@@ -28,6 +28,30 @@ CREATE TABLE IF NOT EXISTS constraints (
   adoption_complexity INTEGER NOT NULL CHECK (adoption_complexity BETWEEN 1 AND 10),
   confidence INTEGER NOT NULL CHECK (confidence BETWEEN 1 AND 10),
   sources_json TEXT NOT NULL,
+  evidence_strength TEXT NOT NULL CHECK (evidence_strength IN ('Low', 'Moderate', 'High')),
+  source_type TEXT NOT NULL CHECK (
+    source_type IN (
+      'Government',
+      'Industry Benchmark',
+      'Professional Association',
+      'Mixed Secondary',
+      'Operational Pattern'
+    )
+  ),
+  validation_status TEXT NOT NULL CHECK (
+    validation_status IN (
+      'Unverified',
+      'Plausible',
+      'Partially Validated',
+      'Validated'
+    )
+  ),
+  source_quality INTEGER NOT NULL CHECK (source_quality BETWEEN 1 AND 10),
+  measurement_difficulty INTEGER NOT NULL CHECK (measurement_difficulty BETWEEN 1 AND 10),
+  data_availability INTEGER NOT NULL CHECK (data_availability BETWEEN 1 AND 10),
+  confidence_reasoning TEXT NOT NULL,
+  validation_notes_json TEXT NOT NULL,
+  evidence_gaps_json TEXT NOT NULL,
   created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -38,6 +62,9 @@ CREATE TABLE IF NOT EXISTS constraint_scores (
   solvability_score REAL NOT NULL,
   ai_readiness_score REAL NOT NULL,
   overlooked_opportunity_score REAL NOT NULL,
+  evidence_score REAL NOT NULL,
+  measurability_score REAL NOT NULL,
+  validation_confidence_score REAL NOT NULL,
   total_priority_score REAL NOT NULL,
   scored_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (constraint_id) REFERENCES constraints(id) ON DELETE CASCADE
@@ -45,5 +72,9 @@ CREATE TABLE IF NOT EXISTS constraint_scores (
 
 CREATE INDEX IF NOT EXISTS idx_constraints_category ON constraints(category);
 CREATE INDEX IF NOT EXISTS idx_constraints_subsector ON constraints(subsector);
+CREATE INDEX IF NOT EXISTS idx_constraints_validation_status
+  ON constraints(validation_status);
 CREATE INDEX IF NOT EXISTS idx_constraint_scores_priority
   ON constraint_scores(total_priority_score DESC);
+CREATE INDEX IF NOT EXISTS idx_constraint_scores_validation
+  ON constraint_scores(validation_confidence_score DESC);

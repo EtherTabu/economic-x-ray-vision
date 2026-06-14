@@ -31,6 +31,12 @@ export default function Home() {
       0
     ) / scoredConstraints.length;
 
+  const averageValidation =
+    scoredConstraints.reduce(
+      (total, item) => total + item.scores.validation_confidence_score,
+      0
+    ) / scoredConstraints.length;
+
   const topOpportunity = scoredConstraints.reduce((top, item) =>
     item.scores.overlooked_opportunity_score >
     top.scores.overlooked_opportunity_score
@@ -82,6 +88,10 @@ export default function Home() {
             <div className="priority-panel__meta">
               <span>{topPriority.category}</span>
               <span>Priority {topPriority.scores.total_priority_score.toFixed(1)}</span>
+              <span>
+                Validation{" "}
+                {topPriority.scores.validation_confidence_score.toFixed(1)}
+              </span>
             </div>
           </div>
         </section>
@@ -100,6 +110,10 @@ export default function Home() {
             <strong>{averagePriority.toFixed(1)}</strong>
           </div>
           <div className="summary-item">
+            <span>Average Validation</span>
+            <strong>{averageValidation.toFixed(1)}</strong>
+          </div>
+          <div className="summary-item">
             <span>Top Overlooked Area</span>
             <strong>{topOpportunity.category}</strong>
           </div>
@@ -115,7 +129,9 @@ export default function Home() {
             an AI model. Severity weights time, capital, labor, and trend;
             solvability balances digital potential against complexity; AI readiness
             estimates where automation or extraction may help; overlooked opportunity
-            rewards high-friction areas with lower visibility.
+            rewards high-friction areas with lower visibility. V1.2 adds evidence,
+            measurability, and validation confidence scores so each ranking can be
+            inspected for defensibility.
           </p>
         </section>
 

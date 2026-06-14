@@ -46,6 +46,10 @@ V1 may use static TypeScript seed data for the UI first. `db/schema.sql` is a pl
 
 V1.1 should make the prototype feel more like an intelligence product while keeping the same small local-first architecture. Prioritize clear dashboard hierarchy, highest-priority constraint visibility, expanded inspection details, a full score breakdown, and a short deterministic scoring explanation in the UI.
 
+## V1.2 Direction
+
+V1.2 adds an evidence and validation layer so each constraint can be inspected for defensibility. Constraint records should track evidence strength, source type, validation status, source quality, measurement difficulty, data availability, confidence reasoning, validation notes, and evidence gaps. Deterministic scoring should include evidence, measurability, and validation confidence scores without adding scrapers, AI APIs, or SQLite wiring.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:

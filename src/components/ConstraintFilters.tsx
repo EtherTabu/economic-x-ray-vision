@@ -14,7 +14,10 @@ const sortLabels: Record<SortOption, string> = {
   severity_score: "Severity score",
   solvability_score: "Solvability score",
   ai_readiness_score: "AI readiness",
-  overlooked_opportunity_score: "Overlooked opportunity"
+  overlooked_opportunity_score: "Overlooked opportunity",
+  evidence_score: "Evidence strength",
+  measurability_score: "Measurability",
+  validation_confidence_score: "Validation confidence"
 };
 
 export function ConstraintFilters({

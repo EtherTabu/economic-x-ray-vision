@@ -37,7 +37,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 7,
     adoption_complexity: 6,
     confidence: 9,
-    sources: ["CMS administrative simplification guidance", "AMA prior authorization surveys"]
+    sources: ["CMS administrative simplification guidance", "AMA prior authorization surveys"],
+    evidence_strength: "High",
+    source_type: "Mixed Secondary",
+    validation_status: "Partially Validated",
+    source_quality: 8,
+    measurement_difficulty: 6,
+    data_availability: 7,
+    confidence_reasoning:
+      "Prior authorization burden is widely documented, but local cycle time and staff cost still require organization-specific measurement.",
+    validation_notes: [
+      "External evidence supports the friction pattern",
+      "Operational validation should compare authorization cycle time by payer"
+    ],
+    evidence_gaps: [
+      "Payer-specific denial and approval timing",
+      "Internal labor minutes per authorization"
+    ]
   },
   {
     id: "hc-admin-002",
@@ -75,7 +91,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 5,
     adoption_complexity: 5,
     confidence: 8,
-    sources: ["Healthcare Financial Management Association", "CAQH administrative index"]
+    sources: ["Healthcare Financial Management Association", "CAQH administrative index"],
+    evidence_strength: "Moderate",
+    source_type: "Industry Benchmark",
+    validation_status: "Plausible",
+    source_quality: 7,
+    measurement_difficulty: 5,
+    data_availability: 7,
+    confidence_reasoning:
+      "Eligibility verification is common and measurable, but waste varies by payer mix and front desk workflow maturity.",
+    validation_notes: [
+      "Can be sampled from visit prep logs",
+      "Claim rejection patterns can confirm downstream impact"
+    ],
+    evidence_gaps: [
+      "Average verification minutes per visit",
+      "Share of visits requiring repeated verification"
+    ]
   },
   {
     id: "hc-admin-003",
@@ -113,7 +145,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 6,
     adoption_complexity: 6,
     confidence: 9,
-    sources: ["MGMA revenue cycle benchmarks", "HFMA denial management resources"]
+    sources: ["MGMA revenue cycle benchmarks", "HFMA denial management resources"],
+    evidence_strength: "High",
+    source_type: "Industry Benchmark",
+    validation_status: "Partially Validated",
+    source_quality: 8,
+    measurement_difficulty: 4,
+    data_availability: 8,
+    confidence_reasoning:
+      "Denials and resubmissions leave structured traces in revenue cycle systems, making the constraint relatively defensible.",
+    validation_notes: [
+      "Denial reason codes support repeatable measurement",
+      "Appeal timing and recovery rate can be tracked"
+    ],
+    evidence_gaps: [
+      "Preventable denial share",
+      "Labor cost per denial category"
+    ]
   },
   {
     id: "hc-admin-004",
@@ -151,7 +199,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 5,
     adoption_complexity: 7,
     confidence: 8,
-    sources: ["ONC interoperability resources", "Medical Group Management Association"]
+    sources: ["ONC interoperability resources", "Medical Group Management Association"],
+    evidence_strength: "Moderate",
+    source_type: "Mixed Secondary",
+    validation_status: "Plausible",
+    source_quality: 7,
+    measurement_difficulty: 7,
+    data_availability: 5,
+    confidence_reasoning:
+      "Referral leakage is a recognized handoff issue, but lost demand is harder to measure without closed-loop referral tracking.",
+    validation_notes: [
+      "Referral timestamps can expose handoff delay",
+      "Scheduled-versus-sent referral ratios can indicate leakage"
+    ],
+    evidence_gaps: [
+      "Unscheduled referral count",
+      "Patient abandonment after referral"
+    ]
   },
   {
     id: "hc-admin-005",
@@ -189,7 +253,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 6,
     adoption_complexity: 6,
     confidence: 8,
-    sources: ["AHRQ care transitions resources", "CMS readmissions reduction program"]
+    sources: ["AHRQ care transitions resources", "CMS readmissions reduction program"],
+    evidence_strength: "High",
+    source_type: "Government",
+    validation_status: "Partially Validated",
+    source_quality: 9,
+    measurement_difficulty: 6,
+    data_availability: 7,
+    confidence_reasoning:
+      "Care transition risk is well supported, though the administrative friction component needs local follow-up completion data.",
+    validation_notes: [
+      "Discharge and follow-up timestamps provide measurable signals",
+      "Readmission reviews can identify missed coordination"
+    ],
+    evidence_gaps: [
+      "Follow-up completion rate by discharge type",
+      "Manual outreach attempts per patient"
+    ]
   },
   {
     id: "hc-admin-006",
@@ -227,7 +307,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 7,
     adoption_complexity: 6,
     confidence: 8,
-    sources: ["CAQH provider data resources", "NCQA credentialing standards"]
+    sources: ["CAQH provider data resources", "NCQA credentialing standards"],
+    evidence_strength: "Moderate",
+    source_type: "Professional Association",
+    validation_status: "Plausible",
+    source_quality: 7,
+    measurement_difficulty: 5,
+    data_availability: 6,
+    confidence_reasoning:
+      "Credentialing duplication is structurally visible, but impact depends on payer enrollment timing and provider start dates.",
+    validation_notes: [
+      "Packet completion dates can be audited",
+      "Enrollment lag can be compared across payers"
+    ],
+    evidence_gaps: [
+      "Duplicate document requests per provider",
+      "Revenue delay while enrollment is pending"
+    ]
   },
   {
     id: "hc-admin-007",
@@ -265,7 +361,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 7,
     adoption_complexity: 6,
     confidence: 8,
-    sources: ["AMA prior authorization research", "NCPDP electronic prior authorization resources"]
+    sources: ["AMA prior authorization research", "NCPDP electronic prior authorization resources"],
+    evidence_strength: "High",
+    source_type: "Professional Association",
+    validation_status: "Partially Validated",
+    source_quality: 8,
+    measurement_difficulty: 6,
+    data_availability: 6,
+    confidence_reasoning:
+      "Medication authorization burden is well documented, while abandonment and clinical delay require pharmacy-prescriber matching.",
+    validation_notes: [
+      "Rejected prescriptions can be counted",
+      "Exception turnaround can be measured by medication class"
+    ],
+    evidence_gaps: [
+      "Therapy abandonment after authorization delay",
+      "Prescriber staff time per exception"
+    ]
   },
   {
     id: "hc-admin-008",
@@ -303,7 +415,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 8,
     adoption_complexity: 5,
     confidence: 7,
-    sources: ["HHS HIPAA right of access guidance", "AHIMA release of information resources"]
+    sources: ["HHS HIPAA right of access guidance", "AHIMA release of information resources"],
+    evidence_strength: "Moderate",
+    source_type: "Government",
+    validation_status: "Plausible",
+    source_quality: 8,
+    measurement_difficulty: 5,
+    data_availability: 6,
+    confidence_reasoning:
+      "Regulatory requirements and request workflows are clear, but backlog severity depends on request volume and fulfillment logs.",
+    validation_notes: [
+      "Request intake and completion timestamps are measurable",
+      "Request type mix can explain complexity"
+    ],
+    evidence_gaps: [
+      "Average fulfillment time by request channel",
+      "Rework from invalid authorization forms"
+    ]
   },
   {
     id: "hc-admin-009",
@@ -341,7 +469,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 4,
     adoption_complexity: 6,
     confidence: 7,
-    sources: ["MGMA access benchmarks", "Patient access operations case studies"]
+    sources: ["MGMA access benchmarks", "Patient access operations case studies"],
+    evidence_strength: "Moderate",
+    source_type: "Operational Pattern",
+    validation_status: "Plausible",
+    source_quality: 6,
+    measurement_difficulty: 4,
+    data_availability: 8,
+    confidence_reasoning:
+      "Call center queues are easy to instrument, but attribution to lost access requires appointment and abandoned-call linkage.",
+    validation_notes: [
+      "Queue logs can show wait and abandonment",
+      "Scheduling data can show recovered demand"
+    ],
+    evidence_gaps: [
+      "Caller intent distribution",
+      "Appointment slots lost after abandoned calls"
+    ]
   },
   {
     id: "hc-admin-010",
@@ -379,7 +523,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 8,
     adoption_complexity: 6,
     confidence: 8,
-    sources: ["CMS quality reporting programs", "NCQA HEDIS resources"]
+    sources: ["CMS quality reporting programs", "NCQA HEDIS resources"],
+    evidence_strength: "High",
+    source_type: "Government",
+    validation_status: "Validated",
+    source_quality: 9,
+    measurement_difficulty: 7,
+    data_availability: 7,
+    confidence_reasoning:
+      "Quality reporting requirements are formal and well documented, though abstraction labor varies by measure and EHR configuration.",
+    validation_notes: [
+      "Measure abstraction queues provide direct evidence",
+      "Manual chart review volume can be tracked over time"
+    ],
+    evidence_gaps: [
+      "Labor hours per measure",
+      "Share of measures requiring manual chart review"
+    ]
   },
   {
     id: "hc-admin-011",
@@ -417,7 +577,23 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 5,
     adoption_complexity: 5,
     confidence: 7,
-    sources: ["Consumer Financial Protection Bureau medical billing research", "HFMA patient financial communications"]
+    sources: ["Consumer Financial Protection Bureau medical billing research", "HFMA patient financial communications"],
+    evidence_strength: "Moderate",
+    source_type: "Mixed Secondary",
+    validation_status: "Plausible",
+    source_quality: 7,
+    measurement_difficulty: 6,
+    data_availability: 6,
+    confidence_reasoning:
+      "Patient billing confusion is well recognized, but linking statement design to support cost needs call reason and payment timing data.",
+    validation_notes: [
+      "Support call reason codes can validate confusion drivers",
+      "Payment timing can show collection delay"
+    ],
+    evidence_gaps: [
+      "Statement-specific call volume",
+      "Balance resolution time after patient contact"
+    ]
   },
   {
     id: "hc-admin-012",
@@ -455,6 +631,22 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     regulatory_complexity: 4,
     adoption_complexity: 7,
     confidence: 7,
-    sources: ["AHRMM supply chain resources", "Healthcare supply chain operations reports"]
+    sources: ["AHRMM supply chain resources", "Healthcare supply chain operations reports"],
+    evidence_strength: "Moderate",
+    source_type: "Operational Pattern",
+    validation_status: "Plausible",
+    source_quality: 6,
+    measurement_difficulty: 6,
+    data_availability: 6,
+    confidence_reasoning:
+      "Preference card drift is operationally plausible and measurable, but waste estimates need item-level pick, use, and return data.",
+    validation_notes: [
+      "Case pick lists can be compared with actual usage",
+      "Return and waste logs can quantify excess supply"
+    ],
+    evidence_gaps: [
+      "Unused item cost per procedure type",
+      "Frequency of urgent substitutions"
+    ]
   }
 ];

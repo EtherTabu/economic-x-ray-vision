@@ -20,6 +20,7 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
             <span className="pill">{constraint.subsector}</span>
             <span className="pill">{constraint.category}</span>
             <span className="pill">Confidence {constraint.confidence}/10</span>
+            <span className="pill">{constraint.validation_status}</span>
           </div>
           <p>{constraint.description}</p>
         </div>
@@ -43,6 +44,14 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
       {expanded ? (
         <div className="constraint-card__details">
           <DetailBlock title="Evidence" values={constraint.evidence} />
+          <DetailBlock
+            title="Evidence Profile"
+            values={[
+              `Evidence strength: ${constraint.evidence_strength}`,
+              `Source type: ${constraint.source_type}`,
+              `Validation status: ${constraint.validation_status}`
+            ]}
+          />
           <DetailBlock title="Affected Parties" values={constraint.affected_parties} />
           <DetailBlock title="Current Process" values={constraint.current_process} />
           <DetailBlock title="Resource Waste" values={constraint.resource_waste} />
@@ -63,6 +72,26 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
               `Growth trend: ${constraint.growth_trend}`
             ]}
           />
+          <div className="detail-block">
+            <h3>Validation Inputs</h3>
+            <div className="score-grid">
+              <Metric label="Source quality" value={constraint.source_quality} />
+              <Metric
+                label="Measurement difficulty"
+                value={constraint.measurement_difficulty}
+              />
+              <Metric
+                label="Data availability"
+                value={constraint.data_availability}
+              />
+            </div>
+          </div>
+          <DetailBlock
+            title="Confidence Reasoning"
+            values={[constraint.confidence_reasoning]}
+          />
+          <DetailBlock title="Validation Notes" values={constraint.validation_notes} />
+          <DetailBlock title="Evidence Gaps" values={constraint.evidence_gaps} />
           <div className="detail-block">
             <h3>Complexity</h3>
             <div className="score-grid">
@@ -87,6 +116,15 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
               <Metric
                 label="Total priority"
                 value={constraint.scores.total_priority_score}
+              />
+              <Metric label="Evidence" value={constraint.scores.evidence_score} />
+              <Metric
+                label="Measurability"
+                value={constraint.scores.measurability_score}
+              />
+              <Metric
+                label="Validation confidence"
+                value={constraint.scores.validation_confidence_score}
               />
             </div>
           </div>

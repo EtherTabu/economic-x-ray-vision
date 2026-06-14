@@ -45,11 +45,33 @@ export function scoreConstraint(
       solvability_score * 0.1
   );
 
+  const evidence_score = round(
+    evidenceStrengthValue(constraint.evidence_strength) * 0.35 +
+      constraint.source_quality * 0.35 +
+      validationStatusValue(constraint.validation_status) * 0.2 +
+      constraint.confidence * 0.1
+  );
+
+  const measurability_score = round(
+    constraint.data_availability * 0.45 +
+      invertComplexity(constraint.measurement_difficulty) * 0.35 +
+      constraint.source_quality * 0.2
+  );
+
+  const validation_confidence_score = round(
+    evidence_score * 0.4 +
+      measurability_score * 0.25 +
+      constraint.confidence * 0.2 +
+      validationStatusValue(constraint.validation_status) * 0.15
+  );
+
   const total_priority_score = round(
-    severity_score * 0.35 +
+    (severity_score * 0.35 +
       solvability_score * 0.25 +
       ai_readiness_score * 0.15 +
-      overlooked_opportunity_score * 0.25
+      overlooked_opportunity_score * 0.25) *
+      0.85 +
+      validation_confidence_score * 0.15
   );
 
   return {
@@ -57,6 +79,9 @@ export function scoreConstraint(
     solvability_score: clampScore(solvability_score),
     ai_readiness_score: clampScore(ai_readiness_score),
     overlooked_opportunity_score: clampScore(overlooked_opportunity_score),
+    evidence_score: clampScore(evidence_score),
+    measurability_score: clampScore(measurability_score),
+    validation_confidence_score: clampScore(validation_confidence_score),
     total_priority_score: clampScore(total_priority_score)
   };
 }
@@ -75,4 +100,36 @@ function trendBoost(trend: ConstraintIntelligenceObject["growth_trend"]) {
 
 function clampScore(score: number) {
   return Math.max(1, Math.min(10, score));
+}
+
+function evidenceStrengthValue(
+  strength: ConstraintIntelligenceObject["evidence_strength"]
+) {
+  if (strength === "High") {
+    return 9;
+  }
+
+  if (strength === "Moderate") {
+    return 6;
+  }
+
+  return 3;
+}
+
+function validationStatusValue(
+  status: ConstraintIntelligenceObject["validation_status"]
+) {
+  if (status === "Validated") {
+    return 9;
+  }
+
+  if (status === "Partially Validated") {
+    return 7;
+  }
+
+  if (status === "Plausible") {
+    return 5;
+  }
+
+  return 2;
 }
