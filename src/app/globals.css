@@ -251,6 +251,120 @@ h1 {
   font-weight: 800;
 }
 
+.workbench {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.workbench__header {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.45fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.workbench__header h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.workbench__header p:not(.section-kicker) {
+  margin: 0;
+  color: #344655;
+  line-height: 1.55;
+}
+
+.workbench__brief {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.brief-item {
+  padding: 12px;
+  background: #fbfcfd;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.brief-item span,
+.thesis-card__top span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brief-item strong {
+  display: block;
+  margin-top: 6px;
+  line-height: 1.3;
+}
+
+.thesis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.thesis-card {
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.thesis-card__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.thesis-card__top strong {
+  color: var(--accent-strong);
+  font-size: 1.2rem;
+}
+
+.thesis-card h3 {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.thesis-card p {
+  margin: 8px 0 0;
+  color: #344655;
+  line-height: 1.45;
+}
+
+.thesis-card dl {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+
+.thesis-card dt {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.thesis-card dd {
+  margin: 3px 0 0;
+  color: #344655;
+  line-height: 1.4;
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -454,7 +568,8 @@ select {
   .summary-grid,
   .constraint-card__details,
   .intelligence-overview,
-  .scoring-model {
+  .scoring-model,
+  .workbench__header {
     grid-template-columns: 1fr;
   }
 

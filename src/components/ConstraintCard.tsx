@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ConstraintScoreBadge } from "@/components/ConstraintScoreBadge";
+import { explainConstraint } from "@/lib/explainability";
 import type { ScoredConstraint } from "@/types/constraint";
 
 type ConstraintCardProps = {
@@ -10,6 +11,7 @@ type ConstraintCardProps = {
 
 export function ConstraintCard({ constraint }: ConstraintCardProps) {
   const [expanded, setExpanded] = useState(false);
+  const explanation = explainConstraint(constraint);
 
   return (
     <article className="constraint-card">
@@ -45,6 +47,22 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
 
       {expanded ? (
         <div className="constraint-card__details">
+          <DetailBlock
+            title="Score Drivers"
+            values={explanation.top_score_drivers}
+          />
+          <DetailBlock
+            title="Strategic Interpretation"
+            values={[explanation.strategic_interpretation]}
+          />
+          <DetailBlock
+            title="Analyst Takeaway"
+            values={[explanation.analyst_takeaway]}
+          />
+          <DetailBlock
+            title="Why It Ranks High"
+            values={[explanation.why_it_ranks_high]}
+          />
           <DetailBlock title="Evidence" values={constraint.evidence} />
           <DetailBlock
             title="Evidence Profile"
@@ -93,7 +111,12 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
             values={[constraint.confidence_reasoning]}
           />
           <DetailBlock title="Validation Notes" values={constraint.validation_notes} />
+          <DetailBlock
+            title="Validation Next Steps"
+            values={explanation.validation_next_steps}
+          />
           <DetailBlock title="Evidence Gaps" values={constraint.evidence_gaps} />
+          <DetailBlock title="Evidence Risks" values={explanation.evidence_risks} />
           <DetailBlock
             title="Graph Position"
             values={[
@@ -118,6 +141,18 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
           <DetailBlock
             title="Solution Hypotheses"
             values={constraint.solution_hypotheses}
+          />
+          <DetailBlock
+            title="Likely Intervention Paths"
+            values={explanation.likely_intervention_paths}
+          />
+          <DetailBlock
+            title="AI / Automation Angle"
+            values={[explanation.automation_or_ai_angle]}
+          />
+          <DetailBlock
+            title="Implementation Watchouts"
+            values={explanation.implementation_watchouts}
           />
           <div className="detail-block">
             <h3>Complexity</h3>

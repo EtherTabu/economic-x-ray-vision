@@ -62,6 +62,10 @@ V1.4 turns the intake contract into a local dashboard pipeline. Validated JSON i
 
 V2.0 adds a lightweight constraint graph and opportunity ranking layer. Records track upstream and downstream constraints, related processes, affected systems, solution hypotheses, and opportunity type. Deterministic scoring adds constraint density, downstream impact, opportunity, and total strategic scores while preserving priority, evidence, validation, and intake scoring.
 
+## V3.0 Direction
+
+V3.0 adds an intelligence analyst workbench. Deterministic explainability derives score drivers, strategic interpretation, weak assumptions, evidence risks, validation next steps, intervention paths, AI/automation angles, and analyst takeaways from existing records and scores. Portfolio opportunity analysis identifies strongest, most AI-solvable, under-validated, under-measured, most connected, and low-complexity/high-impact opportunities without external facts or APIs.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:

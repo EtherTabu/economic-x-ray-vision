@@ -4,17 +4,20 @@ import type {
   RecordOrigin,
   SortOption
 } from "@/types/constraint";
+import type { DecisionFilter } from "@/lib/constraints";
 
 type ConstraintFiltersProps = {
   categories: ConstraintCategory[];
   category: ConstraintCategory | "All";
   opportunityTypes: OpportunityType[];
   opportunityType: OpportunityType | "All";
+  decisionFilter: DecisionFilter;
   origin: RecordOrigin | "All";
   resultCount: number;
   sortBy: SortOption;
   onCategoryChange: (category: ConstraintCategory | "All") => void;
   onOpportunityTypeChange: (opportunityType: OpportunityType | "All") => void;
+  onDecisionFilterChange: (decisionFilter: DecisionFilter) => void;
   onOriginChange: (origin: RecordOrigin | "All") => void;
   onSortChange: (sortBy: SortOption) => void;
 };
@@ -39,11 +42,13 @@ export function ConstraintFilters({
   category,
   opportunityTypes,
   opportunityType,
+  decisionFilter,
   origin,
   resultCount,
   sortBy,
   onCategoryChange,
   onOpportunityTypeChange,
+  onDecisionFilterChange,
   onOriginChange,
   onSortChange
 }: ConstraintFiltersProps) {
@@ -98,6 +103,25 @@ export function ConstraintFilters({
             <option value="All">All records</option>
             <option value="seed">Seed records</option>
             <option value="intake">Intake records</option>
+          </select>
+        </div>
+
+        <div className="control-group">
+          <label htmlFor="decision-filter">Decision filter</label>
+          <select
+            id="decision-filter"
+            onChange={(event) =>
+              onDecisionFilterChange(event.target.value as DecisionFilter)
+            }
+            value={decisionFilter}
+          >
+            <option value="All">All candidates</option>
+            <option value="AI-solvable">AI-solvable</option>
+            <option value="Low-complexity / high-impact">
+              Low-complexity / high-impact
+            </option>
+            <option value="Under-validated">Under-validated</option>
+            <option value="Under-measured">Under-measured</option>
           </select>
         </div>
 

@@ -1,15 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { AnalysisWorkbench } from "@/components/AnalysisWorkbench";
 import { ConstraintCard } from "@/components/ConstraintCard";
 import { ConstraintFilters } from "@/components/ConstraintFilters";
 import { constraintRegistry } from "@/data/constraintRegistry";
 import {
   categoryOptions,
+  type DecisionFilter,
   getConstraintsWithScores,
   opportunityTypeOptions,
   sortAndFilterConstraints
 } from "@/lib/constraints";
+import { analyzeOpportunities } from "@/lib/opportunityAnalysis";
 import type {
   ConstraintCategory,
   OpportunityType,
@@ -23,6 +26,7 @@ export default function Home() {
   const [opportunityType, setOpportunityType] = useState<OpportunityType | "All">(
     "All"
   );
+  const [decisionFilter, setDecisionFilter] = useState<DecisionFilter>("All");
   const [sortBy, setSortBy] = useState<SortOption>("total_priority_score");
 
   const scoredConstraints = useMemo(
@@ -37,9 +41,15 @@ export default function Home() {
         category,
         origin,
         opportunityType,
+        decisionFilter,
         sortBy
       ),
-    [category, opportunityType, origin, scoredConstraints, sortBy]
+    [category, decisionFilter, opportunityType, origin, scoredConstraints, sortBy]
+  );
+
+  const opportunityPortfolio = useMemo(
+    () => analyzeOpportunities(scoredConstraints),
+    [scoredConstraints]
   );
 
   const seedRecordCount = scoredConstraints.filter(
@@ -216,15 +226,19 @@ export default function Home() {
           />
         </section>
 
+        <AnalysisWorkbench portfolio={opportunityPortfolio} />
+
         <ConstraintFilters
           categories={categoryOptions(scoredConstraints)}
           category={category}
+          decisionFilter={decisionFilter}
           opportunityTypes={opportunityTypeOptions(scoredConstraints)}
           opportunityType={opportunityType}
           origin={origin}
           resultCount={visibleConstraints.length}
           sortBy={sortBy}
           onCategoryChange={setCategory}
+          onDecisionFilterChange={setDecisionFilter}
           onOpportunityTypeChange={setOpportunityType}
           onOriginChange={setOrigin}
           onSortChange={setSortBy}
