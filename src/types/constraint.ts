@@ -29,6 +29,13 @@ export type ValidationStatus =
 
 export type RecordOrigin = "seed" | "intake";
 
+export type OpportunityType =
+  | "Automation"
+  | "Workflow Redesign"
+  | "Data Quality"
+  | "Capacity Optimization"
+  | "Compliance Simplification";
+
 export type ConstraintIntelligenceObject = {
   id: string;
   origin: RecordOrigin;
@@ -66,6 +73,12 @@ export type ConstraintIntelligenceObject = {
   confidence_reasoning: string;
   validation_notes: string[];
   evidence_gaps: string[];
+  upstream_constraints: string[];
+  downstream_constraints: string[];
+  related_processes: string[];
+  affected_systems: string[];
+  solution_hypotheses: string[];
+  opportunity_type: OpportunityType;
 };
 
 export type ConstraintScores = {
@@ -76,6 +89,10 @@ export type ConstraintScores = {
   evidence_score: number;
   measurability_score: number;
   validation_confidence_score: number;
+  constraint_density_score: number;
+  downstream_impact_score: number;
+  opportunity_score: number;
+  total_strategic_score: number;
   total_priority_score: number;
 };
 

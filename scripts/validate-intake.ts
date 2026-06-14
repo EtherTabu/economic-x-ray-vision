@@ -47,6 +47,12 @@ type IntakeRecordKey =
   | "confidence_reasoning"
   | "validation_notes"
   | "evidence_gaps"
+  | "upstream_constraints"
+  | "downstream_constraints"
+  | "related_processes"
+  | "affected_systems"
+  | "solution_hypotheses"
+  | "opportunity_type"
   | "sources";
 
 const intakePath = resolve("data/intake/sample_constraints.json");
@@ -80,6 +86,13 @@ const validationStatuses = [
   "Partially Validated",
   "Validated"
 ];
+const opportunityTypes = [
+  "Automation",
+  "Workflow Redesign",
+  "Data Quality",
+  "Capacity Optimization",
+  "Compliance Simplification"
+];
 
 const stringFields: IntakeRecordKey[] = [
   "id",
@@ -94,6 +107,7 @@ const stringFields: IntakeRecordKey[] = [
   "evidence_strength",
   "source_type",
   "validation_status",
+  "opportunity_type",
   "confidence_reasoning"
 ];
 
@@ -104,6 +118,11 @@ const arrayFields: IntakeRecordKey[] = [
   "resource_waste",
   "validation_notes",
   "evidence_gaps",
+  "upstream_constraints",
+  "downstream_constraints",
+  "related_processes",
+  "affected_systems",
+  "solution_hypotheses",
   "sources"
 ];
 
@@ -228,6 +247,12 @@ function validateRecord(
     record.validation_status,
     validationStatuses,
     `records[${index}].validation_status`,
+    errors
+  );
+  validateKnownValue(
+    record.opportunity_type,
+    opportunityTypes,
+    `records[${index}].opportunity_type`,
     errors
   );
 

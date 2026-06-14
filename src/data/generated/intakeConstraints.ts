@@ -65,7 +65,31 @@ export const intakeConstraints: ConstraintIntelligenceObject[] = [
     "evidence_gaps": [
       "Average re-entry minutes by visit type",
       "Mismatch rate between patient-submitted and EHR registration data"
-    ]
+    ],
+    "upstream_constraints": [
+      "Portal intake design",
+      "Patient registration"
+    ],
+    "downstream_constraints": [
+      "Eligibility verification",
+      "Visit check-in",
+      "Claim accuracy"
+    ],
+    "related_processes": [
+      "Patient intake",
+      "Registration",
+      "Demographic verification"
+    ],
+    "affected_systems": [
+      "Patient portal",
+      "EHR",
+      "Registration system"
+    ],
+    "solution_hypotheses": [
+      "Promote one authoritative demographic profile across intake channels",
+      "Route only mismatched fields to registration staff"
+    ],
+    "opportunity_type": "Data Quality"
   },
   {
     "id": "hc-intake-002",
@@ -128,7 +152,31 @@ export const intakeConstraints: ConstraintIntelligenceObject[] = [
     "evidence_gaps": [
       "Share of rejections caused by coordination of benefits",
       "Average days delayed by coverage order corrections"
-    ]
+    ],
+    "upstream_constraints": [
+      "Eligibility verification",
+      "Patient coverage updates"
+    ],
+    "downstream_constraints": [
+      "Claim submission",
+      "Denial management",
+      "Cash collection"
+    ],
+    "related_processes": [
+      "Coverage verification",
+      "Claims processing",
+      "Patient outreach"
+    ],
+    "affected_systems": [
+      "Billing system",
+      "Eligibility clearinghouse",
+      "Payer portals"
+    ],
+    "solution_hypotheses": [
+      "Flag conflicting payer order before claim submission",
+      "Create a coverage-order exception queue for multi-payer patients"
+    ],
+    "opportunity_type": "Workflow Redesign"
   },
   {
     "id": "hc-intake-003",
@@ -191,7 +239,31 @@ export const intakeConstraints: ConstraintIntelligenceObject[] = [
     "evidence_gaps": [
       "Documentation chase volume by service line",
       "Time from missing-document flag to completed addendum"
-    ]
+    ],
+    "upstream_constraints": [
+      "Clinical order entry",
+      "Medical necessity rules"
+    ],
+    "downstream_constraints": [
+      "Prior authorization",
+      "Scheduling",
+      "Claim submission"
+    ],
+    "related_processes": [
+      "Clinical documentation",
+      "Order review",
+      "Payer review"
+    ],
+    "affected_systems": [
+      "EHR",
+      "Payer portals",
+      "Messaging inbox"
+    ],
+    "solution_hypotheses": [
+      "Detect missing payer-required documentation at order entry",
+      "Suggest documentation prompts before administrative review"
+    ],
+    "opportunity_type": "Automation"
   },
   {
     "id": "hc-intake-004",
@@ -254,6 +326,30 @@ export const intakeConstraints: ConstraintIntelligenceObject[] = [
     "evidence_gaps": [
       "Accounts eligible for assistance before statement generation",
       "Avoidable outreach tied to late screening"
-    ]
+    ],
+    "upstream_constraints": [
+      "Claim adjudication",
+      "Patient balance generation"
+    ],
+    "downstream_constraints": [
+      "Statement cycles",
+      "Support calls",
+      "Collections workflow"
+    ],
+    "related_processes": [
+      "Patient billing",
+      "Financial assistance screening",
+      "Support triage"
+    ],
+    "affected_systems": [
+      "Billing system",
+      "Payment portal",
+      "Contact center"
+    ],
+    "solution_hypotheses": [
+      "Screen likely assistance eligibility before first statement",
+      "Route eligible accounts to counseling before billing escalation"
+    ],
+    "opportunity_type": "Workflow Redesign"
   }
 ];

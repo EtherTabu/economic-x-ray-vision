@@ -53,6 +53,20 @@ CREATE TABLE IF NOT EXISTS constraints (
   confidence_reasoning TEXT NOT NULL,
   validation_notes_json TEXT NOT NULL,
   evidence_gaps_json TEXT NOT NULL,
+  upstream_constraints_json TEXT NOT NULL,
+  downstream_constraints_json TEXT NOT NULL,
+  related_processes_json TEXT NOT NULL,
+  affected_systems_json TEXT NOT NULL,
+  solution_hypotheses_json TEXT NOT NULL,
+  opportunity_type TEXT NOT NULL CHECK (
+    opportunity_type IN (
+      'Automation',
+      'Workflow Redesign',
+      'Data Quality',
+      'Capacity Optimization',
+      'Compliance Simplification'
+    )
+  ),
   created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -66,6 +80,10 @@ CREATE TABLE IF NOT EXISTS constraint_scores (
   evidence_score REAL NOT NULL,
   measurability_score REAL NOT NULL,
   validation_confidence_score REAL NOT NULL,
+  constraint_density_score REAL NOT NULL,
+  downstream_impact_score REAL NOT NULL,
+  opportunity_score REAL NOT NULL,
+  total_strategic_score REAL NOT NULL,
   total_priority_score REAL NOT NULL,
   scored_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (constraint_id) REFERENCES constraints(id) ON DELETE CASCADE
@@ -75,7 +93,11 @@ CREATE INDEX IF NOT EXISTS idx_constraints_category ON constraints(category);
 CREATE INDEX IF NOT EXISTS idx_constraints_subsector ON constraints(subsector);
 CREATE INDEX IF NOT EXISTS idx_constraints_validation_status
   ON constraints(validation_status);
+CREATE INDEX IF NOT EXISTS idx_constraints_opportunity_type
+  ON constraints(opportunity_type);
 CREATE INDEX IF NOT EXISTS idx_constraint_scores_priority
   ON constraint_scores(total_priority_score DESC);
+CREATE INDEX IF NOT EXISTS idx_constraint_scores_strategic
+  ON constraint_scores(total_strategic_score DESC);
 CREATE INDEX IF NOT EXISTS idx_constraint_scores_validation
   ON constraint_scores(validation_confidence_score DESC);

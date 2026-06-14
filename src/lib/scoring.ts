@@ -65,13 +65,56 @@ export function scoreConstraint(
       validationStatusValue(constraint.validation_status) * 0.15
   );
 
+  const constraint_density_score = round(
+    Math.min(
+      10,
+      2 +
+        constraint.upstream_constraints.length * 1.2 +
+        constraint.downstream_constraints.length * 1.5 +
+        constraint.related_processes.length * 0.8 +
+        constraint.affected_systems.length * 0.7
+    )
+  );
+
+  const downstream_impact_score = round(
+    severity_score * 0.35 +
+      constraint.downstream_constraints.length * 0.9 +
+      constraint.affected_systems.length * 0.55 +
+      constraint.capital_waste * 0.1 +
+      constraint.labor_waste * 0.1
+  );
+
+  const opportunity_score = round(
+    solvability_score * 0.28 +
+      ai_readiness_score * 0.22 +
+      constraint.digital_solution_potential * 0.14 +
+      constraint.automation_potential * 0.14 +
+      validation_confidence_score * 0.12 +
+      opportunityTypeBoost(constraint.opportunity_type)
+  );
+
+  const total_strategic_score = round(
+    downstream_impact_score * 0.3 +
+      constraint_density_score * 0.25 +
+      opportunity_score * 0.3 +
+      total_priority_scoreBase(
+        severity_score,
+        solvability_score,
+        ai_readiness_score,
+        overlooked_opportunity_score,
+        validation_confidence_score
+      ) *
+        0.15
+  );
+
   const total_priority_score = round(
-    (severity_score * 0.35 +
-      solvability_score * 0.25 +
-      ai_readiness_score * 0.15 +
-      overlooked_opportunity_score * 0.25) *
-      0.85 +
-      validation_confidence_score * 0.15
+    total_priority_scoreBase(
+      severity_score,
+      solvability_score,
+      ai_readiness_score,
+      overlooked_opportunity_score,
+      validation_confidence_score
+    )
   );
 
   return {
@@ -82,8 +125,29 @@ export function scoreConstraint(
     evidence_score: clampScore(evidence_score),
     measurability_score: clampScore(measurability_score),
     validation_confidence_score: clampScore(validation_confidence_score),
+    constraint_density_score: clampScore(constraint_density_score),
+    downstream_impact_score: clampScore(downstream_impact_score),
+    opportunity_score: clampScore(opportunity_score),
+    total_strategic_score: clampScore(total_strategic_score),
     total_priority_score: clampScore(total_priority_score)
   };
+}
+
+function total_priority_scoreBase(
+  severity_score: number,
+  solvability_score: number,
+  ai_readiness_score: number,
+  overlooked_opportunity_score: number,
+  validation_confidence_score: number
+) {
+  return (
+    (severity_score * 0.35 +
+      solvability_score * 0.25 +
+      ai_readiness_score * 0.15 +
+      overlooked_opportunity_score * 0.25) *
+      0.85 +
+    validation_confidence_score * 0.15
+  );
 }
 
 function trendBoost(trend: ConstraintIntelligenceObject["growth_trend"]) {
@@ -132,4 +196,26 @@ function validationStatusValue(
   }
 
   return 2;
+}
+
+function opportunityTypeBoost(
+  opportunityType: ConstraintIntelligenceObject["opportunity_type"]
+) {
+  if (opportunityType === "Automation") {
+    return 1;
+  }
+
+  if (opportunityType === "Data Quality") {
+    return 0.8;
+  }
+
+  if (opportunityType === "Workflow Redesign") {
+    return 0.7;
+  }
+
+  if (opportunityType === "Capacity Optimization") {
+    return 0.6;
+  }
+
+  return 0.5;
 }

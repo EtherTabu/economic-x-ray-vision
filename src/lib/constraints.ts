@@ -2,6 +2,7 @@ import { scoreConstraint } from "@/lib/scoring";
 import type {
   ConstraintCategory,
   ConstraintIntelligenceObject,
+  OpportunityType,
   RecordOrigin,
   ScoredConstraint,
   SortOption
@@ -22,14 +23,27 @@ export function categoryOptions(
   return Array.from(new Set(constraints.map((constraint) => constraint.category))).sort();
 }
 
+export function opportunityTypeOptions(
+  constraints: ScoredConstraint[]
+): OpportunityType[] {
+  return Array.from(
+    new Set(constraints.map((constraint) => constraint.opportunity_type))
+  ).sort();
+}
+
 export function sortAndFilterConstraints(
   constraints: ScoredConstraint[],
   category: ConstraintCategory | "All",
   origin: RecordOrigin | "All",
+  opportunityType: OpportunityType | "All",
   sortBy: SortOption
 ): ScoredConstraint[] {
   return constraints
     .filter((constraint) => category === "All" || constraint.category === category)
     .filter((constraint) => origin === "All" || constraint.origin === origin)
+    .filter(
+      (constraint) =>
+        opportunityType === "All" || constraint.opportunity_type === opportunityType
+    )
     .sort((first, second) => second.scores[sortBy] - first.scores[sortBy]);
 }

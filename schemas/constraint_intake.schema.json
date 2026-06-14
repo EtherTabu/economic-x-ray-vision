@@ -98,6 +98,12 @@
         "confidence_reasoning",
         "validation_notes",
         "evidence_gaps",
+        "upstream_constraints",
+        "downstream_constraints",
+        "related_processes",
+        "affected_systems",
+        "solution_hypotheses",
+        "opportunity_type",
         "sources"
       ],
       "additionalProperties": false,
@@ -225,6 +231,30 @@
         },
         "evidence_gaps": {
           "$ref": "#/$defs/stringList"
+        },
+        "upstream_constraints": {
+          "$ref": "#/$defs/stringList"
+        },
+        "downstream_constraints": {
+          "$ref": "#/$defs/stringList"
+        },
+        "related_processes": {
+          "$ref": "#/$defs/stringList"
+        },
+        "affected_systems": {
+          "$ref": "#/$defs/stringList"
+        },
+        "solution_hypotheses": {
+          "$ref": "#/$defs/stringList"
+        },
+        "opportunity_type": {
+          "enum": [
+            "Automation",
+            "Workflow Redesign",
+            "Data Quality",
+            "Capacity Optimization",
+            "Compliance Simplification"
+          ]
         },
         "sources": {
           "type": "array",

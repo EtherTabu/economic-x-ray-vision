@@ -2,6 +2,7 @@ import type {
   ConstraintCategory,
   EvidenceStrength,
   GrowthTrend,
+  OpportunityType,
   SourceType,
   ValidationStatus
 } from "@/types/constraint";
@@ -49,6 +50,12 @@ export type ConstraintIntakeRecord = {
   confidence_reasoning: string;
   validation_notes: string[];
   evidence_gaps: string[];
+  upstream_constraints: string[];
+  downstream_constraints: string[];
+  related_processes: string[];
+  affected_systems: string[];
+  solution_hypotheses: string[];
+  opportunity_type: OpportunityType;
   sources: ConstraintIntakeSource[];
 };
 

@@ -37,6 +37,12 @@ type ConvertIntakeRecord = {
   confidence_reasoning: string;
   validation_notes: string[];
   evidence_gaps: string[];
+  upstream_constraints: string[];
+  downstream_constraints: string[];
+  related_processes: string[];
+  affected_systems: string[];
+  solution_hypotheses: string[];
+  opportunity_type: string;
   sources: ConvertIntakeSource[];
 };
 
@@ -82,7 +88,13 @@ function convertIntakeRecord(record: ConvertIntakeRecord) {
     data_availability: record.data_availability,
     confidence_reasoning: record.confidence_reasoning,
     validation_notes: record.validation_notes,
-    evidence_gaps: record.evidence_gaps
+    evidence_gaps: record.evidence_gaps,
+    upstream_constraints: record.upstream_constraints,
+    downstream_constraints: record.downstream_constraints,
+    related_processes: record.related_processes,
+    affected_systems: record.affected_systems,
+    solution_hypotheses: record.solution_hypotheses,
+    opportunity_type: record.opportunity_type
   };
 }
 

@@ -54,7 +54,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Payer-specific denial and approval timing",
       "Internal labor minutes per authorization"
-    ]
+    ],
+    upstream_constraints: ["Eligibility verification", "Medical necessity documentation"],
+    downstream_constraints: ["Treatment scheduling", "Claim submission", "Patient access"],
+    related_processes: ["Prior authorization", "Clinical documentation", "Scheduling"],
+    affected_systems: ["EHR", "Payer portals", "Scheduling system"],
+    solution_hypotheses: [
+      "Standardize payer documentation checklists",
+      "Pre-fill authorization packets from structured clinical data"
+    ],
+    opportunity_type: "Automation"
   },
   {
     id: "hc-admin-002",
@@ -109,7 +118,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Average verification minutes per visit",
       "Share of visits requiring repeated verification"
-    ]
+    ],
+    upstream_constraints: ["Patient registration", "Coverage updates"],
+    downstream_constraints: ["Claim submission", "Patient billing", "Prior authorization"],
+    related_processes: ["Eligibility verification", "Visit prep", "Registration"],
+    affected_systems: ["EHR", "Eligibility clearinghouse", "Billing system"],
+    solution_hypotheses: [
+      "Batch verify coverage before appointment windows",
+      "Flag only coverage changes and exceptions for staff review"
+    ],
+    opportunity_type: "Data Quality"
   },
   {
     id: "hc-admin-003",
@@ -164,7 +182,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Preventable denial share",
       "Labor cost per denial category"
-    ]
+    ],
+    upstream_constraints: ["Eligibility verification", "Coding accuracy", "Documentation completeness"],
+    downstream_constraints: ["Cash collection", "Appeals", "Patient billing"],
+    related_processes: ["Claims processing", "Denial management", "Revenue recovery"],
+    affected_systems: ["Billing system", "Clearinghouse", "Payer portals"],
+    solution_hypotheses: [
+      "Classify denials by preventability before assignment",
+      "Route recurring denial patterns back to front-end workflows"
+    ],
+    opportunity_type: "Workflow Redesign"
   },
   {
     id: "hc-admin-004",
@@ -219,7 +246,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Unscheduled referral count",
       "Patient abandonment after referral"
-    ]
+    ],
+    upstream_constraints: ["Primary care referral creation", "Record transfer"],
+    downstream_constraints: ["Specialist scheduling", "Care plan completion", "Patient outreach"],
+    related_processes: ["Referral management", "Records exchange", "Patient scheduling"],
+    affected_systems: ["EHR", "Fax queue", "Referral management tool"],
+    solution_hypotheses: [
+      "Create closed-loop referral status tracking",
+      "Prioritize referrals missing required records"
+    ],
+    opportunity_type: "Workflow Redesign"
   },
   {
     id: "hc-admin-005",
@@ -274,7 +310,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Follow-up completion rate by discharge type",
       "Manual outreach attempts per patient"
-    ]
+    ],
+    upstream_constraints: ["Discharge planning", "Medication reconciliation"],
+    downstream_constraints: ["Follow-up scheduling", "Readmission prevention", "Care management"],
+    related_processes: ["Care transitions", "Patient outreach", "Follow-up verification"],
+    affected_systems: ["EHR", "Care management platform", "Scheduling system"],
+    solution_hypotheses: [
+      "Trigger follow-up tasks from discharge events",
+      "Track closed-loop completion by risk tier"
+    ],
+    opportunity_type: "Workflow Redesign"
   },
   {
     id: "hc-admin-006",
@@ -329,7 +374,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Duplicate document requests per provider",
       "Revenue delay while enrollment is pending"
-    ]
+    ],
+    upstream_constraints: ["Provider onboarding", "License verification"],
+    downstream_constraints: ["Payer enrollment", "Provider scheduling", "Billable access"],
+    related_processes: ["Credentialing", "Enrollment", "Document renewal"],
+    affected_systems: ["Credentialing platform", "Document repository", "Payer portals"],
+    solution_hypotheses: [
+      "Maintain reusable credentialing packets by payer",
+      "Alert on expiring documents before enrollment delays"
+    ],
+    opportunity_type: "Data Quality"
   },
   {
     id: "hc-admin-007",
@@ -384,7 +438,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Therapy abandonment after authorization delay",
       "Prescriber staff time per exception"
-    ]
+    ],
+    upstream_constraints: ["Formulary checks", "Clinical documentation"],
+    downstream_constraints: ["Medication dispensing", "Patient adherence", "Prescriber messaging"],
+    related_processes: ["Electronic prescribing", "Pharmacy coordination", "Prior authorization"],
+    affected_systems: ["EHR", "Pharmacy system", "Payer portals"],
+    solution_hypotheses: [
+      "Detect exception likelihood at prescribing time",
+      "Auto-assemble medication exception documentation"
+    ],
+    opportunity_type: "Automation"
   },
   {
     id: "hc-admin-008",
@@ -439,7 +502,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Average fulfillment time by request channel",
       "Rework from invalid authorization forms"
-    ]
+    ],
+    upstream_constraints: ["Identity verification", "Authorization form completeness"],
+    downstream_constraints: ["Record fulfillment", "External care coordination", "Legal review"],
+    related_processes: ["Release of information", "Document retrieval", "Secure transmission"],
+    affected_systems: ["EHR", "Document management system", "Patient portal"],
+    solution_hypotheses: [
+      "Triage requests by completeness and urgency",
+      "Standardize authorization validation before queue assignment"
+    ],
+    opportunity_type: "Compliance Simplification"
   },
   {
     id: "hc-admin-009",
@@ -494,7 +566,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Caller intent distribution",
       "Appointment slots lost after abandoned calls"
-    ]
+    ],
+    upstream_constraints: ["Appointment availability", "Portal usability"],
+    downstream_constraints: ["Scheduling throughput", "Patient access", "Capacity utilization"],
+    related_processes: ["Call routing", "Scheduling", "Patient self-service"],
+    affected_systems: ["Phone system", "Scheduling system", "Patient portal"],
+    solution_hypotheses: [
+      "Route callers by intent before scheduler handoff",
+      "Expose routine scheduling paths through self-service"
+    ],
+    opportunity_type: "Capacity Optimization"
   },
   {
     id: "hc-admin-010",
@@ -549,7 +630,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Labor hours per measure",
       "Share of measures requiring manual chart review"
-    ]
+    ],
+    upstream_constraints: ["Clinical documentation", "Structured field capture"],
+    downstream_constraints: ["Quality reporting", "Performance improvement", "Regulatory submission"],
+    related_processes: ["Measure abstraction", "Chart review", "Data validation"],
+    affected_systems: ["EHR", "Quality registry", "Reporting system"],
+    solution_hypotheses: [
+      "Map measures to structured data gaps before abstraction",
+      "Flag charts likely to require manual review"
+    ],
+    opportunity_type: "Automation"
   },
   {
     id: "hc-admin-011",
@@ -604,7 +694,16 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Statement-specific call volume",
       "Balance resolution time after patient contact"
-    ]
+    ],
+    upstream_constraints: ["Claim adjudication", "Statement generation"],
+    downstream_constraints: ["Support calls", "Payment collection", "Financial assistance routing"],
+    related_processes: ["Patient billing", "Support triage", "Payment resolution"],
+    affected_systems: ["Billing system", "Payment portal", "Contact center"],
+    solution_hypotheses: [
+      "Classify confusing balances before statement release",
+      "Add account-specific explanations to patient billing flows"
+    ],
+    opportunity_type: "Data Quality"
   },
   {
     id: "hc-admin-012",
@@ -659,6 +758,15 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     evidence_gaps: [
       "Unused item cost per procedure type",
       "Frequency of urgent substitutions"
-    ]
+    ],
+    upstream_constraints: ["Procedure preference cards", "Inventory updates"],
+    downstream_constraints: ["Case setup", "Supply returns", "Inventory planning"],
+    related_processes: ["Supply picking", "Procedure preparation", "Inventory reconciliation"],
+    affected_systems: ["Supply chain system", "Preference card system", "OR scheduling"],
+    solution_hypotheses: [
+      "Compare preference cards against actual usage by procedure",
+      "Prioritize high-cost items with repeated return patterns"
+    ],
+    opportunity_type: "Capacity Optimization"
   }
 ];

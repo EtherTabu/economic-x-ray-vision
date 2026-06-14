@@ -19,6 +19,7 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
           <div className="constraint-card__meta">
             <span className="pill">{constraint.subsector}</span>
             <span className="pill">{constraint.category}</span>
+            <span className="pill">{constraint.opportunity_type}</span>
             <span className="pill">{constraint.origin} record</span>
             <span className="pill">Confidence {constraint.confidence}/10</span>
             <span className="pill">{constraint.validation_status}</span>
@@ -93,6 +94,31 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
           />
           <DetailBlock title="Validation Notes" values={constraint.validation_notes} />
           <DetailBlock title="Evidence Gaps" values={constraint.evidence_gaps} />
+          <DetailBlock
+            title="Graph Position"
+            values={[
+              `Opportunity type: ${constraint.opportunity_type}`,
+              `Upstream links: ${constraint.upstream_constraints.length}`,
+              `Downstream links: ${constraint.downstream_constraints.length}`
+            ]}
+          />
+          <DetailBlock
+            title="Upstream Constraints"
+            values={constraint.upstream_constraints}
+          />
+          <DetailBlock
+            title="Downstream Constraints"
+            values={constraint.downstream_constraints}
+          />
+          <DetailBlock
+            title="Related Processes"
+            values={constraint.related_processes}
+          />
+          <DetailBlock title="Affected Systems" values={constraint.affected_systems} />
+          <DetailBlock
+            title="Solution Hypotheses"
+            values={constraint.solution_hypotheses}
+          />
           <div className="detail-block">
             <h3>Complexity</h3>
             <div className="score-grid">
@@ -126,6 +152,22 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
               <Metric
                 label="Validation confidence"
                 value={constraint.scores.validation_confidence_score}
+              />
+              <Metric
+                label="Constraint density"
+                value={constraint.scores.constraint_density_score}
+              />
+              <Metric
+                label="Downstream impact"
+                value={constraint.scores.downstream_impact_score}
+              />
+              <Metric
+                label="Opportunity"
+                value={constraint.scores.opportunity_score}
+              />
+              <Metric
+                label="Strategic"
+                value={constraint.scores.total_strategic_score}
               />
             </div>
           </div>

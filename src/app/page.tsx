@@ -7,10 +7,12 @@ import { constraintRegistry } from "@/data/constraintRegistry";
 import {
   categoryOptions,
   getConstraintsWithScores,
+  opportunityTypeOptions,
   sortAndFilterConstraints
 } from "@/lib/constraints";
 import type {
   ConstraintCategory,
+  OpportunityType,
   RecordOrigin,
   SortOption
 } from "@/types/constraint";
@@ -18,6 +20,9 @@ import type {
 export default function Home() {
   const [category, setCategory] = useState<ConstraintCategory | "All">("All");
   const [origin, setOrigin] = useState<RecordOrigin | "All">("All");
+  const [opportunityType, setOpportunityType] = useState<OpportunityType | "All">(
+    "All"
+  );
   const [sortBy, setSortBy] = useState<SortOption>("total_priority_score");
 
   const scoredConstraints = useMemo(
@@ -26,8 +31,15 @@ export default function Home() {
   );
 
   const visibleConstraints = useMemo(
-    () => sortAndFilterConstraints(scoredConstraints, category, origin, sortBy),
-    [category, origin, scoredConstraints, sortBy]
+    () =>
+      sortAndFilterConstraints(
+        scoredConstraints,
+        category,
+        origin,
+        opportunityType,
+        sortBy
+      ),
+    [category, opportunityType, origin, scoredConstraints, sortBy]
   );
 
   const seedRecordCount = scoredConstraints.filter(
@@ -59,6 +71,31 @@ export default function Home() {
 
   const topPriority = scoredConstraints.reduce((top, item) =>
     item.scores.total_priority_score > top.scores.total_priority_score ? item : top
+  );
+
+  const highestStrategicOpportunity = scoredConstraints.reduce((top, item) =>
+    item.scores.total_strategic_score > top.scores.total_strategic_score
+      ? item
+      : top
+  );
+
+  const mostConnectedConstraint = scoredConstraints.reduce((top, item) =>
+    item.scores.constraint_density_score > top.scores.constraint_density_score
+      ? item
+      : top
+  );
+
+  const highestDownstreamImpact = scoredConstraints.reduce((top, item) =>
+    item.scores.downstream_impact_score > top.scores.downstream_impact_score
+      ? item
+      : top
+  );
+
+  const highestAiSolvableOpportunity = scoredConstraints.reduce((top, item) =>
+    item.scores.ai_readiness_score + item.scores.opportunity_score >
+    top.scores.ai_readiness_score + top.scores.opportunity_score
+      ? item
+      : top
   );
 
   return (
@@ -156,13 +193,39 @@ export default function Home() {
           </p>
         </section>
 
+        <section className="strategic-grid" aria-label="Strategic opportunity signals">
+          <StrategicSignal
+            label="Highest Strategic Opportunity"
+            score={highestStrategicOpportunity.scores.total_strategic_score}
+            title={highestStrategicOpportunity.title}
+          />
+          <StrategicSignal
+            label="Most Connected Constraint"
+            score={mostConnectedConstraint.scores.constraint_density_score}
+            title={mostConnectedConstraint.title}
+          />
+          <StrategicSignal
+            label="Highest Downstream Impact"
+            score={highestDownstreamImpact.scores.downstream_impact_score}
+            title={highestDownstreamImpact.title}
+          />
+          <StrategicSignal
+            label="Highest AI-Solvable Opportunity"
+            score={highestAiSolvableOpportunity.scores.ai_readiness_score}
+            title={highestAiSolvableOpportunity.title}
+          />
+        </section>
+
         <ConstraintFilters
           categories={categoryOptions(scoredConstraints)}
           category={category}
+          opportunityTypes={opportunityTypeOptions(scoredConstraints)}
+          opportunityType={opportunityType}
           origin={origin}
           resultCount={visibleConstraints.length}
           sortBy={sortBy}
           onCategoryChange={setCategory}
+          onOpportunityTypeChange={setOpportunityType}
           onOriginChange={setOrigin}
           onSortChange={setSortBy}
         />
@@ -178,5 +241,23 @@ export default function Home() {
         ) : null}
       </section>
     </main>
+  );
+}
+
+function StrategicSignal({
+  label,
+  score,
+  title
+}: {
+  label: string;
+  score: number;
+  title: string;
+}) {
+  return (
+    <div className="strategic-signal">
+      <span>{label}</span>
+      <strong>{title}</strong>
+      <p>Score {score.toFixed(1)}</p>
+    </div>
   );
 }

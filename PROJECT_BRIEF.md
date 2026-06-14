@@ -58,6 +58,10 @@ V1.3 introduces a structured local JSON intake contract before any scraper, AI e
 
 V1.4 turns the intake contract into a local dashboard pipeline. Validated JSON intake records are converted into generated TypeScript data, combined with static seed records in a constraint registry, and labeled with record origin metadata so filtering, scoring, and inspection can distinguish seed records from intake records.
 
+## V2.0 Direction
+
+V2.0 adds a lightweight constraint graph and opportunity ranking layer. Records track upstream and downstream constraints, related processes, affected systems, solution hypotheses, and opportunity type. Deterministic scoring adds constraint density, downstream impact, opportunity, and total strategic scores while preserving priority, evidence, validation, and intake scoring.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:

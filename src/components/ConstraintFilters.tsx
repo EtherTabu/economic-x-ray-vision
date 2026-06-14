@@ -1,5 +1,6 @@
 import type {
   ConstraintCategory,
+  OpportunityType,
   RecordOrigin,
   SortOption
 } from "@/types/constraint";
@@ -7,10 +8,13 @@ import type {
 type ConstraintFiltersProps = {
   categories: ConstraintCategory[];
   category: ConstraintCategory | "All";
+  opportunityTypes: OpportunityType[];
+  opportunityType: OpportunityType | "All";
   origin: RecordOrigin | "All";
   resultCount: number;
   sortBy: SortOption;
   onCategoryChange: (category: ConstraintCategory | "All") => void;
+  onOpportunityTypeChange: (opportunityType: OpportunityType | "All") => void;
   onOriginChange: (origin: RecordOrigin | "All") => void;
   onSortChange: (sortBy: SortOption) => void;
 };
@@ -23,16 +27,23 @@ const sortLabels: Record<SortOption, string> = {
   overlooked_opportunity_score: "Overlooked opportunity",
   evidence_score: "Evidence strength",
   measurability_score: "Measurability",
-  validation_confidence_score: "Validation confidence"
+  validation_confidence_score: "Validation confidence",
+  constraint_density_score: "Constraint density",
+  downstream_impact_score: "Downstream impact",
+  opportunity_score: "Opportunity score",
+  total_strategic_score: "Strategic score"
 };
 
 export function ConstraintFilters({
   categories,
   category,
+  opportunityTypes,
+  opportunityType,
   origin,
   resultCount,
   sortBy,
   onCategoryChange,
+  onOpportunityTypeChange,
   onOriginChange,
   onSortChange
 }: ConstraintFiltersProps) {
@@ -50,6 +61,24 @@ export function ConstraintFilters({
           >
             <option value="All">All categories</option>
             {categories.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="control-group">
+          <label htmlFor="opportunity-type">Opportunity type</label>
+          <select
+            id="opportunity-type"
+            onChange={(event) =>
+              onOpportunityTypeChange(event.target.value as OpportunityType | "All")
+            }
+            value={opportunityType}
+          >
+            <option value="All">All opportunity types</option>
+            {opportunityTypes.map((option) => (
               <option key={option} value={option}>
                 {option}
               </option>
