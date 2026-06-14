@@ -1,0 +1,852 @@
+{
+  "generated_at": "2026-06-14T22:48:18.362Z",
+  "dossier_count": 16,
+  "validation_summary": {
+    "total_dossiers": 16,
+    "decision_ready_records": 4,
+    "needs_evidence_records": 10,
+    "high_priority_validation_records": 2,
+    "high_opportunity_weak_evidence_records": 8,
+    "validation_status_distribution": {
+      "needs_evidence": 10,
+      "partially_supported": 2,
+      "evidence_backed": 3,
+      "validated": 1
+    },
+    "average_validation_priority_score": 6.9
+  },
+  "dossiers": [
+    {
+      "constraint_id": "hc-admin-009",
+      "constraint_title": "Appointment call queue overflow",
+      "core_claim": "Appointment call queue overflow creates idle capacity through Call routing.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 6.3,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Moderate evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "High inbound volume mixes urgent and routine needs",
+        "Schedulers answer repeated availability questions",
+        "Missed calls become abandoned demand"
+      ],
+      "evidence_gaps": [
+        "Caller intent distribution",
+        "Appointment slots lost after abandoned calls"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring idle capacity in Call routing.",
+        "Measured waste aligns with time 7/10, labor 7/10, or capital 6/10 assumptions.",
+        "Downstream effects appear in Scheduling throughput."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring idle capacity friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Call routing."
+      ],
+      "recommended_validation_steps": [
+        "Measure Call routing using local operational logs.",
+        "Validate whether Caller intent distribution materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Route callers by intent before scheduler handoff."
+      ],
+      "recommended_source_types": [
+        "Local Phone system logs",
+        "Call routing timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Appointment call queue overflow frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Call routing improve Scheduling throughput?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Call routing using local operational logs.",
+        "Validate whether Caller intent distribution materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Route callers by intent before scheduler handoff."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 7.5
+    },
+    {
+      "constraint_id": "hc-intake-001",
+      "constraint_title": "Duplicate demographic collection across intake channels",
+      "core_claim": "Duplicate demographic collection across intake channels creates duplicated work through Patient intake.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 6.1,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Moderate evidence based on operational pattern inputs with 1 listed source signal(s).",
+      "known_evidence": [
+        "Patients are asked for the same address, phone, insurance, and emergency contact data through multiple intake steps",
+        "Staff reconcile portal-submitted information with EHR registration fields",
+        "Mismatch correction often happens during the visit window"
+      ],
+      "evidence_gaps": [
+        "Average re-entry minutes by visit type",
+        "Mismatch rate between patient-submitted and EHR registration data"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring duplicated work in Patient intake.",
+        "Measured waste aligns with time 7/10, labor 7/10, or capital 4/10 assumptions.",
+        "Downstream effects appear in Eligibility verification."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring duplicated work friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Patient intake."
+      ],
+      "recommended_validation_steps": [
+        "Measure Patient intake using local operational logs.",
+        "Validate whether Average re-entry minutes by visit type materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Promote one authoritative demographic profile across intake channels."
+      ],
+      "recommended_source_types": [
+        "Local Patient portal logs",
+        "Patient intake timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Duplicate demographic collection across intake channels frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Patient intake improve Eligibility verification?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Patient intake using local operational logs.",
+        "Validate whether Average re-entry minutes by visit type materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Promote one authoritative demographic profile across intake channels."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.5
+    },
+    {
+      "constraint_id": "hc-admin-004",
+      "constraint_title": "Referral leakage from manual handoffs",
+      "core_claim": "Referral leakage from manual handoffs creates information gap through Referral management.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 6.1,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Moderate evidence based on mixed secondary inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Referrals depend on fax or phone follow-up",
+        "Missing records delay appointment creation",
+        "Patients often become the coordination layer"
+      ],
+      "evidence_gaps": [
+        "Unscheduled referral count",
+        "Patient abandonment after referral"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring information gap in Referral management.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Specialist scheduling."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring information gap friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Referral management."
+      ],
+      "recommended_validation_steps": [
+        "Measure Referral management using local operational logs.",
+        "Validate whether Unscheduled referral count materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Create closed-loop referral status tracking."
+      ],
+      "recommended_source_types": [
+        "Local EHR logs",
+        "Referral management timestamps or queues",
+        "Mixed Secondary benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Referral leakage from manual handoffs frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Referral management improve Specialist scheduling?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Referral management using local operational logs.",
+        "Validate whether Unscheduled referral count materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Create closed-loop referral status tracking."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 7.4
+    },
+    {
+      "constraint_id": "hc-admin-006",
+      "constraint_title": "Provider credentialing packet duplication",
+      "core_claim": "Provider credentialing packet duplication creates duplicated work through Credentialing.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 6.4,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "Moderate",
+      "evidence_summary": "Moderate evidence based on professional association inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Multiple payers request similar credentialing materials",
+        "Manual expiration tracking creates renewal work",
+        "Provider onboarding waits on document completion"
+      ],
+      "evidence_gaps": [
+        "Duplicate document requests per provider",
+        "Revenue delay while enrollment is pending"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring duplicated work in Credentialing.",
+        "Measured waste aligns with time 8/10, labor 8/10, or capital 6/10 assumptions.",
+        "Downstream effects appear in Payer enrollment."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring duplicated work friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Credentialing."
+      ],
+      "recommended_validation_steps": [
+        "Measure Credentialing using local operational logs.",
+        "Validate whether Duplicate document requests per provider materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Maintain reusable credentialing packets by payer."
+      ],
+      "recommended_source_types": [
+        "Local Credentialing platform logs",
+        "Credentialing timestamps or queues",
+        "Professional Association benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Provider credentialing packet duplication frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Credentialing improve Payer enrollment?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Credentialing using local operational logs.",
+        "Validate whether Duplicate document requests per provider materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Maintain reusable credentialing packets by payer."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 7.4
+    },
+    {
+      "constraint_id": "hc-admin-012",
+      "constraint_title": "Preference card mismatch in procedural supply planning",
+      "core_claim": "Preference card mismatch in procedural supply planning creates market mismatch through Supply picking.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 5.9,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Moderate evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Preference cards are updated inconsistently",
+        "Actual usage varies by clinician and site",
+        "Unused supplies are returned or wasted after setup"
+      ],
+      "evidence_gaps": [
+        "Unused item cost per procedure type",
+        "Frequency of urgent substitutions"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring market mismatch in Supply picking.",
+        "Measured waste aligns with time 6/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Case setup."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring market mismatch friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Supply picking."
+      ],
+      "recommended_validation_steps": [
+        "Measure Supply picking using local operational logs.",
+        "Validate whether Unused item cost per procedure type materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Compare preference cards against actual usage by procedure."
+      ],
+      "recommended_source_types": [
+        "Local Supply chain system logs",
+        "Supply picking timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Preference card mismatch in procedural supply planning frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Supply picking improve Case setup?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Supply picking using local operational logs.",
+        "Validate whether Unused item cost per procedure type materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Compare preference cards against actual usage by procedure."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.4
+    },
+    {
+      "constraint_id": "hc-admin-011",
+      "constraint_title": "Patient statement confusion and support calls",
+      "core_claim": "Patient statement confusion and support calls creates hidden cost through Patient billing.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 6.1,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "Moderate",
+      "evidence_summary": "Moderate evidence based on mixed secondary inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Patients call to clarify balances",
+        "Insurance adjustments are difficult to interpret",
+        "Multiple statements can arrive for one episode of care"
+      ],
+      "evidence_gaps": [
+        "Statement-specific call volume",
+        "Balance resolution time after patient contact"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring hidden cost in Patient billing.",
+        "Measured waste aligns with time 6/10, labor 7/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Support calls."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring hidden cost friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Patient billing."
+      ],
+      "recommended_validation_steps": [
+        "Measure Patient billing using local operational logs.",
+        "Validate whether Statement-specific call volume materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Classify confusing balances before statement release."
+      ],
+      "recommended_source_types": [
+        "Local Billing system logs",
+        "Patient billing timestamps or queues",
+        "Mixed Secondary benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Patient statement confusion and support calls frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Patient billing improve Support calls?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Patient billing using local operational logs.",
+        "Validate whether Statement-specific call volume materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Classify confusing balances before statement release."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.3
+    },
+    {
+      "constraint_id": "hc-intake-003",
+      "constraint_title": "Medical necessity documentation chase",
+      "core_claim": "Medical necessity documentation chase creates information gap through Clinical documentation.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 7.5,
+      "evidence_strength": "High",
+      "evidence_risk_level": "Low",
+      "evidence_summary": "High evidence based on mixed secondary inputs with 1 listed source signal(s).",
+      "known_evidence": [
+        "Orders may lack payer-required supporting details",
+        "Staff send repeated messages to clinicians for missing documentation",
+        "Scheduling or billing waits until documentation is complete"
+      ],
+      "evidence_gaps": [
+        "Documentation chase volume by service line",
+        "Time from missing-document flag to completed addendum"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring information gap in Clinical documentation.",
+        "Measured waste aligns with time 8/10, labor 8/10, or capital 6/10 assumptions.",
+        "Downstream effects appear in Prior authorization."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring information gap friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Clinical documentation."
+      ],
+      "recommended_validation_steps": [
+        "Measure Clinical documentation using local operational logs.",
+        "Validate whether Documentation chase volume by service line materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Detect missing payer-required documentation at order entry."
+      ],
+      "recommended_source_types": [
+        "Local EHR logs",
+        "Clinical documentation timestamps or queues",
+        "Mixed Secondary benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Medical necessity documentation chase frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Clinical documentation improve Prior authorization?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Clinical documentation using local operational logs.",
+        "Validate whether Documentation chase volume by service line materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Detect missing payer-required documentation at order entry."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 7.1
+    },
+    {
+      "constraint_id": "hc-intake-004",
+      "constraint_title": "Financial assistance screening after billing escalation",
+      "core_claim": "Financial assistance screening after billing escalation creates hidden cost through Patient billing.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 6.3,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "Moderate",
+      "evidence_summary": "Moderate evidence based on government inputs with 1 listed source signal(s).",
+      "known_evidence": [
+        "Assistance eligibility can be discovered late in the billing cycle",
+        "Support teams spend time explaining balances that may later be adjusted",
+        "Delayed screening can increase patient confusion and avoidable outreach"
+      ],
+      "evidence_gaps": [
+        "Accounts eligible for assistance before statement generation",
+        "Avoidable outreach tied to late screening"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring hidden cost in Patient billing.",
+        "Measured waste aligns with time 6/10, labor 7/10, or capital 6/10 assumptions.",
+        "Downstream effects appear in Statement cycles."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring hidden cost friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Patient billing."
+      ],
+      "recommended_validation_steps": [
+        "Measure Patient billing using local operational logs.",
+        "Validate whether Accounts eligible for assistance before statement generation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Screen likely assistance eligibility before first statement."
+      ],
+      "recommended_source_types": [
+        "Local Billing system logs",
+        "Patient billing timestamps or queues",
+        "Government benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Financial assistance screening after billing escalation frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Patient billing improve Statement cycles?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Patient billing using local operational logs.",
+        "Validate whether Accounts eligible for assistance before statement generation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Screen likely assistance eligibility before first statement."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.1
+    },
+    {
+      "constraint_id": "hc-admin-008",
+      "constraint_title": "Release of information request backlog",
+      "core_claim": "Release of information request backlog creates compliance drag through Release of information.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 6.4,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "Moderate",
+      "evidence_summary": "Moderate evidence based on government inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Requests arrive through multiple channels",
+        "Identity and authorization checks remain manual",
+        "Records must be redacted, packaged, or transmitted securely"
+      ],
+      "evidence_gaps": [
+        "Average fulfillment time by request channel",
+        "Rework from invalid authorization forms"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring compliance drag in Release of information.",
+        "Measured waste aligns with time 7/10, labor 8/10, or capital 5/10 assumptions.",
+        "Downstream effects appear in Record fulfillment."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring compliance drag friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Release of information."
+      ],
+      "recommended_validation_steps": [
+        "Measure Release of information using local operational logs.",
+        "Validate whether Average fulfillment time by request channel materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Triage requests by completeness and urgency."
+      ],
+      "recommended_source_types": [
+        "Local EHR logs",
+        "Release of information timestamps or queues",
+        "Government benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Release of information request backlog frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Release of information improve Record fulfillment?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Release of information using local operational logs.",
+        "Validate whether Average fulfillment time by request channel materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Triage requests by completeness and urgency."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7
+    },
+    {
+      "constraint_id": "hc-admin-002",
+      "constraint_title": "Insurance eligibility verification before each visit",
+      "core_claim": "Insurance eligibility verification before each visit creates manual verification through Eligibility verification.",
+      "current_validation_status": "partially_supported",
+      "current_validation_confidence": 6.5,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "Moderate",
+      "evidence_summary": "Moderate evidence based on industry benchmark inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Eligibility checks occur even for returning patients",
+        "Coverage can change between booking and visit",
+        "Portal data often needs staff interpretation"
+      ],
+      "evidence_gaps": [
+        "Average verification minutes per visit",
+        "Share of visits requiring repeated verification"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring manual verification in Eligibility verification.",
+        "Measured waste aligns with time 7/10, labor 8/10, or capital 5/10 assumptions.",
+        "Downstream effects appear in Claim submission."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring manual verification friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Eligibility verification."
+      ],
+      "recommended_validation_steps": [
+        "Measure Eligibility verification using local operational logs.",
+        "Validate whether Average verification minutes per visit materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Batch verify coverage before appointment windows."
+      ],
+      "recommended_source_types": [
+        "Local EHR logs",
+        "Eligibility verification timestamps or queues",
+        "Industry Benchmark benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Insurance eligibility verification before each visit frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Eligibility verification improve Claim submission?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Eligibility verification using local operational logs.",
+        "Validate whether Average verification minutes per visit materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Batch verify coverage before appointment windows."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 6.8
+    },
+    {
+      "constraint_id": "hc-admin-007",
+      "constraint_title": "Medication prior authorization exceptions",
+      "core_claim": "Medication prior authorization exceptions creates administrative delay through Electronic prescribing.",
+      "current_validation_status": "needs_evidence",
+      "current_validation_confidence": 7.5,
+      "evidence_strength": "High",
+      "evidence_risk_level": "Low",
+      "evidence_summary": "High evidence based on professional association inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Patients wait while exceptions are reviewed",
+        "Pharmacies contact prescribers for alternatives",
+        "Staff repeat similar justification language"
+      ],
+      "evidence_gaps": [
+        "Therapy abandonment after authorization delay",
+        "Prescriber staff time per exception"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring administrative delay in Electronic prescribing.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 5/10 assumptions.",
+        "Downstream effects appear in Medication dispensing."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring administrative delay friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Electronic prescribing."
+      ],
+      "recommended_validation_steps": [
+        "Measure Electronic prescribing using local operational logs.",
+        "Validate whether Therapy abandonment after authorization delay materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Detect exception likelihood at prescribing time."
+      ],
+      "recommended_source_types": [
+        "Local EHR logs",
+        "Electronic prescribing timestamps or queues",
+        "Professional Association benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Medication prior authorization exceptions frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Electronic prescribing improve Medication dispensing?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Electronic prescribing using local operational logs.",
+        "Validate whether Therapy abandonment after authorization delay materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Detect exception likelihood at prescribing time."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 6.8
+    },
+    {
+      "constraint_id": "hc-intake-002",
+      "constraint_title": "Coordination of benefits ambiguity before claim submission",
+      "core_claim": "Coordination of benefits ambiguity before claim submission creates manual verification through Coverage verification.",
+      "current_validation_status": "partially_supported",
+      "current_validation_confidence": 6.3,
+      "evidence_strength": "Moderate",
+      "evidence_risk_level": "Moderate",
+      "evidence_summary": "Moderate evidence based on industry benchmark inputs with 1 listed source signal(s).",
+      "known_evidence": [
+        "Claims can reject when payer order is wrong",
+        "Staff contact patients or payers to clarify active coverage",
+        "Coverage order is often corrected after an initial failed billing attempt"
+      ],
+      "evidence_gaps": [
+        "Share of rejections caused by coordination of benefits",
+        "Average days delayed by coverage order corrections"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring manual verification in Coverage verification.",
+        "Measured waste aligns with time 7/10, labor 7/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Claim submission."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring manual verification friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Coverage verification."
+      ],
+      "recommended_validation_steps": [
+        "Measure Coverage verification using local operational logs.",
+        "Validate whether Share of rejections caused by coordination of benefits materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Flag conflicting payer order before claim submission."
+      ],
+      "recommended_source_types": [
+        "Local Billing system logs",
+        "Coverage verification timestamps or queues",
+        "Industry Benchmark benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Coordination of benefits ambiguity before claim submission frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Coverage verification improve Claim submission?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Coverage verification using local operational logs.",
+        "Validate whether Share of rejections caused by coordination of benefits materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Flag conflicting payer order before claim submission."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 6.6
+    },
+    {
+      "constraint_id": "hc-admin-001",
+      "constraint_title": "Prior authorization rework loops",
+      "core_claim": "Prior authorization rework loops creates administrative delay through Prior authorization.",
+      "current_validation_status": "evidence_backed",
+      "current_validation_confidence": 7.8,
+      "evidence_strength": "High",
+      "evidence_risk_level": "Low",
+      "evidence_summary": "High evidence based on mixed secondary inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Repeated payer-specific forms",
+        "Manual status calls after portal submission",
+        "Treatment scheduling delayed while approvals are pending"
+      ],
+      "evidence_gaps": [
+        "Payer-specific denial and approval timing",
+        "Internal labor minutes per authorization"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring administrative delay in Prior authorization.",
+        "Measured waste aligns with time 9/10, labor 9/10, or capital 6/10 assumptions.",
+        "Downstream effects appear in Treatment scheduling."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring administrative delay friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Prior authorization."
+      ],
+      "recommended_validation_steps": [
+        "Measure Prior authorization using local operational logs.",
+        "Validate whether Payer-specific denial and approval timing materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Standardize payer documentation checklists."
+      ],
+      "recommended_source_types": [
+        "Local EHR logs",
+        "Prior authorization timestamps or queues",
+        "Mixed Secondary benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Prior authorization rework loops frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Prior authorization improve Treatment scheduling?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Prior authorization using local operational logs.",
+        "Validate whether Payer-specific denial and approval timing materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Standardize payer documentation checklists."
+      ],
+      "decision_usefulness": "Decision-ready for prioritizing a scoped validation or pilot.",
+      "decision_ready": true,
+      "validation_priority_score": 6.5
+    },
+    {
+      "constraint_id": "hc-admin-003",
+      "constraint_title": "Claim denial triage and resubmission",
+      "core_claim": "Claim denial triage and resubmission creates revenue leakage through Claims processing.",
+      "current_validation_status": "evidence_backed",
+      "current_validation_confidence": 8.1,
+      "evidence_strength": "High",
+      "evidence_risk_level": "Low",
+      "evidence_summary": "High evidence based on industry benchmark inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Denial codes require manual interpretation",
+        "Missing documentation is gathered after the fact",
+        "Resubmission deadlines create avoidable write-offs"
+      ],
+      "evidence_gaps": [
+        "Preventable denial share",
+        "Labor cost per denial category"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring revenue leakage in Claims processing.",
+        "Measured waste aligns with time 8/10, labor 8/10, or capital 9/10 assumptions.",
+        "Downstream effects appear in Cash collection."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring revenue leakage friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Claims processing."
+      ],
+      "recommended_validation_steps": [
+        "Measure Claims processing using local operational logs.",
+        "Validate whether Preventable denial share materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Classify denials by preventability before assignment."
+      ],
+      "recommended_source_types": [
+        "Local Billing system logs",
+        "Claims processing timestamps or queues",
+        "Industry Benchmark benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Claim denial triage and resubmission frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Claims processing improve Cash collection?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Claims processing using local operational logs.",
+        "Validate whether Preventable denial share materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Classify denials by preventability before assignment."
+      ],
+      "decision_usefulness": "Decision-ready for prioritizing a scoped validation or pilot.",
+      "decision_ready": true,
+      "validation_priority_score": 6.3
+    },
+    {
+      "constraint_id": "hc-admin-005",
+      "constraint_title": "Post-discharge follow-up gaps",
+      "core_claim": "Post-discharge follow-up gaps creates process handoff through Care transitions.",
+      "current_validation_status": "evidence_backed",
+      "current_validation_confidence": 7.7,
+      "evidence_strength": "High",
+      "evidence_risk_level": "Low",
+      "evidence_summary": "High evidence based on government inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Discharge instructions are not always closed-loop",
+        "Primary care follow-up may be scheduled separately",
+        "Medication and home care coordination require repeated calls"
+      ],
+      "evidence_gaps": [
+        "Follow-up completion rate by discharge type",
+        "Manual outreach attempts per patient"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring process handoff in Care transitions.",
+        "Measured waste aligns with time 7/10, labor 7/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Follow-up scheduling."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring process handoff friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Care transitions."
+      ],
+      "recommended_validation_steps": [
+        "Measure Care transitions using local operational logs.",
+        "Validate whether Follow-up completion rate by discharge type materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Trigger follow-up tasks from discharge events."
+      ],
+      "recommended_source_types": [
+        "Local EHR logs",
+        "Care transitions timestamps or queues",
+        "Government benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Post-discharge follow-up gaps frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Care transitions improve Follow-up scheduling?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Care transitions using local operational logs.",
+        "Validate whether Follow-up completion rate by discharge type materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Trigger follow-up tasks from discharge events."
+      ],
+      "decision_usefulness": "Decision-ready for prioritizing a scoped validation or pilot.",
+      "decision_ready": true,
+      "validation_priority_score": 6.1
+    },
+    {
+      "constraint_id": "hc-admin-010",
+      "constraint_title": "Manual quality measure abstraction",
+      "core_claim": "Manual quality measure abstraction creates compliance drag through Measure abstraction.",
+      "current_validation_status": "validated",
+      "current_validation_confidence": 8.1,
+      "evidence_strength": "High",
+      "evidence_risk_level": "Low",
+      "evidence_summary": "High evidence based on government inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Measure definitions change over time",
+        "Structured fields may not capture the required context",
+        "Manual chart review fills reporting gaps"
+      ],
+      "evidence_gaps": [
+        "Labor hours per measure",
+        "Share of measures requiring manual chart review"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring compliance drag in Measure abstraction.",
+        "Measured waste aligns with time 8/10, labor 8/10, or capital 6/10 assumptions.",
+        "Downstream effects appear in Quality reporting."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring compliance drag friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Measure abstraction."
+      ],
+      "recommended_validation_steps": [
+        "Measure Measure abstraction using local operational logs.",
+        "Validate whether Labor hours per measure materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Map measures to structured data gaps before abstraction."
+      ],
+      "recommended_source_types": [
+        "Local EHR logs",
+        "Measure abstraction timestamps or queues",
+        "Government benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Manual quality measure abstraction frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Measure abstraction improve Quality reporting?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Measure abstraction using local operational logs.",
+        "Validate whether Labor hours per measure materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Map measures to structured data gaps before abstraction."
+      ],
+      "decision_usefulness": "Decision-ready for prioritizing a scoped validation or pilot.",
+      "decision_ready": true,
+      "validation_priority_score": 6
+    }
+  ]
+}

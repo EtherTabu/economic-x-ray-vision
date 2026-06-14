@@ -70,6 +70,10 @@ V3.0 adds an intelligence analyst workbench. Deterministic explainability derive
 
 V4.0 adds local dataset operations before SQLite runtime wiring. The current registry can be built into a JSON dataset snapshot, audited for quality and completeness, and exported as a machine-readable artifact. SQLite remains the next persistence target after JSON snapshot operations stabilize; do not add native SQLite dependencies yet.
 
+## V5.0 Direction
+
+V5.0 adds evidence dossiers and a validation workflow so records are treated as hypotheses until evidence improves. Dossiers derive core claims, evidence gaps, proof/disproof conditions, red-team questions, source recommendations, confidence upgrade paths, decision usefulness, and validation priority from existing fields and scores. Most records should remain needs-evidence or partially-supported unless the local evidence and validation confidence justify decision-ready status.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:

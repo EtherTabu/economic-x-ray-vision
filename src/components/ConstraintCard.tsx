@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ConstraintScoreBadge } from "@/components/ConstraintScoreBadge";
+import { buildEvidenceDossier } from "@/lib/evidenceDossier";
 import { explainConstraint } from "@/lib/explainability";
 import type { ScoredConstraint } from "@/types/constraint";
 
@@ -12,6 +13,7 @@ type ConstraintCardProps = {
 export function ConstraintCard({ constraint }: ConstraintCardProps) {
   const [expanded, setExpanded] = useState(false);
   const explanation = explainConstraint(constraint);
+  const dossier = buildEvidenceDossier(constraint);
 
   return (
     <article className="constraint-card">
@@ -70,6 +72,17 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
               `Evidence strength: ${constraint.evidence_strength}`,
               `Source type: ${constraint.source_type}`,
               `Validation status: ${constraint.validation_status}`
+            ]}
+          />
+          <DetailBlock
+            title="Evidence / Validation Dossier"
+            values={[
+              `Current state: ${dossier.current_validation_status}`,
+              `Evidence risk: ${dossier.evidence_risk_level}`,
+              `Next step: ${dossier.recommended_validation_steps[0]}`,
+              `Would prove true: ${dossier.what_would_prove_this_true[0]}`,
+              `Would disprove: ${dossier.what_would_disprove_this[0]}`,
+              `Decision readiness: ${dossier.decision_usefulness}`
             ]}
           />
           <DetailBlock title="Affected Parties" values={constraint.affected_parties} />

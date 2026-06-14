@@ -2,6 +2,7 @@ type DatasetFsModule = typeof import("node:fs");
 type DatasetPathModule = typeof import("node:path");
 
 const {
+  existsSync: datasetExistsSync,
   mkdirSync: datasetMkdirSync,
   readFileSync: datasetReadFileSync,
   writeFileSync: datasetWriteFileSync
@@ -53,6 +54,7 @@ type ScoredRawRecord = RawRecord & {
 const datasetOutputPath = datasetResolve(
   "data/exports/constraint_dataset_snapshot.json"
 );
+const datasetEvidenceOutputPath = datasetResolve("data/exports/evidence_dossiers.json");
 
 function buildDatasetSnapshot() {
   const records = loadCurrentRegistry();
@@ -72,11 +74,24 @@ function buildDatasetSnapshot() {
       category_distribution: distribution(scoredRecords.map((record) => record.category)),
       opportunity_type_distribution: distribution(
         scoredRecords.map((record) => record.opportunity_type)
-      )
+      ),
+      evidence_dossier_summary: readEvidenceDossierSummary()
     },
     score_summary: scoreSummary(scoredRecords),
     quality_summary: datasetQualitySummary
   };
+}
+
+function readEvidenceDossierSummary() {
+  if (!datasetExistsSync(datasetEvidenceOutputPath)) {
+    return null;
+  }
+
+  const evidenceExport = JSON.parse(
+    datasetReadFileSync(datasetEvidenceOutputPath, "utf8")
+  ) as { validation_summary?: unknown };
+
+  return evidenceExport.validation_summary ?? null;
 }
 
 function writeDatasetSnapshot() {

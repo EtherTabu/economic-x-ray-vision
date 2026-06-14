@@ -12,7 +12,8 @@
     "validate:intake": "node scripts/validate-intake.ts",
     "build:data": "npm run validate:intake && node scripts/build-intake-data.ts",
     "dataset": "npm run build:data && node scripts/build-dataset.ts && node scripts/audit-dataset.ts && node scripts/export-dataset.ts",
-    "check": "npm run validate && npm run build:data && npm run dataset && npm run lint && npm run build"
+    "evidence": "npm run dataset && node scripts/build-evidence-dossiers.ts && node scripts/audit-evidence.ts",
+    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run evidence && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "^15.3.3",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T22:33:01.103Z",
+  "generated_at": "2026-06-14T22:48:18.229Z",
   "record_count": 16,
   "records": [
     {
@@ -1650,6 +1650,20 @@
       "Workflow Redesign": 5,
       "Compliance Simplification": 1,
       "Capacity Optimization": 2
+    },
+    "evidence_dossier_summary": {
+      "total_dossiers": 16,
+      "decision_ready_records": 4,
+      "needs_evidence_records": 10,
+      "high_priority_validation_records": 2,
+      "high_opportunity_weak_evidence_records": 8,
+      "validation_status_distribution": {
+        "needs_evidence": 10,
+        "partially_supported": 2,
+        "evidence_backed": 3,
+        "validated": 1
+      },
+      "average_validation_priority_score": 6.9
     }
   },
   "score_summary": {

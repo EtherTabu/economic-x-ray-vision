@@ -5,6 +5,7 @@ import { AnalysisWorkbench } from "@/components/AnalysisWorkbench";
 import { ConstraintCard } from "@/components/ConstraintCard";
 import { ConstraintFilters } from "@/components/ConstraintFilters";
 import { DatasetHealthPanel } from "@/components/DatasetHealthPanel";
+import { EvidenceDossierPanel } from "@/components/EvidenceDossierPanel";
 import { constraintRegistry } from "@/data/constraintRegistry";
 import {
   categoryOptions,
@@ -14,6 +15,10 @@ import {
   sortAndFilterConstraints
 } from "@/lib/constraints";
 import { analyzeDatasetQuality } from "@/lib/dataQuality";
+import {
+  buildEvidenceDossiers,
+  summarizeEvidenceDossiers
+} from "@/lib/evidenceDossier";
 import { analyzeOpportunities } from "@/lib/opportunityAnalysis";
 import type {
   ConstraintCategory,
@@ -57,6 +62,16 @@ export default function Home() {
   const datasetQuality = useMemo(
     () => analyzeDatasetQuality(scoredConstraints),
     [scoredConstraints]
+  );
+
+  const evidenceDossiers = useMemo(
+    () => buildEvidenceDossiers(scoredConstraints),
+    [scoredConstraints]
+  );
+
+  const evidenceDossierSummary = useMemo(
+    () => summarizeEvidenceDossiers(evidenceDossiers),
+    [evidenceDossiers]
   );
 
   const seedRecordCount = scoredConstraints.filter(
@@ -235,6 +250,14 @@ export default function Home() {
         <AnalysisWorkbench portfolio={opportunityPortfolio} />
 
         <DatasetHealthPanel summary={datasetQuality} />
+
+        <EvidenceDossierPanel
+          dossiers={evidenceDossiers}
+          strongestUnderValidatedOpportunity={
+            datasetQuality.strongest_under_validated_opportunity
+          }
+          summary={evidenceDossierSummary}
+        />
 
         <ConstraintFilters
           categories={categoryOptions(scoredConstraints)}
