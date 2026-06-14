@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { AnalysisWorkbench } from "@/components/AnalysisWorkbench";
 import { ConstraintCard } from "@/components/ConstraintCard";
 import { ConstraintFilters } from "@/components/ConstraintFilters";
+import { DatasetHealthPanel } from "@/components/DatasetHealthPanel";
 import { constraintRegistry } from "@/data/constraintRegistry";
 import {
   categoryOptions,
@@ -12,6 +13,7 @@ import {
   opportunityTypeOptions,
   sortAndFilterConstraints
 } from "@/lib/constraints";
+import { analyzeDatasetQuality } from "@/lib/dataQuality";
 import { analyzeOpportunities } from "@/lib/opportunityAnalysis";
 import type {
   ConstraintCategory,
@@ -49,6 +51,11 @@ export default function Home() {
 
   const opportunityPortfolio = useMemo(
     () => analyzeOpportunities(scoredConstraints),
+    [scoredConstraints]
+  );
+
+  const datasetQuality = useMemo(
+    () => analyzeDatasetQuality(scoredConstraints),
     [scoredConstraints]
   );
 
@@ -226,6 +233,8 @@ export default function Home() {
         </section>
 
         <AnalysisWorkbench portfolio={opportunityPortfolio} />
+
+        <DatasetHealthPanel summary={datasetQuality} />
 
         <ConstraintFilters
           categories={categoryOptions(scoredConstraints)}

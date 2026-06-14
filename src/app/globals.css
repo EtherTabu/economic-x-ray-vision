@@ -365,6 +365,66 @@ h1 {
   line-height: 1.4;
 }
 
+.dataset-health {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.dataset-health__header {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.4fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.dataset-health__header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.dataset-health__header p:not(.section-kicker) {
+  margin: 0;
+  color: #344655;
+  line-height: 1.55;
+}
+
+.dataset-health__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.health-metric {
+  min-height: 82px;
+  padding: 12px;
+  background: #fbfcfd;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.health-metric span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.health-metric strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--text);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -569,7 +629,8 @@ select {
   .constraint-card__details,
   .intelligence-overview,
   .scoring-model,
-  .workbench__header {
+  .workbench__header,
+  .dataset-health__header {
     grid-template-columns: 1fr;
   }
 

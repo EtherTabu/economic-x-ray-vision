@@ -66,6 +66,10 @@ V2.0 adds a lightweight constraint graph and opportunity ranking layer. Records 
 
 V3.0 adds an intelligence analyst workbench. Deterministic explainability derives score drivers, strategic interpretation, weak assumptions, evidence risks, validation next steps, intervention paths, AI/automation angles, and analyst takeaways from existing records and scores. Portfolio opportunity analysis identifies strongest, most AI-solvable, under-validated, under-measured, most connected, and low-complexity/high-impact opportunities without external facts or APIs.
 
+## V4.0 Direction
+
+V4.0 adds local dataset operations before SQLite runtime wiring. The current registry can be built into a JSON dataset snapshot, audited for quality and completeness, and exported as a machine-readable artifact. SQLite remains the next persistence target after JSON snapshot operations stabilize; do not add native SQLite dependencies yet.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:
