@@ -45,7 +45,16 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
           <DetailBlock title="Evidence" values={constraint.evidence} />
           <DetailBlock title="Affected Parties" values={constraint.affected_parties} />
           <DetailBlock title="Current Process" values={constraint.current_process} />
-          <DetailBlock title="Waste Signals" values={constraint.resource_waste} />
+          <DetailBlock title="Resource Waste" values={constraint.resource_waste} />
+          <div className="detail-block">
+            <h3>Waste Intensity</h3>
+            <div className="score-grid">
+              <Metric label="Time waste" value={constraint.time_waste} />
+              <Metric label="Capital waste" value={constraint.capital_waste} />
+              <Metric label="Labor waste" value={constraint.labor_waste} />
+              <Metric label="Confidence" value={constraint.confidence} />
+            </div>
+          </div>
           <DetailBlock title="Opportunity Cost" values={[constraint.opportunity_cost]} />
           <DetailBlock
             title="Impact"
@@ -55,7 +64,18 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
             ]}
           />
           <div className="detail-block">
-            <h3>Scores</h3>
+            <h3>Complexity</h3>
+            <div className="score-grid">
+              <Metric
+                label="Implementation"
+                value={constraint.implementation_complexity}
+              />
+              <Metric label="Regulatory" value={constraint.regulatory_complexity} />
+              <Metric label="Adoption" value={constraint.adoption_complexity} />
+            </div>
+          </div>
+          <div className="detail-block detail-block--wide">
+            <h3>Score Breakdown</h3>
             <div className="score-grid">
               <Metric label="Severity" value={constraint.scores.severity_score} />
               <Metric label="Solvability" value={constraint.scores.solvability_score} />
@@ -63,6 +83,10 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
               <Metric
                 label="Overlooked"
                 value={constraint.scores.overlooked_opportunity_score}
+              />
+              <Metric
+                label="Total priority"
+                value={constraint.scores.total_priority_score}
               />
             </div>
           </div>

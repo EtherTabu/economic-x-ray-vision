@@ -42,6 +42,10 @@ V1 should include:
 
 V1 may use static TypeScript seed data for the UI first. `db/schema.sql` is a planned SQLite-ready schema and should not be described as a live SQLite implementation unless the app is actually wired to SQLite.
 
+## V1.1 Direction
+
+V1.1 should make the prototype feel more like an intelligence product while keeping the same small local-first architecture. Prioritize clear dashboard hierarchy, highest-priority constraint visibility, expanded inspection details, a full score breakdown, and a short deterministic scoring explanation in the UI.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:
