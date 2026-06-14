@@ -50,6 +50,10 @@ V1.1 should make the prototype feel more like an intelligence product while keep
 
 V1.2 adds an evidence and validation layer so each constraint can be inspected for defensibility. Constraint records should track evidence strength, source type, validation status, source quality, measurement difficulty, data availability, confidence reasoning, validation notes, and evidence gaps. Deterministic scoring should include evidence, measurability, and validation confidence scores without adding scrapers, AI APIs, or SQLite wiring.
 
+## V1.3 Direction
+
+V1.3 introduces a structured local JSON intake contract before any scraper, AI extraction, Python worker, or SQLite integration is added. Intake records live outside the app seed data, validate required fields and score ranges locally, and can be converted into the internal TypeScript constraint object shape when the ingestion path is ready.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:

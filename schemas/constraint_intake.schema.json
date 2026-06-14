@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Constraint Intake Contract",
+  "type": "object",
+  "required": ["contract_version", "records"],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "1.0"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/constraintRecord"
+      }
+    }
+  },
+  "$defs": {
+    "score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["title", "publisher", "source_type"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "publisher": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_type": {
+          "enum": [
+            "Government",
+            "Industry Benchmark",
+            "Professional Association",
+            "Mixed Secondary",
+            "Operational Pattern"
+          ]
+        },
+        "url": {
+          "type": "string"
+        },
+        "accessed": {
+          "type": "string"
+        }
+      }
+    },
+    "constraintRecord": {
+      "type": "object",
+      "required": [
+        "id",
+        "industry",
+        "subsector",
+        "title",
+        "category",
+        "description",
+        "evidence",
+        "affected_parties",
+        "current_process",
+        "resource_waste",
+        "time_waste",
+        "capital_waste",
+        "labor_waste",
+        "opportunity_cost",
+        "estimated_annual_impact",
+        "growth_trend",
+        "visibility_score",
+        "overlooked_score",
+        "digital_solution_potential",
+        "automation_potential",
+        "ai_potential",
+        "implementation_complexity",
+        "regulatory_complexity",
+        "adoption_complexity",
+        "confidence",
+        "evidence_strength",
+        "source_type",
+        "validation_status",
+        "source_quality",
+        "measurement_difficulty",
+        "data_availability",
+        "confidence_reasoning",
+        "validation_notes",
+        "evidence_gaps",
+        "sources"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "industry": {
+          "const": "Healthcare"
+        },
+        "subsector": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "category": {
+          "enum": [
+            "Administrative Delay",
+            "Manual Verification",
+            "Revenue Leakage",
+            "Information Gap",
+            "Process Handoff",
+            "Duplicated Work",
+            "Compliance Drag",
+            "Idle Capacity",
+            "Hidden Cost",
+            "Market Mismatch"
+          ]
+        },
+        "description": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "evidence": {
+          "$ref": "#/$defs/stringList"
+        },
+        "affected_parties": {
+          "$ref": "#/$defs/stringList"
+        },
+        "current_process": {
+          "$ref": "#/$defs/stringList"
+        },
+        "resource_waste": {
+          "$ref": "#/$defs/stringList"
+        },
+        "time_waste": {
+          "$ref": "#/$defs/score"
+        },
+        "capital_waste": {
+          "$ref": "#/$defs/score"
+        },
+        "labor_waste": {
+          "$ref": "#/$defs/score"
+        },
+        "opportunity_cost": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "estimated_annual_impact": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "growth_trend": {
+          "enum": ["Decreasing", "Stable", "Increasing"]
+        },
+        "visibility_score": {
+          "$ref": "#/$defs/score"
+        },
+        "overlooked_score": {
+          "$ref": "#/$defs/score"
+        },
+        "digital_solution_potential": {
+          "$ref": "#/$defs/score"
+        },
+        "automation_potential": {
+          "$ref": "#/$defs/score"
+        },
+        "ai_potential": {
+          "$ref": "#/$defs/score"
+        },
+        "implementation_complexity": {
+          "$ref": "#/$defs/score"
+        },
+        "regulatory_complexity": {
+          "$ref": "#/$defs/score"
+        },
+        "adoption_complexity": {
+          "$ref": "#/$defs/score"
+        },
+        "confidence": {
+          "$ref": "#/$defs/score"
+        },
+        "evidence_strength": {
+          "enum": ["Low", "Moderate", "High"]
+        },
+        "source_type": {
+          "enum": [
+            "Government",
+            "Industry Benchmark",
+            "Professional Association",
+            "Mixed Secondary",
+            "Operational Pattern"
+          ]
+        },
+        "validation_status": {
+          "enum": [
+            "Unverified",
+            "Plausible",
+            "Partially Validated",
+            "Validated"
+          ]
+        },
+        "source_quality": {
+          "$ref": "#/$defs/score"
+        },
+        "measurement_difficulty": {
+          "$ref": "#/$defs/score"
+        },
+        "data_availability": {
+          "$ref": "#/$defs/score"
+        },
+        "confidence_reasoning": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "validation_notes": {
+          "$ref": "#/$defs/stringList"
+        },
+        "evidence_gaps": {
+          "$ref": "#/$defs/stringList"
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        }
+      }
+    }
+  }
+}
