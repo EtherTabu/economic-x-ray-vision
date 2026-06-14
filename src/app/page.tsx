@@ -6,6 +6,7 @@ import { ConstraintCard } from "@/components/ConstraintCard";
 import { ConstraintFilters } from "@/components/ConstraintFilters";
 import { DatasetHealthPanel } from "@/components/DatasetHealthPanel";
 import { EvidenceDossierPanel } from "@/components/EvidenceDossierPanel";
+import { InterventionStrategyPanel } from "@/components/InterventionStrategyPanel";
 import { constraintRegistry } from "@/data/constraintRegistry";
 import {
   categoryOptions,
@@ -20,6 +21,10 @@ import {
   summarizeEvidenceDossiers
 } from "@/lib/evidenceDossier";
 import { analyzeOpportunities } from "@/lib/opportunityAnalysis";
+import {
+  buildInterventionStrategies,
+  summarizeInterventions
+} from "@/lib/interventionSimulator";
 import type {
   ConstraintCategory,
   OpportunityType,
@@ -72,6 +77,16 @@ export default function Home() {
   const evidenceDossierSummary = useMemo(
     () => summarizeEvidenceDossiers(evidenceDossiers),
     [evidenceDossiers]
+  );
+
+  const interventionStrategies = useMemo(
+    () => buildInterventionStrategies(scoredConstraints),
+    [scoredConstraints]
+  );
+
+  const interventionSummary = useMemo(
+    () => summarizeInterventions(interventionStrategies),
+    [interventionStrategies]
   );
 
   const seedRecordCount = scoredConstraints.filter(
@@ -257,6 +272,11 @@ export default function Home() {
             datasetQuality.strongest_under_validated_opportunity
           }
           summary={evidenceDossierSummary}
+        />
+
+        <InterventionStrategyPanel
+          strategies={interventionStrategies}
+          summary={interventionSummary}
         />
 
         <ConstraintFilters

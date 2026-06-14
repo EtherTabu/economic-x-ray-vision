@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ConstraintScoreBadge } from "@/components/ConstraintScoreBadge";
 import { buildEvidenceDossier } from "@/lib/evidenceDossier";
 import { explainConstraint } from "@/lib/explainability";
+import { buildInterventionStrategy } from "@/lib/interventionSimulator";
 import type { ScoredConstraint } from "@/types/constraint";
 
 type ConstraintCardProps = {
@@ -14,6 +15,7 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
   const [expanded, setExpanded] = useState(false);
   const explanation = explainConstraint(constraint);
   const dossier = buildEvidenceDossier(constraint);
+  const strategy = buildInterventionStrategy(constraint);
 
   return (
     <article className="constraint-card">
@@ -83,6 +85,20 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
               `Would prove true: ${dossier.what_would_prove_this_true[0]}`,
               `Would disprove: ${dossier.what_would_disprove_this[0]}`,
               `Decision readiness: ${dossier.decision_usefulness}`
+            ]}
+          />
+          <DetailBlock
+            title="Action Strategy"
+            values={[
+              `Recommended intervention: ${strategy.intervention_type.replaceAll("_", " ")}`,
+              `First experiment: ${strategy.first_experiment}`,
+              `Success metric: ${strategy.success_metrics[0]}`,
+              `Action confidence: ${strategy.action_confidence.toFixed(1)}/10`,
+              `Rollout guardrail: ${
+                strategy.action_confidence < 7
+                  ? "Validation is weak; run measurement-first before rollout."
+                  : "Use a bounded pilot before scaling."
+              }`
             ]}
           />
           <DetailBlock title="Affected Parties" values={constraint.affected_parties} />

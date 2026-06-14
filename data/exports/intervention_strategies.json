@@ -1,0 +1,910 @@
+{
+  "generated_at": "2026-06-14T23:07:46.808Z",
+  "strategy_count": 16,
+  "record_count": 16,
+  "intervention_summary": {
+    "total_strategies": 16,
+    "top_fast_wins": [
+      "Appointment call queue overflow",
+      "Insurance eligibility verification before each visit",
+      "Duplicate demographic collection across intake channels",
+      "Patient statement confusion and support calls",
+      "Provider credentialing packet duplication"
+    ],
+    "top_ai_leverage": [
+      "Claim denial triage and resubmission",
+      "Medical necessity documentation chase",
+      "Prior authorization rework loops",
+      "Medication prior authorization exceptions",
+      "Manual quality measure abstraction"
+    ],
+    "high_upside_high_friction": [
+      "Claim denial triage and resubmission",
+      "Prior authorization rework loops",
+      "Medical necessity documentation chase",
+      "Post-discharge follow-up gaps",
+      "Medication prior authorization exceptions"
+    ],
+    "validation_required_before_action": [
+      "Appointment call queue overflow",
+      "Insurance eligibility verification before each visit",
+      "Patient statement confusion and support calls",
+      "Duplicate demographic collection across intake channels",
+      "Provider credentialing packet duplication"
+    ],
+    "intervention_type_distribution": {
+      "automation_assist": 4,
+      "workflow_redesign": 1,
+      "policy_simplification": 1,
+      "evidence_collection": 10
+    },
+    "average_action_confidence": 6.6,
+    "highest_priority_intervention": "Automation Assist for Claims processing"
+  },
+  "strategies": [
+    {
+      "constraint_id": "hc-admin-003",
+      "constraint_title": "Claim denial triage and resubmission",
+      "intervention_type": "automation_assist",
+      "intervention_name": "Automation Assist for Claims processing",
+      "intervention_thesis": "Automation Assist could reduce revenue leakage in Claims processing without assuming unproven financial ROI.",
+      "why_this_fits": "Automation Assist fits because the record shows revenue leakage, workflow redesign potential, and downstream impact in Cash collection.",
+      "expected_unlock": "Relative unlock: improve Cash collection by reducing friction across Claims processing and Billing system.",
+      "affected_processes": [
+        "Claims processing",
+        "Denial management",
+        "Revenue recovery"
+      ],
+      "affected_systems": [
+        "Billing system",
+        "Clearinghouse",
+        "Payer portals"
+      ],
+      "required_evidence": [
+        "Measure Claims processing using local operational logs.",
+        "Validate whether Preventable denial share materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring revenue leakage in Claims processing.",
+        "Staff can test changes in Claims processing without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Pilot automation assist on one bounded Claims processing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Claims processing",
+        "Shorter delay before Cash collection",
+        "Fewer exceptions in Billing system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring revenue leakage friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Claims processing."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Medium",
+      "ai_leverage_score": 7.6,
+      "pilotability_score": 5.8,
+      "evidence_dependency_score": 2.8,
+      "expected_unlock_score": 8.3,
+      "time_to_impact_score": 5.5,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5,
+      "validation_readiness_score": 8.2,
+      "total_intervention_score": 6.6,
+      "intervention_priority_score": 7,
+      "action_confidence": 7.5,
+      "recommended_next_step": "Run a narrow pilot using: Classify denials by preventability before assignment"
+    },
+    {
+      "constraint_id": "hc-admin-001",
+      "constraint_title": "Prior authorization rework loops",
+      "intervention_type": "automation_assist",
+      "intervention_name": "Automation Assist for Prior authorization",
+      "intervention_thesis": "Automation Assist could reduce administrative delay in Prior authorization without assuming unproven financial ROI.",
+      "why_this_fits": "Automation Assist fits because the record shows administrative delay, automation potential, and downstream impact in Treatment scheduling.",
+      "expected_unlock": "Relative unlock: improve Treatment scheduling by reducing friction across Prior authorization and EHR.",
+      "affected_processes": [
+        "Prior authorization",
+        "Clinical documentation",
+        "Scheduling"
+      ],
+      "affected_systems": [
+        "EHR",
+        "Payer portals",
+        "Scheduling system"
+      ],
+      "required_evidence": [
+        "Measure Prior authorization using local operational logs.",
+        "Validate whether Payer-specific denial and approval timing materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring administrative delay in Prior authorization.",
+        "Staff can test changes in Prior authorization without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Pilot automation assist on one bounded Prior authorization workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Prior authorization",
+        "Shorter delay before Treatment scheduling",
+        "Fewer exceptions in EHR"
+      ],
+      "failure_modes": [
+        "Local records show little recurring administrative delay friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Prior authorization."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 7,
+      "pilotability_score": 5.3,
+      "evidence_dependency_score": 3,
+      "expected_unlock_score": 8.3,
+      "time_to_impact_score": 5.2,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 4.6,
+      "validation_readiness_score": 8,
+      "total_intervention_score": 6.4,
+      "intervention_priority_score": 6.8,
+      "action_confidence": 7.3,
+      "recommended_next_step": "Run a narrow pilot using: Standardize payer documentation checklists"
+    },
+    {
+      "constraint_id": "hc-intake-003",
+      "constraint_title": "Medical necessity documentation chase",
+      "intervention_type": "automation_assist",
+      "intervention_name": "Automation Assist for Clinical documentation",
+      "intervention_thesis": "Automation Assist could reduce information gap in Clinical documentation without assuming unproven financial ROI.",
+      "why_this_fits": "Automation Assist fits because the record shows information gap, automation potential, and downstream impact in Prior authorization.",
+      "expected_unlock": "Relative unlock: improve Prior authorization by reducing friction across Clinical documentation and EHR.",
+      "affected_processes": [
+        "Clinical documentation",
+        "Order review",
+        "Payer review"
+      ],
+      "affected_systems": [
+        "EHR",
+        "Payer portals",
+        "Messaging inbox"
+      ],
+      "required_evidence": [
+        "Measure Clinical documentation using local operational logs.",
+        "Validate whether Documentation chase volume by service line materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring information gap in Clinical documentation.",
+        "Staff can test changes in Clinical documentation without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Pilot automation assist on one bounded Clinical documentation workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Clinical documentation",
+        "Shorter delay before Prior authorization",
+        "Fewer exceptions in EHR"
+      ],
+      "failure_modes": [
+        "Local records show little recurring information gap friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Clinical documentation."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 7.4,
+      "pilotability_score": 5.2,
+      "evidence_dependency_score": 3.3,
+      "expected_unlock_score": 8.1,
+      "time_to_impact_score": 5.1,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 4.6,
+      "validation_readiness_score": 7.7,
+      "total_intervention_score": 6.3,
+      "intervention_priority_score": 6.7,
+      "action_confidence": 7.2,
+      "recommended_next_step": "Run a narrow pilot using: Detect missing payer-required documentation at order entry"
+    },
+    {
+      "constraint_id": "hc-admin-005",
+      "constraint_title": "Post-discharge follow-up gaps",
+      "intervention_type": "workflow_redesign",
+      "intervention_name": "Workflow Redesign for Care transitions",
+      "intervention_thesis": "Workflow Redesign could reduce process handoff in Care transitions without assuming unproven financial ROI.",
+      "why_this_fits": "Workflow Redesign fits because the record shows process handoff, workflow redesign potential, and downstream impact in Follow-up scheduling.",
+      "expected_unlock": "Relative unlock: improve Follow-up scheduling by reducing friction across Care transitions and EHR.",
+      "affected_processes": [
+        "Care transitions",
+        "Patient outreach",
+        "Follow-up verification"
+      ],
+      "affected_systems": [
+        "EHR",
+        "Care management platform",
+        "Scheduling system"
+      ],
+      "required_evidence": [
+        "Measure Care transitions using local operational logs.",
+        "Validate whether Follow-up completion rate by discharge type materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring process handoff in Care transitions.",
+        "Staff can test changes in Care transitions without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Pilot workflow redesign on one bounded Care transitions workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Care transitions",
+        "Shorter delay before Follow-up scheduling",
+        "Fewer exceptions in EHR"
+      ],
+      "failure_modes": [
+        "Local records show little recurring process handoff friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Care transitions."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.9,
+      "pilotability_score": 5.5,
+      "evidence_dependency_score": 3.1,
+      "expected_unlock_score": 7.8,
+      "time_to_impact_score": 5.3,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5,
+      "validation_readiness_score": 7.9,
+      "total_intervention_score": 6.1,
+      "intervention_priority_score": 6.5,
+      "action_confidence": 7.2,
+      "recommended_next_step": "Run a narrow pilot using: Trigger follow-up tasks from discharge events"
+    },
+    {
+      "constraint_id": "hc-admin-007",
+      "constraint_title": "Medication prior authorization exceptions",
+      "intervention_type": "automation_assist",
+      "intervention_name": "Automation Assist for Electronic prescribing",
+      "intervention_thesis": "Automation Assist could reduce administrative delay in Electronic prescribing without assuming unproven financial ROI.",
+      "why_this_fits": "Automation Assist fits because the record shows administrative delay, automation potential, and downstream impact in Medication dispensing.",
+      "expected_unlock": "Relative unlock: improve Medication dispensing by reducing friction across Electronic prescribing and EHR.",
+      "affected_processes": [
+        "Electronic prescribing",
+        "Pharmacy coordination",
+        "Prior authorization"
+      ],
+      "affected_systems": [
+        "EHR",
+        "Pharmacy system",
+        "Payer portals"
+      ],
+      "required_evidence": [
+        "Measure Electronic prescribing using local operational logs.",
+        "Validate whether Therapy abandonment after authorization delay materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring administrative delay in Electronic prescribing.",
+        "Staff can test changes in Electronic prescribing without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Pilot automation assist on one bounded Electronic prescribing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Electronic prescribing",
+        "Shorter delay before Medication dispensing",
+        "Fewer exceptions in EHR"
+      ],
+      "failure_modes": [
+        "Local records show little recurring administrative delay friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Electronic prescribing."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 6.8,
+      "pilotability_score": 5.2,
+      "evidence_dependency_score": 3.3,
+      "expected_unlock_score": 7.7,
+      "time_to_impact_score": 5.1,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 4.6,
+      "validation_readiness_score": 7.7,
+      "total_intervention_score": 6.1,
+      "intervention_priority_score": 6.5,
+      "action_confidence": 7.1,
+      "recommended_next_step": "Run a narrow pilot using: Detect exception likelihood at prescribing time"
+    },
+    {
+      "constraint_id": "hc-admin-010",
+      "constraint_title": "Manual quality measure abstraction",
+      "intervention_type": "policy_simplification",
+      "intervention_name": "Policy Simplification for Measure abstraction",
+      "intervention_thesis": "Policy Simplification could reduce compliance drag in Measure abstraction without assuming unproven financial ROI.",
+      "why_this_fits": "Policy Simplification fits because the record shows compliance drag, automation potential, and downstream impact in Quality reporting.",
+      "expected_unlock": "Relative unlock: improve Quality reporting by reducing friction across Measure abstraction and EHR.",
+      "affected_processes": [
+        "Measure abstraction",
+        "Chart review",
+        "Data validation"
+      ],
+      "affected_systems": [
+        "EHR",
+        "Quality registry",
+        "Reporting system"
+      ],
+      "required_evidence": [
+        "Measure Measure abstraction using local operational logs.",
+        "Validate whether Labor hours per measure materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring compliance drag in Measure abstraction.",
+        "Staff can test changes in Measure abstraction without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Pilot policy simplification on one bounded Measure abstraction workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Measure abstraction",
+        "Shorter delay before Quality reporting",
+        "Fewer exceptions in EHR"
+      ],
+      "failure_modes": [
+        "Local records show little recurring compliance drag friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Measure abstraction."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 6.2,
+      "pilotability_score": 4.7,
+      "evidence_dependency_score": 2.7,
+      "expected_unlock_score": 7.8,
+      "time_to_impact_score": 4.4,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 3.9,
+      "validation_readiness_score": 8.3,
+      "total_intervention_score": 5.7,
+      "intervention_priority_score": 6.4,
+      "action_confidence": 7.3,
+      "recommended_next_step": "Run a narrow pilot using: Map measures to structured data gaps before abstraction"
+    },
+    {
+      "constraint_id": "hc-admin-009",
+      "constraint_title": "Appointment call queue overflow",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Call routing",
+      "intervention_thesis": "Evidence Collection could reduce idle capacity in Call routing without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows idle capacity, capacity optimization potential, and downstream impact in Scheduling throughput.",
+      "expected_unlock": "Relative unlock: improve Scheduling throughput by reducing friction across Call routing and Phone system.",
+      "affected_processes": [
+        "Call routing",
+        "Scheduling",
+        "Patient self-service"
+      ],
+      "affected_systems": [
+        "Phone system",
+        "Scheduling system",
+        "Patient portal"
+      ],
+      "required_evidence": [
+        "Measure Call routing using local operational logs.",
+        "Validate whether Caller intent distribution materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring idle capacity in Call routing.",
+        "Staff can test changes in Call routing without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Call routing before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Call routing",
+        "Shorter delay before Scheduling throughput",
+        "Fewer exceptions in Phone system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring idle capacity friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Call routing."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 5,
+      "time_to_impact": "Medium",
+      "ai_leverage_score": 6.1,
+      "pilotability_score": 6.4,
+      "evidence_dependency_score": 4.8,
+      "expected_unlock_score": 7.7,
+      "time_to_impact_score": 6.2,
+      "implementation_complexity_score": 6,
+      "operational_risk_score": 6.1,
+      "validation_readiness_score": 6.2,
+      "total_intervention_score": 6.6,
+      "intervention_priority_score": 5.6,
+      "action_confidence": 6.3,
+      "recommended_next_step": "Validate Caller intent distribution before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-admin-002",
+      "constraint_title": "Insurance eligibility verification before each visit",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Eligibility verification",
+      "intervention_thesis": "Evidence Collection could reduce manual verification in Eligibility verification without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows manual verification, data quality potential, and downstream impact in Claim submission.",
+      "expected_unlock": "Relative unlock: improve Claim submission by reducing friction across Eligibility verification and EHR.",
+      "affected_processes": [
+        "Eligibility verification",
+        "Visit prep",
+        "Registration"
+      ],
+      "affected_systems": [
+        "EHR",
+        "Eligibility clearinghouse",
+        "Billing system"
+      ],
+      "required_evidence": [
+        "Measure Eligibility verification using local operational logs.",
+        "Validate whether Average verification minutes per visit materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring manual verification in Eligibility verification.",
+        "Staff can test changes in Eligibility verification without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Eligibility verification before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Eligibility verification",
+        "Shorter delay before Claim submission",
+        "Fewer exceptions in EHR"
+      ],
+      "failure_modes": [
+        "Local records show little recurring manual verification friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Eligibility verification."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 5,
+      "time_to_impact": "Medium",
+      "ai_leverage_score": 5.2,
+      "pilotability_score": 6.2,
+      "evidence_dependency_score": 4.6,
+      "expected_unlock_score": 7.7,
+      "time_to_impact_score": 6.1,
+      "implementation_complexity_score": 6,
+      "operational_risk_score": 6,
+      "validation_readiness_score": 6.4,
+      "total_intervention_score": 6.4,
+      "intervention_priority_score": 5.4,
+      "action_confidence": 6.4,
+      "recommended_next_step": "Validate Average verification minutes per visit before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-admin-011",
+      "constraint_title": "Patient statement confusion and support calls",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Patient billing",
+      "intervention_thesis": "Evidence Collection could reduce hidden cost in Patient billing without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows hidden cost, data quality potential, and downstream impact in Support calls.",
+      "expected_unlock": "Relative unlock: improve Support calls by reducing friction across Patient billing and Billing system.",
+      "affected_processes": [
+        "Patient billing",
+        "Support triage",
+        "Payment resolution"
+      ],
+      "affected_systems": [
+        "Billing system",
+        "Payment portal",
+        "Contact center"
+      ],
+      "required_evidence": [
+        "Measure Patient billing using local operational logs.",
+        "Validate whether Statement-specific call volume materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring hidden cost in Patient billing.",
+        "Staff can test changes in Patient billing without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Patient billing before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Patient billing",
+        "Shorter delay before Support calls",
+        "Fewer exceptions in Billing system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring hidden cost friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Patient billing."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 5,
+      "time_to_impact": "Medium",
+      "ai_leverage_score": 5.4,
+      "pilotability_score": 6,
+      "evidence_dependency_score": 4.9,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 6,
+      "implementation_complexity_score": 6,
+      "operational_risk_score": 6,
+      "validation_readiness_score": 6.1,
+      "total_intervention_score": 6.4,
+      "intervention_priority_score": 5.4,
+      "action_confidence": 6.3,
+      "recommended_next_step": "Validate Statement-specific call volume before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-intake-001",
+      "constraint_title": "Duplicate demographic collection across intake channels",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Patient intake",
+      "intervention_thesis": "Evidence Collection could reduce duplicated work in Patient intake without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows duplicated work, data quality potential, and downstream impact in Eligibility verification.",
+      "expected_unlock": "Relative unlock: improve Eligibility verification by reducing friction across Patient intake and Patient portal.",
+      "affected_processes": [
+        "Patient intake",
+        "Registration",
+        "Demographic verification"
+      ],
+      "affected_systems": [
+        "Patient portal",
+        "EHR",
+        "Registration system"
+      ],
+      "required_evidence": [
+        "Measure Patient intake using local operational logs.",
+        "Validate whether Average re-entry minutes by visit type materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring duplicated work in Patient intake.",
+        "Staff can test changes in Patient intake without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Patient intake before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Patient intake",
+        "Shorter delay before Eligibility verification",
+        "Fewer exceptions in Patient portal"
+      ],
+      "failure_modes": [
+        "Local records show little recurring duplicated work friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Patient intake."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 5,
+      "time_to_impact": "Medium",
+      "ai_leverage_score": 5.2,
+      "pilotability_score": 6.2,
+      "evidence_dependency_score": 5,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 6.1,
+      "implementation_complexity_score": 6,
+      "operational_risk_score": 6.1,
+      "validation_readiness_score": 6,
+      "total_intervention_score": 6.4,
+      "intervention_priority_score": 5.4,
+      "action_confidence": 6.2,
+      "recommended_next_step": "Validate Average re-entry minutes by visit type before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-admin-006",
+      "constraint_title": "Provider credentialing packet duplication",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Credentialing",
+      "intervention_thesis": "Evidence Collection could reduce duplicated work in Credentialing without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows duplicated work, data quality potential, and downstream impact in Payer enrollment.",
+      "expected_unlock": "Relative unlock: improve Payer enrollment by reducing friction across Credentialing and Credentialing platform.",
+      "affected_processes": [
+        "Credentialing",
+        "Enrollment",
+        "Document renewal"
+      ],
+      "affected_systems": [
+        "Credentialing platform",
+        "Document repository",
+        "Payer portals"
+      ],
+      "required_evidence": [
+        "Measure Credentialing using local operational logs.",
+        "Validate whether Duplicate document requests per provider materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring duplicated work in Credentialing.",
+        "Staff can test changes in Credentialing without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Credentialing before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Credentialing",
+        "Shorter delay before Payer enrollment",
+        "Fewer exceptions in Credentialing platform"
+      ],
+      "failure_modes": [
+        "Local records show little recurring duplicated work friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Credentialing."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 5,
+      "time_to_impact": "Medium",
+      "ai_leverage_score": 5,
+      "pilotability_score": 5.7,
+      "evidence_dependency_score": 4.6,
+      "expected_unlock_score": 7.7,
+      "time_to_impact_score": 5.8,
+      "implementation_complexity_score": 6,
+      "operational_risk_score": 4.8,
+      "validation_readiness_score": 6.4,
+      "total_intervention_score": 6.1,
+      "intervention_priority_score": 5.1,
+      "action_confidence": 6.2,
+      "recommended_next_step": "Validate Duplicate document requests per provider before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-admin-012",
+      "constraint_title": "Preference card mismatch in procedural supply planning",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Supply picking",
+      "intervention_thesis": "Evidence Collection could reduce market mismatch in Supply picking without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows market mismatch, capacity optimization potential, and downstream impact in Case setup.",
+      "expected_unlock": "Relative unlock: improve Case setup by reducing friction across Supply picking and Supply chain system.",
+      "affected_processes": [
+        "Supply picking",
+        "Procedure preparation",
+        "Inventory reconciliation"
+      ],
+      "affected_systems": [
+        "Supply chain system",
+        "Preference card system",
+        "OR scheduling"
+      ],
+      "required_evidence": [
+        "Measure Supply picking using local operational logs.",
+        "Validate whether Unused item cost per procedure type materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring market mismatch in Supply picking.",
+        "Staff can test changes in Supply picking without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Supply picking before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Supply picking",
+        "Shorter delay before Case setup",
+        "Fewer exceptions in Supply chain system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring market mismatch friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Supply picking."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 6,
+      "pilotability_score": 5.4,
+      "evidence_dependency_score": 5.1,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 5.2,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.6,
+      "validation_readiness_score": 5.9,
+      "total_intervention_score": 6.1,
+      "intervention_priority_score": 5.1,
+      "action_confidence": 6,
+      "recommended_next_step": "Validate Unused item cost per procedure type before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-intake-002",
+      "constraint_title": "Coordination of benefits ambiguity before claim submission",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Coverage verification",
+      "intervention_thesis": "Evidence Collection could reduce manual verification in Coverage verification without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows manual verification, workflow redesign potential, and downstream impact in Claim submission.",
+      "expected_unlock": "Relative unlock: improve Claim submission by reducing friction across Coverage verification and Billing system.",
+      "affected_processes": [
+        "Coverage verification",
+        "Claims processing",
+        "Patient outreach"
+      ],
+      "affected_systems": [
+        "Billing system",
+        "Eligibility clearinghouse",
+        "Payer portals"
+      ],
+      "required_evidence": [
+        "Measure Coverage verification using local operational logs.",
+        "Validate whether Share of rejections caused by coordination of benefits materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring manual verification in Coverage verification.",
+        "Staff can test changes in Coverage verification without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Coverage verification before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Coverage verification",
+        "Shorter delay before Claim submission",
+        "Fewer exceptions in Billing system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring manual verification friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Coverage verification."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.8,
+      "pilotability_score": 5.6,
+      "evidence_dependency_score": 4.7,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 5.4,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.4,
+      "validation_readiness_score": 6.3,
+      "total_intervention_score": 5.9,
+      "intervention_priority_score": 5,
+      "action_confidence": 6.1,
+      "recommended_next_step": "Validate Share of rejections caused by coordination of benefits before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-admin-004",
+      "constraint_title": "Referral leakage from manual handoffs",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Referral management",
+      "intervention_thesis": "Evidence Collection could reduce information gap in Referral management without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows information gap, workflow redesign potential, and downstream impact in Specialist scheduling.",
+      "expected_unlock": "Relative unlock: improve Specialist scheduling by reducing friction across Referral management and EHR.",
+      "affected_processes": [
+        "Referral management",
+        "Records exchange",
+        "Patient scheduling"
+      ],
+      "affected_systems": [
+        "EHR",
+        "Fax queue",
+        "Referral management tool"
+      ],
+      "required_evidence": [
+        "Measure Referral management using local operational logs.",
+        "Validate whether Unscheduled referral count materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring information gap in Referral management.",
+        "Staff can test changes in Referral management without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Referral management before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Referral management",
+        "Shorter delay before Specialist scheduling",
+        "Fewer exceptions in EHR"
+      ],
+      "failure_modes": [
+        "Local records show little recurring information gap friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Referral management."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.6,
+      "pilotability_score": 5.1,
+      "evidence_dependency_score": 4.8,
+      "expected_unlock_score": 7.7,
+      "time_to_impact_score": 5.1,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.1,
+      "validation_readiness_score": 6.2,
+      "total_intervention_score": 5.9,
+      "intervention_priority_score": 4.9,
+      "action_confidence": 6.1,
+      "recommended_next_step": "Validate Unscheduled referral count before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-intake-004",
+      "constraint_title": "Financial assistance screening after billing escalation",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Patient billing",
+      "intervention_thesis": "Evidence Collection could reduce hidden cost in Patient billing without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows hidden cost, workflow redesign potential, and downstream impact in Statement cycles.",
+      "expected_unlock": "Relative unlock: improve Statement cycles by reducing friction across Patient billing and Billing system.",
+      "affected_processes": [
+        "Patient billing",
+        "Financial assistance screening",
+        "Support triage"
+      ],
+      "affected_systems": [
+        "Billing system",
+        "Payment portal",
+        "Contact center"
+      ],
+      "required_evidence": [
+        "Measure Patient billing using local operational logs.",
+        "Validate whether Accounts eligible for assistance before statement generation materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring hidden cost in Patient billing.",
+        "Staff can test changes in Patient billing without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Patient billing before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Patient billing",
+        "Shorter delay before Statement cycles",
+        "Fewer exceptions in Billing system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring hidden cost friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Patient billing."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.2,
+      "pilotability_score": 5.2,
+      "evidence_dependency_score": 4.6,
+      "expected_unlock_score": 7.4,
+      "time_to_impact_score": 5.1,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 4.6,
+      "validation_readiness_score": 6.4,
+      "total_intervention_score": 5.8,
+      "intervention_priority_score": 4.9,
+      "action_confidence": 6.2,
+      "recommended_next_step": "Validate Accounts eligible for assistance before statement generation before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "hc-admin-008",
+      "constraint_title": "Release of information request backlog",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Release of information",
+      "intervention_thesis": "Evidence Collection could reduce compliance drag in Release of information without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows compliance drag, compliance simplification potential, and downstream impact in Record fulfillment.",
+      "expected_unlock": "Relative unlock: improve Record fulfillment by reducing friction across Release of information and EHR.",
+      "affected_processes": [
+        "Release of information",
+        "Document retrieval",
+        "Secure transmission"
+      ],
+      "affected_systems": [
+        "EHR",
+        "Document management system",
+        "Patient portal"
+      ],
+      "required_evidence": [
+        "Measure Release of information using local operational logs.",
+        "Validate whether Average fulfillment time by request channel materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring compliance drag in Release of information.",
+        "Staff can test changes in Release of information without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Release of information before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Release of information",
+        "Shorter delay before Record fulfillment",
+        "Fewer exceptions in EHR"
+      ],
+      "failure_modes": [
+        "Local records show little recurring compliance drag friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Release of information."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.1,
+      "pilotability_score": 5.3,
+      "evidence_dependency_score": 4.5,
+      "expected_unlock_score": 7.2,
+      "time_to_impact_score": 5.2,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 4.5,
+      "validation_readiness_score": 6.5,
+      "total_intervention_score": 5.7,
+      "intervention_priority_score": 4.8,
+      "action_confidence": 6.2,
+      "recommended_next_step": "Validate Average fulfillment time by request channel before rollout; use the intervention as a measurement experiment."
+    }
+  ]
+}

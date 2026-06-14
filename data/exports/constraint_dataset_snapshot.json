@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T22:48:18.229Z",
+  "generated_at": "2026-06-14T23:07:46.368Z",
   "record_count": 16,
   "records": [
     {
@@ -1664,6 +1664,45 @@
         "validated": 1
       },
       "average_validation_priority_score": 6.9
+    },
+    "intervention_summary": {
+      "total_strategies": 16,
+      "top_fast_wins": [
+        "Appointment call queue overflow",
+        "Insurance eligibility verification before each visit",
+        "Duplicate demographic collection across intake channels",
+        "Patient statement confusion and support calls",
+        "Provider credentialing packet duplication"
+      ],
+      "top_ai_leverage": [
+        "Claim denial triage and resubmission",
+        "Medical necessity documentation chase",
+        "Prior authorization rework loops",
+        "Medication prior authorization exceptions",
+        "Manual quality measure abstraction"
+      ],
+      "high_upside_high_friction": [
+        "Claim denial triage and resubmission",
+        "Prior authorization rework loops",
+        "Medical necessity documentation chase",
+        "Post-discharge follow-up gaps",
+        "Medication prior authorization exceptions"
+      ],
+      "validation_required_before_action": [
+        "Appointment call queue overflow",
+        "Insurance eligibility verification before each visit",
+        "Patient statement confusion and support calls",
+        "Duplicate demographic collection across intake channels",
+        "Provider credentialing packet duplication"
+      ],
+      "intervention_type_distribution": {
+        "automation_assist": 4,
+        "workflow_redesign": 1,
+        "policy_simplification": 1,
+        "evidence_collection": 10
+      },
+      "average_action_confidence": 6.6,
+      "highest_priority_intervention": "Automation Assist for Claims processing"
     }
   },
   "score_summary": {

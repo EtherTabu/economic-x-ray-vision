@@ -74,6 +74,10 @@ V4.0 adds local dataset operations before SQLite runtime wiring. The current reg
 
 V5.0 adds evidence dossiers and a validation workflow so records are treated as hypotheses until evidence improves. Dossiers derive core claims, evidence gaps, proof/disproof conditions, red-team questions, source recommendations, confidence upgrade paths, decision usefulness, and validation priority from existing fields and scores. Most records should remain needs-evidence or partially-supported unless the local evidence and validation confidence justify decision-ready status.
 
+## V6.0 Direction
+
+V6.0 adds deterministic intervention simulation and action strategy. Strategies recommend bounded first experiments, success metrics, assumptions, failure modes, action confidence, and next steps from existing scores, graph position, evidence confidence, and complexity. Low validation should produce measurement-first recommendations rather than rollout claims. The system must avoid fake ROI, invented citations, and unsupported savings claims.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:

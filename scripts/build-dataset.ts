@@ -55,6 +55,9 @@ const datasetOutputPath = datasetResolve(
   "data/exports/constraint_dataset_snapshot.json"
 );
 const datasetEvidenceOutputPath = datasetResolve("data/exports/evidence_dossiers.json");
+const datasetInterventionOutputPath = datasetResolve(
+  "data/exports/intervention_strategies.json"
+);
 
 function buildDatasetSnapshot() {
   const records = loadCurrentRegistry();
@@ -75,23 +78,31 @@ function buildDatasetSnapshot() {
       opportunity_type_distribution: distribution(
         scoredRecords.map((record) => record.opportunity_type)
       ),
-      evidence_dossier_summary: readEvidenceDossierSummary()
+      evidence_dossier_summary: readOptionalSummary(
+        datasetEvidenceOutputPath,
+        "validation_summary"
+      ),
+      intervention_summary: readOptionalSummary(
+        datasetInterventionOutputPath,
+        "intervention_summary"
+      )
     },
     score_summary: scoreSummary(scoredRecords),
     quality_summary: datasetQualitySummary
   };
 }
 
-function readEvidenceDossierSummary() {
-  if (!datasetExistsSync(datasetEvidenceOutputPath)) {
+function readOptionalSummary(path: string, key: string) {
+  if (!datasetExistsSync(path)) {
     return null;
   }
 
-  const evidenceExport = JSON.parse(
-    datasetReadFileSync(datasetEvidenceOutputPath, "utf8")
-  ) as { validation_summary?: unknown };
+  const parsedExport = JSON.parse(datasetReadFileSync(path, "utf8")) as Record<
+    string,
+    unknown
+  >;
 
-  return evidenceExport.validation_summary ?? null;
+  return parsedExport[key] ?? null;
 }
 
 function writeDatasetSnapshot() {
