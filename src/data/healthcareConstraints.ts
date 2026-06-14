@@ -3,6 +3,7 @@ import type { ConstraintIntelligenceObject } from "@/types/constraint";
 export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   {
     id: "hc-admin-001",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Revenue Cycle",
     title: "Prior authorization rework loops",
@@ -57,6 +58,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-002",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Patient Access",
     title: "Insurance eligibility verification before each visit",
@@ -111,6 +113,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-003",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Claims",
     title: "Claim denial triage and resubmission",
@@ -165,6 +168,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-004",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Scheduling",
     title: "Referral leakage from manual handoffs",
@@ -219,6 +223,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-005",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Care Coordination",
     title: "Post-discharge follow-up gaps",
@@ -273,6 +278,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-006",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Credentialing",
     title: "Provider credentialing packet duplication",
@@ -327,6 +333,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-007",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Pharmacy Administration",
     title: "Medication prior authorization exceptions",
@@ -381,6 +388,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-008",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Medical Records",
     title: "Release of information request backlog",
@@ -435,6 +443,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-009",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Call Center",
     title: "Appointment call queue overflow",
@@ -489,6 +498,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-010",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Quality Reporting",
     title: "Manual quality measure abstraction",
@@ -543,6 +553,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-011",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Patient Billing",
     title: "Patient statement confusion and support calls",
@@ -597,6 +608,7 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
   },
   {
     id: "hc-admin-012",
+    origin: "seed",
     industry: "Healthcare",
     subsector: "Supply Administration",
     title: "Preference card mismatch in procedural supply planning",

@@ -2,6 +2,7 @@ import { scoreConstraint } from "@/lib/scoring";
 import type {
   ConstraintCategory,
   ConstraintIntelligenceObject,
+  RecordOrigin,
   ScoredConstraint,
   SortOption
 } from "@/types/constraint";
@@ -24,9 +25,11 @@ export function categoryOptions(
 export function sortAndFilterConstraints(
   constraints: ScoredConstraint[],
   category: ConstraintCategory | "All",
+  origin: RecordOrigin | "All",
   sortBy: SortOption
 ): ScoredConstraint[] {
   return constraints
     .filter((constraint) => category === "All" || constraint.category === category)
+    .filter((constraint) => origin === "All" || constraint.origin === origin)
     .sort((first, second) => second.scores[sortBy] - first.scores[sortBy]);
 }

@@ -48,6 +48,7 @@ type ConvertIntakeFile = {
 function convertIntakeRecord(record: ConvertIntakeRecord) {
   return {
     id: record.id,
+    origin: "intake",
     industry: record.industry,
     subsector: record.subsector,
     title: record.title,

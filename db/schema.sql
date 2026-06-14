@@ -3,6 +3,7 @@
 
 CREATE TABLE IF NOT EXISTS constraints (
   id TEXT PRIMARY KEY,
+  origin TEXT NOT NULL CHECK (origin IN ('seed', 'intake')),
   industry TEXT NOT NULL,
   subsector TEXT NOT NULL,
   title TEXT NOT NULL,

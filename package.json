@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "validate:intake": "node scripts/validate-intake.ts"
+    "validate:intake": "node scripts/validate-intake.ts",
+    "build:data": "npm run validate:intake && node scripts/build-intake-data.ts",
+    "check": "npm run validate:intake && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "^15.3.3",

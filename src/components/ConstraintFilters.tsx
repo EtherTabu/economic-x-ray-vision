@@ -1,11 +1,17 @@
-import type { ConstraintCategory, SortOption } from "@/types/constraint";
+import type {
+  ConstraintCategory,
+  RecordOrigin,
+  SortOption
+} from "@/types/constraint";
 
 type ConstraintFiltersProps = {
   categories: ConstraintCategory[];
   category: ConstraintCategory | "All";
+  origin: RecordOrigin | "All";
   resultCount: number;
   sortBy: SortOption;
   onCategoryChange: (category: ConstraintCategory | "All") => void;
+  onOriginChange: (origin: RecordOrigin | "All") => void;
   onSortChange: (sortBy: SortOption) => void;
 };
 
@@ -23,9 +29,11 @@ const sortLabels: Record<SortOption, string> = {
 export function ConstraintFilters({
   categories,
   category,
+  origin,
   resultCount,
   sortBy,
   onCategoryChange,
+  onOriginChange,
   onSortChange
 }: ConstraintFiltersProps) {
   return (
@@ -46,6 +54,21 @@ export function ConstraintFilters({
                 {option}
               </option>
             ))}
+          </select>
+        </div>
+
+        <div className="control-group">
+          <label htmlFor="origin">Origin</label>
+          <select
+            id="origin"
+            onChange={(event) =>
+              onOriginChange(event.target.value as RecordOrigin | "All")
+            }
+            value={origin}
+          >
+            <option value="All">All records</option>
+            <option value="seed">Seed records</option>
+            <option value="intake">Intake records</option>
           </select>
         </div>
 

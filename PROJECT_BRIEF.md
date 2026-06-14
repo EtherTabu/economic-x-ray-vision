@@ -54,6 +54,10 @@ V1.2 adds an evidence and validation layer so each constraint can be inspected f
 
 V1.3 introduces a structured local JSON intake contract before any scraper, AI extraction, Python worker, or SQLite integration is added. Intake records live outside the app seed data, validate required fields and score ranges locally, and can be converted into the internal TypeScript constraint object shape when the ingestion path is ready.
 
+## V1.4 Direction
+
+V1.4 turns the intake contract into a local dashboard pipeline. Validated JSON intake records are converted into generated TypeScript data, combined with static seed records in a constraint registry, and labeled with record origin metadata so filtering, scoring, and inspection can distinguish seed records from intake records.
+
 ## Data Model Direction
 
 Each constraint intelligence object should eventually support fields like:

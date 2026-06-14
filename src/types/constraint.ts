@@ -27,8 +27,11 @@ export type ValidationStatus =
   | "Partially Validated"
   | "Validated";
 
+export type RecordOrigin = "seed" | "intake";
+
 export type ConstraintIntelligenceObject = {
   id: string;
+  origin: RecordOrigin;
   industry: "Healthcare";
   subsector: string;
   title: string;

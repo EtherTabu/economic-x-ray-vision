@@ -3,27 +3,40 @@
 import { useMemo, useState } from "react";
 import { ConstraintCard } from "@/components/ConstraintCard";
 import { ConstraintFilters } from "@/components/ConstraintFilters";
-import { healthcareConstraints } from "@/data/healthcareConstraints";
+import { constraintRegistry } from "@/data/constraintRegistry";
 import {
   categoryOptions,
   getConstraintsWithScores,
   sortAndFilterConstraints
 } from "@/lib/constraints";
-import type { ConstraintCategory, SortOption } from "@/types/constraint";
+import type {
+  ConstraintCategory,
+  RecordOrigin,
+  SortOption
+} from "@/types/constraint";
 
 export default function Home() {
   const [category, setCategory] = useState<ConstraintCategory | "All">("All");
+  const [origin, setOrigin] = useState<RecordOrigin | "All">("All");
   const [sortBy, setSortBy] = useState<SortOption>("total_priority_score");
 
   const scoredConstraints = useMemo(
-    () => getConstraintsWithScores(healthcareConstraints),
+    () => getConstraintsWithScores(constraintRegistry),
     []
   );
 
   const visibleConstraints = useMemo(
-    () => sortAndFilterConstraints(scoredConstraints, category, sortBy),
-    [category, scoredConstraints, sortBy]
+    () => sortAndFilterConstraints(scoredConstraints, category, origin, sortBy),
+    [category, origin, scoredConstraints, sortBy]
   );
+
+  const seedRecordCount = scoredConstraints.filter(
+    (item) => item.origin === "seed"
+  ).length;
+
+  const intakeRecordCount = scoredConstraints.filter(
+    (item) => item.origin === "intake"
+  ).length;
 
   const averagePriority =
     scoredConstraints.reduce(
@@ -102,8 +115,16 @@ export default function Home() {
             <strong>Healthcare</strong>
           </div>
           <div className="summary-item">
-            <span>Objects</span>
-            <strong>{scoredConstraints.length}</strong>
+            <span>Seed Records</span>
+            <strong>{seedRecordCount}</strong>
+          </div>
+          <div className="summary-item">
+            <span>Intake Records</span>
+            <strong>{intakeRecordCount}</strong>
+          </div>
+          <div className="summary-item">
+            <span>Total Visible</span>
+            <strong>{visibleConstraints.length}</strong>
           </div>
           <div className="summary-item">
             <span>Average Priority</span>
@@ -138,9 +159,11 @@ export default function Home() {
         <ConstraintFilters
           categories={categoryOptions(scoredConstraints)}
           category={category}
+          origin={origin}
           resultCount={visibleConstraints.length}
           sortBy={sortBy}
           onCategoryChange={setCategory}
+          onOriginChange={setOrigin}
           onSortChange={setSortBy}
         />
 

@@ -19,6 +19,7 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
           <div className="constraint-card__meta">
             <span className="pill">{constraint.subsector}</span>
             <span className="pill">{constraint.category}</span>
+            <span className="pill">{constraint.origin} record</span>
             <span className="pill">Confidence {constraint.confidence}/10</span>
             <span className="pill">{constraint.validation_status}</span>
           </div>
