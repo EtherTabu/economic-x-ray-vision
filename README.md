@@ -31,6 +31,7 @@ Economic X-Ray Vision currently:
 - Detects cross-industry analogs, such as similar queue or documentation patterns in different sectors.
 - Builds evidence dossiers for each record.
 - Proposes deterministic intervention strategies and first experiments.
+- Opens a dedicated investigation workspace for each constraint, linking evidence, validation workflow, analogs, archetype reasoning, and intervention strategy.
 - Exports local JSON artifacts for dataset, evidence, intervention, and archetype analysis.
 
 ## Why It Matters
@@ -72,7 +73,8 @@ Current metrics:
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
 - **Cross-Industry Analog Engine**: finds similar constraints in different industries.
-- **Dashboard UI**: displays portfolio health, evidence workflow, interventions, archetypes, filters, and expanded record inspection.
+- **Investigation Workspace**: renders a focused record-level view from `/constraints/[id]` with the full evidence-to-validation-to-intervention chain.
+- **Dashboard UI**: displays portfolio health, evidence workflow, interventions, archetypes, filters, expanded record inspection, and links into each investigation workspace.
 
 ## Architecture
 
@@ -88,6 +90,10 @@ flowchart TD
   H --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
   F --> K["Dashboard Panels"]
+  K --> M["Constraint Investigation Workspace"]
+  H --> M
+  I --> M
+  J --> M
   G --> L["JSON Exports"]
   H --> L
   I --> L

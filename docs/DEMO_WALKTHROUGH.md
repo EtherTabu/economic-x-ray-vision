@@ -88,7 +88,19 @@ Open a constraint card and inspect:
 - Score breakdown
 - Sources
 
-## 8. Run Locally
+Then use `Open investigation` to move from the dashboard card into the dedicated constraint workspace. The workspace follows the record through overview, score signals, evidence dossier, validation workflow, archetype reasoning, cross-industry analogs, intervention strategy, and a copyable investigation summary.
+
+## 8. Review A Constraint Investigation
+
+In the investigation workspace, check:
+
+- Whether the record is decision-ready or still a hypothesis.
+- What evidence would prove or disprove the core claim.
+- Which cross-industry analogs share the same bottleneck pattern.
+- Which first experiment is recommended before broader rollout.
+- Whether action confidence is limited by validation gaps.
+
+## 9. Run Locally
 
 ```bash
 npm install
@@ -97,4 +109,3 @@ npm run check
 ```
 
 The full check validates intake, rebuilds generated data, refreshes exports, audits all layers, lints, and builds the Next.js app.
-

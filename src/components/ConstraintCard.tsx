@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { ConstraintScoreBadge } from "@/components/ConstraintScoreBadge";
 import { buildEvidenceDossier } from "@/lib/evidenceDossier";
@@ -50,6 +51,9 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
           >
             {expanded ? "Hide details" : "Inspect"}
           </button>
+          <Link className="details-link" href={`/constraints/${constraint.id}`}>
+            Open investigation
+          </Link>
         </div>
       </div>
 

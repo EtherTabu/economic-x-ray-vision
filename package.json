@@ -2,7 +2,7 @@
   "name": "economic-x-ray-vision",
   "version": "0.1.0",
   "private": true,
-  "description": "Local-first constraint intelligence prototype for healthcare administration friction.",
+  "description": "Local-first constraint intelligence engine for mapping recurring bottlenecks, validation gaps, and intervention paths across strategic operating systems.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
