@@ -34,6 +34,7 @@ Economic X-Ray Vision currently:
 - Proposes deterministic intervention strategies and first experiments.
 - Opens a dedicated investigation workspace for each constraint, linking evidence, validation workflow, analogs, archetype reasoning, and intervention strategy.
 - Renders a constraint network map that connects records to archetypes, industries, cross-sector analogs, and intervention paths.
+- Supports network search, filters, and focused neighborhoods via links such as `/network?focus=hc-admin-001`.
 - Exports local JSON artifacts for dataset, evidence, intervention, and archetype analysis.
 
 ## Why It Matters
@@ -76,7 +77,7 @@ Current metrics:
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
 - **Cross-Industry Analog Engine**: finds similar constraints in different industries.
-- **Constraint Network Engine**: builds a local graph of constraint, archetype, industry, analog, and intervention relationships.
+- **Constraint Network Engine**: builds a local graph of constraint, archetype, industry, analog, and intervention relationships, with search/filter/focus exploration in the UI.
 - **Investigation Workspace**: renders a focused record-level view from `/constraints/[id]` with the full evidence-to-validation-to-intervention chain.
 - **Dashboard UI**: displays portfolio health, evidence workflow, interventions, archetypes, filters, expanded record inspection, and links into each investigation workspace and network map.
 

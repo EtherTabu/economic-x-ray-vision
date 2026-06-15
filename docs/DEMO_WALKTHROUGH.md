@@ -75,7 +75,11 @@ The Archetype Intelligence panel shows recurring bottleneck patterns across indu
 Use `Open Constraint Network` from the dashboard to inspect the relationship map. The network page shows:
 
 - Constraint, archetype, industry, and intervention nodes.
+- Search by title, id, industry, or archetype.
+- Filters for industry, archetype, and evidence risk.
+- Focus mode via direct links such as `/network?focus=hc-admin-001`.
 - Bridge constraints that connect across sectors.
+- Neighborhood edges around the focused constraint.
 - Weak evidence clusters.
 - High intervention leverage clusters.
 - Clickable constraint nodes that open `/constraints/[id]` investigation pages.

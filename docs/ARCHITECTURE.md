@@ -52,6 +52,8 @@ flowchart TD
 
 The constraint network map is built locally from the existing registry and deterministic engines. It creates constraint, archetype, industry, and intervention nodes, then connects them with edges for archetype membership, industry membership, intervention type, and cross-industry analogs.
 
+The `/network` route renders the static graph into an interactive local explorer. It supports text search, industry filtering, archetype filtering, evidence-risk filtering, and focus links such as `/network?focus=hc-admin-001`. Focus mode shows the immediate neighborhood around one constraint without fetching external data.
+
 The network export is written to `data/exports/constraint_network.json`. It uses stable generated metadata so repeated checks do not create meaningless timestamp diffs when the graph content has not changed.
 
 ## Evidence Packs

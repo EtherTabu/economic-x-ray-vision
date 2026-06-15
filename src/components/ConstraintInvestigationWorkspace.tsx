@@ -31,7 +31,7 @@ export function ConstraintInvestigationWorkspace({
             <Link className="back-link" href="/">
               Back to dashboard
             </Link>
-            <Link className="back-link" href="/network">
+            <Link className="back-link" href={`/network?focus=${constraint.id}`}>
               View this constraint in the network
             </Link>
           </div>

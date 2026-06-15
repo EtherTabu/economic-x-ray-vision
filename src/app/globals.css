@@ -1430,6 +1430,99 @@ select {
   padding: 18px;
 }
 
+.network-filter-panel,
+.network-focus-panel {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.network-filter-panel h2,
+.network-focus-panel h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.network-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+}
+
+.network-filter-grid label {
+  display: grid;
+  gap: 6px;
+}
+
+.network-filter-grid input,
+.network-filter-grid select {
+  width: 100%;
+  min-width: 0;
+}
+
+.network-filter-grid input {
+  min-height: 38px;
+  padding: 9px 10px;
+  color: var(--text);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.network-filter-actions,
+.network-focus-actions,
+.network-node-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.network-focus-panel p {
+  margin: 0;
+  color: #344655;
+  line-height: 1.55;
+}
+
+.network-neighborhood,
+.network-edge-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.network-edge-card {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+  background: #fbfcfd;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.network-edge-card span {
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.network-edge-card strong {
+  line-height: 1.3;
+}
+
+.network-edge-card p,
+.network-edge-card small {
+  margin: 0;
+  color: #344655;
+  line-height: 1.45;
+}
+
 .network-section--lead {
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
   align-items: start;
@@ -1534,7 +1627,6 @@ select {
   gap: 6px;
   padding: 12px;
   color: var(--text);
-  text-decoration: none;
 }
 
 .network-node-card--highlight {
@@ -1551,6 +1643,20 @@ select {
 .network-node-card small {
   color: #344655;
   line-height: 1.35;
+}
+
+.network-node-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 8px;
+  color: var(--accent-strong);
+  background: #ffffff;
+  border: 1px solid #a8cfd3;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .network-grid {

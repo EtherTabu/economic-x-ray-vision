@@ -23,6 +23,7 @@ export type ConstraintNetworkNode = {
   id: string;
   label: string;
   type: ConstraintNetworkNodeType;
+  constraint_id?: string;
   industry?: string;
   archetype?: string;
   priority_score?: number;
@@ -97,6 +98,7 @@ export function buildConstraintNetwork(
 
     nodes.set(constraintNodeId(constraint.id), {
       id: constraintNodeId(constraint.id),
+      constraint_id: constraint.id,
       label: constraint.title,
       type: "constraint",
       industry: constraint.industry,
