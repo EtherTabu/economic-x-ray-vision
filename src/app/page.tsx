@@ -9,6 +9,7 @@ import { ConstraintFilters } from "@/components/ConstraintFilters";
 import { DatasetHealthPanel } from "@/components/DatasetHealthPanel";
 import { EvidenceDossierPanel } from "@/components/EvidenceDossierPanel";
 import { InterventionStrategyPanel } from "@/components/InterventionStrategyPanel";
+import { SourceEvidencePanel } from "@/components/SourceEvidencePanel";
 import { constraintRegistry } from "@/data/constraintRegistry";
 import {
   archetypeOptions,
@@ -25,6 +26,7 @@ import {
   buildEvidenceDossiers,
   summarizeEvidenceDossiers
 } from "@/lib/evidenceDossier";
+import { buildEvidencePackPortfolio } from "@/lib/evidencePacks";
 import { analyzeOpportunities } from "@/lib/opportunityAnalysis";
 import {
   buildInterventionStrategies,
@@ -99,6 +101,11 @@ export default function Home() {
   const evidenceDossierSummary = useMemo(
     () => summarizeEvidenceDossiers(evidenceDossiers),
     [evidenceDossiers]
+  );
+
+  const evidencePackPortfolio = useMemo(
+    () => buildEvidencePackPortfolio(scoredConstraints),
+    [scoredConstraints]
   );
 
   const interventionStrategies = useMemo(
@@ -304,6 +311,8 @@ export default function Home() {
           }
           summary={evidenceDossierSummary}
         />
+
+        <SourceEvidencePanel portfolio={evidencePackPortfolio} />
 
         <InterventionStrategyPanel
           strategies={interventionStrategies}

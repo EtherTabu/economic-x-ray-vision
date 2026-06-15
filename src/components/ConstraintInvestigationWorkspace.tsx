@@ -13,6 +13,7 @@ export function ConstraintInvestigationWorkspace({
     analogs,
     constraint,
     evidenceDossier,
+    evidencePack,
     executiveSummary,
     explanation,
     interventionStrategy,
@@ -125,6 +126,45 @@ export function ConstraintInvestigationWorkspace({
               title="Red-team questions"
               values={evidenceDossier.red_team_questions}
             />
+          </InvestigationSection>
+
+          <InvestigationSection title="Source Registry + Evidence Pack">
+            <p>{evidencePack.core_claim}</p>
+            <DefinitionList
+              items={[
+                ["Provenance status", evidencePack.provenance_status],
+                [
+                  "Defensibility score",
+                  `${evidencePack.defensibility_score.toFixed(1)}/10`
+                ],
+                [
+                  "Source coverage",
+                  `${evidencePack.source_coverage_score.toFixed(1)}/10`
+                ],
+                [
+                  "Recommended source upgrade",
+                  evidencePack.recommended_source_upgrade
+                ]
+              ]}
+            />
+            <ListBlock
+              title="Source records"
+              values={evidencePack.source_records.map(
+                (source) =>
+                  `${source.title} (${source.provenance_level}; ${source.citation_status})`
+              )}
+            />
+            <ListBlock
+              title="Claim support"
+              values={evidencePack.claim_support.map(
+                (claim) => `${claim.support_level}: ${claim.claim}`
+              )}
+            />
+            <ListBlock
+              title="Provenance notes"
+              values={evidencePack.provenance_notes}
+            />
+            <ListBlock title="Audit flags" values={evidencePack.audit_flags} />
           </InvestigationSection>
 
           <InvestigationSection title="Validation Workflow">

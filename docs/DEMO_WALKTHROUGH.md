@@ -37,7 +37,17 @@ The Evidence Dossier panel treats records as claims under validation. It highlig
 - What would prove or disprove a claim
 - Red-team questions
 
-## 4. Review Intervention Simulator
+## 4. Review Source Registry + Evidence Packs
+
+The Source Registry panel separates source metadata from claim support. It highlights:
+
+- Source record count
+- Average source trust
+- Average defensibility
+- Thin provenance records
+- Recommended source upgrades
+
+## 5. Review Intervention Simulator
 
 The Intervention Simulator shows bounded action hypotheses:
 
@@ -49,7 +59,7 @@ The Intervention Simulator shows bounded action hypotheses:
 - Success metrics
 - Failure modes
 
-## 5. Review Archetype Intelligence
+## 6. Review Archetype Intelligence
 
 The Archetype Intelligence panel shows recurring bottleneck patterns across industries:
 
@@ -60,7 +70,7 @@ The Archetype Intelligence panel shows recurring bottleneck patterns across indu
 - Cross-industry analog pair
 - Archetype distribution
 
-## 6. Explore The Constraint Network
+## 7. Explore The Constraint Network
 
 Use `Open Constraint Network` from the dashboard to inspect the relationship map. The network page shows:
 
@@ -70,7 +80,7 @@ Use `Open Constraint Network` from the dashboard to inspect the relationship map
 - High intervention leverage clusters.
 - Clickable constraint nodes that open `/constraints/[id]` investigation pages.
 
-## 7. Use Filters
+## 8. Use Filters
 
 Use the filters to compare:
 
@@ -84,7 +94,7 @@ Use the filters to compare:
 
 Example: filter to `Energy / Grid / Interconnection`, then filter by `documentation_chase` or `queue_backlog`.
 
-## 8. Inspect A Constraint Card
+## 9. Inspect A Constraint Card
 
 Open a constraint card and inspect:
 
@@ -100,18 +110,19 @@ Open a constraint card and inspect:
 
 Then use `Open investigation` to move from the dashboard card into the dedicated constraint workspace. The workspace follows the record through overview, score signals, evidence dossier, validation workflow, archetype reasoning, cross-industry analogs, intervention strategy, and a copyable investigation summary.
 
-## 9. Review A Constraint Investigation
+## 10. Review A Constraint Investigation
 
 In the investigation workspace, check:
 
 - Whether the record is decision-ready or still a hypothesis.
 - What evidence would prove or disprove the core claim.
+- Which source records support the claim and what provenance gaps remain.
 - Which cross-industry analogs share the same bottleneck pattern.
 - Which first experiment is recommended before broader rollout.
 - Whether action confidence is limited by validation gaps.
 - The link back to the network map for relationship exploration.
 
-## 10. Run Locally
+## 11. Run Locally
 
 ```bash
 npm install

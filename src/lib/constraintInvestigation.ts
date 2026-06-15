@@ -3,6 +3,7 @@ import {
   findAnalogsForConstraint,
   type CrossIndustryAnalog
 } from "@/lib/crossIndustryAnalogs";
+import { buildEvidencePack, type EvidencePack } from "@/lib/evidencePacks";
 import { buildEvidenceDossier, type EvidenceDossier } from "@/lib/evidenceDossier";
 import { explainConstraint, type ConstraintExplanation } from "@/lib/explainability";
 import {
@@ -19,6 +20,7 @@ export type ConstraintInvestigation = {
   constraint: ScoredConstraint;
   explanation: ConstraintExplanation;
   evidenceDossier: EvidenceDossier;
+  evidencePack: EvidencePack;
   validationWorkflow: ValidationWorkflowAssessment;
   interventionStrategy: InterventionStrategy;
   primaryArchetype: ConstraintArchetype;
@@ -38,6 +40,7 @@ export function buildConstraintInvestigation(
 ): ConstraintInvestigation {
   const explanation = explainConstraint(constraint);
   const evidenceDossier = buildEvidenceDossier(constraint);
+  const evidencePack = buildEvidencePack(constraint);
   const validationWorkflow = assessValidationWorkflow(constraint);
   const interventionStrategy = buildInterventionStrategy(constraint);
   const primaryArchetype = archetypeById[constraint.primary_archetype];
@@ -55,6 +58,7 @@ export function buildConstraintInvestigation(
     constraint,
     explanation,
     evidenceDossier,
+    evidencePack,
     validationWorkflow,
     interventionStrategy,
     primaryArchetype,
@@ -64,6 +68,7 @@ export function buildConstraintInvestigation(
     summaryText: buildSummaryText({
       constraint,
       evidenceDossier,
+      evidencePack,
       validationWorkflow,
       interventionStrategy,
       primaryArchetype,
@@ -75,6 +80,7 @@ export function buildConstraintInvestigation(
 function buildSummaryText({
   constraint,
   evidenceDossier,
+  evidencePack,
   validationWorkflow,
   interventionStrategy,
   primaryArchetype,
@@ -82,6 +88,7 @@ function buildSummaryText({
 }: {
   constraint: ScoredConstraint;
   evidenceDossier: EvidenceDossier;
+  evidencePack: EvidencePack;
   validationWorkflow: ValidationWorkflowAssessment;
   interventionStrategy: InterventionStrategy;
   primaryArchetype: ConstraintArchetype;
@@ -103,6 +110,8 @@ function buildSummaryText({
     `Validation confidence: ${constraint.scores.validation_confidence_score.toFixed(1)}/10`,
     `Core claim: ${evidenceDossier.core_claim}`,
     `Evidence risk: ${evidenceDossier.evidence_risk_level}`,
+    `Evidence pack defensibility: ${evidencePack.defensibility_score.toFixed(1)}/10`,
+    `Recommended source upgrade: ${evidencePack.recommended_source_upgrade}`,
     `Top analog: ${analogLine}`,
     `Recommended intervention: ${interventionStrategy.intervention_name}`,
     `First experiment: ${interventionStrategy.first_experiment}`,

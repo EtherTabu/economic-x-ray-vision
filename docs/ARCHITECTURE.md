@@ -1,6 +1,6 @@
 # Architecture
 
-Economic X-Ray Vision is a local-first constraint intelligence engine. It structures constraint hypotheses, scores them deterministically, evaluates evidence quality, proposes validation and intervention paths, identifies recurring bottleneck archetypes across industries, and maps relationships between constraints.
+Economic X-Ray Vision is a local-first constraint intelligence engine. It structures constraint hypotheses, scores them deterministically, evaluates evidence quality, separates source provenance from claim support, proposes validation and intervention paths, identifies recurring bottleneck archetypes across industries, and maps relationships between constraints.
 
 The current system is a Next.js app backed by TypeScript data modules, local JSON intake records, generated TypeScript data, and JSON export artifacts. It does not use external APIs, cloud services, authentication, scraping, or SQLite runtime wiring.
 
@@ -16,11 +16,13 @@ flowchart TD
   F --> G["Dashboard UI"]
   F --> H["Dataset Snapshot"]
   H --> I["Evidence Dossiers"]
-  I --> J["Intervention Strategies"]
+  I --> O["Source Registry + Evidence Packs"]
+  O --> J["Intervention Strategies"]
   J --> K["Archetype Analysis"]
   K --> M["Constraint Network Map"]
   H --> L["Local JSON Exports"]
   I --> L
+  O --> L
   J --> L
   K --> L
   M --> L
@@ -37,6 +39,8 @@ flowchart TD
 - `src/data/constraintRegistry.ts`: combined registry used by the app.
 - `src/lib/scoring.ts`: deterministic score calculations.
 - `src/lib/evidenceDossier.ts`: evidence dossier generation.
+- `src/lib/sourceRegistry.ts`: source locator registry and provenance metadata.
+- `src/lib/evidencePacks.ts`: claim support, source coverage, provenance, and defensibility pack generation.
 - `src/lib/interventionSimulator.ts`: intervention strategy generation.
 - `src/lib/constraintArchetypes.ts`: reusable bottleneck taxonomy.
 - `src/lib/archetypeAnalysis.ts`: archetype distribution and portfolio analysis.
@@ -49,6 +53,12 @@ flowchart TD
 The constraint network map is built locally from the existing registry and deterministic engines. It creates constraint, archetype, industry, and intervention nodes, then connects them with edges for archetype membership, industry membership, intervention type, and cross-industry analogs.
 
 The network export is written to `data/exports/constraint_network.json`. It uses stable generated metadata so repeated checks do not create meaningless timestamp diffs when the graph content has not changed.
+
+## Evidence Packs
+
+V11 adds a source registry and evidence pack layer. Source records preserve the current source names as local source locators and label whether each source needs a URL, a primary document, or local observation. Evidence packs connect those sources to specific claim-support statements, unresolved gaps, provenance notes, audit flags, and a defensibility score.
+
+This does not invent citations or fetch external documents. It makes the current evidence status more inspectable and gives future ingestion work a cleaner target.
 
 ## Why Deterministic Logic Matters
 

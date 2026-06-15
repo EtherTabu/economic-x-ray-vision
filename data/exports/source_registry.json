@@ -1,0 +1,541 @@
+{
+  "generated_at": "2026-06-15T12:16:56.307Z",
+  "sources": [
+    {
+      "source_id": "source:administrative-simplification-and-medical-review-workflow-guidance",
+      "title": "Administrative simplification and medical review workflow guidance",
+      "source_type": "Mixed Secondary",
+      "publisher": "Administrative simplification and medical review workflow",
+      "referenced_by": [
+        "hc-intake-003"
+      ],
+      "provenance_level": "secondary-reference",
+      "citation_status": "needs-url",
+      "trust_weight": 8.2,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:ahima-release-of-information-resources",
+      "title": "AHIMA release of information resources",
+      "source_type": "Government",
+      "publisher": "AHIMA release of information",
+      "referenced_by": [
+        "hc-admin-008"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 9,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:ahrmm-supply-chain-resources",
+      "title": "AHRMM supply chain resources",
+      "source_type": "Operational Pattern",
+      "publisher": "AHRMM supply chain",
+      "referenced_by": [
+        "hc-admin-012"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 5.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
+      "source_id": "source:ahrq-care-transitions-resources",
+      "title": "AHRQ care transitions resources",
+      "source_type": "Government",
+      "publisher": "AHRQ care transitions",
+      "referenced_by": [
+        "hc-admin-005"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 10,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:ama-prior-authorization-research",
+      "title": "AMA prior authorization research",
+      "source_type": "Professional Association",
+      "publisher": "AMA prior authorization",
+      "referenced_by": [
+        "hc-admin-007"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 8.7,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:ama-prior-authorization-surveys",
+      "title": "AMA prior authorization surveys",
+      "source_type": "Mixed Secondary",
+      "publisher": "AMA prior authorization",
+      "referenced_by": [
+        "hc-admin-001"
+      ],
+      "provenance_level": "secondary-reference",
+      "citation_status": "needs-url",
+      "trust_weight": 8.2,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:caqh-administrative-index",
+      "title": "CAQH administrative index",
+      "source_type": "Industry Benchmark",
+      "publisher": "CAQH administrative",
+      "referenced_by": [
+        "hc-admin-002"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-url",
+      "trust_weight": 7.5,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:caqh-provider-data-resources",
+      "title": "CAQH provider data resources",
+      "source_type": "Professional Association",
+      "publisher": "CAQH provider data",
+      "referenced_by": [
+        "hc-admin-006"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 7.7,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:cms-administrative-simplification-guidance",
+      "title": "CMS administrative simplification guidance",
+      "source_type": "Mixed Secondary",
+      "publisher": "CMS administrative simplification",
+      "referenced_by": [
+        "hc-admin-001"
+      ],
+      "provenance_level": "secondary-reference",
+      "citation_status": "needs-url",
+      "trust_weight": 8.2,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:cms-quality-reporting-programs",
+      "title": "CMS quality reporting programs",
+      "source_type": "Government",
+      "publisher": "CMS quality reporting",
+      "referenced_by": [
+        "hc-admin-010"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 10,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:cms-readmissions-reduction-program",
+      "title": "CMS readmissions reduction program",
+      "source_type": "Government",
+      "publisher": "CMS readmissions reduction program",
+      "referenced_by": [
+        "hc-admin-005"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 10,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:consumer-financial-protection-bureau-medical-billing-research",
+      "title": "Consumer Financial Protection Bureau medical billing research",
+      "source_type": "Mixed Secondary",
+      "publisher": "Consumer Financial Protection Bureau medical billing",
+      "referenced_by": [
+        "hc-admin-011"
+      ],
+      "provenance_level": "secondary-reference",
+      "citation_status": "needs-url",
+      "trust_weight": 7.2,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:energy-grid-interconnection-process-pattern-review",
+      "title": "Energy / Grid / Interconnection process pattern review",
+      "source_type": "Operational Pattern",
+      "publisher": "Energy / Grid / Interconnection process pattern review",
+      "referenced_by": [
+        "strategic-001",
+        "strategic-002",
+        "strategic-003",
+        "strategic-004",
+        "strategic-005",
+        "strategic-031"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 5.2,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
+      "source_id": "source:healthcare-financial-management-association",
+      "title": "Healthcare Financial Management Association",
+      "source_type": "Industry Benchmark",
+      "publisher": "Healthcare Financial Management Association",
+      "referenced_by": [
+        "hc-admin-002"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-url",
+      "trust_weight": 7.5,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:healthcare-supply-chain-operations-reports",
+      "title": "Healthcare supply chain operations reports",
+      "source_type": "Operational Pattern",
+      "publisher": "Healthcare supply chain operations",
+      "referenced_by": [
+        "hc-admin-012"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 5.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
+      "source_id": "source:hfma-denial-management-resources",
+      "title": "HFMA denial management resources",
+      "source_type": "Industry Benchmark",
+      "publisher": "HFMA denial management",
+      "referenced_by": [
+        "hc-admin-003"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-url",
+      "trust_weight": 8.5,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:hfma-patient-financial-communications",
+      "title": "HFMA patient financial communications",
+      "source_type": "Mixed Secondary",
+      "publisher": "HFMA patient financial communications",
+      "referenced_by": [
+        "hc-admin-011"
+      ],
+      "provenance_level": "secondary-reference",
+      "citation_status": "needs-url",
+      "trust_weight": 7.2,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:hhs-hipaa-right-of-access-guidance",
+      "title": "HHS HIPAA right of access guidance",
+      "source_type": "Government",
+      "publisher": "HHS HIPAA right of access",
+      "referenced_by": [
+        "hc-admin-008"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 9,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:hospital-financial-assistance-policy-guidance",
+      "title": "Hospital financial assistance policy guidance",
+      "source_type": "Government",
+      "publisher": "Hospital financial assistance policy",
+      "referenced_by": [
+        "hc-intake-004"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 9,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:infrastructure-permitting-construction-process-pattern-review",
+      "title": "Infrastructure / Permitting / Construction process pattern review",
+      "source_type": "Government",
+      "publisher": "Infrastructure / Permitting / Construction process pattern review",
+      "referenced_by": [
+        "strategic-006",
+        "strategic-007",
+        "strategic-008",
+        "strategic-009",
+        "strategic-010",
+        "strategic-032"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 5.3,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:logistics-supply-chain-industrial-equipment-process-pattern-review",
+      "title": "Logistics / Supply Chain / Industrial Equipment process pattern review",
+      "source_type": "Operational Pattern",
+      "publisher": "Logistics / Supply Chain / Industrial Equipment process pattern review",
+      "referenced_by": [
+        "strategic-021",
+        "strategic-022",
+        "strategic-023",
+        "strategic-024",
+        "strategic-025",
+        "strategic-035"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 4.9,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
+      "source_id": "source:medical-group-management-association",
+      "title": "Medical Group Management Association",
+      "source_type": "Mixed Secondary",
+      "publisher": "Medical Group Management Association",
+      "referenced_by": [
+        "hc-admin-004"
+      ],
+      "provenance_level": "secondary-reference",
+      "citation_status": "needs-url",
+      "trust_weight": 7.2,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:metals-mining-critical-inputs-process-pattern-review",
+      "title": "Metals / Mining / Critical Inputs process pattern review",
+      "source_type": "Government",
+      "publisher": "Metals / Mining / Critical Inputs process pattern review",
+      "referenced_by": [
+        "strategic-016",
+        "strategic-017",
+        "strategic-018",
+        "strategic-019",
+        "strategic-020",
+        "strategic-034"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 4.9,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:mgma-access-benchmarks",
+      "title": "MGMA access benchmarks",
+      "source_type": "Operational Pattern",
+      "publisher": "MGMA access",
+      "referenced_by": [
+        "hc-admin-009"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 5.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
+      "source_id": "source:mgma-revenue-cycle-benchmarks",
+      "title": "MGMA revenue cycle benchmarks",
+      "source_type": "Industry Benchmark",
+      "publisher": "MGMA revenue cycle",
+      "referenced_by": [
+        "hc-admin-003"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-url",
+      "trust_weight": 8.5,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:ncpdp-electronic-prior-authorization-resources",
+      "title": "NCPDP electronic prior authorization resources",
+      "source_type": "Professional Association",
+      "publisher": "NCPDP electronic prior authorization",
+      "referenced_by": [
+        "hc-admin-007"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 8.7,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:ncqa-credentialing-standards",
+      "title": "NCQA credentialing standards",
+      "source_type": "Professional Association",
+      "publisher": "NCQA credentialing",
+      "referenced_by": [
+        "hc-admin-006"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 7.7,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:ncqa-hedis-resources",
+      "title": "NCQA HEDIS resources",
+      "source_type": "Government",
+      "publisher": "NCQA HEDIS",
+      "referenced_by": [
+        "hc-admin-010"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 10,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:onc-interoperability-resources",
+      "title": "ONC interoperability resources",
+      "source_type": "Mixed Secondary",
+      "publisher": "ONC interoperability",
+      "referenced_by": [
+        "hc-admin-004"
+      ],
+      "provenance_level": "secondary-reference",
+      "citation_status": "needs-url",
+      "trust_weight": 7.2,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:patient-access-operations-case-studies",
+      "title": "Patient access operations case studies",
+      "source_type": "Operational Pattern",
+      "publisher": "Patient access operations",
+      "referenced_by": [
+        "hc-admin-009"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 5.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
+      "source_id": "source:patient-access-operations-workflow-review",
+      "title": "Patient access operations workflow review",
+      "source_type": "Operational Pattern",
+      "publisher": "Patient access operations workflow review",
+      "referenced_by": [
+        "hc-intake-001"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 5.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
+      "source_id": "source:public-sector-administration-compliance-process-pattern-review",
+      "title": "Public-Sector Administration / Compliance process pattern review",
+      "source_type": "Government",
+      "publisher": "Public-Sector Administration / Compliance process pattern review",
+      "referenced_by": [
+        "strategic-026",
+        "strategic-027",
+        "strategic-028",
+        "strategic-029",
+        "strategic-030",
+        "strategic-036"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-primary-document",
+      "trust_weight": 5.3,
+      "verification_need": "Attach specific agency document, program page, or dataset reference."
+    },
+    {
+      "source_id": "source:revenue-cycle-denial-management-benchmark-pattern",
+      "title": "Revenue cycle denial management benchmark pattern",
+      "source_type": "Industry Benchmark",
+      "publisher": "Revenue cycle denial management benchmark pattern",
+      "referenced_by": [
+        "hc-intake-002"
+      ],
+      "provenance_level": "source-title-only",
+      "citation_status": "needs-url",
+      "trust_weight": 7.5,
+      "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:semiconductors-advanced-manufacturing-process-pattern-review",
+      "title": "Semiconductors / Advanced Manufacturing process pattern review",
+      "source_type": "Operational Pattern",
+      "publisher": "Semiconductors / Advanced Manufacturing process pattern review",
+      "referenced_by": [
+        "strategic-011",
+        "strategic-012",
+        "strategic-013",
+        "strategic-014",
+        "strategic-015",
+        "strategic-033"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 4.9,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
+      "source_id": "source:structured-hypothesis-local-operational-evidence-required",
+      "title": "Structured hypothesis; local operational evidence required",
+      "source_type": "Operational Pattern",
+      "publisher": "Structured hypothesis; local operational evidence required",
+      "referenced_by": [
+        "strategic-001",
+        "strategic-002",
+        "strategic-003",
+        "strategic-004",
+        "strategic-005",
+        "strategic-006",
+        "strategic-007",
+        "strategic-008",
+        "strategic-009",
+        "strategic-010",
+        "strategic-011",
+        "strategic-012",
+        "strategic-013",
+        "strategic-014",
+        "strategic-015",
+        "strategic-016",
+        "strategic-017",
+        "strategic-018",
+        "strategic-019",
+        "strategic-020",
+        "strategic-021",
+        "strategic-022",
+        "strategic-023",
+        "strategic-024",
+        "strategic-025",
+        "strategic-026",
+        "strategic-027",
+        "strategic-028",
+        "strategic-029",
+        "strategic-030",
+        "strategic-031",
+        "strategic-032",
+        "strategic-033",
+        "strategic-034",
+        "strategic-035",
+        "strategic-036"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 4.9,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    }
+  ],
+  "summary": {
+    "source_count": 35,
+    "constraint_coverage_count": 52,
+    "average_trust_weight": 7.3,
+    "provenance_distribution": {
+      "secondary-reference": 7,
+      "source-title-only": 19,
+      "operational-pattern": 9
+    },
+    "citation_status_distribution": {
+      "needs-url": 12,
+      "needs-primary-document": 14,
+      "local-observation-needed": 9
+    },
+    "sources_needing_primary_documents": 14
+  }
+}

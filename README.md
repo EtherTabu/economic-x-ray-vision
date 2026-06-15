@@ -30,6 +30,7 @@ Economic X-Ray Vision currently:
 - Classifies constraints into recurring bottleneck archetypes.
 - Detects cross-industry analogs, such as similar queue or documentation patterns in different sectors.
 - Builds evidence dossiers for each record.
+- Separates source metadata, claim support, evidence gaps, and provenance into local evidence packs.
 - Proposes deterministic intervention strategies and first experiments.
 - Opens a dedicated investigation workspace for each constraint, linking evidence, validation workflow, analogs, archetype reasoning, and intervention strategy.
 - Renders a constraint network map that connects records to archetypes, industries, cross-sector analogs, and intervention paths.
@@ -70,6 +71,7 @@ Current metrics:
 - **Scoring Engine**: computes deterministic priority, validation, graph, archetype, and strategic scores.
 - **Dataset Operations**: builds and audits local dataset snapshots.
 - **Evidence Dossier Engine**: derives evidence gaps, proof/disproof conditions, red-team questions, and validation priority.
+- **Source Registry + Evidence Packs**: structures source locators, claim support, citation gaps, provenance limits, and defensibility scores.
 - **Validation Workflow**: classifies records as hypotheses, partially supported claims, or decision-ready candidates.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
@@ -89,7 +91,8 @@ flowchart TD
   C --> F["Scoring Engine"]
   F --> G["Dataset Snapshot"]
   G --> H["Evidence Dossiers"]
-  H --> I["Intervention Strategies"]
+  H --> O["Source Registry + Evidence Packs"]
+  O --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
   J --> N["Constraint Network Map"]
   F --> K["Dashboard Panels"]
@@ -100,6 +103,7 @@ flowchart TD
   N --> M
   G --> L["JSON Exports"]
   H --> L
+  O --> L
   I --> L
   J --> L
   N --> L
@@ -147,6 +151,7 @@ Useful checks and exports:
 npm run check
 npm run dataset
 npm run evidence
+npm run sources
 npm run intervention
 npm run archetype
 npm run network
@@ -156,6 +161,8 @@ npm run network
 
 - `data/exports/constraint_dataset_snapshot.json`
 - `data/exports/evidence_dossiers.json`
+- `data/exports/source_registry.json`
+- `data/exports/evidence_packs.json`
 - `data/exports/intervention_strategies.json`
 - `data/exports/archetype_analysis.json`
 - `data/exports/constraint_network.json`
