@@ -177,3 +177,11 @@ V8.0 focuses on repository presentation and architecture hardening rather than p
 This phase is meant to help a GitHub visitor, recruiter, reviewer, mentor, or fellowship evaluator understand the project within 30-90 seconds while still providing deeper technical documentation for follow-up review. Screenshot documentation uses placeholders and capture guidance only; no broken image links or fake screenshots should be added.
 
 The system should continue to avoid fake production claims, fake badges, invented citations, unsupported ROI claims, hidden external services, scraping, AI API calls, authentication, cloud services, and SQLite runtime wiring until those capabilities are actually implemented.
+
+## V13.0 Technical Note
+
+V13.0 adds local SQLite persistence as a build artifact, not as a runtime dependency for the dashboard. The stable app still reads from the TypeScript/generated registry, while local scripts can build `data/exports/constraint_intelligence.sqlite` from the current JSON dataset, source registry, and evidence packs.
+
+The SQLite layer is intentionally scoped to database credibility and inspection: schema alignment, constraint and score tables, source registry tables, evidence pack tables, build metadata, audit reporting, and inspection queries. Repeated builds compare a content hash before rewriting the database artifact so ordinary checks do not create meaningless database churn.
+
+The next persistence step can move selected runtime reads to SQLite only after the artifact, schema, and audit workflow remain stable.

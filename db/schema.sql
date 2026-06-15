@@ -95,6 +95,54 @@ CREATE TABLE IF NOT EXISTS constraint_scores (
   FOREIGN KEY (constraint_id) REFERENCES constraints(id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS source_records (
+  source_id TEXT PRIMARY KEY,
+  title TEXT NOT NULL,
+  source_type TEXT NOT NULL,
+  publisher TEXT NOT NULL,
+  referenced_by_json TEXT NOT NULL,
+  provenance_level TEXT NOT NULL,
+  citation_status TEXT NOT NULL,
+  trust_weight REAL NOT NULL CHECK (trust_weight BETWEEN 1 AND 10),
+  verification_need TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS constraint_sources (
+  constraint_id TEXT NOT NULL,
+  source_id TEXT NOT NULL,
+  PRIMARY KEY (constraint_id, source_id),
+  FOREIGN KEY (constraint_id) REFERENCES constraints(id) ON DELETE CASCADE,
+  FOREIGN KEY (source_id) REFERENCES source_records(source_id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS evidence_packs (
+  constraint_id TEXT PRIMARY KEY,
+  constraint_title TEXT NOT NULL,
+  core_claim TEXT NOT NULL,
+  source_records_json TEXT NOT NULL,
+  claim_support_json TEXT NOT NULL,
+  evidence_gaps_json TEXT NOT NULL,
+  provenance_notes_json TEXT NOT NULL,
+  provenance_status TEXT NOT NULL CHECK (provenance_status IN ('thin', 'workable', 'strong')),
+  source_coverage_score REAL NOT NULL CHECK (source_coverage_score BETWEEN 1 AND 10),
+  claim_support_score REAL NOT NULL CHECK (claim_support_score BETWEEN 1 AND 10),
+  provenance_score REAL NOT NULL CHECK (provenance_score BETWEEN 1 AND 10),
+  defensibility_score REAL NOT NULL CHECK (defensibility_score BETWEEN 1 AND 10),
+  recommended_source_upgrade TEXT NOT NULL,
+  audit_flags_json TEXT NOT NULL,
+  FOREIGN KEY (constraint_id) REFERENCES constraints(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS database_builds (
+  id TEXT PRIMARY KEY,
+  built_at TEXT NOT NULL,
+  content_hash TEXT NOT NULL,
+  record_count INTEGER NOT NULL,
+  source_count INTEGER NOT NULL,
+  evidence_pack_count INTEGER NOT NULL,
+  schema_version TEXT NOT NULL
+);
+
 CREATE INDEX IF NOT EXISTS idx_constraints_category ON constraints(category);
 CREATE INDEX IF NOT EXISTS idx_constraints_industry ON constraints(industry);
 CREATE INDEX IF NOT EXISTS idx_constraints_subsector ON constraints(subsector);
@@ -110,3 +158,11 @@ CREATE INDEX IF NOT EXISTS idx_constraint_scores_strategic
   ON constraint_scores(total_strategic_score DESC);
 CREATE INDEX IF NOT EXISTS idx_constraint_scores_validation
   ON constraint_scores(validation_confidence_score DESC);
+CREATE INDEX IF NOT EXISTS idx_source_records_citation_status
+  ON source_records(citation_status);
+CREATE INDEX IF NOT EXISTS idx_source_records_provenance_level
+  ON source_records(provenance_level);
+CREATE INDEX IF NOT EXISTS idx_evidence_packs_defensibility
+  ON evidence_packs(defensibility_score DESC);
+CREATE INDEX IF NOT EXISTS idx_evidence_packs_provenance_status
+  ON evidence_packs(provenance_status);
