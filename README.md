@@ -1,96 +1,178 @@
 # Economic X-Ray Vision
 
-Economic X-Ray Vision is a local-first constraint intelligence prototype for finding where value is being wasted, delayed, duplicated, trapped, or underused before those problems show up in traditional outcome metrics.
+A local-first constraint intelligence engine for mapping recurring bottlenecks, validation gaps, and intervention paths across strategic operating systems.
 
-The first version focuses on healthcare administration. It is intentionally small: static TypeScript seed data, deterministic scoring logic, and a Next.js interface for browsing, filtering, sorting, and inspecting constraint intelligence objects.
+Economic X-Ray Vision is an experimental TypeScript + Next.js system for identifying hidden friction before it becomes visible in late-stage outcome metrics. It is not a generic dashboard. It models the queues, handoffs, evidence gaps, approval loops, and capacity mismatches that quietly slow systems down.
 
-## Thesis
+## Problem Statement
 
-Most dashboards measure outcomes after the fact: revenue, productivity, complaints, claim performance, or utilization. Economic X-Ray Vision models earlier signals of constraint and waste, such as manual verification, repeated handoffs, delayed approvals, duplicated work, compliance drag, idle capacity, and information gaps.
+Organizations and industries often fail to move work forward because of hidden constraints rather than one obvious failure point. The recurring patterns include:
 
-The product idea is not to replace operational systems. It is to create an explainable intelligence layer that helps prioritize where hidden friction deserves closer investigation.
+- Queue backlogs
+- Documentation drag
+- Handoff leakage
+- Manual verification
+- Permitting delays
+- Equipment bottlenecks
+- Data fragmentation
+- Capacity mismatch
+- Evidence gaps
 
-## Current Status
+Traditional metrics usually show the outcome after the damage is visible: revenue loss, complaints, inflation, utilization gaps, productivity drag, or project delay. This project asks a different question: can we structure and inspect the friction earlier?
 
-V1.1 is a working local prototype. The UI is powered by static seed data in `src/data/healthcareConstraints.ts`; SQLite is not wired into the app yet. `db/schema.sql` documents the planned local database shape for a future phase.
+## What The System Does
 
-## V1.1 Capabilities
+Economic X-Ray Vision currently:
 
-- Healthcare administration only
-- 12 structured healthcare administration constraint objects
-- Deterministic priority scoring
-- Dashboard summary of analyzed objects and highest-priority friction
-- Category filtering and score-based sorting
-- Expanded card inspection for evidence, affected parties, process, waste, opportunity cost, complexity, confidence, and sources
-- Score breakdown for severity, solvability, AI readiness, overlooked opportunity, and total priority
-- SQLite-ready schema documentation in `db/schema.sql`
+- Maps constraint records across strategic operating domains.
+- Scores priority, severity, solvability, validation confidence, graph position, and strategic opportunity.
+- Validates evidence quality and identifies missing proof.
+- Classifies constraints into recurring bottleneck archetypes.
+- Detects cross-industry analogs, such as similar queue or documentation patterns in different sectors.
+- Builds evidence dossiers for each record.
+- Proposes deterministic intervention strategies and first experiments.
+- Exports local JSON artifacts for dataset, evidence, intervention, and archetype analysis.
 
-## Scoring Model
+## Why It Matters
 
-Scoring is local, deterministic, and explainable. No AI API is used for ranking.
+This project is an attempt to model hidden constraints before they harden into late-stage outcomes. The useful signal is often not the final KPI. It is the earlier friction: the queue that keeps aging, the document packet that keeps bouncing back, the handoff that loses ownership, or the equipment lead time that silently governs an entire project plan.
 
-- Severity combines time waste, capital waste, labor waste, and growth trend.
-- Solvability combines digital solution potential, automation potential, and the inverse of implementation, regulatory, and adoption complexity.
-- AI readiness combines AI potential, digital solution potential, confidence, and regulatory complexity.
-- Overlooked opportunity combines overlooked score, low visibility, severity, and solvability.
-- Total priority combines the four derived scores into one ranking signal.
+The system treats most records as hypotheses until validation improves. That is intentional. The goal is not fake certainty. The goal is structured, inspectable intelligence.
 
-Scores are intended to help compare friction objects, not to claim financial precision.
+## Current Scope
 
-## Tech Direction
+The V7 dataset contains:
 
-- TypeScript
-- Next.js App Router
-- Static local seed data for the current UI
-- Local-first architecture
-- Planned SQLite data layer
+- Healthcare administration
+- Energy / grid / interconnection
+- Infrastructure / permitting / construction
+- Semiconductors / advanced manufacturing
+- Metals / mining / critical inputs
+- Logistics / supply chain / industrial equipment
+- Public-sector administration / compliance
 
-## Run Locally
+Current metrics:
+
+- 52 constraint records
+- 7 industries
+- 23 bottleneck archetypes
+- 20 cross-industry analog pairs
+- Local-first data and scripts
+- Deterministic scoring
+- No external APIs
+- No scraping
+
+## System Modules
+
+- **Constraint Registry**: combines healthcare seed records, generated intake records, and strategic cross-sector seed records.
+- **Scoring Engine**: computes deterministic priority, validation, graph, archetype, and strategic scores.
+- **Dataset Operations**: builds and audits local dataset snapshots.
+- **Evidence Dossier Engine**: derives evidence gaps, proof/disproof conditions, red-team questions, and validation priority.
+- **Validation Workflow**: classifies records as hypotheses, partially supported claims, or decision-ready candidates.
+- **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
+- **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
+- **Cross-Industry Analog Engine**: finds similar constraints in different industries.
+- **Dashboard UI**: displays portfolio health, evidence workflow, interventions, archetypes, filters, and expanded record inspection.
+
+## Architecture
+
+```mermaid
+flowchart TD
+  A["Seed Records"] --> C["Constraint Registry"]
+  B["JSON Intake Records"] --> D["Generated Intake Data"]
+  D --> C
+  E["Strategic Cross-Sector Seeds"] --> C
+  C --> F["Scoring Engine"]
+  F --> G["Dataset Snapshot"]
+  G --> H["Evidence Dossiers"]
+  H --> I["Intervention Strategies"]
+  I --> J["Archetype Analysis"]
+  F --> K["Dashboard Panels"]
+  G --> L["JSON Exports"]
+  H --> L
+  I --> L
+  J --> L
+  J --> K
+```
+
+## Screenshots
+
+Screenshot files are not committed yet, so this README avoids broken image links. Recommended future screenshots:
+
+- [ ] `docs/screenshots/01-hero-overview.png`
+- [ ] `docs/screenshots/02-dataset-health.png`
+- [ ] `docs/screenshots/03-evidence-dossiers.png`
+- [ ] `docs/screenshots/04-intervention-simulator.png`
+- [ ] `docs/screenshots/05-archetype-intelligence.png`
+- [ ] `docs/screenshots/06-constraint-list-filters.png`
+- [ ] `docs/screenshots/07-expanded-card-inspection.png`
+
+See [docs/SCREENSHOT_GUIDE.md](docs/SCREENSHOT_GUIDE.md) for capture guidance.
+
+## How To Run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Open `http://localhost:3000`.
 
-## Useful Scripts
+Useful checks and exports:
 
 ```bash
-npm run dev
-npm run build
-npm run lint
+npm run check
+npm run dataset
+npm run evidence
+npm run intervention
+npm run archetype
 ```
 
-## Non-Goals
+## Local Export Artifacts
 
-V1.1 does not include:
+- `data/exports/constraint_dataset_snapshot.json`
+- `data/exports/evidence_dossiers.json`
+- `data/exports/intervention_strategies.json`
+- `data/exports/archetype_analysis.json`
 
-- Scrapers
-- AI API calls
-- Authentication
-- Cloud services
-- Python ingestion workers
-- Paid dependencies
-- Large datasets
-- Multi-industry expansion
-- A live SQLite-backed application layer
+Generated exports preserve existing `generated_at` values when semantic content is unchanged, which prevents meaningless Git diffs during repeated local checks.
 
-## Project Structure
+## Documentation
 
-```text
-src/app                 Next.js app shell and main page
-src/components          UI components for cards, filters, and score badges
-src/data                Static healthcare administration seed dataset
-src/lib                 Scoring, sorting, and filtering helpers
-src/types               Constraint intelligence TypeScript types
-db/schema.sql           Planned SQLite schema for a future local data layer
-```
+- [Architecture](docs/ARCHITECTURE.md)
+- [Data Pipeline](docs/DATA_PIPELINE.md)
+- [Scoring and Validation](docs/SCORING_AND_VALIDATION.md)
+- [Constraint Archetypes](docs/CONSTRAINT_ARCHETYPES.md)
+- [Intervention Strategy](docs/INTERVENTION_STRATEGY.md)
+- [Demo Walkthrough](docs/DEMO_WALKTHROUGH.md)
+- [Screenshot Guide](docs/SCREENSHOT_GUIDE.md)
+- [Portfolio Summary](docs/PORTFOLIO_SUMMARY.md)
+
+## Project Status
+
+Economic X-Ray Vision is an experimental local-first intelligence engine. It is not a production SaaS product, does not include authentication, does not run cloud services, and does not call external AI or scraping APIs.
+
+SQLite is represented by `db/schema.sql` as the planned persistence target, but the current app still runs from local TypeScript data and generated JSON artifacts.
+
+## Design Principles
+
+- Deterministic scoring over opaque ranking.
+- Inspectable logic over hidden model output.
+- Evidence humility over false certainty.
+- Hypotheses before claims.
+- Local-first data and exports.
+- No hidden external services.
+- No fake ROI claims.
+- No invented citations.
 
 ## Roadmap
 
-- Add richer score explanations per object
-- Add search and more precise filtering
-- Wire the static model into SQLite when the interaction model stabilizes
-- Add import/export for local datasets
-- Later, add ingestion workers for document parsing, extraction, and research workflows
+Future directions:
+
+- Real source ingestion with explicit provenance.
+- SQLite persistence for local dataset operations.
+- Richer validation workflow states and reviewer notes.
+- Domain-specific evidence packs.
+- Graph visualization for constraint relationships and analogs.
+- Benchmarking against real case studies.
+

@@ -169,3 +169,11 @@ The dataset keeps healthcare administration as the baseline and adds strategic s
 Each record now carries `primary_archetype`, `secondary_archetypes`, `archetype_confidence`, and `archetype_reasoning`. The archetype analysis layer computes distribution, spread, under-validation, intervention opportunity, and cross-industry analogs so the product can show when different sectors share the same underlying constraint pattern.
 
 Export hygiene was improved so generated JSON exports preserve existing `generated_at` values when semantic content is unchanged. This keeps repeated local checks from creating meaningless Git diffs after the committed snapshots are current.
+
+## V8.0 Technical Note
+
+V8.0 focuses on repository presentation and architecture hardening rather than product feature expansion. The README and docs now explain the project narrative, current system metrics, local-first architecture, deterministic data pipeline, scoring and validation approach, intervention strategy logic, constraint archetype engine, cross-industry analog detection, and portfolio positioning.
+
+This phase is meant to help a GitHub visitor, recruiter, reviewer, mentor, or fellowship evaluator understand the project within 30-90 seconds while still providing deeper technical documentation for follow-up review. Screenshot documentation uses placeholders and capture guidance only; no broken image links or fake screenshots should be added.
+
+The system should continue to avoid fake production claims, fake badges, invented citations, unsupported ROI claims, hidden external services, scraping, AI API calls, authentication, cloud services, and SQLite runtime wiring until those capabilities are actually implemented.
