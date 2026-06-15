@@ -159,3 +159,13 @@ Later:
 - AI-assisted extraction
 - Multi-source evidence management
 - Multi-industry expansion
+
+## V7.0 Technical Note
+
+V7.0 shifts the project from a healthcare-only constraint dashboard toward a generalized constraint archetype engine. The system now models recurring bottleneck patterns such as queue backlogs, documentation chase, handoff leakage, permitting delay, equipment lead time, data fragmentation, regulatory complexity, inspection delay, vendor qualification, measurement blind spots, and support channel overload.
+
+The dataset keeps healthcare administration as the baseline and adds strategic seed hypotheses across energy/grid interconnection, infrastructure/permitting/construction, semiconductors/advanced manufacturing, metals/mining/critical inputs, logistics/supply chain/industrial equipment, and public-sector administration/compliance. These records are intentionally framed as hypotheses until evidence improves.
+
+Each record now carries `primary_archetype`, `secondary_archetypes`, `archetype_confidence`, and `archetype_reasoning`. The archetype analysis layer computes distribution, spread, under-validation, intervention opportunity, and cross-industry analogs so the product can show when different sectors share the same underlying constraint pattern.
+
+Export hygiene was improved so generated JSON exports preserve existing `generated_at` values when semantic content is unchanged. This keeps repeated local checks from creating meaningless Git diffs after the committed snapshots are current.

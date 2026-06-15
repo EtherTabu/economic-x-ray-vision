@@ -14,7 +14,8 @@
     "dataset": "npm run build:data && node scripts/build-dataset.ts && node scripts/audit-dataset.ts && node scripts/export-dataset.ts",
     "evidence": "npm run dataset && node scripts/build-evidence-dossiers.ts && node scripts/audit-evidence.ts",
     "intervention": "npm run evidence && node scripts/build-interventions.ts && node scripts/audit-interventions.ts",
-    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run intervention && npm run lint && npm run build"
+    "archetype": "npm run intervention && node scripts/build-archetype-analysis.ts && node scripts/audit-archetypes.ts",
+    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run intervention && npm run archetype && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "^15.3.3",

@@ -43,6 +43,8 @@ const scoreKeys: SortOption[] = [
   "downstream_impact_score",
   "opportunity_score",
   "total_strategic_score",
+  "archetype_spread_score",
+  "cross_industry_similarity_score",
   "total_priority_score"
 ];
 
@@ -106,7 +108,7 @@ export function analyzeDatasetQuality(
     evidence_completeness_score: evidenceCompleteness,
     relationship_completeness_score: relationshipCompleteness,
     records_needing_validation: recordsNeedingValidation(constraints),
-    strongest_under_validated_opportunity: strongestUnderValidated(constraints).id,
+    strongest_under_validated_opportunity: strongestUnderValidated(constraints).title,
     category_distribution: distribution(constraints.map((item) => item.category)),
     opportunity_type_distribution: distribution(
       constraints.map((item) => item.opportunity_type)

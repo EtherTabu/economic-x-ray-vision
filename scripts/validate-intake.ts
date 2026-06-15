@@ -53,6 +53,10 @@ type IntakeRecordKey =
   | "affected_systems"
   | "solution_hypotheses"
   | "opportunity_type"
+  | "primary_archetype"
+  | "secondary_archetypes"
+  | "archetype_confidence"
+  | "archetype_reasoning"
   | "sources";
 
 const intakePath = resolve("data/intake/sample_constraints.json");
@@ -69,6 +73,15 @@ const categories = [
   "Idle Capacity",
   "Hidden Cost",
   "Market Mismatch"
+];
+const industries = [
+  "Healthcare",
+  "Energy / Grid / Interconnection",
+  "Infrastructure / Permitting / Construction",
+  "Semiconductors / Advanced Manufacturing",
+  "Metals / Mining / Critical Inputs",
+  "Logistics / Supply Chain / Industrial Equipment",
+  "Public-Sector Administration / Compliance"
 ];
 
 const growthTrends = ["Decreasing", "Stable", "Increasing"];
@@ -93,6 +106,31 @@ const opportunityTypes = [
   "Capacity Optimization",
   "Compliance Simplification"
 ];
+const archetypeIds = [
+  "queue_backlog",
+  "manual_verification_drag",
+  "documentation_chase",
+  "handoff_leakage",
+  "duplicated_work",
+  "data_fragmentation",
+  "idle_capacity",
+  "capacity_mismatch",
+  "equipment_lead_time",
+  "permitting_delay",
+  "regulatory_complexity",
+  "inspection_delay",
+  "vendor_qualification",
+  "workforce_constraint",
+  "infrastructure_siting",
+  "interconnection_delay",
+  "project_approval_friction",
+  "supply_concentration",
+  "processing_capacity",
+  "measurement_blind_spot",
+  "demand_forecast_mismatch",
+  "hidden_cost_shift",
+  "support_channel_overload"
+];
 
 const stringFields: IntakeRecordKey[] = [
   "id",
@@ -108,6 +146,8 @@ const stringFields: IntakeRecordKey[] = [
   "source_type",
   "validation_status",
   "opportunity_type",
+  "primary_archetype",
+  "archetype_reasoning",
   "confidence_reasoning"
 ];
 
@@ -123,6 +163,7 @@ const arrayFields: IntakeRecordKey[] = [
   "related_processes",
   "affected_systems",
   "solution_hypotheses",
+  "secondary_archetypes",
   "sources"
 ];
 
@@ -141,7 +182,8 @@ const scoreFields: IntakeRecordKey[] = [
   "confidence",
   "source_quality",
   "measurement_difficulty",
-  "data_availability"
+  "data_availability",
+  "archetype_confidence"
 ];
 
 function main() {
@@ -220,9 +262,7 @@ function validateRecord(
     }
   });
 
-  if (record.industry !== "Healthcare") {
-    errors.push(`records[${index}].industry must be Healthcare.`);
-  }
+  validateKnownValue(record.industry, industries, `records[${index}].industry`, errors);
 
   validateKnownValue(record.category, categories, `records[${index}].category`, errors);
   validateKnownValue(
@@ -255,6 +295,23 @@ function validateRecord(
     `records[${index}].opportunity_type`,
     errors
   );
+  validateKnownValue(
+    record.primary_archetype,
+    archetypeIds,
+    `records[${index}].primary_archetype`,
+    errors
+  );
+
+  if (Array.isArray(record.secondary_archetypes)) {
+    record.secondary_archetypes.forEach((archetype, archetypeIndex) =>
+      validateKnownValue(
+        archetype,
+        archetypeIds,
+        `records[${index}].secondary_archetypes[${archetypeIndex}]`,
+        errors
+      )
+    );
+  }
 
   if (Array.isArray(record.sources)) {
     record.sources.forEach((source, sourceIndex) =>

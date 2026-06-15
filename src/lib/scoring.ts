@@ -107,6 +107,27 @@ export function scoreConstraint(
         0.15
   );
 
+  const archetype_spread_score = round(
+    Math.min(
+      10,
+      3 +
+        constraint.secondary_archetypes.length * 1.2 +
+        constraint.archetype_confidence * 0.35 +
+        constraint.affected_systems.length * 0.35
+    )
+  );
+
+  const cross_industry_similarity_score = round(
+    Math.min(
+      10,
+      archetype_spread_score * 0.45 +
+        constraint.related_processes.length * 0.45 +
+        constraint.affected_systems.length * 0.35 +
+        constraint.solution_hypotheses.length * 0.25 +
+        2
+    )
+  );
+
   const total_priority_score = round(
     total_priority_scoreBase(
       severity_score,
@@ -129,6 +150,8 @@ export function scoreConstraint(
     downstream_impact_score: clampScore(downstream_impact_score),
     opportunity_score: clampScore(opportunity_score),
     total_strategic_score: clampScore(total_strategic_score),
+    archetype_spread_score: clampScore(archetype_spread_score),
+    cross_industry_similarity_score: clampScore(cross_industry_similarity_score),
     total_priority_score: clampScore(total_priority_score)
   };
 }

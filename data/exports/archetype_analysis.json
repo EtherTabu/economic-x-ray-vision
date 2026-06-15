@@ -1,0 +1,844 @@
+{
+  "generated_at": "2026-06-14T23:53:54.708Z",
+  "record_count": 52,
+  "archetype_count": 23,
+  "archetype_summary": {
+    "total_archetypes_detected": 23,
+    "most_widespread_archetype": "Documentation Chase",
+    "highest_priority_archetype": "Manual Verification Drag",
+    "most_under_validated_archetype": "Equipment Lead Time",
+    "highest_intervention_opportunity_archetype": "Manual Verification Drag",
+    "cross_industry_analog_count": 20,
+    "archetype_distribution": {
+      "queue_backlog": 6,
+      "manual_verification_drag": 2,
+      "documentation_chase": 5,
+      "handoff_leakage": 4,
+      "hidden_cost_shift": 2,
+      "duplicated_work": 3,
+      "capacity_mismatch": 2,
+      "regulatory_complexity": 1,
+      "support_channel_overload": 1,
+      "measurement_blind_spot": 5,
+      "data_fragmentation": 2,
+      "interconnection_delay": 1,
+      "equipment_lead_time": 3,
+      "permitting_delay": 2,
+      "inspection_delay": 2,
+      "vendor_qualification": 4,
+      "infrastructure_siting": 1,
+      "processing_capacity": 2,
+      "supply_concentration": 1,
+      "project_approval_friction": 2,
+      "demand_forecast_mismatch": 1
+    },
+    "industry_distribution": {
+      "Healthcare": 16,
+      "Energy / Grid / Interconnection": 6,
+      "Infrastructure / Permitting / Construction": 6,
+      "Semiconductors / Advanced Manufacturing": 6,
+      "Metals / Mining / Critical Inputs": 6,
+      "Logistics / Supply Chain / Industrial Equipment": 6,
+      "Public-Sector Administration / Compliance": 6
+    }
+  },
+  "archetype_summaries": [
+    {
+      "archetype_id": "documentation_chase",
+      "display_name": "Documentation Chase",
+      "record_count": 22,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs",
+        "Public-Sector Administration / Compliance",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Prior authorization rework loops",
+        "Claim denial triage and resubmission",
+        "Medical necessity documentation chase",
+        "Release of information request backlog",
+        "Patient statement confusion and support calls"
+      ],
+      "average_priority_score": 6.3,
+      "average_validation_confidence": 5.4,
+      "average_intervention_priority": 4.9
+    },
+    {
+      "archetype_id": "manual_verification_drag",
+      "display_name": "Manual Verification Drag",
+      "record_count": 19,
+      "affected_industries": [
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs",
+        "Public-Sector Administration / Compliance",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Prior authorization rework loops",
+        "Claim denial triage and resubmission",
+        "Medical necessity documentation chase",
+        "Provider credentialing packet duplication",
+        "Manual quality measure abstraction"
+      ],
+      "average_priority_score": 6.5,
+      "average_validation_confidence": 5.9,
+      "average_intervention_priority": 5.3
+    },
+    {
+      "archetype_id": "queue_backlog",
+      "display_name": "Queue Backlog",
+      "record_count": 19,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Public-Sector Administration / Compliance",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Prior authorization rework loops",
+        "Claim denial triage and resubmission",
+        "Medical necessity documentation chase",
+        "Appointment call queue overflow",
+        "Manual quality measure abstraction"
+      ],
+      "average_priority_score": 6.4,
+      "average_validation_confidence": 5.8,
+      "average_intervention_priority": 5.3
+    },
+    {
+      "archetype_id": "capacity_mismatch",
+      "display_name": "Capacity Mismatch",
+      "record_count": 11,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Medication prior authorization exceptions",
+        "Chip equipment lead-time coordination",
+        "Grid interconnection queue delay",
+        "Advanced packaging capacity bottleneck",
+        "Distributed energy hosting capacity uncertainty"
+      ],
+      "average_priority_score": 6.1,
+      "average_validation_confidence": 4.6,
+      "average_intervention_priority": 4.7
+    },
+    {
+      "archetype_id": "data_fragmentation",
+      "display_name": "Data Fragmentation",
+      "record_count": 11,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Public-Sector Administration / Compliance",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Post-discharge follow-up gaps",
+        "Referral leakage from manual handoffs",
+        "Insurance eligibility verification before each visit",
+        "Duplicate demographic collection across intake channels",
+        "Coordination of benefits ambiguity before claim submission"
+      ],
+      "average_priority_score": 6.4,
+      "average_validation_confidence": 5.5,
+      "average_intervention_priority": 5.1
+    },
+    {
+      "archetype_id": "support_channel_overload",
+      "display_name": "Support Channel Overload",
+      "record_count": 10,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Public-Sector Administration / Compliance"
+      ],
+      "top_constraints": [
+        "Post-discharge follow-up gaps",
+        "Appointment call queue overflow",
+        "Public infrastructure grant review backlog",
+        "Financial assistance screening after billing escalation",
+        "Benefits eligibility manual verification drag"
+      ],
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 5.2,
+      "average_intervention_priority": 5
+    },
+    {
+      "archetype_id": "hidden_cost_shift",
+      "display_name": "Hidden Cost Shift",
+      "record_count": 9,
+      "affected_industries": [
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs"
+      ],
+      "top_constraints": [
+        "Post-discharge follow-up gaps",
+        "Preference card mismatch in procedural supply planning",
+        "Financial assistance screening after billing escalation",
+        "Warehouse slotting and pick-path rework",
+        "Industrial replacement parts lead-time mismatch"
+      ],
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 5,
+      "average_intervention_priority": 4.9
+    },
+    {
+      "archetype_id": "processing_capacity",
+      "display_name": "Processing Capacity",
+      "record_count": 9,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Manual quality measure abstraction",
+        "Port and rail movement bottleneck",
+        "Transformer lead-time bottleneck",
+        "Advanced packaging capacity bottleneck",
+        "Yield learning cycle delay"
+      ],
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 5,
+      "average_intervention_priority": 4.9
+    },
+    {
+      "archetype_id": "project_approval_friction",
+      "display_name": "Project Approval Friction",
+      "record_count": 9,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Infrastructure / Permitting / Construction",
+        "Metals / Mining / Critical Inputs",
+        "Public-Sector Administration / Compliance",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Chip equipment lead-time coordination",
+        "Public infrastructure grant review backlog",
+        "Grid interconnection queue delay",
+        "Utility upgrade review backlog",
+        "Semiconductor fab utility readiness"
+      ],
+      "average_priority_score": 6.1,
+      "average_validation_confidence": 4.5,
+      "average_intervention_priority": 4.2
+    },
+    {
+      "archetype_id": "handoff_leakage",
+      "display_name": "Handoff Leakage",
+      "record_count": 7,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Logistics / Supply Chain / Industrial Equipment"
+      ],
+      "top_constraints": [
+        "Referral leakage from manual handoffs",
+        "Port and rail movement bottleneck",
+        "Financial assistance screening after billing escalation",
+        "Utility upgrade review backlog",
+        "Cold chain exception handoff leakage"
+      ],
+      "average_priority_score": 6.3,
+      "average_validation_confidence": 4.9,
+      "average_intervention_priority": 4.7
+    },
+    {
+      "archetype_id": "measurement_blind_spot",
+      "display_name": "Measurement Blind Spot",
+      "record_count": 7,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Referral leakage from manual handoffs",
+        "Preference card mismatch in procedural supply planning",
+        "Yield learning cycle delay",
+        "Warehouse slotting and pick-path rework",
+        "Mine maintenance shutdown workpack readiness gap"
+      ],
+      "average_priority_score": 6.3,
+      "average_validation_confidence": 4.6,
+      "average_intervention_priority": 5
+    },
+    {
+      "archetype_id": "regulatory_complexity",
+      "display_name": "Regulatory Complexity",
+      "record_count": 7,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Metals / Mining / Critical Inputs",
+        "Public-Sector Administration / Compliance"
+      ],
+      "top_constraints": [
+        "Release of information request backlog",
+        "Compliance reporting duplication",
+        "Transmission permitting documentation drag",
+        "Construction permit review delay",
+        "Copper mine permitting delay"
+      ],
+      "average_priority_score": 6.1,
+      "average_validation_confidence": 5.4,
+      "average_intervention_priority": 4.2
+    },
+    {
+      "archetype_id": "demand_forecast_mismatch",
+      "display_name": "Demand Forecast Mismatch",
+      "record_count": 6,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Preference card mismatch in procedural supply planning",
+        "Transformer lead-time bottleneck",
+        "Advanced packaging capacity bottleneck",
+        "Warehouse slotting and pick-path rework",
+        "Industrial replacement parts lead-time mismatch"
+      ],
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 4.9,
+      "average_intervention_priority": 4.9
+    },
+    {
+      "archetype_id": "duplicated_work",
+      "display_name": "Duplicated Work",
+      "record_count": 6,
+      "affected_industries": [
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Public-Sector Administration / Compliance"
+      ],
+      "top_constraints": [
+        "Provider credentialing packet duplication",
+        "Insurance eligibility verification before each visit",
+        "Duplicate demographic collection across intake channels",
+        "Compliance reporting duplication",
+        "Contractor qualification friction"
+      ],
+      "average_priority_score": 6.5,
+      "average_validation_confidence": 6.1,
+      "average_intervention_priority": 5.2
+    },
+    {
+      "archetype_id": "equipment_lead_time",
+      "display_name": "Equipment Lead Time",
+      "record_count": 6,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Chip equipment lead-time coordination",
+        "Transformer lead-time bottleneck",
+        "Mine maintenance shutdown workpack readiness gap",
+        "Heavy equipment availability constraint",
+        "Industrial replacement parts lead-time mismatch"
+      ],
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 4.2,
+      "average_intervention_priority": 4.7
+    },
+    {
+      "archetype_id": "supply_concentration",
+      "display_name": "Supply Concentration",
+      "record_count": 6,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Metals / Mining / Critical Inputs",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Chip equipment lead-time coordination",
+        "Transformer lead-time bottleneck",
+        "Specialty material qualification lag",
+        "Refining and smelting capacity bottleneck",
+        "Critical mineral processing qualification delay"
+      ],
+      "average_priority_score": 6,
+      "average_validation_confidence": 4.2,
+      "average_intervention_priority": 4.3
+    },
+    {
+      "archetype_id": "idle_capacity",
+      "display_name": "Idle Capacity",
+      "record_count": 5,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Appointment call queue overflow",
+        "Inspection scheduling bottleneck",
+        "Advanced packaging capacity bottleneck",
+        "Heavy equipment availability constraint",
+        "Outage restoration crew dispatch mismatch"
+      ],
+      "average_priority_score": 6.3,
+      "average_validation_confidence": 5.1,
+      "average_intervention_priority": 5.1
+    },
+    {
+      "archetype_id": "permitting_delay",
+      "display_name": "Permitting Delay",
+      "record_count": 5,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Infrastructure / Permitting / Construction",
+        "Metals / Mining / Critical Inputs"
+      ],
+      "top_constraints": [
+        "Transmission permitting documentation drag",
+        "Construction permit review delay",
+        "Copper mine permitting delay",
+        "Environmental review documentation chase",
+        "Gold project approval and capital sequencing friction"
+      ],
+      "average_priority_score": 5.9,
+      "average_validation_confidence": 5.1,
+      "average_intervention_priority": 3.8
+    },
+    {
+      "archetype_id": "vendor_qualification",
+      "display_name": "Vendor Qualification",
+      "record_count": 5,
+      "affected_industries": [
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Logistics / Supply Chain / Industrial Equipment",
+        "Metals / Mining / Critical Inputs",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Provider credentialing packet duplication",
+        "Contractor qualification friction",
+        "Procurement vendor onboarding delay",
+        "Specialty material qualification lag",
+        "Critical mineral processing qualification delay"
+      ],
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 5.2,
+      "average_intervention_priority": 4.8
+    },
+    {
+      "archetype_id": "interconnection_delay",
+      "display_name": "Interconnection Delay",
+      "record_count": 4,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Grid interconnection queue delay",
+        "Utility upgrade review backlog",
+        "Distributed energy hosting capacity uncertainty",
+        "Semiconductor fab utility readiness"
+      ],
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 4.5,
+      "average_intervention_priority": 4.3
+    },
+    {
+      "archetype_id": "workforce_constraint",
+      "display_name": "Workforce Constraint",
+      "record_count": 4,
+      "affected_industries": [
+        "Healthcare",
+        "Infrastructure / Permitting / Construction",
+        "Metals / Mining / Critical Inputs",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Medication prior authorization exceptions",
+        "Inspection scheduling bottleneck",
+        "Yield learning cycle delay",
+        "Mine maintenance shutdown workpack readiness gap"
+      ],
+      "average_priority_score": 6.4,
+      "average_validation_confidence": 5.3,
+      "average_intervention_priority": 5.3
+    },
+    {
+      "archetype_id": "infrastructure_siting",
+      "display_name": "Infrastructure Siting",
+      "record_count": 3,
+      "affected_industries": [
+        "Energy / Grid / Interconnection",
+        "Infrastructure / Permitting / Construction",
+        "Semiconductors / Advanced Manufacturing"
+      ],
+      "top_constraints": [
+        "Transmission permitting documentation drag",
+        "Semiconductor fab utility readiness",
+        "Right-of-way utility relocation sequencing delay"
+      ],
+      "average_priority_score": 6.1,
+      "average_validation_confidence": 4.4,
+      "average_intervention_priority": 4
+    },
+    {
+      "archetype_id": "inspection_delay",
+      "display_name": "Inspection Delay",
+      "record_count": 2,
+      "affected_industries": [
+        "Infrastructure / Permitting / Construction",
+        "Public-Sector Administration / Compliance"
+      ],
+      "top_constraints": [
+        "Inspection scheduling bottleneck",
+        "Code enforcement reinspection loop"
+      ],
+      "average_priority_score": 6.1,
+      "average_validation_confidence": 4.9,
+      "average_intervention_priority": 4.9
+    }
+  ],
+  "cross_industry_analogs": [
+    {
+      "source_constraint_title": "Prior authorization rework loops",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Occupational license renewal documentation chase",
+      "analog_industry": "Public-Sector Administration / Compliance",
+      "shared_archetypes": [
+        "queue_backlog",
+        "documentation_chase",
+        "manual_verification_drag"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Prior authorization rework loops and Occupational license renewal documentation chase share queue backlog across different industries."
+    },
+    {
+      "source_constraint_title": "Prior authorization rework loops",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Public records request triage backlog",
+      "analog_industry": "Public-Sector Administration / Compliance",
+      "shared_archetypes": [
+        "queue_backlog",
+        "documentation_chase",
+        "manual_verification_drag"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Prior authorization rework loops and Public records request triage backlog share queue backlog across different industries."
+    },
+    {
+      "source_constraint_title": "Prior authorization rework loops",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Customer quality exception closure queue",
+      "analog_industry": "Semiconductors / Advanced Manufacturing",
+      "shared_archetypes": [
+        "queue_backlog",
+        "documentation_chase",
+        "manual_verification_drag"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Prior authorization rework loops and Customer quality exception closure queue share queue backlog across different industries."
+    },
+    {
+      "source_constraint_title": "Post-discharge follow-up gaps",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Cold chain exception handoff leakage",
+      "analog_industry": "Logistics / Supply Chain / Industrial Equipment",
+      "shared_archetypes": [
+        "hidden_cost_shift",
+        "support_channel_overload",
+        "data_fragmentation"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Post-discharge follow-up gaps and Cold chain exception handoff leakage share hidden cost shift across different industries."
+    },
+    {
+      "source_constraint_title": "Provider credentialing packet duplication",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Contractor qualification friction",
+      "analog_industry": "Infrastructure / Permitting / Construction",
+      "shared_archetypes": [
+        "duplicated_work",
+        "vendor_qualification",
+        "manual_verification_drag"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Provider credentialing packet duplication and Contractor qualification friction share duplicated work across different industries."
+    },
+    {
+      "source_constraint_title": "Release of information request backlog",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Compliance reporting duplication",
+      "analog_industry": "Public-Sector Administration / Compliance",
+      "shared_archetypes": [
+        "regulatory_complexity",
+        "manual_verification_drag",
+        "documentation_chase"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Release of information request backlog and Compliance reporting duplication share regulatory complexity across different industries."
+    },
+    {
+      "source_constraint_title": "Manual quality measure abstraction",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Customer quality exception closure queue",
+      "analog_industry": "Semiconductors / Advanced Manufacturing",
+      "shared_archetypes": [
+        "queue_backlog",
+        "processing_capacity",
+        "manual_verification_drag"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Manual quality measure abstraction and Customer quality exception closure queue share queue backlog across different industries."
+    },
+    {
+      "source_constraint_title": "Medical necessity documentation chase",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Occupational license renewal documentation chase",
+      "analog_industry": "Public-Sector Administration / Compliance",
+      "shared_archetypes": [
+        "documentation_chase",
+        "manual_verification_drag",
+        "queue_backlog"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Medical necessity documentation chase and Occupational license renewal documentation chase share documentation chase across different industries."
+    },
+    {
+      "source_constraint_title": "Medical necessity documentation chase",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Public records request triage backlog",
+      "analog_industry": "Public-Sector Administration / Compliance",
+      "shared_archetypes": [
+        "documentation_chase",
+        "manual_verification_drag",
+        "queue_backlog"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Medical necessity documentation chase and Public records request triage backlog share documentation chase across different industries."
+    },
+    {
+      "source_constraint_title": "Medical necessity documentation chase",
+      "source_industry": "Healthcare",
+      "analog_constraint_title": "Customer quality exception closure queue",
+      "analog_industry": "Semiconductors / Advanced Manufacturing",
+      "shared_archetypes": [
+        "documentation_chase",
+        "manual_verification_drag",
+        "queue_backlog"
+      ],
+      "shared_affected_systems": [],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Medical necessity documentation chase and Customer quality exception closure queue share documentation chase across different industries."
+    },
+    {
+      "source_constraint_title": "Grid interconnection queue delay",
+      "source_industry": "Energy / Grid / Interconnection",
+      "analog_constraint_title": "Semiconductor fab utility readiness",
+      "analog_industry": "Semiconductors / Advanced Manufacturing",
+      "shared_archetypes": [
+        "interconnection_delay",
+        "capacity_mismatch",
+        "project_approval_friction"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Grid interconnection queue delay and Semiconductor fab utility readiness share interconnection delay across different industries."
+    },
+    {
+      "source_constraint_title": "Transformer lead-time bottleneck",
+      "source_industry": "Energy / Grid / Interconnection",
+      "analog_constraint_title": "Silver byproduct supply dependency",
+      "analog_industry": "Metals / Mining / Critical Inputs",
+      "shared_archetypes": [
+        "supply_concentration",
+        "demand_forecast_mismatch",
+        "processing_capacity"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Transformer lead-time bottleneck and Silver byproduct supply dependency share supply concentration across different industries."
+    },
+    {
+      "source_constraint_title": "Transformer lead-time bottleneck",
+      "source_industry": "Energy / Grid / Interconnection",
+      "analog_constraint_title": "Refining and smelting capacity bottleneck",
+      "analog_industry": "Metals / Mining / Critical Inputs",
+      "shared_archetypes": [
+        "equipment_lead_time",
+        "supply_concentration",
+        "processing_capacity"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Transformer lead-time bottleneck and Refining and smelting capacity bottleneck share equipment lead time across different industries."
+    },
+    {
+      "source_constraint_title": "Utility upgrade review backlog",
+      "source_industry": "Energy / Grid / Interconnection",
+      "analog_constraint_title": "Right-of-way utility relocation sequencing delay",
+      "analog_industry": "Infrastructure / Permitting / Construction",
+      "shared_archetypes": [
+        "handoff_leakage",
+        "queue_backlog",
+        "project_approval_friction"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Utility upgrade review backlog and Right-of-way utility relocation sequencing delay share handoff leakage across different industries."
+    },
+    {
+      "source_constraint_title": "Transmission permitting documentation drag",
+      "source_industry": "Energy / Grid / Interconnection",
+      "analog_constraint_title": "Construction permit review delay",
+      "analog_industry": "Infrastructure / Permitting / Construction",
+      "shared_archetypes": [
+        "documentation_chase",
+        "permitting_delay",
+        "regulatory_complexity"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Transmission permitting documentation drag and Construction permit review delay share documentation chase across different industries."
+    },
+    {
+      "source_constraint_title": "Transmission permitting documentation drag",
+      "source_industry": "Energy / Grid / Interconnection",
+      "analog_constraint_title": "Environmental review documentation chase",
+      "analog_industry": "Infrastructure / Permitting / Construction",
+      "shared_archetypes": [
+        "documentation_chase",
+        "permitting_delay",
+        "regulatory_complexity"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Transmission permitting documentation drag and Environmental review documentation chase share documentation chase across different industries."
+    },
+    {
+      "source_constraint_title": "Transmission permitting documentation drag",
+      "source_industry": "Energy / Grid / Interconnection",
+      "analog_constraint_title": "Copper mine permitting delay",
+      "analog_industry": "Metals / Mining / Critical Inputs",
+      "shared_archetypes": [
+        "documentation_chase",
+        "permitting_delay",
+        "regulatory_complexity"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Transmission permitting documentation drag and Copper mine permitting delay share documentation chase across different industries."
+    },
+    {
+      "source_constraint_title": "Construction permit review delay",
+      "source_industry": "Infrastructure / Permitting / Construction",
+      "analog_constraint_title": "Copper mine permitting delay",
+      "analog_industry": "Metals / Mining / Critical Inputs",
+      "shared_archetypes": [
+        "permitting_delay",
+        "documentation_chase",
+        "regulatory_complexity"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Construction permit review delay and Copper mine permitting delay share permitting delay across different industries."
+    },
+    {
+      "source_constraint_title": "Contractor qualification friction",
+      "source_industry": "Infrastructure / Permitting / Construction",
+      "analog_constraint_title": "Specialty material qualification lag",
+      "analog_industry": "Semiconductors / Advanced Manufacturing",
+      "shared_archetypes": [
+        "vendor_qualification",
+        "manual_verification_drag",
+        "documentation_chase"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Contractor qualification friction and Specialty material qualification lag share vendor qualification across different industries."
+    },
+    {
+      "source_constraint_title": "Contractor qualification friction",
+      "source_industry": "Infrastructure / Permitting / Construction",
+      "analog_constraint_title": "Critical mineral processing qualification delay",
+      "analog_industry": "Metals / Mining / Critical Inputs",
+      "shared_archetypes": [
+        "vendor_qualification",
+        "manual_verification_drag",
+        "documentation_chase"
+      ],
+      "shared_affected_systems": [
+        "shared tracking workflow",
+        "operational reporting"
+      ],
+      "similarity_score": 10,
+      "why_the_analog_matters": "Contractor qualification friction and Critical mineral processing qualification delay share vendor qualification across different industries."
+    }
+  ]
+}

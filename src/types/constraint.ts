@@ -29,6 +29,15 @@ export type ValidationStatus =
 
 export type RecordOrigin = "seed" | "intake";
 
+export type ConstraintIndustry =
+  | "Healthcare"
+  | "Energy / Grid / Interconnection"
+  | "Infrastructure / Permitting / Construction"
+  | "Semiconductors / Advanced Manufacturing"
+  | "Metals / Mining / Critical Inputs"
+  | "Logistics / Supply Chain / Industrial Equipment"
+  | "Public-Sector Administration / Compliance";
+
 export type OpportunityType =
   | "Automation"
   | "Workflow Redesign"
@@ -36,10 +45,35 @@ export type OpportunityType =
   | "Capacity Optimization"
   | "Compliance Simplification";
 
+export type ConstraintArchetypeId =
+  | "queue_backlog"
+  | "manual_verification_drag"
+  | "documentation_chase"
+  | "handoff_leakage"
+  | "duplicated_work"
+  | "data_fragmentation"
+  | "idle_capacity"
+  | "capacity_mismatch"
+  | "equipment_lead_time"
+  | "permitting_delay"
+  | "regulatory_complexity"
+  | "inspection_delay"
+  | "vendor_qualification"
+  | "workforce_constraint"
+  | "infrastructure_siting"
+  | "interconnection_delay"
+  | "project_approval_friction"
+  | "supply_concentration"
+  | "processing_capacity"
+  | "measurement_blind_spot"
+  | "demand_forecast_mismatch"
+  | "hidden_cost_shift"
+  | "support_channel_overload";
+
 export type ConstraintIntelligenceObject = {
   id: string;
   origin: RecordOrigin;
-  industry: "Healthcare";
+  industry: ConstraintIndustry;
   subsector: string;
   title: string;
   category: ConstraintCategory;
@@ -79,6 +113,10 @@ export type ConstraintIntelligenceObject = {
   affected_systems: string[];
   solution_hypotheses: string[];
   opportunity_type: OpportunityType;
+  primary_archetype: ConstraintArchetypeId;
+  secondary_archetypes: ConstraintArchetypeId[];
+  archetype_confidence: number;
+  archetype_reasoning: string;
 };
 
 export type ConstraintScores = {
@@ -93,6 +131,8 @@ export type ConstraintScores = {
   downstream_impact_score: number;
   opportunity_score: number;
   total_strategic_score: number;
+  archetype_spread_score: number;
+  cross_industry_similarity_score: number;
   total_priority_score: number;
 };
 

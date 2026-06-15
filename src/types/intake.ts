@@ -1,5 +1,7 @@
 import type {
+  ConstraintArchetypeId,
   ConstraintCategory,
+  ConstraintIndustry,
   EvidenceStrength,
   GrowthTrend,
   OpportunityType,
@@ -17,7 +19,7 @@ export type ConstraintIntakeSource = {
 
 export type ConstraintIntakeRecord = {
   id: string;
-  industry: "Healthcare";
+  industry: ConstraintIndustry;
   subsector: string;
   title: string;
   category: ConstraintCategory;
@@ -56,6 +58,10 @@ export type ConstraintIntakeRecord = {
   affected_systems: string[];
   solution_hypotheses: string[];
   opportunity_type: OpportunityType;
+  primary_archetype: ConstraintArchetypeId;
+  secondary_archetypes: ConstraintArchetypeId[];
+  archetype_confidence: number;
+  archetype_reasoning: string;
   sources: ConstraintIntakeSource[];
 };
 

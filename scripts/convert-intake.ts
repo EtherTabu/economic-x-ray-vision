@@ -4,7 +4,7 @@ type ConvertIntakeSource = {
 
 type ConvertIntakeRecord = {
   id: string;
-  industry: "Healthcare";
+  industry: string;
   subsector: string;
   title: string;
   category: string;
@@ -43,6 +43,10 @@ type ConvertIntakeRecord = {
   affected_systems: string[];
   solution_hypotheses: string[];
   opportunity_type: string;
+  primary_archetype: string;
+  secondary_archetypes: string[];
+  archetype_confidence: number;
+  archetype_reasoning: string;
   sources: ConvertIntakeSource[];
 };
 
@@ -94,7 +98,11 @@ function convertIntakeRecord(record: ConvertIntakeRecord) {
     related_processes: record.related_processes,
     affected_systems: record.affected_systems,
     solution_hypotheses: record.solution_hypotheses,
-    opportunity_type: record.opportunity_type
+    opportunity_type: record.opportunity_type,
+    primary_archetype: record.primary_archetype,
+    secondary_archetypes: record.secondary_archetypes,
+    archetype_confidence: record.archetype_confidence,
+    archetype_reasoning: record.archetype_reasoning
   };
 }
 

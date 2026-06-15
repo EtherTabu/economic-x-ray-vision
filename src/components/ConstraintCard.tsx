@@ -23,8 +23,12 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
         <div>
           <h2>{constraint.title}</h2>
           <div className="constraint-card__meta">
+            <span className="pill">{constraint.industry}</span>
             <span className="pill">{constraint.subsector}</span>
             <span className="pill">{constraint.category}</span>
+            <span className="pill">
+              {constraint.primary_archetype.replaceAll("_", " ")}
+            </span>
             <span className="pill">{constraint.opportunity_type}</span>
             <span className="pill">{constraint.origin} record</span>
             <span className="pill">Confidence {constraint.confidence}/10</span>
@@ -150,8 +154,19 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
             title="Graph Position"
             values={[
               `Opportunity type: ${constraint.opportunity_type}`,
+              `Primary archetype: ${constraint.primary_archetype.replaceAll("_", " ")}`,
+              `Archetype confidence: ${constraint.archetype_confidence}/10`,
               `Upstream links: ${constraint.upstream_constraints.length}`,
               `Downstream links: ${constraint.downstream_constraints.length}`
+            ]}
+          />
+          <DetailBlock
+            title="Archetype Pattern"
+            values={[
+              constraint.archetype_reasoning,
+              `Secondary archetypes: ${constraint.secondary_archetypes
+                .map((item) => item.replaceAll("_", " "))
+                .join(", ")}`
             ]}
           />
           <DetailBlock
@@ -232,6 +247,14 @@ export function ConstraintCard({ constraint }: ConstraintCardProps) {
               <Metric
                 label="Strategic"
                 value={constraint.scores.total_strategic_score}
+              />
+              <Metric
+                label="Archetype spread"
+                value={constraint.scores.archetype_spread_score}
+              />
+              <Metric
+                label="Cross-industry similarity"
+                value={constraint.scores.cross_industry_similarity_score}
               />
             </div>
           </div>

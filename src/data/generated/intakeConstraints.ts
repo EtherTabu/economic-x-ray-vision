@@ -89,7 +89,14 @@ export const intakeConstraints: ConstraintIntelligenceObject[] = [
       "Promote one authoritative demographic profile across intake channels",
       "Route only mismatched fields to registration staff"
     ],
-    "opportunity_type": "Data Quality"
+    "opportunity_type": "Data Quality",
+    "primary_archetype": "duplicated_work",
+    "secondary_archetypes": [
+      "data_fragmentation",
+      "manual_verification_drag"
+    ],
+    "archetype_confidence": 8,
+    "archetype_reasoning": "Duplicate demographic collection maps to duplicated work because patients and staff repeat the same data capture across intake channels."
   },
   {
     "id": "hc-intake-002",
@@ -176,7 +183,14 @@ export const intakeConstraints: ConstraintIntelligenceObject[] = [
       "Flag conflicting payer order before claim submission",
       "Create a coverage-order exception queue for multi-payer patients"
     ],
-    "opportunity_type": "Workflow Redesign"
+    "opportunity_type": "Workflow Redesign",
+    "primary_archetype": "data_fragmentation",
+    "secondary_archetypes": [
+      "manual_verification_drag",
+      "documentation_chase"
+    ],
+    "archetype_confidence": 7,
+    "archetype_reasoning": "Coordination of benefits ambiguity maps to data fragmentation because payer responsibility is split across records and manually reconciled before claim submission."
   },
   {
     "id": "hc-intake-003",
@@ -263,7 +277,14 @@ export const intakeConstraints: ConstraintIntelligenceObject[] = [
       "Detect missing payer-required documentation at order entry",
       "Suggest documentation prompts before administrative review"
     ],
-    "opportunity_type": "Automation"
+    "opportunity_type": "Automation",
+    "primary_archetype": "documentation_chase",
+    "secondary_archetypes": [
+      "manual_verification_drag",
+      "queue_backlog"
+    ],
+    "archetype_confidence": 8,
+    "archetype_reasoning": "Medical necessity documentation chase maps to documentation chase because progress depends on assembling and correcting evidence before approval."
   },
   {
     "id": "hc-intake-004",
@@ -350,6 +371,13 @@ export const intakeConstraints: ConstraintIntelligenceObject[] = [
       "Screen likely assistance eligibility before first statement",
       "Route eligible accounts to counseling before billing escalation"
     ],
-    "opportunity_type": "Workflow Redesign"
+    "opportunity_type": "Workflow Redesign",
+    "primary_archetype": "hidden_cost_shift",
+    "secondary_archetypes": [
+      "support_channel_overload",
+      "handoff_leakage"
+    ],
+    "archetype_confidence": 7,
+    "archetype_reasoning": "Financial assistance screening after billing escalation maps to hidden cost shift because unresolved eligibility work moves downstream into billing support."
   }
 ];

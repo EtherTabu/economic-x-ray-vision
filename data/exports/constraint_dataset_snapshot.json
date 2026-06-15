@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-14T23:07:46.368Z",
-  "record_count": 16,
+  "generated_at": "2026-06-14T23:56:23.117Z",
+  "record_count": 52,
   "records": [
     {
       "id": "hc-admin-001",
@@ -89,6 +89,13 @@
         "Pre-fill authorization packets from structured clinical data"
       ],
       "opportunity_type": "Automation",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 9,
+      "archetype_reasoning": "Prior authorization rework loops maps to queue backlog because the workflow pattern centers on Prior authorization and affects Treatment scheduling.",
       "scores": {
         "severity_score": 8.1,
         "solvability_score": 6.7,
@@ -101,6 +108,8 @@
         "downstream_impact_score": 8.7,
         "opportunity_score": 7.6,
         "total_strategic_score": 8.5,
+        "archetype_spread_score": 9.6,
+        "cross_industry_similarity_score": 9.2,
         "total_priority_score": 7.4
       }
     },
@@ -190,6 +199,13 @@
         "Flag only coverage changes and exceptions for staff review"
       ],
       "opportunity_type": "Data Quality",
+      "primary_archetype": "manual_verification_drag",
+      "secondary_archetypes": [
+        "data_fragmentation",
+        "duplicated_work"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Insurance eligibility verification before each visit maps to manual verification drag because the workflow pattern centers on Eligibility verification and affects Claim submission.",
       "scores": {
         "severity_score": 6.5,
         "solvability_score": 7.2,
@@ -202,6 +218,8 @@
         "downstream_impact_score": 7.9,
         "opportunity_score": 7.2,
         "total_strategic_score": 8,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 6.6
       }
     },
@@ -293,6 +311,13 @@
         "Route recurring denial patterns back to front-end workflows"
       ],
       "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "documentation_chase",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Claim denial triage and resubmission maps to documentation chase because the workflow pattern centers on Claims processing and affects Cash collection.",
       "scores": {
         "severity_score": 8.4,
         "solvability_score": 6.6,
@@ -305,6 +330,8 @@
         "downstream_impact_score": 9,
         "opportunity_score": 7.3,
         "total_strategic_score": 8.5,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 7.3
       }
     },
@@ -395,6 +422,13 @@
         "Prioritize referrals missing required records"
       ],
       "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "data_fragmentation",
+        "measurement_blind_spot"
+      ],
+      "archetype_confidence": 9,
+      "archetype_reasoning": "Referral leakage from manual handoffs maps to handoff leakage because the workflow pattern centers on Referral management and affects Specialist scheduling.",
       "scores": {
         "severity_score": 7.1,
         "solvability_score": 6.3,
@@ -407,6 +441,8 @@
         "downstream_impact_score": 8.2,
         "opportunity_score": 6.7,
         "total_strategic_score": 8,
+        "archetype_spread_score": 9.6,
+        "cross_industry_similarity_score": 9.2,
         "total_priority_score": 6.8
       }
     },
@@ -497,6 +533,13 @@
         "Track closed-loop completion by risk tier"
       ],
       "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "hidden_cost_shift",
+      "secondary_archetypes": [
+        "support_channel_overload",
+        "data_fragmentation"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Post-discharge follow-up gaps maps to hidden cost shift because the workflow pattern centers on Care transitions and affects Follow-up scheduling.",
       "scores": {
         "severity_score": 7.5,
         "solvability_score": 5.9,
@@ -509,6 +552,8 @@
         "downstream_impact_score": 8.5,
         "opportunity_score": 6.6,
         "total_strategic_score": 8.1,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 6.9
       }
     },
@@ -599,6 +644,13 @@
         "Alert on expiring documents before enrollment delays"
       ],
       "opportunity_type": "Data Quality",
+      "primary_archetype": "duplicated_work",
+      "secondary_archetypes": [
+        "vendor_qualification",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 9,
+      "archetype_reasoning": "Provider credentialing packet duplication maps to duplicated work because the workflow pattern centers on Credentialing and affects Payer enrollment.",
       "scores": {
         "severity_score": 7.1,
         "solvability_score": 6.6,
@@ -611,6 +663,8 @@
         "downstream_impact_score": 8.2,
         "opportunity_score": 6.9,
         "total_strategic_score": 8,
+        "archetype_spread_score": 9.6,
+        "cross_industry_similarity_score": 9.2,
         "total_priority_score": 6.8
       }
     },
@@ -701,6 +755,13 @@
         "Auto-assemble medication exception documentation"
       ],
       "opportunity_type": "Automation",
+      "primary_archetype": "capacity_mismatch",
+      "secondary_archetypes": [
+        "workforce_constraint",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Medication prior authorization exceptions maps to capacity mismatch because the workflow pattern centers on Electronic prescribing and affects Medication dispensing.",
       "scores": {
         "severity_score": 6.9,
         "solvability_score": 6.1,
@@ -713,6 +774,8 @@
         "downstream_impact_score": 8,
         "opportunity_score": 7,
         "total_strategic_score": 8,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 6.6
       }
     },
@@ -803,6 +866,13 @@
         "Standardize authorization validation before queue assignment"
       ],
       "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "regulatory_complexity",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Release of information request backlog maps to regulatory complexity because the workflow pattern centers on Release of information and affects Record fulfillment.",
       "scores": {
         "severity_score": 6.5,
         "solvability_score": 5.8,
@@ -815,6 +885,8 @@
         "downstream_impact_score": 7.9,
         "opportunity_score": 6,
         "total_strategic_score": 7.6,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 6.4
       }
     },
@@ -904,6 +976,13 @@
         "Expose routine scheduling paths through self-service"
       ],
       "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "support_channel_overload",
+      "secondary_archetypes": [
+        "idle_capacity",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 9,
+      "archetype_reasoning": "Appointment call queue overflow maps to support channel overload because the workflow pattern centers on Call routing and affects Scheduling throughput.",
       "scores": {
         "severity_score": 6.9,
         "solvability_score": 7,
@@ -916,6 +995,8 @@
         "downstream_impact_score": 8.1,
         "opportunity_score": 7,
         "total_strategic_score": 8,
+        "archetype_spread_score": 9.6,
+        "cross_industry_similarity_score": 9.2,
         "total_priority_score": 6.8
       }
     },
@@ -1006,6 +1087,13 @@
         "Flag charts likely to require manual review"
       ],
       "opportunity_type": "Automation",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "processing_capacity",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Manual quality measure abstraction maps to queue backlog because the workflow pattern centers on Measure abstraction and affects Quality reporting.",
       "scores": {
         "severity_score": 7.5,
         "solvability_score": 5.6,
@@ -1018,6 +1106,8 @@
         "downstream_impact_score": 8.4,
         "opportunity_score": 6.9,
         "total_strategic_score": 8.1,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 6.8
       }
     },
@@ -1107,6 +1197,13 @@
         "Add account-specific explanations to patient billing flows"
       ],
       "opportunity_type": "Data Quality",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Patient statement confusion and support calls maps to queue backlog because the workflow pattern centers on Patient billing and affects Support calls.",
       "scores": {
         "severity_score": 6.5,
         "solvability_score": 6.4,
@@ -1119,6 +1216,8 @@
         "downstream_impact_score": 8,
         "opportunity_score": 6.6,
         "total_strategic_score": 7.8,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 6.4
       }
     },
@@ -1209,6 +1308,13 @@
         "Prioritize high-cost items with repeated return patterns"
       ],
       "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "measurement_blind_spot",
+      "secondary_archetypes": [
+        "demand_forecast_mismatch",
+        "hidden_cost_shift"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Preference card mismatch in procedural supply planning maps to measurement blind spot because the workflow pattern centers on Supply picking and affects Case setup.",
       "scores": {
         "severity_score": 6.5,
         "solvability_score": 6.1,
@@ -1221,6 +1327,8 @@
         "downstream_impact_score": 8,
         "opportunity_score": 6.4,
         "total_strategic_score": 7.8,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 6.5
       }
     },
@@ -1310,6 +1418,13 @@
         "Route only mismatched fields to registration staff"
       ],
       "opportunity_type": "Data Quality",
+      "primary_archetype": "duplicated_work",
+      "secondary_archetypes": [
+        "data_fragmentation",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Duplicate demographic collection maps to duplicated work because patients and staff repeat the same data capture across intake channels.",
       "scores": {
         "severity_score": 5.9,
         "solvability_score": 7,
@@ -1322,6 +1437,8 @@
         "downstream_impact_score": 7.5,
         "opportunity_score": 7,
         "total_strategic_score": 7.8,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 6.5
       }
     },
@@ -1411,6 +1528,13 @@
         "Create a coverage-order exception queue for multi-payer patients"
       ],
       "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "data_fragmentation",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Coordination of benefits ambiguity maps to data fragmentation because payer responsibility is split across records and manually reconciled before claim submission.",
       "scores": {
         "severity_score": 6.8,
         "solvability_score": 6.1,
@@ -1423,6 +1547,8 @@
         "downstream_impact_score": 8.1,
         "opportunity_score": 6.3,
         "total_strategic_score": 7.8,
+        "archetype_spread_score": 8.9,
+        "cross_industry_similarity_score": 8.9,
         "total_priority_score": 6.4
       }
     },
@@ -1512,6 +1638,13 @@
         "Suggest documentation prompts before administrative review"
       ],
       "opportunity_type": "Automation",
+      "primary_archetype": "documentation_chase",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Medical necessity documentation chase maps to documentation chase because progress depends on assembling and correcting evidence before approval.",
       "scores": {
         "severity_score": 7.5,
         "solvability_score": 6.4,
@@ -1524,6 +1657,8 @@
         "downstream_impact_score": 8.4,
         "opportunity_score": 7.4,
         "total_strategic_score": 8.3,
+        "archetype_spread_score": 9.3,
+        "cross_industry_similarity_score": 9.1,
         "total_priority_score": 7.1
       }
     },
@@ -1613,6 +1748,13 @@
         "Route eligible accounts to counseling before billing escalation"
       ],
       "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "hidden_cost_shift",
+      "secondary_archetypes": [
+        "support_channel_overload",
+        "handoff_leakage"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Financial assistance screening after billing escalation maps to hidden cost shift because unresolved eligibility work moves downstream into billing support.",
       "scores": {
         "severity_score": 6.6,
         "solvability_score": 5.8,
@@ -1625,54 +1767,4121 @@
         "downstream_impact_score": 8,
         "opportunity_score": 6.2,
         "total_strategic_score": 7.7,
+        "archetype_spread_score": 8.9,
+        "cross_industry_similarity_score": 8.9,
         "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-001",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Generation Interconnection",
+      "title": "Grid interconnection queue delay",
+      "category": "Administrative Delay",
+      "description": "Projects wait through sequential study queues before connection requirements and upgrade obligations are clear.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Interconnection study.",
+        "Operational review should confirm whether Interconnection queue system captures queue, handoff, or capacity data.",
+        "Initial pattern match: interconnection delay."
+      ],
+      "affected_parties": [
+        "Developers",
+        "Utilities",
+        "System operators",
+        "Ratepayers"
+      ],
+      "current_process": [
+        "Interconnection study receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Interconnection queue system.",
+        "Work proceeds only after the constraint clears enough for Project financing."
+      ],
+      "resource_waste": [
+        "Project waiting time",
+        "Repeated study updates",
+        "Capital uncertainty"
+      ],
+      "time_waste": 9,
+      "capital_waste": 9,
+      "labor_waste": 6,
+      "opportunity_cost": "Viable projects can sit idle while sponsors wait for study outcomes and upgrade cost clarity.",
+      "estimated_annual_impact": "High relative impact in regions with congested connection queues",
+      "growth_trend": "Increasing",
+      "visibility_score": 7,
+      "overlooked_score": 7,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 9,
+      "adoption_complexity": 7,
+      "confidence": 7,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Operational Pattern",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 7,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Interconnection study.",
+        "Compare Interconnection queue system records with downstream outcomes in Project financing."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Interconnection study",
+        "Observed frequency and owner of delay before Project financing"
+      ],
+      "upstream_constraints": [
+        "Interconnection study intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Project financing",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Interconnection study",
+        "Interconnection study validation",
+        "Project financing"
+      ],
+      "affected_systems": [
+        "Interconnection queue system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Interconnection study with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant interconnection delay signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "interconnection_delay",
+      "secondary_archetypes": [
+        "queue_backlog",
+        "capacity_mismatch",
+        "project_approval_friction"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Grid interconnection queue delay matches interconnection delay because the constraint centers on Interconnection study and delays Project financing.",
+      "scores": {
+        "severity_score": 8.1,
+        "solvability_score": 4.9,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 6.3,
+        "evidence_score": 5.9,
+        "measurability_score": 5.3,
+        "validation_confidence_score": 5.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.7,
+        "opportunity_score": 5.6,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-002",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Grid Equipment",
+      "title": "Transformer lead-time bottleneck",
+      "category": "Hidden Cost",
+      "description": "Long-cycle transformer procurement limits the timing of grid upgrades, replacement work, and new service capacity.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Transformer procurement.",
+        "Operational review should confirm whether Asset planning system captures queue, handoff, or capacity data.",
+        "Initial pattern match: equipment lead time."
+      ],
+      "affected_parties": [
+        "Utilities",
+        "Developers",
+        "Equipment suppliers",
+        "Large customers"
+      ],
+      "current_process": [
+        "Transformer procurement receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Asset planning system.",
+        "Work proceeds only after the constraint clears enough for Energization schedule."
+      ],
+      "resource_waste": [
+        "Idle construction readiness",
+        "Procurement expediting",
+        "Schedule buffers"
+      ],
+      "time_waste": 8,
+      "capital_waste": 9,
+      "labor_waste": 5,
+      "opportunity_cost": "Construction and interconnection plans can be ready before critical equipment is available.",
+      "estimated_annual_impact": "High where grid upgrades depend on scarce long-cycle equipment",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 6,
+      "automation_potential": 4,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 6,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Operational Pattern",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Transformer procurement.",
+        "Compare Asset planning system records with downstream outcomes in Energization schedule."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Transformer procurement",
+        "Observed frequency and owner of delay before Energization schedule"
+      ],
+      "upstream_constraints": [
+        "Transformer procurement intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Energization schedule",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Transformer procurement",
+        "Transformer procurement validation",
+        "Energization schedule"
+      ],
+      "affected_systems": [
+        "Asset planning system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Transformer procurement with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant equipment lead time signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "equipment_lead_time",
+      "secondary_archetypes": [
+        "supply_concentration",
+        "demand_forecast_mismatch",
+        "processing_capacity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Transformer lead-time bottleneck matches equipment lead time because the constraint centers on Transformer procurement and delays Energization schedule.",
+      "scores": {
+        "severity_score": 7.5,
+        "solvability_score": 5.1,
+        "ai_readiness_score": 5.6,
+        "overlooked_opportunity_score": 6.9,
+        "evidence_score": 5.8,
+        "measurability_score": 5.2,
+        "validation_confidence_score": 5.6,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 5.3,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-003",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Utility Planning",
+      "title": "Utility upgrade review backlog",
+      "category": "Process Handoff",
+      "description": "Upgrade requests wait across planning, engineering, finance, and regulatory review before scope and timing are settled.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Utility upgrade review.",
+        "Operational review should confirm whether Capital planning workflow captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "affected_parties": [
+        "Utility planners",
+        "Engineering teams",
+        "Project sponsors",
+        "Regulators"
+      ],
+      "current_process": [
+        "Utility upgrade review receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Capital planning workflow.",
+        "Work proceeds only after the constraint clears enough for Construction release."
+      ],
+      "resource_waste": [
+        "Review rework",
+        "Scope clarification",
+        "Delayed capital allocation"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Queued upgrade decisions delay downstream construction and connection work.",
+      "estimated_annual_impact": "Moderate to high in upgrade-heavy service territories",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 7,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Utility upgrade review.",
+        "Compare Capital planning workflow records with downstream outcomes in Construction release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Utility upgrade review",
+        "Observed frequency and owner of delay before Construction release"
+      ],
+      "upstream_constraints": [
+        "Utility upgrade review intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Construction release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Utility upgrade review",
+        "Utility upgrade review validation",
+        "Construction release"
+      ],
+      "affected_systems": [
+        "Capital planning workflow",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Utility upgrade review with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant handoff leakage signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "queue_backlog",
+        "project_approval_friction",
+        "interconnection_delay"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Utility upgrade review backlog matches handoff leakage because the constraint centers on Utility upgrade review and delays Construction release.",
+      "scores": {
+        "severity_score": 7.5,
+        "solvability_score": 5.2,
+        "ai_readiness_score": 5.8,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.8,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 4.2,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 5.6,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.2
+      }
+    },
+    {
+      "id": "strategic-004",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Transmission Development",
+      "title": "Transmission permitting documentation drag",
+      "category": "Compliance Drag",
+      "description": "Transmission projects cycle through document assembly, completeness questions, and sequential jurisdictional review.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Transmission permit package review.",
+        "Operational review should confirm whether Permit document repository captures queue, handoff, or capacity data.",
+        "Initial pattern match: documentation chase."
+      ],
+      "affected_parties": [
+        "Transmission developers",
+        "Permitting agencies",
+        "Landowners",
+        "Utilities"
+      ],
+      "current_process": [
+        "Transmission permit package review receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Permit document repository.",
+        "Work proceeds only after the constraint clears enough for Right-of-way acquisition."
+      ],
+      "resource_waste": [
+        "Document resubmission",
+        "Reviewer clarification",
+        "Delayed siting decisions"
+      ],
+      "time_waste": 9,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "Project teams spend time proving package completeness before route and construction work can proceed.",
+      "estimated_annual_impact": "High for multi-jurisdiction transmission projects",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 6,
+      "automation_potential": 4,
+      "ai_potential": 6,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 9,
+      "adoption_complexity": 7,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Government",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 8,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Transmission permit package review.",
+        "Compare Permit document repository records with downstream outcomes in Right-of-way acquisition."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Transmission permit package review",
+        "Observed frequency and owner of delay before Right-of-way acquisition"
+      ],
+      "upstream_constraints": [
+        "Transmission permit package review intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Right-of-way acquisition",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Transmission permit package review",
+        "Transmission permit package review validation",
+        "Right-of-way acquisition"
+      ],
+      "affected_systems": [
+        "Permit document repository",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Transmission permit package review with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant documentation chase signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "documentation_chase",
+      "secondary_archetypes": [
+        "permitting_delay",
+        "infrastructure_siting",
+        "regulatory_complexity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Transmission permitting documentation drag matches documentation chase because the constraint centers on Transmission permit package review and delays Right-of-way acquisition.",
+      "scores": {
+        "severity_score": 8.1,
+        "solvability_score": 4.3,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 6.5,
+        "evidence_score": 5.8,
+        "measurability_score": 4.5,
+        "validation_confidence_score": 5.4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.7,
+        "opportunity_score": 4.9,
+        "total_strategic_score": 7.5,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.2
+      }
+    },
+    {
+      "id": "strategic-005",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Distribution Hosting Capacity",
+      "title": "Distributed energy hosting capacity uncertainty",
+      "category": "Information Gap",
+      "description": "Applicants lack clear feeder-level capacity signals before submitting connection requests.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Hosting capacity screening.",
+        "Operational review should confirm whether Distribution planning data captures queue, handoff, or capacity data.",
+        "Initial pattern match: measurement blind spot."
+      ],
+      "affected_parties": [
+        "Distributed energy developers",
+        "Utilities",
+        "Customers",
+        "Engineering reviewers"
+      ],
+      "current_process": [
+        "Hosting capacity screening receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Distribution planning data.",
+        "Work proceeds only after the constraint clears enough for Connection application."
+      ],
+      "resource_waste": [
+        "Speculative applications",
+        "Engineering screening rework",
+        "Project redesign"
+      ],
+      "time_waste": 7,
+      "capital_waste": 6,
+      "labor_waste": 6,
+      "opportunity_cost": "Projects can enter review despite weak fit with available distribution capacity.",
+      "estimated_annual_impact": "Moderate in constrained distribution networks",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Hosting capacity screening.",
+        "Compare Distribution planning data records with downstream outcomes in Connection application."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Hosting capacity screening",
+        "Observed frequency and owner of delay before Connection application"
+      ],
+      "upstream_constraints": [
+        "Hosting capacity screening intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Connection application",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Hosting capacity screening",
+        "Hosting capacity screening validation",
+        "Connection application"
+      ],
+      "affected_systems": [
+        "Distribution planning data",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Hosting capacity screening with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant measurement blind spot signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "measurement_blind_spot",
+      "secondary_archetypes": [
+        "capacity_mismatch",
+        "interconnection_delay",
+        "data_fragmentation"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Distributed energy hosting capacity uncertainty matches measurement blind spot because the constraint centers on Hosting capacity screening and delays Connection application.",
+      "scores": {
+        "severity_score": 6.6,
+        "solvability_score": 6.2,
+        "ai_readiness_score": 6.1,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.9,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-006",
+      "origin": "seed",
+      "industry": "Infrastructure / Permitting / Construction",
+      "subsector": "Local Building Permits",
+      "title": "Construction permit review delay",
+      "category": "Administrative Delay",
+      "description": "Permit applications wait in completeness, plan review, correction, and resubmission loops before work can begin.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Building permit review.",
+        "Operational review should confirm whether Permit management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: permitting delay."
+      ],
+      "affected_parties": [
+        "Owners",
+        "Contractors",
+        "Permit reviewers",
+        "Design teams"
+      ],
+      "current_process": [
+        "Building permit review receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Permit management system.",
+        "Work proceeds only after the constraint clears enough for Construction start."
+      ],
+      "resource_waste": [
+        "Idle crews",
+        "Resubmitted plans",
+        "Financing carry time"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Construction-ready projects wait for review milestones instead of converting capital into completed assets.",
+      "estimated_annual_impact": "High in jurisdictions with constrained review capacity",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 6,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Infrastructure / Permitting / Construction process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Government",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 6,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Building permit review.",
+        "Compare Permit management system records with downstream outcomes in Construction start."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Building permit review",
+        "Observed frequency and owner of delay before Construction start"
+      ],
+      "upstream_constraints": [
+        "Building permit review intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Construction start",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Building permit review",
+        "Building permit review validation",
+        "Construction start"
+      ],
+      "affected_systems": [
+        "Permit management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Building permit review with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant permitting delay signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "permitting_delay",
+      "secondary_archetypes": [
+        "queue_backlog",
+        "documentation_chase",
+        "regulatory_complexity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Construction permit review delay matches permitting delay because the constraint centers on Building permit review and delays Construction start.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 5.4,
+        "ai_readiness_score": 5.8,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 5.8,
+        "measurability_score": 5.7,
+        "validation_confidence_score": 5.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 5.9,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.2
+      }
+    },
+    {
+      "id": "strategic-007",
+      "origin": "seed",
+      "industry": "Infrastructure / Permitting / Construction",
+      "subsector": "Field Inspection",
+      "title": "Inspection scheduling bottleneck",
+      "category": "Idle Capacity",
+      "description": "Construction progress pauses when field inspections cannot be scheduled or reinspection loops are triggered.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Inspection scheduling.",
+        "Operational review should confirm whether Inspection calendar captures queue, handoff, or capacity data.",
+        "Initial pattern match: inspection delay."
+      ],
+      "affected_parties": [
+        "Contractors",
+        "Inspectors",
+        "Owners",
+        "Subcontractors"
+      ],
+      "current_process": [
+        "Inspection scheduling receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Inspection calendar.",
+        "Work proceeds only after the constraint clears enough for Next construction phase."
+      ],
+      "resource_waste": [
+        "Idle crews",
+        "Reinspection trips",
+        "Schedule resequencing"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Ready work waits for scarce inspection slots before crews can continue.",
+      "estimated_annual_impact": "Moderate to high for inspection-dependent construction phases",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 5,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 5,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Infrastructure / Permitting / Construction process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Operational Pattern",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 5,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Inspection scheduling.",
+        "Compare Inspection calendar records with downstream outcomes in Next construction phase."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Inspection scheduling",
+        "Observed frequency and owner of delay before Next construction phase"
+      ],
+      "upstream_constraints": [
+        "Inspection scheduling intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Next construction phase",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Inspection scheduling",
+        "Inspection scheduling validation",
+        "Next construction phase"
+      ],
+      "affected_systems": [
+        "Inspection calendar",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Inspection scheduling with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant inspection delay signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "inspection_delay",
+      "secondary_archetypes": [
+        "queue_backlog",
+        "idle_capacity",
+        "workforce_constraint"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Inspection scheduling bottleneck matches inspection delay because the constraint centers on Inspection scheduling and delays Next construction phase.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 5.8,
+        "ai_readiness_score": 5.5,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 5.8,
+        "measurability_score": 6,
+        "validation_confidence_score": 5.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 5.8,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-008",
+      "origin": "seed",
+      "industry": "Infrastructure / Permitting / Construction",
+      "subsector": "Contractor Administration",
+      "title": "Contractor qualification friction",
+      "category": "Manual Verification",
+      "description": "Public and private project owners repeatedly collect contractor insurance, safety, bonding, and compliance documents.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Contractor qualification.",
+        "Operational review should confirm whether Vendor qualification portal captures queue, handoff, or capacity data.",
+        "Initial pattern match: vendor qualification."
+      ],
+      "affected_parties": [
+        "Contractors",
+        "Procurement teams",
+        "Project owners",
+        "Risk managers"
+      ],
+      "current_process": [
+        "Contractor qualification receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Vendor qualification portal.",
+        "Work proceeds only after the constraint clears enough for Bid eligibility."
+      ],
+      "resource_waste": [
+        "Repeated document upload",
+        "Qualification review",
+        "Bid delay"
+      ],
+      "time_waste": 6,
+      "capital_waste": 5,
+      "labor_waste": 7,
+      "opportunity_cost": "Qualified contractors spend effort proving the same readiness signals across projects.",
+      "estimated_annual_impact": "Moderate across multi-project contractor networks",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 5,
+      "implementation_complexity": 5,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 6,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Infrastructure / Permitting / Construction process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Operational Pattern",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 5,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Contractor qualification.",
+        "Compare Vendor qualification portal records with downstream outcomes in Bid eligibility."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Contractor qualification",
+        "Observed frequency and owner of delay before Bid eligibility"
+      ],
+      "upstream_constraints": [
+        "Contractor qualification intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Bid eligibility",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Contractor qualification",
+        "Contractor qualification validation",
+        "Bid eligibility"
+      ],
+      "affected_systems": [
+        "Vendor qualification portal",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Contractor qualification with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant vendor qualification signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "vendor_qualification",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "duplicated_work",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Contractor qualification friction matches vendor qualification because the constraint centers on Contractor qualification and delays Bid eligibility.",
+      "scores": {
+        "severity_score": 5.9,
+        "solvability_score": 6.7,
+        "ai_readiness_score": 5.9,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 5.8,
+        "measurability_score": 6,
+        "validation_confidence_score": 5.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.6,
+        "opportunity_score": 6.8,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-009",
+      "origin": "seed",
+      "industry": "Infrastructure / Permitting / Construction",
+      "subsector": "Environmental Review",
+      "title": "Environmental review documentation chase",
+      "category": "Compliance Drag",
+      "description": "Applicants and reviewers trade supplemental documents, clarification requests, and mitigation details before a review file is complete.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Environmental review file assembly.",
+        "Operational review should confirm whether Environmental review docket captures queue, handoff, or capacity data.",
+        "Initial pattern match: documentation chase."
+      ],
+      "affected_parties": [
+        "Applicants",
+        "Environmental reviewers",
+        "Consultants",
+        "Community stakeholders"
+      ],
+      "current_process": [
+        "Environmental review file assembly receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Environmental review docket.",
+        "Work proceeds only after the constraint clears enough for Permit decision."
+      ],
+      "resource_waste": [
+        "Supplemental studies",
+        "Clarification cycles",
+        "Consultant rework"
+      ],
+      "time_waste": 9,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Projects remain uncertain while evidence packages are assembled and reviewed.",
+      "estimated_annual_impact": "High for projects with multi-step environmental review",
+      "growth_trend": "Stable",
+      "visibility_score": 7,
+      "overlooked_score": 6,
+      "digital_solution_potential": 6,
+      "automation_potential": 4,
+      "ai_potential": 6,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 9,
+      "adoption_complexity": 7,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Infrastructure / Permitting / Construction process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Government",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 8,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Environmental review file assembly.",
+        "Compare Environmental review docket records with downstream outcomes in Permit decision."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Environmental review file assembly",
+        "Observed frequency and owner of delay before Permit decision"
+      ],
+      "upstream_constraints": [
+        "Environmental review file assembly intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Permit decision",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Environmental review file assembly",
+        "Environmental review file assembly validation",
+        "Permit decision"
+      ],
+      "affected_systems": [
+        "Environmental review docket",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Environmental review file assembly with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant documentation chase signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "documentation_chase",
+      "secondary_archetypes": [
+        "regulatory_complexity",
+        "permitting_delay",
+        "hidden_cost_shift"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Environmental review documentation chase matches documentation chase because the constraint centers on Environmental review file assembly and delays Permit decision.",
+      "scores": {
+        "severity_score": 7.4,
+        "solvability_score": 4.3,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 5.6,
+        "evidence_score": 5.8,
+        "measurability_score": 4.5,
+        "validation_confidence_score": 5.4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 4.9,
+        "total_strategic_score": 7.3,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.8
+      }
+    },
+    {
+      "id": "strategic-010",
+      "origin": "seed",
+      "industry": "Infrastructure / Permitting / Construction",
+      "subsector": "Utility Coordination",
+      "title": "Right-of-way utility relocation sequencing delay",
+      "category": "Process Handoff",
+      "description": "Construction sequencing waits while utilities, agencies, and contractors coordinate relocation responsibilities and timing.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Utility relocation coordination.",
+        "Operational review should confirm whether Project coordination tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "affected_parties": [
+        "Utilities",
+        "Transportation agencies",
+        "Contractors",
+        "Property owners"
+      ],
+      "current_process": [
+        "Utility relocation coordination receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Project coordination tracker.",
+        "Work proceeds only after the constraint clears enough for Civil construction."
+      ],
+      "resource_waste": [
+        "Crew resequencing",
+        "Design rework",
+        "Delayed site access"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Construction cannot proceed cleanly until physical utility dependencies are resolved.",
+      "estimated_annual_impact": "Moderate to high on corridor and public works projects",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 4,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Infrastructure / Permitting / Construction process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Utility relocation coordination.",
+        "Compare Project coordination tracker records with downstream outcomes in Civil construction."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Utility relocation coordination",
+        "Observed frequency and owner of delay before Civil construction"
+      ],
+      "upstream_constraints": [
+        "Utility relocation coordination intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Civil construction",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Utility relocation coordination",
+        "Utility relocation coordination validation",
+        "Civil construction"
+      ],
+      "affected_systems": [
+        "Project coordination tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Utility relocation coordination with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant handoff leakage signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "infrastructure_siting",
+        "project_approval_friction",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Right-of-way utility relocation sequencing delay matches handoff leakage because the constraint centers on Utility relocation coordination and delays Civil construction.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 5.1,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 5.3,
+        "total_strategic_score": 7.5,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6
+      }
+    },
+    {
+      "id": "strategic-011",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Fab Readiness",
+      "title": "Semiconductor fab utility readiness",
+      "category": "Information Gap",
+      "description": "Factory ramp plans depend on power, water, wastewater, gas, and site utility readiness arriving in the right sequence.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Fab utility readiness tracking.",
+        "Operational review should confirm whether Site readiness plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: infrastructure siting."
+      ],
+      "affected_parties": [
+        "Fab operators",
+        "Utilities",
+        "Construction teams",
+        "Local agencies"
+      ],
+      "current_process": [
+        "Fab utility readiness tracking receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Site readiness plan.",
+        "Work proceeds only after the constraint clears enough for Tool installation."
+      ],
+      "resource_waste": [
+        "Tool idle time",
+        "Construction resequencing",
+        "Utility coordination work"
+      ],
+      "time_waste": 8,
+      "capital_waste": 9,
+      "labor_waste": 6,
+      "opportunity_cost": "High-value manufacturing assets can wait on physical utility readiness dependencies.",
+      "estimated_annual_impact": "High for large advanced manufacturing projects",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 4,
+      "ai_potential": 5,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Fab utility readiness tracking.",
+        "Compare Site readiness plan records with downstream outcomes in Tool installation."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Fab utility readiness tracking",
+        "Observed frequency and owner of delay before Tool installation"
+      ],
+      "upstream_constraints": [
+        "Fab utility readiness tracking intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Tool installation",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Fab utility readiness tracking",
+        "Fab utility readiness tracking validation",
+        "Tool installation"
+      ],
+      "affected_systems": [
+        "Site readiness plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Fab utility readiness tracking with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant infrastructure siting signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "infrastructure_siting",
+      "secondary_archetypes": [
+        "capacity_mismatch",
+        "project_approval_friction",
+        "interconnection_delay"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Semiconductor fab utility readiness matches infrastructure siting because the constraint centers on Fab utility readiness tracking and delays Tool installation.",
+      "scores": {
+        "severity_score": 7.8,
+        "solvability_score": 4.9,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 6.9,
+        "evidence_score": 3.7,
+        "measurability_score": 4.3,
+        "validation_confidence_score": 3.9,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 5.2,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-012",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Advanced Packaging",
+      "title": "Advanced packaging capacity bottleneck",
+      "category": "Idle Capacity",
+      "description": "Packaging and test capacity constrains the conversion of upstream wafer output into usable finished components.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Advanced packaging scheduling.",
+        "Operational review should confirm whether Manufacturing capacity plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: processing capacity."
+      ],
+      "affected_parties": [
+        "Chip designers",
+        "Packaging providers",
+        "Foundries",
+        "End customers"
+      ],
+      "current_process": [
+        "Advanced packaging scheduling receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Manufacturing capacity plan.",
+        "Work proceeds only after the constraint clears enough for Product shipment."
+      ],
+      "resource_waste": [
+        "WIP accumulation",
+        "Expedite planning",
+        "Delayed customer qualification"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 5,
+      "opportunity_cost": "Upstream output can wait for scarce downstream packaging slots.",
+      "estimated_annual_impact": "High in constrained advanced packaging segments",
+      "growth_trend": "Increasing",
+      "visibility_score": 7,
+      "overlooked_score": 7,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 6,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Industry Benchmark",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Advanced packaging scheduling.",
+        "Compare Manufacturing capacity plan records with downstream outcomes in Product shipment."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Advanced packaging scheduling",
+        "Observed frequency and owner of delay before Product shipment"
+      ],
+      "upstream_constraints": [
+        "Advanced packaging scheduling intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Product shipment",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Advanced packaging scheduling",
+        "Advanced packaging scheduling validation",
+        "Product shipment"
+      ],
+      "affected_systems": [
+        "Manufacturing capacity plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Advanced packaging scheduling with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant processing capacity signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "processing_capacity",
+      "secondary_archetypes": [
+        "capacity_mismatch",
+        "idle_capacity",
+        "demand_forecast_mismatch"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Advanced packaging capacity bottleneck matches processing capacity because the constraint centers on Advanced packaging scheduling and delays Product shipment.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 5.8,
+        "ai_readiness_score": 6.4,
+        "overlooked_opportunity_score": 6.2,
+        "evidence_score": 5.8,
+        "measurability_score": 5.2,
+        "validation_confidence_score": 5.6,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 6,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-013",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Semiconductor Equipment",
+      "title": "Chip equipment lead-time coordination",
+      "category": "Hidden Cost",
+      "description": "Tool ordering, facility readiness, installation teams, and qualification windows must align around long equipment lead times.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Tool procurement and install planning.",
+        "Operational review should confirm whether Equipment readiness tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: equipment lead time."
+      ],
+      "affected_parties": [
+        "Fab operators",
+        "Equipment vendors",
+        "Facilities teams",
+        "Process engineers"
+      ],
+      "current_process": [
+        "Tool procurement and install planning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Equipment readiness tracker.",
+        "Work proceeds only after the constraint clears enough for Process qualification."
+      ],
+      "resource_waste": [
+        "Idle cleanroom space",
+        "Installation resequencing",
+        "Qualification delays"
+      ],
+      "time_waste": 8,
+      "capital_waste": 9,
+      "labor_waste": 6,
+      "opportunity_cost": "Capital equipment value is delayed when tools, facilities, and qualification resources miss sequence.",
+      "estimated_annual_impact": "High for tool-constrained manufacturing ramps",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Tool procurement and install planning.",
+        "Compare Equipment readiness tracker records with downstream outcomes in Process qualification."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Tool procurement and install planning",
+        "Observed frequency and owner of delay before Process qualification"
+      ],
+      "upstream_constraints": [
+        "Tool procurement and install planning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Process qualification",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Tool procurement and install planning",
+        "Tool procurement and install planning validation",
+        "Process qualification"
+      ],
+      "affected_systems": [
+        "Equipment readiness tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Tool procurement and install planning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant equipment lead time signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "equipment_lead_time",
+      "secondary_archetypes": [
+        "project_approval_friction",
+        "capacity_mismatch",
+        "supply_concentration"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Chip equipment lead-time coordination matches equipment lead time because the constraint centers on Tool procurement and install planning and delays Process qualification.",
+      "scores": {
+        "severity_score": 7.8,
+        "solvability_score": 5.7,
+        "ai_readiness_score": 6.3,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 5.8,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.4
+      }
+    },
+    {
+      "id": "strategic-014",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Process Engineering",
+      "title": "Yield learning cycle delay",
+      "category": "Information Gap",
+      "description": "Engineering teams need repeated measurement, root-cause review, and process tuning cycles before output reaches target yield.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Yield learning cycle.",
+        "Operational review should confirm whether Manufacturing execution analytics captures queue, handoff, or capacity data.",
+        "Initial pattern match: measurement blind spot."
+      ],
+      "affected_parties": [
+        "Process engineers",
+        "Quality teams",
+        "Production planners",
+        "Customers"
+      ],
+      "current_process": [
+        "Yield learning cycle receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Manufacturing execution analytics.",
+        "Work proceeds only after the constraint clears enough for Qualified production ramp."
+      ],
+      "resource_waste": [
+        "Engineering iteration time",
+        "Scrap risk",
+        "Delayed customer readiness"
+      ],
+      "time_waste": 7,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "Production capacity exists before process learning makes output reliable enough to scale.",
+      "estimated_annual_impact": "High in new process and product ramps",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 8,
+      "automation_potential": 5,
+      "ai_potential": 7,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Yield learning cycle.",
+        "Compare Manufacturing execution analytics records with downstream outcomes in Qualified production ramp."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Yield learning cycle",
+        "Observed frequency and owner of delay before Qualified production ramp"
+      ],
+      "upstream_constraints": [
+        "Yield learning cycle intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Qualified production ramp",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Yield learning cycle",
+        "Yield learning cycle validation",
+        "Qualified production ramp"
+      ],
+      "affected_systems": [
+        "Manufacturing execution analytics",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Yield learning cycle with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant measurement blind spot signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "measurement_blind_spot",
+      "secondary_archetypes": [
+        "workforce_constraint",
+        "processing_capacity",
+        "data_fragmentation"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Yield learning cycle delay matches measurement blind spot because the constraint centers on Yield learning cycle and delays Qualified production ramp.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 6.1,
+        "ai_readiness_score": 7,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 3.7,
+        "measurability_score": 4.8,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-015",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Supplier Quality",
+      "title": "Specialty material qualification lag",
+      "category": "Manual Verification",
+      "description": "New materials and suppliers require specification review, test lots, reliability evidence, and customer qualification before substitution.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Material supplier qualification.",
+        "Operational review should confirm whether Supplier quality system captures queue, handoff, or capacity data.",
+        "Initial pattern match: vendor qualification."
+      ],
+      "affected_parties": [
+        "Materials suppliers",
+        "Quality engineers",
+        "Fab operators",
+        "Customers"
+      ],
+      "current_process": [
+        "Material supplier qualification receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Supplier quality system.",
+        "Work proceeds only after the constraint clears enough for Approved material release."
+      ],
+      "resource_waste": [
+        "Qualification testing",
+        "Inventory buffers",
+        "Supplier review cycles"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 6,
+      "opportunity_cost": "Potential substitutes cannot reduce supply risk until qualification evidence is accepted.",
+      "estimated_annual_impact": "Moderate where materials have narrow qualified supplier bases",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 6,
+      "automation_potential": 4,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Material supplier qualification.",
+        "Compare Supplier quality system records with downstream outcomes in Approved material release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Material supplier qualification",
+        "Observed frequency and owner of delay before Approved material release"
+      ],
+      "upstream_constraints": [
+        "Material supplier qualification intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Approved material release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Material supplier qualification",
+        "Material supplier qualification validation",
+        "Approved material release"
+      ],
+      "affected_systems": [
+        "Supplier quality system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Material supplier qualification with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant vendor qualification signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "vendor_qualification",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "supply_concentration",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Specialty material qualification lag matches vendor qualification because the constraint centers on Material supplier qualification and delays Approved material release.",
+      "scores": {
+        "severity_score": 6.9,
+        "solvability_score": 5,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.1,
+        "opportunity_score": 5.2,
+        "total_strategic_score": 7.4,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.9
+      }
+    },
+    {
+      "id": "strategic-016",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Copper Development",
+      "title": "Copper mine permitting delay",
+      "category": "Compliance Drag",
+      "description": "Mine projects move through long permitting, technical review, environmental documentation, and public-process milestones.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Mine permit review.",
+        "Operational review should confirm whether Permitting docket captures queue, handoff, or capacity data.",
+        "Initial pattern match: permitting delay."
+      ],
+      "affected_parties": [
+        "Mine developers",
+        "Permitting agencies",
+        "Local communities",
+        "Investors"
+      ],
+      "current_process": [
+        "Mine permit review receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Permitting docket.",
+        "Work proceeds only after the constraint clears enough for Project construction decision."
+      ],
+      "resource_waste": [
+        "Document cycles",
+        "Capital waiting time",
+        "Technical review rework"
+      ],
+      "time_waste": 9,
+      "capital_waste": 9,
+      "labor_waste": 7,
+      "opportunity_cost": "Potential upstream supply remains unavailable while project approval risk is unresolved.",
+      "estimated_annual_impact": "High for strategic mineral projects with long approval paths",
+      "growth_trend": "Increasing",
+      "visibility_score": 7,
+      "overlooked_score": 7,
+      "digital_solution_potential": 5,
+      "automation_potential": 3,
+      "ai_potential": 5,
+      "implementation_complexity": 9,
+      "regulatory_complexity": 10,
+      "adoption_complexity": 8,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Government",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 9,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Mine permit review.",
+        "Compare Permitting docket records with downstream outcomes in Project construction decision."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Mine permit review",
+        "Observed frequency and owner of delay before Project construction decision"
+      ],
+      "upstream_constraints": [
+        "Mine permit review intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Project construction decision",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Mine permit review",
+        "Mine permit review validation",
+        "Project construction decision"
+      ],
+      "affected_systems": [
+        "Permitting docket",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Mine permit review with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant permitting delay signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "permitting_delay",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "regulatory_complexity",
+        "project_approval_friction"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Copper mine permitting delay matches permitting delay because the constraint centers on Mine permit review and delays Project construction decision.",
+      "scores": {
+        "severity_score": 8.4,
+        "solvability_score": 3.3,
+        "ai_readiness_score": 4.6,
+        "overlooked_opportunity_score": 6.2,
+        "evidence_score": 5.8,
+        "measurability_score": 4.2,
+        "validation_confidence_score": 5.3,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.9,
+        "opportunity_score": 4.2,
+        "total_strategic_score": 7.3,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.9
+      }
+    },
+    {
+      "id": "strategic-017",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Precious Metals Inputs",
+      "title": "Silver byproduct supply dependency",
+      "category": "Market Mismatch",
+      "description": "Silver availability can depend on production economics for other metals, creating indirect supply responsiveness.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Byproduct supply planning.",
+        "Operational review should confirm whether Commodity supply model captures queue, handoff, or capacity data.",
+        "Initial pattern match: supply concentration."
+      ],
+      "affected_parties": [
+        "Manufacturers",
+        "Mining companies",
+        "Refiners",
+        "Procurement teams"
+      ],
+      "current_process": [
+        "Byproduct supply planning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Commodity supply model.",
+        "Work proceeds only after the constraint clears enough for Industrial input availability."
+      ],
+      "resource_waste": [
+        "Supply uncertainty",
+        "Inventory buffers",
+        "Procurement contingency work"
+      ],
+      "time_waste": 6,
+      "capital_waste": 8,
+      "labor_waste": 4,
+      "opportunity_cost": "Demand planning can miss the constraint created by byproduct-linked supply response.",
+      "estimated_annual_impact": "Moderate to high for silver-dependent industrial uses",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 9,
+      "digital_solution_potential": 6,
+      "automation_potential": 3,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 4,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Byproduct supply planning.",
+        "Compare Commodity supply model records with downstream outcomes in Industrial input availability."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Byproduct supply planning",
+        "Observed frequency and owner of delay before Industrial input availability"
+      ],
+      "upstream_constraints": [
+        "Byproduct supply planning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Industrial input availability",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Byproduct supply planning",
+        "Byproduct supply planning validation",
+        "Industrial input availability"
+      ],
+      "affected_systems": [
+        "Commodity supply model",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Byproduct supply planning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant supply concentration signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "supply_concentration",
+      "secondary_archetypes": [
+        "demand_forecast_mismatch",
+        "hidden_cost_shift",
+        "processing_capacity"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Silver byproduct supply dependency matches supply concentration because the constraint centers on Byproduct supply planning and delays Industrial input availability.",
+      "scores": {
+        "severity_score": 6.3,
+        "solvability_score": 4.9,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 7.3,
+        "evidence_score": 3.7,
+        "measurability_score": 3.9,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.8,
+        "opportunity_score": 5.1,
+        "total_strategic_score": 7.2,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.7
+      }
+    },
+    {
+      "id": "strategic-018",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Gold Project Development",
+      "title": "Gold project approval and capital sequencing friction",
+      "category": "Administrative Delay",
+      "description": "Technical reports, financing gates, board approvals, permits, and contractor readiness must align before project execution.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Mining project approval.",
+        "Operational review should confirm whether Capital approval workflow captures queue, handoff, or capacity data.",
+        "Initial pattern match: project approval friction."
+      ],
+      "affected_parties": [
+        "Project sponsors",
+        "Investors",
+        "Engineering firms",
+        "Contractors"
+      ],
+      "current_process": [
+        "Mining project approval receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Capital approval workflow.",
+        "Work proceeds only after the constraint clears enough for Construction mobilization."
+      ],
+      "resource_waste": [
+        "Capital review cycles",
+        "Contractor standby",
+        "Updated studies"
+      ],
+      "time_waste": 7,
+      "capital_waste": 8,
+      "labor_waste": 5,
+      "opportunity_cost": "Project value waits while governance, financing, and execution readiness are sequenced.",
+      "estimated_annual_impact": "Moderate for capital-intensive mine projects",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 5,
+      "automation_potential": 3,
+      "ai_potential": 4,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 4,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Mining project approval.",
+        "Compare Capital approval workflow records with downstream outcomes in Construction mobilization."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Mining project approval",
+        "Observed frequency and owner of delay before Construction mobilization"
+      ],
+      "upstream_constraints": [
+        "Mining project approval intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Construction mobilization",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Mining project approval",
+        "Mining project approval validation",
+        "Construction mobilization"
+      ],
+      "affected_systems": [
+        "Capital approval workflow",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Mining project approval with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant project approval friction signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "project_approval_friction",
+      "secondary_archetypes": [
+        "permitting_delay",
+        "documentation_chase",
+        "capacity_mismatch"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Gold project approval and capital sequencing friction matches project approval friction because the constraint centers on Mining project approval and delays Construction mobilization.",
+      "scores": {
+        "severity_score": 6.5,
+        "solvability_score": 4,
+        "ai_readiness_score": 4.4,
+        "overlooked_opportunity_score": 6.8,
+        "evidence_score": 3.7,
+        "measurability_score": 3.9,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.9,
+        "opportunity_score": 4.4,
+        "total_strategic_score": 7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.4
+      }
+    },
+    {
+      "id": "strategic-019",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Mineral Processing",
+      "title": "Refining and smelting capacity bottleneck",
+      "category": "Idle Capacity",
+      "description": "Upstream mined material may wait for constrained processing, refining, or smelting capacity before becoming usable input.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Mineral processing allocation.",
+        "Operational review should confirm whether Processing capacity plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: processing capacity."
+      ],
+      "affected_parties": [
+        "Mine operators",
+        "Processors",
+        "Manufacturers",
+        "Traders"
+      ],
+      "current_process": [
+        "Mineral processing allocation receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Processing capacity plan.",
+        "Work proceeds only after the constraint clears enough for Qualified refined input."
+      ],
+      "resource_waste": [
+        "Stockpiled material",
+        "Shipping detours",
+        "Processing queue time"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 5,
+      "opportunity_cost": "Raw supply does not translate into usable supply when processing capacity is the bottleneck.",
+      "estimated_annual_impact": "High for materials with concentrated processing capacity",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 6,
+      "automation_potential": 4,
+      "ai_potential": 5,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 4,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Mineral processing allocation.",
+        "Compare Processing capacity plan records with downstream outcomes in Qualified refined input."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Mineral processing allocation",
+        "Observed frequency and owner of delay before Qualified refined input"
+      ],
+      "upstream_constraints": [
+        "Mineral processing allocation intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Qualified refined input",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Mineral processing allocation",
+        "Mineral processing allocation validation",
+        "Qualified refined input"
+      ],
+      "affected_systems": [
+        "Processing capacity plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Mineral processing allocation with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant processing capacity signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "processing_capacity",
+      "secondary_archetypes": [
+        "supply_concentration",
+        "capacity_mismatch",
+        "equipment_lead_time"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Refining and smelting capacity bottleneck matches processing capacity because the constraint centers on Mineral processing allocation and delays Qualified refined input.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 4.7,
+        "ai_readiness_score": 5.1,
+        "overlooked_opportunity_score": 6.8,
+        "evidence_score": 3.7,
+        "measurability_score": 3.9,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 4.9,
+        "total_strategic_score": 7.3,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.8
+      }
+    },
+    {
+      "id": "strategic-020",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Critical Minerals",
+      "title": "Critical mineral processing qualification delay",
+      "category": "Manual Verification",
+      "description": "New processors and inputs require technical, quality, customer, and compliance qualification before they can enter supply chains.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Critical mineral processor qualification.",
+        "Operational review should confirm whether Supplier qualification system captures queue, handoff, or capacity data.",
+        "Initial pattern match: vendor qualification."
+      ],
+      "affected_parties": [
+        "Processors",
+        "Manufacturers",
+        "Quality teams",
+        "Procurement teams"
+      ],
+      "current_process": [
+        "Critical mineral processor qualification receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Supplier qualification system.",
+        "Work proceeds only after the constraint clears enough for Approved input sourcing."
+      ],
+      "resource_waste": [
+        "Test batches",
+        "Documentation packets",
+        "Supplier review queues"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 6,
+      "opportunity_cost": "Potential supply expansion cannot reduce bottlenecks until qualification evidence is accepted.",
+      "estimated_annual_impact": "Moderate to high for materials with few qualified processors",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 6,
+      "automation_potential": 4,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 4,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Critical mineral processor qualification.",
+        "Compare Supplier qualification system records with downstream outcomes in Approved input sourcing."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Critical mineral processor qualification",
+        "Observed frequency and owner of delay before Approved input sourcing"
+      ],
+      "upstream_constraints": [
+        "Critical mineral processor qualification intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Approved input sourcing",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Critical mineral processor qualification",
+        "Critical mineral processor qualification validation",
+        "Approved input sourcing"
+      ],
+      "affected_systems": [
+        "Supplier qualification system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Critical mineral processor qualification with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant vendor qualification signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "vendor_qualification",
+      "secondary_archetypes": [
+        "supply_concentration",
+        "manual_verification_drag",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Critical mineral processing qualification delay matches vendor qualification because the constraint centers on Critical mineral processor qualification and delays Approved input sourcing.",
+      "scores": {
+        "severity_score": 6.9,
+        "solvability_score": 4.7,
+        "ai_readiness_score": 5.1,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 4.2,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.1,
+        "opportunity_score": 5,
+        "total_strategic_score": 7.3,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.8
+      }
+    },
+    {
+      "id": "strategic-021",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Heavy Equipment",
+      "title": "Heavy equipment availability constraint",
+      "category": "Idle Capacity",
+      "description": "Projects wait for cranes, earthmoving equipment, specialized trucks, or replacement assets that are scarce in the required window.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Equipment availability planning.",
+        "Operational review should confirm whether Fleet scheduling system captures queue, handoff, or capacity data.",
+        "Initial pattern match: measurement blind spot."
+      ],
+      "affected_parties": [
+        "Contractors",
+        "Rental fleets",
+        "Project owners",
+        "Maintenance teams"
+      ],
+      "current_process": [
+        "Equipment availability planning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Fleet scheduling system.",
+        "Work proceeds only after the constraint clears enough for Project execution window."
+      ],
+      "resource_waste": [
+        "Idle crews",
+        "Rental expediting",
+        "Schedule resequencing"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 6,
+      "opportunity_cost": "Labor and project readiness can sit idle waiting for scarce equipment slots.",
+      "estimated_annual_impact": "Moderate across equipment-dependent industrial work",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 5,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Equipment availability planning.",
+        "Compare Fleet scheduling system records with downstream outcomes in Project execution window."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Equipment availability planning",
+        "Observed frequency and owner of delay before Project execution window"
+      ],
+      "upstream_constraints": [
+        "Equipment availability planning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Project execution window",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Equipment availability planning",
+        "Equipment availability planning validation",
+        "Project execution window"
+      ],
+      "affected_systems": [
+        "Fleet scheduling system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Equipment availability planning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant measurement blind spot signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "measurement_blind_spot",
+      "secondary_archetypes": [
+        "idle_capacity",
+        "capacity_mismatch",
+        "equipment_lead_time"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Heavy equipment availability constraint matches measurement blind spot because the constraint centers on Equipment availability planning and delays Project execution window.",
+      "scores": {
+        "severity_score": 6.5,
+        "solvability_score": 6.1,
+        "ai_readiness_score": 5.8,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 5,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.9,
+        "opportunity_score": 5.7,
+        "total_strategic_score": 7.5,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-022",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Freight Movement",
+      "title": "Port and rail movement bottleneck",
+      "category": "Process Handoff",
+      "description": "Cargo movement slows when port, drayage, rail, warehouse, and documentation handoffs are not synchronized.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Intermodal cargo handoff.",
+        "Operational review should confirm whether Freight visibility platform captures queue, handoff, or capacity data.",
+        "Initial pattern match: data fragmentation."
+      ],
+      "affected_parties": [
+        "Shippers",
+        "Ports",
+        "Rail operators",
+        "Drayage providers"
+      ],
+      "current_process": [
+        "Intermodal cargo handoff receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Freight visibility platform.",
+        "Work proceeds only after the constraint clears enough for Customer delivery."
+      ],
+      "resource_waste": [
+        "Dwell time",
+        "Demurrage risk",
+        "Manual status checks"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 6,
+      "opportunity_cost": "Inventory waits in transit while downstream operations lack reliable arrival signals.",
+      "estimated_annual_impact": "High in congested logistics corridors",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 7,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Operational Pattern",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 6,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Intermodal cargo handoff.",
+        "Compare Freight visibility platform records with downstream outcomes in Customer delivery."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Intermodal cargo handoff",
+        "Observed frequency and owner of delay before Customer delivery"
+      ],
+      "upstream_constraints": [
+        "Intermodal cargo handoff intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Customer delivery",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Intermodal cargo handoff",
+        "Intermodal cargo handoff validation",
+        "Customer delivery"
+      ],
+      "affected_systems": [
+        "Freight visibility platform",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Intermodal cargo handoff with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant data fragmentation signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "data_fragmentation",
+      "secondary_archetypes": [
+        "handoff_leakage",
+        "queue_backlog",
+        "processing_capacity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Port and rail movement bottleneck matches data fragmentation because the constraint centers on Intermodal cargo handoff and delays Customer delivery.",
+      "scores": {
+        "severity_score": 6.8,
+        "solvability_score": 6.3,
+        "ai_readiness_score": 6.5,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 5.8,
+        "measurability_score": 5.7,
+        "validation_confidence_score": 5.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8,
+        "opportunity_score": 6.6,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.4
+      }
+    },
+    {
+      "id": "strategic-023",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Procurement Operations",
+      "title": "Procurement vendor onboarding delay",
+      "category": "Manual Verification",
+      "description": "Procurement teams collect tax, compliance, banking, insurance, security, and contract fields before a vendor can transact.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Vendor onboarding.",
+        "Operational review should confirm whether Procurement system captures queue, handoff, or capacity data.",
+        "Initial pattern match: vendor qualification."
+      ],
+      "affected_parties": [
+        "Vendors",
+        "Procurement teams",
+        "Legal teams",
+        "Finance teams"
+      ],
+      "current_process": [
+        "Vendor onboarding receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Procurement system.",
+        "Work proceeds only after the constraint clears enough for Purchase order release."
+      ],
+      "resource_waste": [
+        "Form re-entry",
+        "Approval chasing",
+        "Delayed sourcing"
+      ],
+      "time_waste": 6,
+      "capital_waste": 5,
+      "labor_waste": 7,
+      "opportunity_cost": "Needed vendors cannot support operations until approval and master data setup are complete.",
+      "estimated_annual_impact": "Moderate across organizations with frequent supplier onboarding",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 5,
+      "implementation_complexity": 5,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 6,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Operational Pattern",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 5,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Vendor onboarding.",
+        "Compare Procurement system records with downstream outcomes in Purchase order release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Vendor onboarding",
+        "Observed frequency and owner of delay before Purchase order release"
+      ],
+      "upstream_constraints": [
+        "Vendor onboarding intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Purchase order release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Vendor onboarding",
+        "Vendor onboarding validation",
+        "Purchase order release"
+      ],
+      "affected_systems": [
+        "Procurement system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Vendor onboarding with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant vendor qualification signal."
+      ],
+      "opportunity_type": "Automation",
+      "primary_archetype": "vendor_qualification",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "duplicated_work",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Procurement vendor onboarding delay matches vendor qualification because the constraint centers on Vendor onboarding and delays Purchase order release.",
+      "scores": {
+        "severity_score": 5.9,
+        "solvability_score": 6.8,
+        "ai_readiness_score": 6.1,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 5.8,
+        "measurability_score": 6,
+        "validation_confidence_score": 5.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.6,
+        "opportunity_score": 7,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-024",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Replacement Parts",
+      "title": "Industrial replacement parts lead-time mismatch",
+      "category": "Hidden Cost",
+      "description": "Maintenance work waits when replacement parts demand is discovered after failure but supply lead times require earlier planning.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Replacement parts planning.",
+        "Operational review should confirm whether Maintenance management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: equipment lead time."
+      ],
+      "affected_parties": [
+        "Maintenance teams",
+        "Operations teams",
+        "Parts suppliers",
+        "Asset owners"
+      ],
+      "current_process": [
+        "Replacement parts planning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Maintenance management system.",
+        "Work proceeds only after the constraint clears enough for Asset return to service."
+      ],
+      "resource_waste": [
+        "Unplanned downtime",
+        "Expedite fees",
+        "Emergency workarounds"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 5,
+      "opportunity_cost": "Critical assets stay offline because part availability lags failure discovery.",
+      "estimated_annual_impact": "Moderate to high for asset-intensive operations",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Replacement parts planning.",
+        "Compare Maintenance management system records with downstream outcomes in Asset return to service."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Replacement parts planning",
+        "Observed frequency and owner of delay before Asset return to service"
+      ],
+      "upstream_constraints": [
+        "Replacement parts planning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Asset return to service",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Replacement parts planning",
+        "Replacement parts planning validation",
+        "Asset return to service"
+      ],
+      "affected_systems": [
+        "Maintenance management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Replacement parts planning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant equipment lead time signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "equipment_lead_time",
+      "secondary_archetypes": [
+        "demand_forecast_mismatch",
+        "hidden_cost_shift",
+        "capacity_mismatch"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Industrial replacement parts lead-time mismatch matches equipment lead time because the constraint centers on Replacement parts planning and delays Asset return to service.",
+      "scores": {
+        "severity_score": 6.5,
+        "solvability_score": 6,
+        "ai_readiness_score": 6.3,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 5,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.8,
+        "opportunity_score": 6,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-025",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Warehouse Operations",
+      "title": "Warehouse slotting and pick-path rework",
+      "category": "Duplicated Work",
+      "description": "Warehouse teams repeatedly adjust slotting, pick paths, and replenishment routines when demand patterns drift.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Warehouse slotting.",
+        "Operational review should confirm whether Warehouse management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: demand forecast mismatch."
+      ],
+      "affected_parties": [
+        "Warehouse teams",
+        "Planners",
+        "Transportation teams",
+        "Customers"
+      ],
+      "current_process": [
+        "Warehouse slotting receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Warehouse management system.",
+        "Work proceeds only after the constraint clears enough for Order fulfillment."
+      ],
+      "resource_waste": [
+        "Excess travel time",
+        "Replenishment rework",
+        "Missed pick efficiency"
+      ],
+      "time_waste": 6,
+      "capital_waste": 5,
+      "labor_waste": 8,
+      "opportunity_cost": "Labor is consumed by avoidable movement and adjustment rather than throughput.",
+      "estimated_annual_impact": "Moderate in high-SKU fulfillment environments",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 5,
+      "regulatory_complexity": 3,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 5,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Warehouse slotting.",
+        "Compare Warehouse management system records with downstream outcomes in Order fulfillment."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Warehouse slotting",
+        "Observed frequency and owner of delay before Order fulfillment"
+      ],
+      "upstream_constraints": [
+        "Warehouse slotting intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Order fulfillment",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Warehouse slotting",
+        "Warehouse slotting validation",
+        "Order fulfillment"
+      ],
+      "affected_systems": [
+        "Warehouse management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Warehouse slotting with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant demand forecast mismatch signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "demand_forecast_mismatch",
+      "secondary_archetypes": [
+        "hidden_cost_shift",
+        "measurement_blind_spot",
+        "processing_capacity"
+      ],
+      "archetype_confidence": 6,
+      "archetype_reasoning": "Warehouse slotting and pick-path rework matches demand forecast mismatch because the constraint centers on Warehouse slotting and delays Order fulfillment.",
+      "scores": {
+        "severity_score": 6.2,
+        "solvability_score": 6.8,
+        "ai_readiness_score": 6.7,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 5.8,
+        "validation_confidence_score": 4.2,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.8,
+        "opportunity_score": 6.5,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 9.8,
+        "cross_industry_similarity_score": 9.3,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-026",
+      "origin": "seed",
+      "industry": "Public-Sector Administration / Compliance",
+      "subsector": "Grant Administration",
+      "title": "Public infrastructure grant review backlog",
+      "category": "Administrative Delay",
+      "description": "Grant applications wait through eligibility, completeness, scoring, legal, and award approval steps before funds can move.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Grant application review.",
+        "Operational review should confirm whether Grant management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "affected_parties": [
+        "Applicants",
+        "Grant reviewers",
+        "Finance teams",
+        "Public agencies"
+      ],
+      "current_process": [
+        "Grant application review receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Grant management system.",
+        "Work proceeds only after the constraint clears enough for Award obligation."
+      ],
+      "resource_waste": [
+        "Status inquiries",
+        "Reviewer queue time",
+        "Delayed project start"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Funded priorities wait while application review and award administration progress sequentially.",
+      "estimated_annual_impact": "High in programs with large application volume",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 6,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Public-Sector Administration / Compliance process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Government",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 6,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Grant application review.",
+        "Compare Grant management system records with downstream outcomes in Award obligation."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Grant application review",
+        "Observed frequency and owner of delay before Award obligation"
+      ],
+      "upstream_constraints": [
+        "Grant application review intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Award obligation",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Grant application review",
+        "Grant application review validation",
+        "Award obligation"
+      ],
+      "affected_systems": [
+        "Grant management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Grant application review with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant queue backlog signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "support_channel_overload",
+        "project_approval_friction",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Public infrastructure grant review backlog matches queue backlog because the constraint centers on Grant application review and delays Award obligation.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 6,
+        "ai_readiness_score": 6.1,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 5.8,
+        "measurability_score": 5.7,
+        "validation_confidence_score": 5.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 6.4,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.4
+      }
+    },
+    {
+      "id": "strategic-027",
+      "origin": "seed",
+      "industry": "Public-Sector Administration / Compliance",
+      "subsector": "Compliance Reporting",
+      "title": "Compliance reporting duplication",
+      "category": "Duplicated Work",
+      "description": "Organizations submit overlapping compliance data to different programs, agencies, forms, or reporting periods.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Compliance reporting.",
+        "Operational review should confirm whether Reporting portal captures queue, handoff, or capacity data.",
+        "Initial pattern match: duplicated work."
+      ],
+      "affected_parties": [
+        "Compliance teams",
+        "Agency reviewers",
+        "Program managers",
+        "Auditors"
+      ],
+      "current_process": [
+        "Compliance reporting receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Reporting portal.",
+        "Work proceeds only after the constraint clears enough for Program oversight."
+      ],
+      "resource_waste": [
+        "Repeated data entry",
+        "Format conversion",
+        "Reviewer reconciliation"
+      ],
+      "time_waste": 7,
+      "capital_waste": 4,
+      "labor_waste": 8,
+      "opportunity_cost": "Compliance effort grows without proportionate improvement in oversight quality.",
+      "estimated_annual_impact": "Moderate across reporting-heavy programs",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 6,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Public-Sector Administration / Compliance process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Government",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 6,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Compliance reporting.",
+        "Compare Reporting portal records with downstream outcomes in Program oversight."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Compliance reporting",
+        "Observed frequency and owner of delay before Program oversight"
+      ],
+      "upstream_constraints": [
+        "Compliance reporting intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Program oversight",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Compliance reporting",
+        "Compliance reporting validation",
+        "Program oversight"
+      ],
+      "affected_systems": [
+        "Reporting portal",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Compliance reporting with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant duplicated work signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "duplicated_work",
+      "secondary_archetypes": [
+        "regulatory_complexity",
+        "manual_verification_drag",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Compliance reporting duplication matches duplicated work because the constraint centers on Compliance reporting and delays Program oversight.",
+      "scores": {
+        "severity_score": 6.6,
+        "solvability_score": 6.3,
+        "ai_readiness_score": 6.1,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 5.8,
+        "measurability_score": 5.7,
+        "validation_confidence_score": 5.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.9,
+        "opportunity_score": 6.4,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.4
+      }
+    },
+    {
+      "id": "strategic-028",
+      "origin": "seed",
+      "industry": "Public-Sector Administration / Compliance",
+      "subsector": "Licensing",
+      "title": "Occupational license renewal documentation chase",
+      "category": "Compliance Drag",
+      "description": "License renewals stall when continuing education, identity, payment, background, or employer documents are incomplete.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in License renewal.",
+        "Operational review should confirm whether Licensing portal captures queue, handoff, or capacity data.",
+        "Initial pattern match: documentation chase."
+      ],
+      "affected_parties": [
+        "License holders",
+        "Licensing agencies",
+        "Employers",
+        "Review staff"
+      ],
+      "current_process": [
+        "License renewal receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Licensing portal.",
+        "Work proceeds only after the constraint clears enough for License reactivation."
+      ],
+      "resource_waste": [
+        "Incomplete applications",
+        "Support inquiries",
+        "Manual reviewer checks"
+      ],
+      "time_waste": 6,
+      "capital_waste": 4,
+      "labor_waste": 7,
+      "opportunity_cost": "Eligible workers and agencies lose time resolving preventable documentation exceptions.",
+      "estimated_annual_impact": "Moderate in high-volume licensing programs",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 6,
+      "implementation_complexity": 5,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 5,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Public-Sector Administration / Compliance process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 5,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside License renewal.",
+        "Compare Licensing portal records with downstream outcomes in License reactivation."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for License renewal",
+        "Observed frequency and owner of delay before License reactivation"
+      ],
+      "upstream_constraints": [
+        "License renewal intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "License reactivation",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "License renewal",
+        "License renewal validation",
+        "License reactivation"
+      ],
+      "affected_systems": [
+        "Licensing portal",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument License renewal with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant documentation chase signal."
+      ],
+      "opportunity_type": "Automation",
+      "primary_archetype": "documentation_chase",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "support_channel_overload",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Occupational license renewal documentation chase matches documentation chase because the constraint centers on License renewal and delays License reactivation.",
+      "scores": {
+        "severity_score": 5.6,
+        "solvability_score": 6.7,
+        "ai_readiness_score": 6.1,
+        "overlooked_opportunity_score": 6.9,
+        "evidence_score": 3.7,
+        "measurability_score": 5.8,
+        "validation_confidence_score": 4.2,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.4,
+        "opportunity_score": 6.8,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6
+      }
+    },
+    {
+      "id": "strategic-029",
+      "origin": "seed",
+      "industry": "Public-Sector Administration / Compliance",
+      "subsector": "Benefits Administration",
+      "title": "Benefits eligibility manual verification drag",
+      "category": "Manual Verification",
+      "description": "Caseworkers manually verify identity, residency, income, and household details across fragmented records.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Benefits eligibility verification.",
+        "Operational review should confirm whether Case management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: manual verification drag."
+      ],
+      "affected_parties": [
+        "Applicants",
+        "Caseworkers",
+        "Program administrators",
+        "Partner agencies"
+      ],
+      "current_process": [
+        "Benefits eligibility verification receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Case management system.",
+        "Work proceeds only after the constraint clears enough for Benefit determination."
+      ],
+      "resource_waste": [
+        "Manual record checks",
+        "Applicant follow-up",
+        "Case backlog"
+      ],
+      "time_waste": 8,
+      "capital_waste": 5,
+      "labor_waste": 8,
+      "opportunity_cost": "Eligible cases wait while staff resolve verification and data matching exceptions.",
+      "estimated_annual_impact": "High in high-volume benefit programs",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 6,
+      "confidence": 6,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Public-Sector Administration / Compliance process pattern review"
+      ],
+      "evidence_strength": "Moderate",
+      "source_type": "Government",
+      "validation_status": "Plausible",
+      "source_quality": 6,
+      "measurement_difficulty": 6,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Benefits eligibility verification.",
+        "Compare Case management system records with downstream outcomes in Benefit determination."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Benefits eligibility verification",
+        "Observed frequency and owner of delay before Benefit determination"
+      ],
+      "upstream_constraints": [
+        "Benefits eligibility verification intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Benefit determination",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Benefits eligibility verification",
+        "Benefits eligibility verification validation",
+        "Benefit determination"
+      ],
+      "affected_systems": [
+        "Case management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Benefits eligibility verification with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant manual verification drag signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "manual_verification_drag",
+      "secondary_archetypes": [
+        "data_fragmentation",
+        "queue_backlog",
+        "support_channel_overload"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Benefits eligibility manual verification drag matches manual verification drag because the constraint centers on Benefits eligibility verification and delays Benefit determination.",
+      "scores": {
+        "severity_score": 6.8,
+        "solvability_score": 6.2,
+        "ai_readiness_score": 6.1,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 5.8,
+        "measurability_score": 5.7,
+        "validation_confidence_score": 5.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8,
+        "opportunity_score": 6.7,
+        "total_strategic_score": 7.9,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-030",
+      "origin": "seed",
+      "industry": "Public-Sector Administration / Compliance",
+      "subsector": "Public Records",
+      "title": "Public records request triage backlog",
+      "category": "Administrative Delay",
+      "description": "Records requests wait for scope review, search assignment, redaction, legal review, and requester clarification.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Public records request triage.",
+        "Operational review should confirm whether Records request queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "affected_parties": [
+        "Requesters",
+        "Records officers",
+        "Legal teams",
+        "Program staff"
+      ],
+      "current_process": [
+        "Public records request triage receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Records request queue.",
+        "Work proceeds only after the constraint clears enough for Records release."
+      ],
+      "resource_waste": [
+        "Status inquiries",
+        "Search rework",
+        "Redaction queues"
+      ],
+      "time_waste": 7,
+      "capital_waste": 4,
+      "labor_waste": 7,
+      "opportunity_cost": "Staff capacity is consumed by request routing and clarification before disclosure decisions are ready.",
+      "estimated_annual_impact": "Moderate in agencies with frequent complex records requests",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 7,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Public-Sector Administration / Compliance process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Public records request triage.",
+        "Compare Records request queue records with downstream outcomes in Records release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Public records request triage",
+        "Observed frequency and owner of delay before Records release"
+      ],
+      "upstream_constraints": [
+        "Public records request triage intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Records release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Public records request triage",
+        "Public records request triage validation",
+        "Records release"
+      ],
+      "affected_systems": [
+        "Records request queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Public records request triage with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant queue backlog signal."
+      ],
+      "opportunity_type": "Automation",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "manual_verification_drag",
+        "support_channel_overload"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Public records request triage backlog matches queue backlog because the constraint centers on Public records request triage and delays Records release.",
+      "scores": {
+        "severity_score": 5.9,
+        "solvability_score": 6,
+        "ai_readiness_score": 6.4,
+        "overlooked_opportunity_score": 6.9,
+        "evidence_score": 3.7,
+        "measurability_score": 5,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.5,
+        "opportunity_score": 6.5,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.9
+      }
+    },
+    {
+      "id": "strategic-031",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Grid Operations",
+      "title": "Outage restoration crew dispatch mismatch",
+      "category": "Market Mismatch",
+      "description": "Crew, equipment, location, and damage information can be mismatched during restoration prioritization.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Outage crew dispatch.",
+        "Operational review should confirm whether Outage management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: capacity mismatch."
+      ],
+      "affected_parties": [
+        "Customers",
+        "Dispatchers",
+        "Field crews",
+        "Utilities"
+      ],
+      "current_process": [
+        "Outage crew dispatch receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Outage management system.",
+        "Work proceeds only after the constraint clears enough for Service restoration."
+      ],
+      "resource_waste": [
+        "Crew travel time",
+        "Duplicate field checks",
+        "Customer status calls"
+      ],
+      "time_waste": 7,
+      "capital_waste": 5,
+      "labor_waste": 7,
+      "opportunity_cost": "Restoration capacity can be misallocated when field conditions and available crews are not matched quickly.",
+      "estimated_annual_impact": "Moderate during major outage events",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 7,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Outage crew dispatch.",
+        "Compare Outage management system records with downstream outcomes in Service restoration."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Outage crew dispatch",
+        "Observed frequency and owner of delay before Service restoration"
+      ],
+      "upstream_constraints": [
+        "Outage crew dispatch intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Service restoration",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Outage crew dispatch",
+        "Outage crew dispatch validation",
+        "Service restoration"
+      ],
+      "affected_systems": [
+        "Outage management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Outage crew dispatch with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant capacity mismatch signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "capacity_mismatch",
+      "secondary_archetypes": [
+        "data_fragmentation",
+        "support_channel_overload",
+        "idle_capacity"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Outage restoration crew dispatch mismatch matches capacity mismatch because the constraint centers on Outage crew dispatch and delays Service restoration.",
+      "scores": {
+        "severity_score": 6.2,
+        "solvability_score": 6.4,
+        "ai_readiness_score": 6.8,
+        "overlooked_opportunity_score": 6.3,
+        "evidence_score": 3.7,
+        "measurability_score": 5,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.7,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6
+      }
+    },
+    {
+      "id": "strategic-032",
+      "origin": "seed",
+      "industry": "Infrastructure / Permitting / Construction",
+      "subsector": "Capital Projects",
+      "title": "Capital project change order approval friction",
+      "category": "Administrative Delay",
+      "description": "Change orders wait through scope validation, cost review, owner approval, and contract documentation before field work adjusts.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Change order approval.",
+        "Operational review should confirm whether Project controls system captures queue, handoff, or capacity data.",
+        "Initial pattern match: project approval friction."
+      ],
+      "affected_parties": [
+        "Owners",
+        "Contractors",
+        "Construction managers",
+        "Finance teams"
+      ],
+      "current_process": [
+        "Change order approval receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Project controls system.",
+        "Work proceeds only after the constraint clears enough for Field execution."
+      ],
+      "resource_waste": [
+        "Pending work packages",
+        "Commercial disputes",
+        "Schedule uncertainty"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 6,
+      "opportunity_cost": "Field progress and budget clarity wait for multi-party approval loops.",
+      "estimated_annual_impact": "Moderate in complex capital projects",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Infrastructure / Permitting / Construction process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Change order approval.",
+        "Compare Project controls system records with downstream outcomes in Field execution."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Change order approval",
+        "Observed frequency and owner of delay before Field execution"
+      ],
+      "upstream_constraints": [
+        "Change order approval intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Field execution",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Change order approval",
+        "Change order approval validation",
+        "Field execution"
+      ],
+      "affected_systems": [
+        "Project controls system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Change order approval with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant project approval friction signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "project_approval_friction",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "handoff_leakage",
+        "hidden_cost_shift"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Capital project change order approval friction matches project approval friction because the constraint centers on Change order approval and delays Field execution.",
+      "scores": {
+        "severity_score": 6.5,
+        "solvability_score": 5.7,
+        "ai_readiness_score": 5.7,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 5,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.9,
+        "opportunity_score": 5.7,
+        "total_strategic_score": 7.5,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6
+      }
+    },
+    {
+      "id": "strategic-033",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Manufacturing Quality",
+      "title": "Customer quality exception closure queue",
+      "category": "Administrative Delay",
+      "description": "Quality exceptions wait through root-cause evidence, customer review, corrective action, and closure approval.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Quality exception closure.",
+        "Operational review should confirm whether Quality management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "affected_parties": [
+        "Quality engineers",
+        "Customers",
+        "Manufacturing teams",
+        "Supplier teams"
+      ],
+      "current_process": [
+        "Quality exception closure receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Quality management system.",
+        "Work proceeds only after the constraint clears enough for Customer shipment release."
+      ],
+      "resource_waste": [
+        "Engineering investigation",
+        "Customer clarification",
+        "Shipment holds"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Usable output may wait for evidence-backed closure of exceptions.",
+      "estimated_annual_impact": "Moderate for high-reliability manufacturing programs",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 7,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Quality exception closure.",
+        "Compare Quality management system records with downstream outcomes in Customer shipment release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Quality exception closure",
+        "Observed frequency and owner of delay before Customer shipment release"
+      ],
+      "upstream_constraints": [
+        "Quality exception closure intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Customer shipment release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Quality exception closure",
+        "Quality exception closure validation",
+        "Customer shipment release"
+      ],
+      "affected_systems": [
+        "Quality management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Quality exception closure with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant queue backlog signal."
+      ],
+      "opportunity_type": "Automation",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "manual_verification_drag",
+        "processing_capacity"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Customer quality exception closure queue matches queue backlog because the constraint centers on Quality exception closure and delays Customer shipment release.",
+      "scores": {
+        "severity_score": 6.8,
+        "solvability_score": 6.3,
+        "ai_readiness_score": 6.8,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 3.7,
+        "measurability_score": 5.5,
+        "validation_confidence_score": 4.2,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.1,
+        "opportunity_score": 6.7,
+        "total_strategic_score": 7.9,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.2
+      }
+    },
+    {
+      "id": "strategic-034",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Mine Operations",
+      "title": "Mine maintenance shutdown workpack readiness gap",
+      "category": "Information Gap",
+      "description": "Shutdown productivity depends on workpacks, parts, permits, crews, and equipment being ready before a narrow outage window.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Shutdown workpack planning.",
+        "Operational review should confirm whether Maintenance planning system captures queue, handoff, or capacity data.",
+        "Initial pattern match: measurement blind spot."
+      ],
+      "affected_parties": [
+        "Maintenance planners",
+        "Operations teams",
+        "Contractors",
+        "Suppliers"
+      ],
+      "current_process": [
+        "Shutdown workpack planning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Maintenance planning system.",
+        "Work proceeds only after the constraint clears enough for Asset restart."
+      ],
+      "resource_waste": [
+        "Lost shutdown time",
+        "Parts chasing",
+        "Crew waiting"
+      ],
+      "time_waste": 7,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "A narrow production outage can lose value when readiness signals are incomplete.",
+      "estimated_annual_impact": "Moderate to high for asset-intensive operations",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Shutdown workpack planning.",
+        "Compare Maintenance planning system records with downstream outcomes in Asset restart."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Shutdown workpack planning",
+        "Observed frequency and owner of delay before Asset restart"
+      ],
+      "upstream_constraints": [
+        "Shutdown workpack planning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Asset restart",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Shutdown workpack planning",
+        "Shutdown workpack planning validation",
+        "Asset restart"
+      ],
+      "affected_systems": [
+        "Maintenance planning system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Shutdown workpack planning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant measurement blind spot signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "measurement_blind_spot",
+      "secondary_archetypes": [
+        "equipment_lead_time",
+        "workforce_constraint",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Mine maintenance shutdown workpack readiness gap matches measurement blind spot because the constraint centers on Shutdown workpack planning and delays Asset restart.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 5.7,
+        "ai_readiness_score": 6,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.7,
+        "measurability_score": 5,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 5.9,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.2
+      }
+    },
+    {
+      "id": "strategic-035",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Cold Chain Logistics",
+      "title": "Cold chain exception handoff leakage",
+      "category": "Process Handoff",
+      "description": "Temperature, custody, and delivery exceptions lose resolution time as they move between carriers, brokers, warehouses, and customers.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Cold chain exception handling.",
+        "Operational review should confirm whether Shipment visibility system captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "affected_parties": [
+        "Carriers",
+        "Warehouses",
+        "Brokers",
+        "Customers"
+      ],
+      "current_process": [
+        "Cold chain exception handling receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Shipment visibility system.",
+        "Work proceeds only after the constraint clears enough for Product disposition."
+      ],
+      "resource_waste": [
+        "Exception calls",
+        "Disposition delay",
+        "Spoilage risk"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 6,
+      "opportunity_cost": "At-risk shipments require fast decisions, but fragmented ownership slows response.",
+      "estimated_annual_impact": "Moderate in temperature-sensitive logistics",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 7,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Cold chain exception handling.",
+        "Compare Shipment visibility system records with downstream outcomes in Product disposition."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Cold chain exception handling",
+        "Observed frequency and owner of delay before Product disposition"
+      ],
+      "upstream_constraints": [
+        "Cold chain exception handling intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Product disposition",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Cold chain exception handling",
+        "Cold chain exception handling validation",
+        "Product disposition"
+      ],
+      "affected_systems": [
+        "Shipment visibility system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Cold chain exception handling with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant handoff leakage signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "data_fragmentation",
+        "support_channel_overload",
+        "hidden_cost_shift"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Cold chain exception handoff leakage matches handoff leakage because the constraint centers on Cold chain exception handling and delays Product disposition.",
+      "scores": {
+        "severity_score": 6.5,
+        "solvability_score": 6.2,
+        "ai_readiness_score": 6.2,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.7,
+        "measurability_score": 5,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.9,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-036",
+      "origin": "seed",
+      "industry": "Public-Sector Administration / Compliance",
+      "subsector": "Inspection Administration",
+      "title": "Code enforcement reinspection loop",
+      "category": "Compliance Drag",
+      "description": "Cases move through complaint intake, field inspection, notice, correction, reinspection, and escalation cycles.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Code enforcement reinspection.",
+        "Operational review should confirm whether Code enforcement case system captures queue, handoff, or capacity data.",
+        "Initial pattern match: inspection delay."
+      ],
+      "affected_parties": [
+        "Residents",
+        "Inspectors",
+        "Property owners",
+        "Municipal staff"
+      ],
+      "current_process": [
+        "Code enforcement reinspection receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Code enforcement case system.",
+        "Work proceeds only after the constraint clears enough for Case closure."
+      ],
+      "resource_waste": [
+        "Repeated visits",
+        "Support calls",
+        "Escalation paperwork"
+      ],
+      "time_waste": 7,
+      "capital_waste": 4,
+      "labor_waste": 8,
+      "opportunity_cost": "Inspector capacity is consumed by repeat cycles before cases reach durable closure.",
+      "estimated_annual_impact": "Moderate in jurisdictions with repeated compliance inspections",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 6,
+      "confidence": 5,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Public-Sector Administration / Compliance process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Code enforcement reinspection.",
+        "Compare Code enforcement case system records with downstream outcomes in Case closure."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Code enforcement reinspection",
+        "Observed frequency and owner of delay before Case closure"
+      ],
+      "upstream_constraints": [
+        "Code enforcement reinspection intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Case closure",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Code enforcement reinspection",
+        "Code enforcement reinspection validation",
+        "Case closure"
+      ],
+      "affected_systems": [
+        "Code enforcement case system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Code enforcement reinspection with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant inspection delay signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "inspection_delay",
+      "secondary_archetypes": [
+        "queue_backlog",
+        "regulatory_complexity",
+        "support_channel_overload"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Code enforcement reinspection loop matches inspection delay because the constraint centers on Code enforcement reinspection and delays Case closure.",
+      "scores": {
+        "severity_score": 6.2,
+        "solvability_score": 5.6,
+        "ai_readiness_score": 5.8,
+        "overlooked_opportunity_score": 6.9,
+        "evidence_score": 3.7,
+        "measurability_score": 5,
+        "validation_confidence_score": 4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 7.7,
+        "opportunity_score": 5.7,
+        "total_strategic_score": 7.4,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.8
       }
     }
   ],
   "dataset_summary": {
-    "seed_records": 12,
+    "seed_records": 48,
     "intake_records": 4,
+    "industry_distribution": {
+      "Healthcare": 16,
+      "Energy / Grid / Interconnection": 6,
+      "Infrastructure / Permitting / Construction": 6,
+      "Semiconductors / Advanced Manufacturing": 6,
+      "Metals / Mining / Critical Inputs": 6,
+      "Logistics / Supply Chain / Industrial Equipment": 6,
+      "Public-Sector Administration / Compliance": 6
+    },
     "category_distribution": {
-      "Administrative Delay": 2,
-      "Manual Verification": 2,
+      "Administrative Delay": 9,
+      "Manual Verification": 7,
       "Revenue Leakage": 1,
-      "Information Gap": 2,
-      "Process Handoff": 1,
-      "Duplicated Work": 2,
-      "Compliance Drag": 2,
-      "Idle Capacity": 1,
-      "Hidden Cost": 2,
-      "Market Mismatch": 1
+      "Information Gap": 6,
+      "Process Handoff": 5,
+      "Duplicated Work": 4,
+      "Compliance Drag": 7,
+      "Idle Capacity": 5,
+      "Hidden Cost": 5,
+      "Market Mismatch": 3
+    },
+    "archetype_distribution": {
+      "queue_backlog": 6,
+      "manual_verification_drag": 2,
+      "documentation_chase": 5,
+      "handoff_leakage": 4,
+      "hidden_cost_shift": 2,
+      "duplicated_work": 3,
+      "capacity_mismatch": 2,
+      "regulatory_complexity": 1,
+      "support_channel_overload": 1,
+      "measurement_blind_spot": 5,
+      "data_fragmentation": 2,
+      "interconnection_delay": 1,
+      "equipment_lead_time": 3,
+      "permitting_delay": 2,
+      "inspection_delay": 2,
+      "vendor_qualification": 4,
+      "infrastructure_siting": 1,
+      "processing_capacity": 2,
+      "supply_concentration": 1,
+      "project_approval_friction": 2,
+      "demand_forecast_mismatch": 1
     },
     "opportunity_type_distribution": {
-      "Automation": 4,
-      "Data Quality": 4,
-      "Workflow Redesign": 5,
-      "Compliance Simplification": 1,
-      "Capacity Optimization": 2
+      "Automation": 8,
+      "Data Quality": 13,
+      "Workflow Redesign": 17,
+      "Compliance Simplification": 5,
+      "Capacity Optimization": 9
     },
     "evidence_dossier_summary": {
-      "total_dossiers": 16,
+      "total_dossiers": 52,
       "decision_ready_records": 4,
-      "needs_evidence_records": 10,
-      "high_priority_validation_records": 2,
-      "high_opportunity_weak_evidence_records": 8,
+      "needs_evidence_records": 46,
+      "high_priority_validation_records": 27,
+      "high_opportunity_weak_evidence_records": 43,
       "validation_status_distribution": {
-        "needs_evidence": 10,
+        "unvalidated": 22,
+        "needs_evidence": 24,
         "partially_supported": 2,
         "evidence_backed": 3,
         "validated": 1
       },
-      "average_validation_priority_score": 6.9
+      "average_validation_priority_score": 7.4
     },
     "intervention_summary": {
-      "total_strategies": 16,
+      "total_strategies": 52,
       "top_fast_wins": [
         "Appointment call queue overflow",
         "Insurance eligibility verification before each visit",
         "Duplicate demographic collection across intake channels",
-        "Patient statement confusion and support calls",
-        "Provider credentialing packet duplication"
+        "Warehouse slotting and pick-path rework",
+        "Patient statement confusion and support calls"
       ],
       "top_ai_leverage": [
         "Claim denial triage and resubmission",
@@ -1690,56 +5899,96 @@
       ],
       "validation_required_before_action": [
         "Appointment call queue overflow",
+        "Warehouse slotting and pick-path rework",
         "Insurance eligibility verification before each visit",
         "Patient statement confusion and support calls",
-        "Duplicate demographic collection across intake channels",
-        "Provider credentialing packet duplication"
+        "Duplicate demographic collection across intake channels"
       ],
       "intervention_type_distribution": {
         "automation_assist": 4,
         "workflow_redesign": 1,
         "policy_simplification": 1,
-        "evidence_collection": 10
+        "evidence_collection": 46
       },
-      "average_action_confidence": 6.6,
+      "average_action_confidence": 5.5,
       "highest_priority_intervention": "Automation Assist for Claims processing"
+    },
+    "archetype_summary": {
+      "total_archetypes_detected": 23,
+      "most_widespread_archetype": "Documentation Chase",
+      "highest_priority_archetype": "Manual Verification Drag",
+      "most_under_validated_archetype": "Equipment Lead Time",
+      "highest_intervention_opportunity_archetype": "Manual Verification Drag",
+      "cross_industry_analog_count": 20,
+      "archetype_distribution": {
+        "queue_backlog": 6,
+        "manual_verification_drag": 2,
+        "documentation_chase": 5,
+        "handoff_leakage": 4,
+        "hidden_cost_shift": 2,
+        "duplicated_work": 3,
+        "capacity_mismatch": 2,
+        "regulatory_complexity": 1,
+        "support_channel_overload": 1,
+        "measurement_blind_spot": 5,
+        "data_fragmentation": 2,
+        "interconnection_delay": 1,
+        "equipment_lead_time": 3,
+        "permitting_delay": 2,
+        "inspection_delay": 2,
+        "vendor_qualification": 4,
+        "infrastructure_siting": 1,
+        "processing_capacity": 2,
+        "supply_concentration": 1,
+        "project_approval_friction": 2,
+        "demand_forecast_mismatch": 1
+      },
+      "industry_distribution": {
+        "Healthcare": 16,
+        "Energy / Grid / Interconnection": 6,
+        "Infrastructure / Permitting / Construction": 6,
+        "Semiconductors / Advanced Manufacturing": 6,
+        "Metals / Mining / Critical Inputs": 6,
+        "Logistics / Supply Chain / Industrial Equipment": 6,
+        "Public-Sector Administration / Compliance": 6
+      }
     }
   },
   "score_summary": {
     "severity_score": {
-      "min": 5.9,
+      "min": 5.6,
       "max": 8.4,
-      "average": 7
+      "average": 6.9
     },
     "solvability_score": {
-      "min": 5.6,
+      "min": 3.3,
       "max": 7.2,
-      "average": 6.4
+      "average": 5.8
     },
     "ai_readiness_score": {
-      "min": 5.8,
+      "min": 4.4,
       "max": 7.7,
-      "average": 6.7
+      "average": 6.1
     },
     "overlooked_opportunity_score": {
-      "min": 5.8,
-      "max": 7.2,
-      "average": 6.6
+      "min": 5.6,
+      "max": 7.3,
+      "average": 6.7
     },
     "evidence_score": {
-      "min": 5.9,
+      "min": 3.7,
       "max": 8.9,
-      "average": 7
+      "average": 5.3
     },
     "measurability_score": {
-      "min": 5.1,
+      "min": 3.9,
       "max": 7.7,
-      "average": 6.4
+      "average": 5.4
     },
     "validation_confidence_score": {
-      "min": 5.9,
+      "min": 3.8,
       "max": 8.1,
-      "average": 6.8
+      "average": 5.3
     },
     "constraint_density_score": {
       "min": 10,
@@ -1747,32 +5996,42 @@
       "average": 10
     },
     "downstream_impact_score": {
-      "min": 7.5,
+      "min": 7.4,
       "max": 9,
-      "average": 8.2
+      "average": 8.1
     },
     "opportunity_score": {
-      "min": 6,
+      "min": 4.2,
       "max": 7.6,
-      "average": 6.8
+      "average": 6.1
     },
     "total_strategic_score": {
-      "min": 7.6,
+      "min": 7,
       "max": 8.5,
-      "average": 8
+      "average": 7.7
+    },
+    "archetype_spread_score": {
+      "min": 8.9,
+      "max": 10,
+      "average": 9.8
+    },
+    "cross_industry_similarity_score": {
+      "min": 8.9,
+      "max": 9.4,
+      "average": 9.3
     },
     "total_priority_score": {
-      "min": 6.3,
+      "min": 5.4,
       "max": 7.4,
-      "average": 6.7
+      "average": 6.3
     }
   },
   "quality_summary": {
-    "total_records": 16,
-    "seed_records": 12,
+    "total_records": 52,
+    "seed_records": 48,
     "intake_records": 4,
-    "data_quality_score": 8.5,
-    "validation_coverage_score": 3.8,
+    "data_quality_score": 7.8,
+    "validation_coverage_score": 1.2,
     "evidence_completeness_score": 10,
     "relationship_completeness_score": 10,
     "records_needing_validation": [
@@ -1790,9 +6049,45 @@
       "hc-intake-001",
       "hc-intake-002",
       "hc-intake-003",
-      "hc-intake-004"
+      "hc-intake-004",
+      "strategic-001",
+      "strategic-002",
+      "strategic-003",
+      "strategic-004",
+      "strategic-005",
+      "strategic-006",
+      "strategic-007",
+      "strategic-008",
+      "strategic-009",
+      "strategic-010",
+      "strategic-011",
+      "strategic-012",
+      "strategic-013",
+      "strategic-014",
+      "strategic-015",
+      "strategic-016",
+      "strategic-017",
+      "strategic-018",
+      "strategic-019",
+      "strategic-020",
+      "strategic-021",
+      "strategic-022",
+      "strategic-023",
+      "strategic-024",
+      "strategic-025",
+      "strategic-026",
+      "strategic-027",
+      "strategic-028",
+      "strategic-029",
+      "strategic-030",
+      "strategic-031",
+      "strategic-032",
+      "strategic-033",
+      "strategic-034",
+      "strategic-035",
+      "strategic-036"
     ],
-    "strongest_under_validated_opportunity": "hc-admin-004",
+    "strongest_under_validated_opportunity": "Chip equipment lead-time coordination",
     "missing_evidence_fields": {},
     "missing_relationship_fields": {},
     "low_validation_confidence_records": [
@@ -1805,7 +6100,43 @@
       "hc-admin-012",
       "hc-intake-001",
       "hc-intake-002",
-      "hc-intake-004"
+      "hc-intake-004",
+      "strategic-001",
+      "strategic-002",
+      "strategic-003",
+      "strategic-004",
+      "strategic-005",
+      "strategic-006",
+      "strategic-007",
+      "strategic-008",
+      "strategic-009",
+      "strategic-010",
+      "strategic-011",
+      "strategic-012",
+      "strategic-013",
+      "strategic-014",
+      "strategic-015",
+      "strategic-016",
+      "strategic-017",
+      "strategic-018",
+      "strategic-019",
+      "strategic-020",
+      "strategic-021",
+      "strategic-022",
+      "strategic-023",
+      "strategic-024",
+      "strategic-025",
+      "strategic-026",
+      "strategic-027",
+      "strategic-028",
+      "strategic-029",
+      "strategic-030",
+      "strategic-031",
+      "strategic-032",
+      "strategic-033",
+      "strategic-034",
+      "strategic-035",
+      "strategic-036"
     ],
     "high_strategic_score_records": [
       "hc-admin-001",
@@ -1822,64 +6153,97 @@
     "high_opportunity_weak_evidence_records": [
       "hc-admin-002",
       "hc-admin-009",
-      "hc-intake-001"
+      "hc-intake-001",
+      "strategic-023"
     ],
     "duplicate_ids": [],
     "invalid_source_evidence_metadata": [],
     "category_distribution": {
-      "Administrative Delay": 2,
-      "Manual Verification": 2,
+      "Administrative Delay": 9,
+      "Manual Verification": 7,
       "Revenue Leakage": 1,
-      "Information Gap": 2,
-      "Process Handoff": 1,
-      "Duplicated Work": 2,
-      "Compliance Drag": 2,
-      "Idle Capacity": 1,
-      "Hidden Cost": 2,
-      "Market Mismatch": 1
+      "Information Gap": 6,
+      "Process Handoff": 5,
+      "Duplicated Work": 4,
+      "Compliance Drag": 7,
+      "Idle Capacity": 5,
+      "Hidden Cost": 5,
+      "Market Mismatch": 3
+    },
+    "industry_distribution": {
+      "Healthcare": 16,
+      "Energy / Grid / Interconnection": 6,
+      "Infrastructure / Permitting / Construction": 6,
+      "Semiconductors / Advanced Manufacturing": 6,
+      "Metals / Mining / Critical Inputs": 6,
+      "Logistics / Supply Chain / Industrial Equipment": 6,
+      "Public-Sector Administration / Compliance": 6
+    },
+    "archetype_distribution": {
+      "queue_backlog": 6,
+      "manual_verification_drag": 2,
+      "documentation_chase": 5,
+      "handoff_leakage": 4,
+      "hidden_cost_shift": 2,
+      "duplicated_work": 3,
+      "capacity_mismatch": 2,
+      "regulatory_complexity": 1,
+      "support_channel_overload": 1,
+      "measurement_blind_spot": 5,
+      "data_fragmentation": 2,
+      "interconnection_delay": 1,
+      "equipment_lead_time": 3,
+      "permitting_delay": 2,
+      "inspection_delay": 2,
+      "vendor_qualification": 4,
+      "infrastructure_siting": 1,
+      "processing_capacity": 2,
+      "supply_concentration": 1,
+      "project_approval_friction": 2,
+      "demand_forecast_mismatch": 1
     },
     "opportunity_type_distribution": {
-      "Automation": 4,
-      "Data Quality": 4,
-      "Workflow Redesign": 5,
-      "Compliance Simplification": 1,
-      "Capacity Optimization": 2
+      "Automation": 8,
+      "Data Quality": 13,
+      "Workflow Redesign": 17,
+      "Compliance Simplification": 5,
+      "Capacity Optimization": 9
     },
     "score_range_summary": {
       "severity_score": {
-        "min": 5.9,
+        "min": 5.6,
         "max": 8.4,
-        "average": 7
+        "average": 6.9
       },
       "solvability_score": {
-        "min": 5.6,
+        "min": 3.3,
         "max": 7.2,
-        "average": 6.4
+        "average": 5.8
       },
       "ai_readiness_score": {
-        "min": 5.8,
+        "min": 4.4,
         "max": 7.7,
-        "average": 6.7
+        "average": 6.1
       },
       "overlooked_opportunity_score": {
-        "min": 5.8,
-        "max": 7.2,
-        "average": 6.6
+        "min": 5.6,
+        "max": 7.3,
+        "average": 6.7
       },
       "evidence_score": {
-        "min": 5.9,
+        "min": 3.7,
         "max": 8.9,
-        "average": 7
+        "average": 5.3
       },
       "measurability_score": {
-        "min": 5.1,
+        "min": 3.9,
         "max": 7.7,
-        "average": 6.4
+        "average": 5.4
       },
       "validation_confidence_score": {
-        "min": 5.9,
+        "min": 3.8,
         "max": 8.1,
-        "average": 6.8
+        "average": 5.3
       },
       "constraint_density_score": {
         "min": 10,
@@ -1887,24 +6251,34 @@
         "average": 10
       },
       "downstream_impact_score": {
-        "min": 7.5,
+        "min": 7.4,
         "max": 9,
-        "average": 8.2
+        "average": 8.1
       },
       "opportunity_score": {
-        "min": 6,
+        "min": 4.2,
         "max": 7.6,
-        "average": 6.8
+        "average": 6.1
       },
       "total_strategic_score": {
-        "min": 7.6,
+        "min": 7,
         "max": 8.5,
-        "average": 8
+        "average": 7.7
+      },
+      "archetype_spread_score": {
+        "min": 8.9,
+        "max": 10,
+        "average": 9.8
+      },
+      "cross_industry_similarity_score": {
+        "min": 8.9,
+        "max": 9.4,
+        "average": 9.3
       },
       "total_priority_score": {
-        "min": 6.3,
+        "min": 5.4,
         "max": 7.4,
-        "average": 6.7
+        "average": 6.3
       }
     }
   }

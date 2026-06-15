@@ -2,6 +2,7 @@ type InterventionBuildFsModule = typeof import("node:fs");
 type InterventionBuildPathModule = typeof import("node:path");
 
 const {
+  existsSync: interventionBuildExistsSync,
   mkdirSync: interventionBuildMkdirSync,
   readFileSync: interventionBuildReadFileSync,
   writeFileSync: interventionBuildWriteFileSync
@@ -92,13 +93,41 @@ function interventionBuildExport() {
   interventionBuildMkdirSync(interventionBuildDirname(interventionBuildOutputPath), {
     recursive: true
   });
-  interventionBuildWriteFileSync(
-    interventionBuildOutputPath,
-    `${JSON.stringify(output, null, 2)}\n`
-  );
+  interventionBuildWriteStableJson(interventionBuildOutputPath, output);
   console.log(
     `Built ${strategies.length} intervention strategies at ${interventionBuildOutputPath}.`
   );
+  return output;
+}
+
+function interventionBuildWriteStableJson(
+  path: string,
+  output: Record<string, unknown>
+) {
+  const stableOutput = interventionBuildPreserveGeneratedAt(path, output);
+  interventionBuildWriteFileSync(path, `${JSON.stringify(stableOutput, null, 2)}\n`);
+}
+
+function interventionBuildPreserveGeneratedAt(
+  path: string,
+  output: Record<string, unknown>
+) {
+  if (!interventionBuildExistsSync(path)) {
+    return output;
+  }
+
+  const existing = JSON.parse(
+    interventionBuildReadFileSync(path, "utf8")
+  ) as Record<string, unknown>;
+  const existingComparable = { ...existing, generated_at: output.generated_at };
+
+  if (JSON.stringify(existingComparable) === JSON.stringify(output)) {
+    return {
+      ...output,
+      generated_at: existing.generated_at
+    };
+  }
+
   return output;
 }
 

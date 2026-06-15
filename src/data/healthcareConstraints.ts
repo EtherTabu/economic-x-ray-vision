@@ -1,6 +1,89 @@
-import type { ConstraintIntelligenceObject } from "@/types/constraint";
+import type {
+  ConstraintArchetypeId,
+  ConstraintIntelligenceObject
+} from "@/types/constraint";
 
-export const healthcareConstraints: ConstraintIntelligenceObject[] = [
+type HealthcareBaseConstraint = Omit<
+  ConstraintIntelligenceObject,
+  | "primary_archetype"
+  | "secondary_archetypes"
+  | "archetype_confidence"
+  | "archetype_reasoning"
+>;
+
+type HealthcareArchetypeAssignment = {
+  primary_archetype: ConstraintArchetypeId;
+  secondary_archetypes: ConstraintArchetypeId[];
+  archetype_confidence: number;
+};
+
+const healthcareArchetypeAssignments: Record<
+  string,
+  HealthcareArchetypeAssignment
+> = {
+  "hc-admin-001": {
+    primary_archetype: "queue_backlog",
+    secondary_archetypes: ["documentation_chase", "manual_verification_drag"],
+    archetype_confidence: 9
+  },
+  "hc-admin-002": {
+    primary_archetype: "manual_verification_drag",
+    secondary_archetypes: ["data_fragmentation", "duplicated_work"],
+    archetype_confidence: 8
+  },
+  "hc-admin-003": {
+    primary_archetype: "documentation_chase",
+    secondary_archetypes: ["manual_verification_drag", "queue_backlog"],
+    archetype_confidence: 8
+  },
+  "hc-admin-004": {
+    primary_archetype: "handoff_leakage",
+    secondary_archetypes: ["data_fragmentation", "measurement_blind_spot"],
+    archetype_confidence: 9
+  },
+  "hc-admin-005": {
+    primary_archetype: "hidden_cost_shift",
+    secondary_archetypes: ["support_channel_overload", "data_fragmentation"],
+    archetype_confidence: 8
+  },
+  "hc-admin-006": {
+    primary_archetype: "duplicated_work",
+    secondary_archetypes: ["vendor_qualification", "manual_verification_drag"],
+    archetype_confidence: 9
+  },
+  "hc-admin-007": {
+    primary_archetype: "capacity_mismatch",
+    secondary_archetypes: ["workforce_constraint", "queue_backlog"],
+    archetype_confidence: 8
+  },
+  "hc-admin-008": {
+    primary_archetype: "regulatory_complexity",
+    secondary_archetypes: ["manual_verification_drag", "documentation_chase"],
+    archetype_confidence: 8
+  },
+  "hc-admin-009": {
+    primary_archetype: "support_channel_overload",
+    secondary_archetypes: ["idle_capacity", "queue_backlog"],
+    archetype_confidence: 9
+  },
+  "hc-admin-010": {
+    primary_archetype: "queue_backlog",
+    secondary_archetypes: ["processing_capacity", "manual_verification_drag"],
+    archetype_confidence: 8
+  },
+  "hc-admin-011": {
+    primary_archetype: "queue_backlog",
+    secondary_archetypes: ["documentation_chase", "manual_verification_drag"],
+    archetype_confidence: 8
+  },
+  "hc-admin-012": {
+    primary_archetype: "measurement_blind_spot",
+    secondary_archetypes: ["demand_forecast_mismatch", "hidden_cost_shift"],
+    archetype_confidence: 8
+  }
+};
+
+const healthcareBaseConstraints: HealthcareBaseConstraint[] = [
   {
     id: "hc-admin-001",
     origin: "seed",
@@ -770,3 +853,14 @@ export const healthcareConstraints: ConstraintIntelligenceObject[] = [
     opportunity_type: "Capacity Optimization"
   }
 ];
+
+export const healthcareConstraints: ConstraintIntelligenceObject[] =
+  healthcareBaseConstraints.map((constraint) => {
+    const assignment = healthcareArchetypeAssignments[constraint.id];
+
+    return {
+      ...constraint,
+      ...assignment,
+      archetype_reasoning: `${constraint.title} maps to ${assignment.primary_archetype.replaceAll("_", " ")} because the workflow pattern centers on ${constraint.related_processes[0]} and affects ${constraint.downstream_constraints[0]}.`
+    };
+  });

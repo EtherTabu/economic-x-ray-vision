@@ -2,6 +2,7 @@ type EvidenceBuildFsModule = typeof import("node:fs");
 type EvidenceBuildPathModule = typeof import("node:path");
 
 const {
+  existsSync: evidenceBuildExistsSync,
   mkdirSync: evidenceBuildMkdirSync,
   readFileSync: evidenceBuildReadFileSync,
   writeFileSync: evidenceBuildWriteFileSync
@@ -85,13 +86,42 @@ function buildEvidenceDossierExport() {
   evidenceBuildMkdirSync(evidenceBuildDirname(evidenceBuildOutputPath), {
     recursive: true
   });
-  evidenceBuildWriteFileSync(
-    evidenceBuildOutputPath,
-    `${JSON.stringify(output, null, 2)}\n`
-  );
+  evidenceBuildWriteStableJson(evidenceBuildOutputPath, output);
   console.log(
     `Built ${dossiers.length} evidence dossiers at ${evidenceBuildOutputPath}.`
   );
+  return output;
+}
+
+function evidenceBuildWriteStableJson(
+  path: string,
+  output: Record<string, unknown>
+) {
+  const stableOutput = evidenceBuildPreserveGeneratedAt(path, output);
+  evidenceBuildWriteFileSync(path, `${JSON.stringify(stableOutput, null, 2)}\n`);
+}
+
+function evidenceBuildPreserveGeneratedAt(
+  path: string,
+  output: Record<string, unknown>
+) {
+  if (!evidenceBuildExistsSync(path)) {
+    return output;
+  }
+
+  const existing = JSON.parse(evidenceBuildReadFileSync(path, "utf8")) as Record<
+    string,
+    unknown
+  >;
+  const existingComparable = { ...existing, generated_at: output.generated_at };
+
+  if (JSON.stringify(existingComparable) === JSON.stringify(output)) {
+    return {
+      ...output,
+      generated_at: existing.generated_at
+    };
+  }
+
   return output;
 }
 

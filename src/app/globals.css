@@ -684,6 +684,126 @@ h1 {
   line-height: 1.42;
 }
 
+.archetype-panel {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.archetype-panel__header {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.archetype-panel__header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.archetype-panel__header p:not(.section-kicker) {
+  margin: 0;
+  color: #344655;
+  line-height: 1.55;
+}
+
+.archetype-panel__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.archetype-metric,
+.analog-metric {
+  min-height: 82px;
+  padding: 12px;
+  background: #fbfcfd;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.archetype-metric span,
+.analog-metric span,
+.archetype-preview > span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.archetype-metric strong,
+.analog-metric strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.archetype-panel__body {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.32fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.archetype-distribution,
+.archetype-preview,
+.analog-section {
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.archetype-distribution h3,
+.archetype-preview h3,
+.analog-section h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.archetype-preview p,
+.analog-section p {
+  margin: 10px 0 0;
+  color: #344655;
+  line-height: 1.5;
+}
+
+.archetype-preview dl {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+
+.archetype-preview dt {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.archetype-preview dd {
+  margin: 3px 0 0;
+  color: #344655;
+  line-height: 1.42;
+}
+
+.analog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -893,7 +1013,9 @@ select {
   .evidence-panel__header,
   .evidence-panel__body,
   .intervention-panel__header,
-  .intervention-panel__body {
+  .intervention-panel__body,
+  .archetype-panel__header,
+  .archetype-panel__body {
     grid-template-columns: 1fr;
   }
 

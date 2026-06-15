@@ -67,6 +67,10 @@ CREATE TABLE IF NOT EXISTS constraints (
       'Compliance Simplification'
     )
   ),
+  primary_archetype TEXT NOT NULL,
+  secondary_archetypes_json TEXT NOT NULL,
+  archetype_confidence INTEGER NOT NULL CHECK (archetype_confidence BETWEEN 1 AND 10),
+  archetype_reasoning TEXT NOT NULL,
   created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -84,13 +88,18 @@ CREATE TABLE IF NOT EXISTS constraint_scores (
   downstream_impact_score REAL NOT NULL,
   opportunity_score REAL NOT NULL,
   total_strategic_score REAL NOT NULL,
+  archetype_spread_score REAL NOT NULL,
+  cross_industry_similarity_score REAL NOT NULL,
   total_priority_score REAL NOT NULL,
   scored_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (constraint_id) REFERENCES constraints(id) ON DELETE CASCADE
 );
 
 CREATE INDEX IF NOT EXISTS idx_constraints_category ON constraints(category);
+CREATE INDEX IF NOT EXISTS idx_constraints_industry ON constraints(industry);
 CREATE INDEX IF NOT EXISTS idx_constraints_subsector ON constraints(subsector);
+CREATE INDEX IF NOT EXISTS idx_constraints_primary_archetype
+  ON constraints(primary_archetype);
 CREATE INDEX IF NOT EXISTS idx_constraints_validation_status
   ON constraints(validation_status);
 CREATE INDEX IF NOT EXISTS idx_constraints_opportunity_type

@@ -1,5 +1,7 @@
 import type {
+  ConstraintArchetypeId,
   ConstraintCategory,
+  ConstraintIndustry,
   OpportunityType,
   RecordOrigin,
   SortOption
@@ -7,15 +9,21 @@ import type {
 import type { DecisionFilter } from "@/lib/constraints";
 
 type ConstraintFiltersProps = {
+  archetype: ConstraintArchetypeId | "All";
+  archetypes: ConstraintArchetypeId[];
   categories: ConstraintCategory[];
   category: ConstraintCategory | "All";
+  industries: ConstraintIndustry[];
+  industry: ConstraintIndustry | "All";
   opportunityTypes: OpportunityType[];
   opportunityType: OpportunityType | "All";
   decisionFilter: DecisionFilter;
   origin: RecordOrigin | "All";
   resultCount: number;
   sortBy: SortOption;
+  onArchetypeChange: (archetype: ConstraintArchetypeId | "All") => void;
   onCategoryChange: (category: ConstraintCategory | "All") => void;
+  onIndustryChange: (industry: ConstraintIndustry | "All") => void;
   onOpportunityTypeChange: (opportunityType: OpportunityType | "All") => void;
   onDecisionFilterChange: (decisionFilter: DecisionFilter) => void;
   onOriginChange: (origin: RecordOrigin | "All") => void;
@@ -34,19 +42,27 @@ const sortLabels: Record<SortOption, string> = {
   constraint_density_score: "Constraint density",
   downstream_impact_score: "Downstream impact",
   opportunity_score: "Opportunity score",
-  total_strategic_score: "Strategic score"
+  total_strategic_score: "Strategic score",
+  archetype_spread_score: "Archetype spread",
+  cross_industry_similarity_score: "Cross-industry similarity"
 };
 
 export function ConstraintFilters({
+  archetype,
+  archetypes,
   categories,
   category,
+  industries,
+  industry,
   opportunityTypes,
   opportunityType,
   decisionFilter,
   origin,
   resultCount,
   sortBy,
+  onArchetypeChange,
   onCategoryChange,
+  onIndustryChange,
   onOpportunityTypeChange,
   onDecisionFilterChange,
   onOriginChange,
@@ -55,6 +71,24 @@ export function ConstraintFilters({
   return (
     <div className="toolbar">
       <div className="control-row">
+        <div className="control-group">
+          <label htmlFor="industry">Industry</label>
+          <select
+            id="industry"
+            onChange={(event) =>
+              onIndustryChange(event.target.value as ConstraintIndustry | "All")
+            }
+            value={industry}
+          >
+            <option value="All">All industries</option>
+            {industries.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <div className="control-group">
           <label htmlFor="category">Category</label>
           <select
@@ -68,6 +102,24 @@ export function ConstraintFilters({
             {categories.map((option) => (
               <option key={option} value={option}>
                 {option}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="control-group">
+          <label htmlFor="archetype">Archetype</label>
+          <select
+            id="archetype"
+            onChange={(event) =>
+              onArchetypeChange(event.target.value as ConstraintArchetypeId | "All")
+            }
+            value={archetype}
+          >
+            <option value="All">All archetypes</option>
+            {archetypes.map((option) => (
+              <option key={option} value={option}>
+                {option.replaceAll("_", " ")}
               </option>
             ))}
           </select>

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { AnalysisWorkbench } from "@/components/AnalysisWorkbench";
+import { ArchetypeIntelligencePanel } from "@/components/ArchetypeIntelligencePanel";
 import { ConstraintCard } from "@/components/ConstraintCard";
 import { ConstraintFilters } from "@/components/ConstraintFilters";
 import { DatasetHealthPanel } from "@/components/DatasetHealthPanel";
@@ -9,12 +10,15 @@ import { EvidenceDossierPanel } from "@/components/EvidenceDossierPanel";
 import { InterventionStrategyPanel } from "@/components/InterventionStrategyPanel";
 import { constraintRegistry } from "@/data/constraintRegistry";
 import {
+  archetypeOptions,
   categoryOptions,
   type DecisionFilter,
   getConstraintsWithScores,
+  industryOptions,
   opportunityTypeOptions,
   sortAndFilterConstraints
 } from "@/lib/constraints";
+import { analyzeArchetypes } from "@/lib/archetypeAnalysis";
 import { analyzeDatasetQuality } from "@/lib/dataQuality";
 import {
   buildEvidenceDossiers,
@@ -26,14 +30,20 @@ import {
   summarizeInterventions
 } from "@/lib/interventionSimulator";
 import type {
+  ConstraintArchetypeId,
   ConstraintCategory,
+  ConstraintIndustry,
   OpportunityType,
   RecordOrigin,
   SortOption
 } from "@/types/constraint";
 
 export default function Home() {
+  const [industry, setIndustry] = useState<ConstraintIndustry | "All">("All");
   const [category, setCategory] = useState<ConstraintCategory | "All">("All");
+  const [archetype, setArchetype] = useState<ConstraintArchetypeId | "All">(
+    "All"
+  );
   const [origin, setOrigin] = useState<RecordOrigin | "All">("All");
   const [opportunityType, setOpportunityType] = useState<OpportunityType | "All">(
     "All"
@@ -50,13 +60,24 @@ export default function Home() {
     () =>
       sortAndFilterConstraints(
         scoredConstraints,
+        industry,
         category,
+        archetype,
         origin,
         opportunityType,
         decisionFilter,
         sortBy
       ),
-    [category, decisionFilter, opportunityType, origin, scoredConstraints, sortBy]
+    [
+      archetype,
+      category,
+      decisionFilter,
+      industry,
+      opportunityType,
+      origin,
+      scoredConstraints,
+      sortBy
+    ]
   );
 
   const opportunityPortfolio = useMemo(
@@ -87,6 +108,11 @@ export default function Home() {
   const interventionSummary = useMemo(
     () => summarizeInterventions(interventionStrategies),
     [interventionStrategies]
+  );
+
+  const archetypePortfolio = useMemo(
+    () => analyzeArchetypes(scoredConstraints),
+    [scoredConstraints]
   );
 
   const seedRecordCount = scoredConstraints.filter(
@@ -153,8 +179,9 @@ export default function Home() {
           <h1>Economic X-Ray Vision</h1>
           <p className="lede">
             A local-first constraint intelligence workbench for ranking
-            healthcare administration friction, validating evidence, mapping
-            graph position, and generating opportunity theses.
+            friction across healthcare, grid, infrastructure, manufacturing,
+            mining, logistics, and public administration by mapping recurring
+            bottleneck archetypes.
           </p>
           <div className="measurement-strip" aria-label="What this system measures">
             <span>Delay</span>
@@ -169,13 +196,13 @@ export default function Home() {
       <section className="page-main" aria-label="Constraint intelligence list">
         <section className="intelligence-overview" aria-label="Intelligence overview">
           <div className="overview-copy">
-            <p className="section-kicker">V3.0 analyst workbench</p>
-            <h2>Explain early friction before it turns into late-stage damage.</h2>
+            <p className="section-kicker">V7.0 constraint archetype engine</p>
+            <h2>Recognize recurring bottlenecks before they become outcomes.</h2>
             <p>
               Economic X-Ray Vision combines deterministic scoring, validation
               confidence, graph position, and opportunity thesis analysis to
               show where value is being delayed, duplicated, trapped, or
-              underused inside healthcare administration.
+              underused across strategic operating systems.
             </p>
           </div>
 
@@ -196,8 +223,8 @@ export default function Home() {
 
         <div className="summary-grid" aria-label="Portfolio summary metrics">
           <div className="summary-item">
-            <span>Industry</span>
-            <strong>Healthcare</strong>
+            <span>Industries</span>
+            <strong>{industryOptions(scoredConstraints).length}</strong>
           </div>
           <div className="summary-item">
             <span>Seed Records</span>
@@ -279,17 +306,25 @@ export default function Home() {
           summary={interventionSummary}
         />
 
+        <ArchetypeIntelligencePanel portfolio={archetypePortfolio} />
+
         <ConstraintFilters
+          archetype={archetype}
+          archetypes={archetypeOptions(scoredConstraints)}
           categories={categoryOptions(scoredConstraints)}
           category={category}
           decisionFilter={decisionFilter}
+          industries={industryOptions(scoredConstraints)}
+          industry={industry}
           opportunityTypes={opportunityTypeOptions(scoredConstraints)}
           opportunityType={opportunityType}
           origin={origin}
           resultCount={visibleConstraints.length}
           sortBy={sortBy}
+          onArchetypeChange={setArchetype}
           onCategoryChange={setCategory}
           onDecisionFilterChange={setDecisionFilter}
+          onIndustryChange={setIndustry}
           onOpportunityTypeChange={setOpportunityType}
           onOriginChange={setOrigin}
           onSortChange={setSortBy}

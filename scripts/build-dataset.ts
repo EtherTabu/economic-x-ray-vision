@@ -1,4 +1,5 @@
 type DatasetFsModule = typeof import("node:fs");
+type DatasetModuleModule = typeof import("node:module");
 type DatasetPathModule = typeof import("node:path");
 
 const {
@@ -7,14 +8,19 @@ const {
   readFileSync: datasetReadFileSync,
   writeFileSync: datasetWriteFileSync
 } = process.getBuiltinModule("fs") as DatasetFsModule;
+const { createRequire: datasetCreateRequire } = process.getBuiltinModule(
+  "module"
+) as DatasetModuleModule;
 const {
   dirname: datasetDirname,
   resolve: datasetResolve
 } = process.getBuiltinModule("path") as DatasetPathModule;
+const datasetRequire = datasetCreateRequire(__filename);
 
 type RawRecord = Record<string, unknown> & {
   id: string;
   origin: "seed" | "intake";
+  industry: string;
   category: string;
   opportunity_type: string;
   validation_status: string;
@@ -45,6 +51,10 @@ type RawRecord = Record<string, unknown> & {
   data_availability: number;
   visibility_score: number;
   overlooked_score: number;
+  primary_archetype: string;
+  secondary_archetypes: string[];
+  archetype_confidence: number;
+  archetype_reasoning: string;
 };
 
 type ScoredRawRecord = RawRecord & {
@@ -57,6 +67,9 @@ const datasetOutputPath = datasetResolve(
 const datasetEvidenceOutputPath = datasetResolve("data/exports/evidence_dossiers.json");
 const datasetInterventionOutputPath = datasetResolve(
   "data/exports/intervention_strategies.json"
+);
+const datasetArchetypeOutputPath = datasetResolve(
+  "data/exports/archetype_analysis.json"
 );
 
 function buildDatasetSnapshot() {
@@ -74,7 +87,11 @@ function buildDatasetSnapshot() {
     dataset_summary: {
       seed_records: scoredRecords.filter((record) => record.origin === "seed").length,
       intake_records: scoredRecords.filter((record) => record.origin === "intake").length,
+      industry_distribution: distribution(scoredRecords.map((record) => record.industry)),
       category_distribution: distribution(scoredRecords.map((record) => record.category)),
+      archetype_distribution: distribution(
+        scoredRecords.map((record) => record.primary_archetype)
+      ),
       opportunity_type_distribution: distribution(
         scoredRecords.map((record) => record.opportunity_type)
       ),
@@ -85,6 +102,10 @@ function buildDatasetSnapshot() {
       intervention_summary: readOptionalSummary(
         datasetInterventionOutputPath,
         "intervention_summary"
+      ),
+      archetype_summary: readOptionalSummary(
+        datasetArchetypeOutputPath,
+        "archetype_summary"
       )
     },
     score_summary: scoreSummary(scoredRecords),
@@ -108,46 +129,55 @@ function readOptionalSummary(path: string, key: string) {
 function writeDatasetSnapshot() {
   const snapshot = buildDatasetSnapshot();
   datasetMkdirSync(datasetDirname(datasetOutputPath), { recursive: true });
-  datasetWriteFileSync(datasetOutputPath, `${JSON.stringify(snapshot, null, 2)}\n`);
+  writeStableJson(datasetOutputPath, snapshot);
   console.log(
     `Built dataset snapshot with ${snapshot.record_count} records at ${datasetOutputPath}.`
   );
   return snapshot;
 }
 
-function loadCurrentRegistry() {
-  const seedSource = datasetReadFileSync(
-    datasetResolve("src/data/healthcareConstraints.ts"),
-    "utf8"
-  );
-  const intakeSource = datasetReadFileSync(
-    datasetResolve("src/data/generated/intakeConstraints.ts"),
-    "utf8"
-  );
-
-  return [
-    ...extractArray(seedSource, "healthcareConstraints"),
-    ...extractArray(intakeSource, "intakeConstraints")
-  ] as RawRecord[];
+function writeStableJson(path: string, output: Record<string, unknown>) {
+  const stableOutput = preserveGeneratedAt(path, output);
+  datasetWriteFileSync(path, `${JSON.stringify(stableOutput, null, 2)}\n`);
 }
 
-function extractArray(source: string, exportName: string) {
-  const marker = `export const ${exportName}:`;
-  const markerIndex = source.indexOf(marker);
-
-  if (markerIndex === -1) {
-    throw new Error(`Could not find ${exportName} export.`);
+function preserveGeneratedAt(path: string, output: Record<string, unknown>) {
+  if (!datasetExistsSync(path)) {
+    return output;
   }
 
-  const arrayStart = source.indexOf("[", markerIndex);
-  const arrayEnd = source.lastIndexOf("];");
+  const existing = JSON.parse(datasetReadFileSync(path, "utf8")) as Record<
+    string,
+    unknown
+  >;
+  const existingComparable = { ...existing, generated_at: output.generated_at };
 
-  if (arrayStart === -1 || arrayEnd === -1 || arrayEnd <= arrayStart) {
-    throw new Error(`Could not parse ${exportName} array.`);
+  if (JSON.stringify(existingComparable) === JSON.stringify(output)) {
+    return {
+      ...output,
+      generated_at: existing.generated_at
+    };
   }
 
-  const arrayLiteral = source.slice(arrayStart, arrayEnd + 1);
-  return Function(`"use strict"; return (${arrayLiteral});`)() as unknown[];
+  return output;
+}
+
+function loadCurrentRegistry() {
+  const { healthcareConstraints } = datasetRequire(
+    datasetResolve("src/data/healthcareConstraints.ts")
+  ) as { healthcareConstraints: RawRecord[] };
+  const { intakeConstraints } = datasetRequire(
+    datasetResolve("src/data/generated/intakeConstraints.ts")
+  ) as { intakeConstraints: RawRecord[] };
+  const { strategicConstraintSeeds } = datasetRequire(
+    datasetResolve("src/data/strategicConstraintSeeds.ts")
+  ) as { strategicConstraintSeeds: RawRecord[] };
+
+  return [
+    ...healthcareConstraints,
+    ...intakeConstraints,
+    ...strategicConstraintSeeds
+  ] as RawRecord[];
 }
 
 function qualitySummary(records: ScoredRawRecord[]) {
@@ -219,7 +249,7 @@ function qualitySummary(records: ScoredRawRecord[]) {
           record.scores.validation_confidence_score < 7
       )
       .map((record) => record.id),
-    strongest_under_validated_opportunity: strongestUnderValidated(records).id,
+    strongest_under_validated_opportunity: strongestUnderValidated(records).title,
     missing_evidence_fields: missingEvidence,
     missing_relationship_fields: missingRelationships,
     low_validation_confidence_records: lowValidation,
@@ -228,6 +258,10 @@ function qualitySummary(records: ScoredRawRecord[]) {
     duplicate_ids: duplicateIds(records),
     invalid_source_evidence_metadata: invalidMetadata,
     category_distribution: distribution(records.map((record) => record.category)),
+    industry_distribution: distribution(records.map((record) => record.industry)),
+    archetype_distribution: distribution(
+      records.map((record) => record.primary_archetype)
+    ),
     opportunity_type_distribution: distribution(
       records.map((record) => record.opportunity_type)
     ),
@@ -320,6 +354,25 @@ function scoreRecord(record: RawRecord) {
       opportunity_score * 0.3 +
       total_priority_score * 0.15
   );
+  const archetype_spread_score = round(
+    Math.min(
+      10,
+      3 +
+        record.secondary_archetypes.length * 1.2 +
+        record.archetype_confidence * 0.35 +
+        record.affected_systems.length * 0.35
+    )
+  );
+  const cross_industry_similarity_score = round(
+    Math.min(
+      10,
+      archetype_spread_score * 0.45 +
+        record.related_processes.length * 0.45 +
+        record.affected_systems.length * 0.35 +
+        record.solution_hypotheses.length * 0.25 +
+        2
+    )
+  );
 
   return {
     severity_score: clampScore(severity_score),
@@ -333,6 +386,8 @@ function scoreRecord(record: RawRecord) {
     downstream_impact_score: clampScore(downstream_impact_score),
     opportunity_score: clampScore(opportunity_score),
     total_strategic_score: clampScore(total_strategic_score),
+    archetype_spread_score: clampScore(archetype_spread_score),
+    cross_industry_similarity_score: clampScore(cross_industry_similarity_score),
     total_priority_score: clampScore(total_priority_score)
   };
 }

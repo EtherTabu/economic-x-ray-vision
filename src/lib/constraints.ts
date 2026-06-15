@@ -1,7 +1,9 @@
 import { scoreConstraint } from "@/lib/scoring";
 import type {
+  ConstraintArchetypeId,
   ConstraintCategory,
   ConstraintIntelligenceObject,
+  ConstraintIndustry,
   OpportunityType,
   RecordOrigin,
   ScoredConstraint,
@@ -30,6 +32,20 @@ export function categoryOptions(
   return Array.from(new Set(constraints.map((constraint) => constraint.category))).sort();
 }
 
+export function industryOptions(
+  constraints: ScoredConstraint[]
+): ConstraintIndustry[] {
+  return Array.from(new Set(constraints.map((constraint) => constraint.industry))).sort();
+}
+
+export function archetypeOptions(
+  constraints: ScoredConstraint[]
+): ConstraintArchetypeId[] {
+  return Array.from(
+    new Set(constraints.map((constraint) => constraint.primary_archetype))
+  ).sort();
+}
+
 export function opportunityTypeOptions(
   constraints: ScoredConstraint[]
 ): OpportunityType[] {
@@ -40,14 +56,23 @@ export function opportunityTypeOptions(
 
 export function sortAndFilterConstraints(
   constraints: ScoredConstraint[],
+  industry: ConstraintIndustry | "All",
   category: ConstraintCategory | "All",
+  archetype: ConstraintArchetypeId | "All",
   origin: RecordOrigin | "All",
   opportunityType: OpportunityType | "All",
   decisionFilter: DecisionFilter,
   sortBy: SortOption
 ): ScoredConstraint[] {
   return constraints
+    .filter((constraint) => industry === "All" || constraint.industry === industry)
     .filter((constraint) => category === "All" || constraint.category === category)
+    .filter(
+      (constraint) =>
+        archetype === "All" ||
+        constraint.primary_archetype === archetype ||
+        constraint.secondary_archetypes.includes(archetype)
+    )
     .filter((constraint) => origin === "All" || constraint.origin === origin)
     .filter(
       (constraint) =>
