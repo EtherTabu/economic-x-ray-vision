@@ -60,7 +60,17 @@ The Archetype Intelligence panel shows recurring bottleneck patterns across indu
 - Cross-industry analog pair
 - Archetype distribution
 
-## 6. Use Filters
+## 6. Explore The Constraint Network
+
+Use `Open Constraint Network` from the dashboard to inspect the relationship map. The network page shows:
+
+- Constraint, archetype, industry, and intervention nodes.
+- Bridge constraints that connect across sectors.
+- Weak evidence clusters.
+- High intervention leverage clusters.
+- Clickable constraint nodes that open `/constraints/[id]` investigation pages.
+
+## 7. Use Filters
 
 Use the filters to compare:
 
@@ -74,7 +84,7 @@ Use the filters to compare:
 
 Example: filter to `Energy / Grid / Interconnection`, then filter by `documentation_chase` or `queue_backlog`.
 
-## 7. Inspect A Constraint Card
+## 8. Inspect A Constraint Card
 
 Open a constraint card and inspect:
 
@@ -90,7 +100,7 @@ Open a constraint card and inspect:
 
 Then use `Open investigation` to move from the dashboard card into the dedicated constraint workspace. The workspace follows the record through overview, score signals, evidence dossier, validation workflow, archetype reasoning, cross-industry analogs, intervention strategy, and a copyable investigation summary.
 
-## 8. Review A Constraint Investigation
+## 9. Review A Constraint Investigation
 
 In the investigation workspace, check:
 
@@ -99,8 +109,9 @@ In the investigation workspace, check:
 - Which cross-industry analogs share the same bottleneck pattern.
 - Which first experiment is recommended before broader rollout.
 - Whether action confidence is limited by validation gaps.
+- The link back to the network map for relationship exploration.
 
-## 9. Run Locally
+## 10. Run Locally
 
 ```bash
 npm install

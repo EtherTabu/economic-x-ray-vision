@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { AnalysisWorkbench } from "@/components/AnalysisWorkbench";
 import { ArchetypeIntelligencePanel } from "@/components/ArchetypeIntelligencePanel";
@@ -204,6 +205,9 @@ export default function Home() {
               show where value is being delayed, duplicated, trapped, or
               underused across strategic operating systems.
             </p>
+            <Link className="dashboard-network-link" href="/network">
+              Open Constraint Network
+            </Link>
           </div>
 
           <div className="priority-panel" aria-label="Highest priority constraint">

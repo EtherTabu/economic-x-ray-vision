@@ -32,6 +32,7 @@ Economic X-Ray Vision currently:
 - Builds evidence dossiers for each record.
 - Proposes deterministic intervention strategies and first experiments.
 - Opens a dedicated investigation workspace for each constraint, linking evidence, validation workflow, analogs, archetype reasoning, and intervention strategy.
+- Renders a constraint network map that connects records to archetypes, industries, cross-sector analogs, and intervention paths.
 - Exports local JSON artifacts for dataset, evidence, intervention, and archetype analysis.
 
 ## Why It Matters
@@ -73,8 +74,9 @@ Current metrics:
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
 - **Cross-Industry Analog Engine**: finds similar constraints in different industries.
+- **Constraint Network Engine**: builds a local graph of constraint, archetype, industry, analog, and intervention relationships.
 - **Investigation Workspace**: renders a focused record-level view from `/constraints/[id]` with the full evidence-to-validation-to-intervention chain.
-- **Dashboard UI**: displays portfolio health, evidence workflow, interventions, archetypes, filters, expanded record inspection, and links into each investigation workspace.
+- **Dashboard UI**: displays portfolio health, evidence workflow, interventions, archetypes, filters, expanded record inspection, and links into each investigation workspace and network map.
 
 ## Architecture
 
@@ -89,15 +91,18 @@ flowchart TD
   G --> H["Evidence Dossiers"]
   H --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
+  J --> N["Constraint Network Map"]
   F --> K["Dashboard Panels"]
   K --> M["Constraint Investigation Workspace"]
   H --> M
   I --> M
   J --> M
+  N --> M
   G --> L["JSON Exports"]
   H --> L
   I --> L
   J --> L
+  N --> L
   J --> K
 ```
 
@@ -144,6 +149,7 @@ npm run dataset
 npm run evidence
 npm run intervention
 npm run archetype
+npm run network
 ```
 
 ## Local Export Artifacts
@@ -152,6 +158,7 @@ npm run archetype
 - `data/exports/evidence_dossiers.json`
 - `data/exports/intervention_strategies.json`
 - `data/exports/archetype_analysis.json`
+- `data/exports/constraint_network.json`
 
 Generated exports preserve existing `generated_at` values when semantic content is unchanged, which prevents meaningless Git diffs during repeated local checks.
 

@@ -26,9 +26,14 @@ export function ConstraintInvestigationWorkspace({
     <main className="app-shell investigation-shell">
       <header className="investigation-header">
         <div className="investigation-header__inner">
-          <Link className="back-link" href="/">
-            Back to dashboard
-          </Link>
+          <div className="investigation-header__links">
+            <Link className="back-link" href="/">
+              Back to dashboard
+            </Link>
+            <Link className="back-link" href="/network">
+              View this constraint in the network
+            </Link>
+          </div>
           <p className="eyebrow">Constraint Investigation Workspace</p>
           <h1>{constraint.title}</h1>
           <div className="constraint-card__meta">
