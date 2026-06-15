@@ -97,17 +97,29 @@ flowchart TD
 
 ## Screenshots
 
-Screenshot files are not committed yet, so this README avoids broken image links. Recommended future screenshots:
+### System Overview
 
-- [ ] `docs/screenshots/01-hero-overview.png`
-- [ ] `docs/screenshots/02-dataset-health.png`
-- [ ] `docs/screenshots/03-evidence-dossiers.png`
-- [ ] `docs/screenshots/04-intervention-simulator.png`
-- [ ] `docs/screenshots/05-archetype-intelligence.png`
-- [ ] `docs/screenshots/06-constraint-list-filters.png`
-- [ ] `docs/screenshots/07-expanded-card-inspection.png`
+The opening dashboard frames the system, current scope, scoring model, and portfolio-level metrics.
 
-See [docs/SCREENSHOT_GUIDE.md](docs/SCREENSHOT_GUIDE.md) for capture guidance.
+![System Overview](docs/screenshots/01-hero-overview.png)
+
+### Dataset Health + Evidence Dossiers
+
+Dataset health and evidence dossiers show data quality, validation coverage, evidence gaps, and claim readiness.
+
+![Dataset Health + Evidence Dossiers](docs/screenshots/02-dataset-health-evidence-dossiers.png)
+
+### Intervention Simulator + Archetype Intelligence
+
+The intervention and archetype panels connect validation-aware action strategy with recurring cross-sector bottleneck patterns.
+
+![Intervention Simulator + Archetype Intelligence](docs/screenshots/03-intervention-simulator-archetype-intelligence.png)
+
+### Constraint List + Inspection Workflow
+
+The constraint list supports filtering by industry and archetype, plus expanded inspection of evidence, scores, interventions, and archetype reasoning.
+
+![Constraint List + Inspection Workflow](docs/screenshots/04-constraint-list-filters-expanded-card-inspection.png)
 
 ## How To Run
 
@@ -175,4 +187,3 @@ Future directions:
 - Domain-specific evidence packs.
 - Graph visualization for constraint relationships and analogs.
 - Benchmarking against real case studies.
-
