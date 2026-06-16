@@ -1122,6 +1122,119 @@ h1 {
   color: var(--accent-strong);
 }
 
+.validation-packet-panel {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.validation-packet-panel__header {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.44fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.validation-packet-panel__header h2 {
+  margin: 0;
+  font-size: 1.28rem;
+  line-height: 1.25;
+}
+
+.validation-packet-panel__header p:not(.section-kicker) {
+  margin: 8px 0 0;
+  color: #344655;
+  line-height: 1.55;
+}
+
+.validation-packet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+}
+
+.validation-packet-card {
+  display: grid;
+  gap: 11px;
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.validation-packet-card__topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.validation-packet-card h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.28;
+}
+
+.validation-packet-card p {
+  margin: 0;
+  color: #344655;
+  line-height: 1.45;
+}
+
+.validation-packet-card dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.validation-packet-card dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.validation-packet-card dd {
+  margin: 2px 0 0;
+  color: #344655;
+  line-height: 1.4;
+}
+
+.validation-packet-checks {
+  display: grid;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.validation-packet-checks h4 {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-size: 0.84rem;
+}
+
+.validation-packet-checks ul {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding-left: 18px;
+  color: #344655;
+  line-height: 1.35;
+}
+
+.validation-packet-note {
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+  font-weight: 700;
+}
+
 .validation-filter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -2170,6 +2283,7 @@ select {
   .validation-panel__body,
   .validation-triage-panel__header,
   .validation-triage-panel__body,
+  .validation-packet-panel__header,
   .intervention-panel__header,
   .intervention-panel__body,
   .archetype-panel__header,
