@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { ValidationTriagePanel } from "@/components/ValidationTriagePanel";
 import type {
   ValidationTask,
   ValidationTaskPortfolio,
@@ -9,14 +10,19 @@ import type {
   ValidationTaskStatus,
   ValidationTaskType
 } from "@/lib/validationTasks";
+import type { ValidationTriagePortfolio } from "@/lib/validationTriage";
 
 type ValidationWorkbenchProps = {
   portfolio: ValidationTaskPortfolio;
+  triage: ValidationTriagePortfolio;
 };
 
 type FilterValue = "All";
 
-export function ValidationWorkbench({ portfolio }: ValidationWorkbenchProps) {
+export function ValidationWorkbench({
+  portfolio,
+  triage
+}: ValidationWorkbenchProps) {
   const [taskType, setTaskType] = useState<ValidationTaskType | FilterValue>("All");
   const [industry, setIndustry] = useState<string | FilterValue>("All");
   const [severity, setSeverity] = useState<ValidationTaskSeverity | FilterValue>(
@@ -109,6 +115,8 @@ export function ValidationWorkbench({ portfolio }: ValidationWorkbenchProps) {
       </header>
 
       <section className="validation-main" aria-label="Validation workbench">
+        <ValidationTriagePanel triage={triage} />
+
         <section className="validation-summary-grid">
           <Metric label="Tasks" value={portfolio.summary.total_tasks} />
           <Metric label="Open" value={portfolio.summary.open_tasks} />

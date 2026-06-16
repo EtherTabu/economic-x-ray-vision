@@ -966,6 +966,162 @@ h1 {
   font-size: 1.2rem;
 }
 
+.validation-triage-panel {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.validation-triage-panel__header {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.validation-triage-panel__header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.24;
+}
+
+.validation-triage-panel__header p:not(.section-kicker) {
+  margin: 8px 0 0;
+  color: #344655;
+  line-height: 1.55;
+}
+
+.validation-triage-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 10px;
+}
+
+.validation-triage-panel__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.32fr);
+  gap: 14px;
+}
+
+.validation-triage-queue,
+.validation-triage-explain {
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.validation-triage-queue h3,
+.validation-triage-explain h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.validation-triage-card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.validation-triage-card:last-child {
+  border-bottom: 0;
+}
+
+.validation-triage-card__rank {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 4px;
+}
+
+.validation-triage-card__rank span {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-items: center;
+  color: #ffffff;
+  background: var(--accent);
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.validation-triage-card__rank strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+}
+
+.validation-triage-card h4 {
+  margin: 8px 0 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.validation-triage-card p {
+  margin: 7px 0 0;
+  color: #344655;
+  line-height: 1.45;
+}
+
+.validation-triage-card small {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.validation-triage-explain dl {
+  display: grid;
+  gap: 9px;
+  margin: 12px 0 16px;
+}
+
+.validation-triage-explain dt {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.validation-triage-explain dd {
+  margin: 3px 0 0;
+  color: #344655;
+  line-height: 1.42;
+}
+
+.validation-triage-clusters {
+  display: grid;
+  gap: 8px;
+}
+
+.validation-triage-clusters div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.validation-triage-clusters div:last-child {
+  border-bottom: 0;
+}
+
+.validation-triage-clusters span {
+  color: #344655;
+}
+
+.validation-triage-clusters strong {
+  color: var(--accent-strong);
+}
+
 .validation-filter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -2012,6 +2168,8 @@ select {
   .source-panel__body,
   .validation-panel__header,
   .validation-panel__body,
+  .validation-triage-panel__header,
+  .validation-triage-panel__body,
   .intervention-panel__header,
   .intervention-panel__body,
   .archetype-panel__header,
