@@ -228,6 +228,9 @@ export default function Home() {
             <Link className="dashboard-network-link" href="/sources">
               Open Source Registry
             </Link>
+            <Link className="dashboard-network-link" href="/compare">
+              Open Comparison Workspace
+            </Link>
           </div>
 
           <div className="priority-panel" aria-label="Highest priority constraint">
