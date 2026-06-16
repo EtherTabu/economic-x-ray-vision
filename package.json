@@ -17,11 +17,12 @@
     "intervention": "npm run sources && node scripts/build-interventions.ts && node scripts/audit-interventions.ts",
     "archetype": "npm run intervention && node scripts/build-archetype-analysis.ts && node scripts/audit-archetypes.ts",
     "network": "npm run archetype && node scripts/build-network.ts && node scripts/audit-network.ts",
-    "sqlite:build": "npm run sources && node --no-warnings scripts/build-sqlite.ts",
+    "tasks": "npm run network && node scripts/build-validation-tasks.ts && node scripts/audit-validation-tasks.ts",
+    "sqlite:build": "npm run tasks && node --no-warnings scripts/build-sqlite.ts",
     "sqlite:audit": "node --no-warnings scripts/audit-sqlite.ts",
     "sqlite:inspect": "node --no-warnings scripts/inspect-sqlite.ts",
     "sqlite": "npm run sqlite:build && npm run sqlite:audit && npm run sqlite:inspect",
-    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run sources && npm run intervention && npm run archetype && npm run network && node --no-warnings scripts/build-sqlite.ts && npm run sqlite:audit && npm run sqlite:inspect && npm run lint && npm run build"
+    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run sources && npm run intervention && npm run archetype && npm run network && node scripts/build-validation-tasks.ts && node scripts/audit-validation-tasks.ts && node --no-warnings scripts/build-sqlite.ts && npm run sqlite:audit && npm run sqlite:inspect && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "^15.3.3",

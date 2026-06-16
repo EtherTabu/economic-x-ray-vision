@@ -42,7 +42,7 @@ const sqliteInspectDb = new InspectDatabaseSync(sqliteInspectPath);
 
 try {
   const build = sqliteInspectDb
-    .prepare("SELECT record_count, source_count, evidence_pack_count FROM database_builds WHERE id = 'current'")
+    .prepare("SELECT record_count, source_count, evidence_pack_count, validation_task_count FROM database_builds WHERE id = 'current'")
     .get();
   if (!build) {
     console.error("SQLite build metadata is missing.");
@@ -73,12 +73,32 @@ try {
     GROUP BY citation_status
     ORDER BY count DESC, citation_status
   `).all();
+  const topValidationTasks = sqliteInspectDb.prepare(`
+    SELECT constraint_title, task_title, task_type, severity, priority_score
+    FROM validation_tasks
+    ORDER BY priority_score DESC, constraint_title
+    LIMIT 5
+  `).all();
+  const primaryDocumentNeeds = sqliteInspectDb.prepare(`
+    SELECT constraint_title, task_title, priority_score
+    FROM validation_tasks
+    WHERE task_type = 'primary_document_needed'
+    ORDER BY priority_score DESC, constraint_title
+    LIMIT 5
+  `).all();
+  const weakestDefensibilityTaskRecords = sqliteInspectDb.prepare(`
+    SELECT constraint_title, task_type, defensibility_score, priority_score
+    FROM validation_tasks
+    WHERE defensibility_score IS NOT NULL
+    ORDER BY defensibility_score ASC, priority_score DESC
+    LIMIT 5
+  `).all();
 
   console.log("SQLite inspection report");
   console.log(`- database: ${sqliteInspectPath}`);
   console.log(`- file size: ${Math.round(sqliteInspectStatSync(sqliteInspectPath).size / 1024)} KB`);
   console.log(
-    `- build contents: ${build.record_count} constraints, ${build.source_count} sources, ${build.evidence_pack_count} evidence packs`
+    `- build contents: ${build.record_count} constraints, ${build.source_count} sources, ${build.evidence_pack_count} evidence packs, ${build.validation_task_count} validation tasks`
   );
   console.log("- top priority constraints:");
   topPriority.forEach((record) => {
@@ -97,6 +117,24 @@ try {
       citationDistribution
     )}`
   );
+  console.log("- top validation tasks:");
+  topValidationTasks.forEach((task) => {
+    console.log(
+      `  - ${task.constraint_title}: ${task.priority_score} ${task.task_title} (${task.severity})`
+    );
+  });
+  console.log("- primary document needs:");
+  primaryDocumentNeeds.forEach((task) => {
+    console.log(
+      `  - ${task.constraint_title}: ${task.priority_score} ${task.task_title}`
+    );
+  });
+  console.log("- weakest defensibility task records:");
+  weakestDefensibilityTaskRecords.forEach((task) => {
+    console.log(
+      `  - ${task.constraint_title}: defensibility ${task.defensibility_score}, priority ${task.priority_score}`
+    );
+  });
 } finally {
   sqliteInspectDb.close();
 }

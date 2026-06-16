@@ -31,6 +31,7 @@ Economic X-Ray Vision currently:
 - Detects cross-industry analogs, such as similar queue or documentation patterns in different sectors.
 - Builds evidence dossiers for each record.
 - Separates source metadata, claim support, evidence gaps, and provenance into local evidence packs.
+- Generates a validation task workflow for source upgrades, evidence gaps, weak claim support, and validation-dependent interventions.
 - Proposes deterministic intervention strategies and first experiments.
 - Opens a dedicated investigation workspace for each constraint, linking evidence, validation workflow, analogs, archetype reasoning, and intervention strategy.
 - Renders a constraint network map that connects records to archetypes, industries, cross-sector analogs, and intervention paths.
@@ -74,12 +75,13 @@ Current metrics:
 - **Evidence Dossier Engine**: derives evidence gaps, proof/disproof conditions, red-team questions, and validation priority.
 - **Source Registry + Evidence Packs**: structures source locators, claim support, citation gaps, provenance limits, and defensibility scores.
 - **Validation Workflow**: classifies records as hypotheses, partially supported claims, or decision-ready candidates.
+- **Validation Task Engine**: generates a local analyst queue from source gaps, weak evidence, low defensibility, and validation-dependent interventions.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
 - **Cross-Industry Analog Engine**: finds similar constraints in different industries.
 - **Constraint Network Engine**: builds a local graph of constraint, archetype, industry, analog, and intervention relationships, with search/filter/focus exploration in the UI.
 - **Investigation Workspace**: renders a focused record-level view from `/constraints/[id]` with the full evidence-to-validation-to-intervention chain.
-- **Dashboard UI**: displays portfolio health, evidence workflow, interventions, archetypes, filters, expanded record inspection, and links into each investigation workspace and network map.
+- **Dashboard UI**: displays portfolio health, evidence workflow, validation tasks, interventions, archetypes, filters, expanded record inspection, and links into each investigation workspace and network map.
 
 ## Architecture
 
@@ -96,19 +98,23 @@ flowchart TD
   O --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
   J --> N["Constraint Network Map"]
+  O --> P["Validation Task Queue"]
   F --> K["Dashboard Panels"]
   K --> M["Constraint Investigation Workspace"]
   H --> M
   I --> M
   J --> M
   N --> M
+  P --> M
   G --> L["JSON Exports"]
   H --> L
   O --> L
   I --> L
   J --> L
   N --> L
+  P --> L
   J --> K
+  P --> K
 ```
 
 ## Screenshots
@@ -156,6 +162,8 @@ npm run sources
 npm run intervention
 npm run archetype
 npm run network
+npm run tasks
+npm run sqlite
 ```
 
 ## Local Export Artifacts
@@ -167,6 +175,8 @@ npm run network
 - `data/exports/intervention_strategies.json`
 - `data/exports/archetype_analysis.json`
 - `data/exports/constraint_network.json`
+- `data/exports/validation_tasks.json`
+- `data/exports/constraint_intelligence.sqlite`
 
 Generated exports preserve existing `generated_at` values when semantic content is unchanged, which prevents meaningless Git diffs during repeated local checks.
 
@@ -185,7 +195,7 @@ Generated exports preserve existing `generated_at` values when semantic content 
 
 Economic X-Ray Vision is an experimental local-first intelligence engine. It is not a production SaaS product, does not include authentication, does not run cloud services, and does not call external AI or scraping APIs.
 
-SQLite is represented by `db/schema.sql` as the planned persistence target, but the current app still runs from local TypeScript data and generated JSON artifacts.
+SQLite is available as a local build artifact at `data/exports/constraint_intelligence.sqlite`, with tables for constraints, scores, sources, evidence packs, validation tasks, and build metadata. The current app still runs from local TypeScript data and generated JSON artifacts; runtime SQLite reads are intentionally not wired yet.
 
 ## Design Principles
 
@@ -203,8 +213,8 @@ SQLite is represented by `db/schema.sql` as the planned persistence target, but 
 Future directions:
 
 - Real source ingestion with explicit provenance.
-- SQLite persistence for local dataset operations.
-- Richer validation workflow states and reviewer notes.
+- Runtime SQLite reads once the artifact workflow remains stable.
+- Richer validation task states and reviewer notes.
 - Domain-specific evidence packs.
 - Graph visualization for constraint relationships and analogs.
 - Benchmarking against real case studies.

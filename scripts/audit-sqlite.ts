@@ -45,7 +45,8 @@ try {
     scores: count("constraint_scores"),
     sources: count("source_records"),
     constraintSources: count("constraint_sources"),
-    evidencePacks: count("evidence_packs")
+    evidencePacks: count("evidence_packs"),
+    validationTasks: count("validation_tasks")
   };
   const originDistribution = rows(
     "SELECT origin AS label, COUNT(*) AS count FROM constraints GROUP BY origin ORDER BY origin"
@@ -81,6 +82,21 @@ try {
     LEFT JOIN constraints constraints ON constraints.id = packs.constraint_id
     WHERE constraints.id IS NULL
   `);
+  const orphanValidationTasks = scalar(`
+    SELECT COUNT(*) AS value
+    FROM validation_tasks tasks
+    LEFT JOIN constraints constraints ON constraints.id = tasks.constraint_id
+    WHERE constraints.id IS NULL
+  `);
+  const highPriorityTasks = scalar(
+    "SELECT COUNT(*) AS value FROM validation_tasks WHERE priority_score >= 8"
+  );
+  const taskTypeDistribution = rows(`
+    SELECT task_type AS label, COUNT(*) AS count
+    FROM validation_tasks
+    GROUP BY task_type
+    ORDER BY count DESC, task_type
+  `);
   const build = rows("SELECT * FROM database_builds WHERE id = 'current'")[0];
 
   if (!build) {
@@ -95,6 +111,7 @@ try {
   console.log(`- source records: ${counts.sources}`);
   console.log(`- constraint-source links: ${counts.constraintSources}`);
   console.log(`- evidence packs: ${counts.evidencePacks}`);
+  console.log(`- validation tasks: ${counts.validationTasks}`);
   console.log(
     `- origin distribution: ${sqliteAuditFormatDistribution(originDistribution)}`
   );
@@ -109,15 +126,25 @@ try {
   console.log(`- sources needing primary documents: ${sourcesNeedingPrimary}`);
   console.log(`- orphan scores: ${orphanScores}`);
   console.log(`- orphan evidence packs: ${orphanEvidencePacks}`);
+  console.log(`- orphan validation tasks: ${orphanValidationTasks}`);
+  console.log(`- high priority validation tasks: ${highPriorityTasks}`);
+  console.log(
+    `- task type distribution: ${sqliteAuditFormatDistribution(
+      taskTypeDistribution
+    )}`
+  );
   console.log(`- schema version: ${build.schema_version}`);
 
   if (
     counts.constraints !== 52 ||
     counts.scores !== counts.constraints ||
     counts.evidencePacks !== counts.constraints ||
+    counts.validationTasks === 0 ||
     counts.sources === 0 ||
     orphanScores !== 0 ||
-    orphanEvidencePacks !== 0
+    orphanEvidencePacks !== 0 ||
+    orphanValidationTasks !== 0 ||
+    build.schema_version !== "v14-validation-task-workflow"
   ) {
     process.exitCode = 1;
   }

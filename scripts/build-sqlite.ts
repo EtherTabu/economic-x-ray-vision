@@ -43,7 +43,8 @@ const sqliteSchemaPath = sqliteResolve("db/schema.sql");
 const sqliteDatasetPath = sqliteResolve("data/exports/constraint_dataset_snapshot.json");
 const sqliteSourceRegistryPath = sqliteResolve("data/exports/source_registry.json");
 const sqliteEvidencePackPath = sqliteResolve("data/exports/evidence_packs.json");
-const sqliteSchemaVersion = "v13-local-sqlite-artifact";
+const sqliteValidationTaskPath = sqliteResolve("data/exports/validation_tasks.json");
+const sqliteSchemaVersion = "v14-validation-task-workflow";
 
 type SqliteRecord = Record<string, unknown> & {
   id: string;
@@ -124,6 +125,30 @@ type EvidencePack = {
   audit_flags: string[];
 };
 
+type SqliteValidationTask = {
+  task_id: string;
+  constraint_id: string;
+  constraint_title: string;
+  industry: string;
+  task_type: string;
+  task_title: string;
+  task_summary: string;
+  priority_score: number;
+  severity: string;
+  status: string;
+  evidence_gap: string;
+  source_gap: string;
+  recommended_action: string;
+  expected_artifact: string;
+  blocking_reason: string;
+  generated_from: string[];
+  defensibility_score?: number;
+  validation_confidence?: number;
+  source_ids: string[];
+  investigation_route: string;
+  network_route: string;
+};
+
 function buildSqliteArtifact() {
   const dataset = readJson<{ record_count: number; records: SqliteRecord[] }>(
     sqliteDatasetPath
@@ -132,10 +157,14 @@ function buildSqliteArtifact() {
     sqliteSourceRegistryPath
   );
   const evidencePacks = readJson<{ packs: EvidencePack[] }>(sqliteEvidencePackPath);
+  const validationTasks = readJson<{ tasks: SqliteValidationTask[] }>(
+    sqliteValidationTaskPath
+  );
   const contentHash = hashInputs({
     records: dataset.records,
     sources: sourceRegistry.sources,
     packs: evidencePacks.packs,
+    validation_tasks: validationTasks.tasks,
     schema: sqliteReadFileSync(sqliteSchemaPath, "utf8")
   });
 
@@ -160,11 +189,13 @@ function buildSqliteArtifact() {
     insertSources(db, sourceRegistry.sources);
     insertConstraintSources(db, sourceRegistry.sources);
     insertEvidencePacks(db, evidencePacks.packs);
+    insertValidationTasks(db, validationTasks.tasks);
     insertBuildMetadata(db, {
       contentHash,
       evidencePackCount: evidencePacks.packs.length,
       recordCount: dataset.records.length,
-      sourceCount: sourceRegistry.sources.length
+      sourceCount: sourceRegistry.sources.length,
+      validationTaskCount: validationTasks.tasks.length
     });
     db.exec("COMMIT;");
   } catch (error) {
@@ -181,7 +212,7 @@ function buildSqliteArtifact() {
   sqliteRmSync(sqliteOutputPath, { force: true });
   sqliteRenameSync(sqliteTempPath, sqliteOutputPath);
   console.log(
-    `Built SQLite artifact with ${dataset.records.length} constraints, ${sourceRegistry.sources.length} sources, and ${evidencePacks.packs.length} evidence packs at ${sqliteOutputPath}.`
+    `Built SQLite artifact with ${dataset.records.length} constraints, ${sourceRegistry.sources.length} sources, ${evidencePacks.packs.length} evidence packs, and ${validationTasks.tasks.length} validation tasks at ${sqliteOutputPath}.`
   );
 }
 
@@ -396,6 +427,53 @@ function insertEvidencePacks(db: SqliteDatabase, packs: EvidencePack[]) {
   });
 }
 
+function insertValidationTasks(
+  db: SqliteDatabase,
+  tasks: SqliteValidationTask[]
+) {
+  const statement = db.prepare(`
+    INSERT INTO validation_tasks (
+      task_id, constraint_id, constraint_title, industry, task_type,
+      task_title, task_summary, priority_score, severity, status,
+      evidence_gap, source_gap, recommended_action, expected_artifact,
+      blocking_reason, generated_from_json, defensibility_score,
+      validation_confidence, source_ids_json, investigation_route, network_route
+    ) VALUES (
+      $task_id, $constraint_id, $constraint_title, $industry, $task_type,
+      $task_title, $task_summary, $priority_score, $severity, $status,
+      $evidence_gap, $source_gap, $recommended_action, $expected_artifact,
+      $blocking_reason, $generated_from_json, $defensibility_score,
+      $validation_confidence, $source_ids_json, $investigation_route, $network_route
+    )
+  `);
+
+  tasks.forEach((task) => {
+    statement.run({
+      $task_id: task.task_id,
+      $constraint_id: task.constraint_id,
+      $constraint_title: task.constraint_title,
+      $industry: task.industry,
+      $task_type: task.task_type,
+      $task_title: task.task_title,
+      $task_summary: task.task_summary,
+      $priority_score: task.priority_score,
+      $severity: task.severity,
+      $status: task.status,
+      $evidence_gap: task.evidence_gap,
+      $source_gap: task.source_gap,
+      $recommended_action: task.recommended_action,
+      $expected_artifact: task.expected_artifact,
+      $blocking_reason: task.blocking_reason,
+      $generated_from_json: json(task.generated_from),
+      $defensibility_score: task.defensibility_score ?? null,
+      $validation_confidence: task.validation_confidence ?? null,
+      $source_ids_json: json(task.source_ids),
+      $investigation_route: task.investigation_route,
+      $network_route: task.network_route
+    });
+  });
+}
+
 function insertBuildMetadata(
   db: SqliteDatabase,
   metadata: {
@@ -403,15 +481,16 @@ function insertBuildMetadata(
     evidencePackCount: number;
     recordCount: number;
     sourceCount: number;
+    validationTaskCount: number;
   }
 ) {
   db.prepare(`
     INSERT INTO database_builds (
       id, built_at, content_hash, record_count, source_count,
-      evidence_pack_count, schema_version
+      evidence_pack_count, validation_task_count, schema_version
     ) VALUES (
       'current', $built_at, $content_hash, $record_count, $source_count,
-      $evidence_pack_count, $schema_version
+      $evidence_pack_count, $validation_task_count, $schema_version
     )
   `).run({
     $built_at: new Date().toISOString(),
@@ -419,6 +498,7 @@ function insertBuildMetadata(
     $record_count: metadata.recordCount,
     $source_count: metadata.sourceCount,
     $evidence_pack_count: metadata.evidencePackCount,
+    $validation_task_count: metadata.validationTaskCount,
     $schema_version: sqliteSchemaVersion
   });
 }

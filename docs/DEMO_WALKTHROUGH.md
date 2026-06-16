@@ -59,7 +59,20 @@ The Intervention Simulator shows bounded action hypotheses:
 - Success metrics
 - Failure modes
 
-## 6. Review Archetype Intelligence
+## 6. Review Validation Tasks
+
+The Validation Task panel turns weak evidence into a generated analyst queue. It highlights:
+
+- Open, blocked, and review-ready tasks
+- Primary-document needs
+- Source URL needs
+- Local observation needs
+- High-priority validation tasks
+- The weakest defensibility task target
+
+Use `Open Validation Queue` to inspect `/validation`, filter by task type, industry, severity, or status, and jump from each task into the investigation workspace or focused network view.
+
+## 7. Review Archetype Intelligence
 
 The Archetype Intelligence panel shows recurring bottleneck patterns across industries:
 
@@ -70,7 +83,7 @@ The Archetype Intelligence panel shows recurring bottleneck patterns across indu
 - Cross-industry analog pair
 - Archetype distribution
 
-## 7. Explore The Constraint Network
+## 8. Explore The Constraint Network
 
 Use `Open Constraint Network` from the dashboard to inspect the relationship map. The network page shows:
 
@@ -84,7 +97,7 @@ Use `Open Constraint Network` from the dashboard to inspect the relationship map
 - High intervention leverage clusters.
 - Clickable constraint nodes that open `/constraints/[id]` investigation pages.
 
-## 8. Use Filters
+## 9. Use Filters
 
 Use the filters to compare:
 
@@ -98,7 +111,7 @@ Use the filters to compare:
 
 Example: filter to `Energy / Grid / Interconnection`, then filter by `documentation_chase` or `queue_backlog`.
 
-## 9. Inspect A Constraint Card
+## 10. Inspect A Constraint Card
 
 Open a constraint card and inspect:
 
@@ -112,9 +125,9 @@ Open a constraint card and inspect:
 - Score breakdown
 - Sources
 
-Then use `Open investigation` to move from the dashboard card into the dedicated constraint workspace. The workspace follows the record through overview, score signals, evidence dossier, validation workflow, archetype reasoning, cross-industry analogs, intervention strategy, and a copyable investigation summary.
+Then use `Open investigation` to move from the dashboard card into the dedicated constraint workspace. The workspace follows the record through overview, score signals, evidence dossier, validation workflow, constraint-specific validation tasks, archetype reasoning, cross-industry analogs, intervention strategy, and a copyable investigation summary.
 
-## 10. Review A Constraint Investigation
+## 11. Review A Constraint Investigation
 
 In the investigation workspace, check:
 
@@ -124,9 +137,10 @@ In the investigation workspace, check:
 - Which cross-industry analogs share the same bottleneck pattern.
 - Which first experiment is recommended before broader rollout.
 - Whether action confidence is limited by validation gaps.
+- Which generated validation tasks belong to the record.
 - The link back to the network map for relationship exploration.
 
-## 11. Run Locally
+## 12. Run Locally
 
 ```bash
 npm install

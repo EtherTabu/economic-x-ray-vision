@@ -20,6 +20,7 @@ export function ConstraintInvestigationWorkspace({
     primaryArchetype,
     secondaryArchetypes,
     summaryText,
+    validationTasks,
     validationWorkflow
   } = investigation;
 
@@ -185,6 +186,49 @@ export function ConstraintInvestigationWorkspace({
               title="Confidence downgrade triggers"
               values={validationWorkflow.confidence_downgrade_triggers}
             />
+          </InvestigationSection>
+
+          <InvestigationSection title="Validation Tasks">
+            <div className="investigation-task-header">
+              <p>
+                Generated task queue for this constraint. Status is deterministic
+                and not user-editable in this phase.
+              </p>
+              <Link className="details-link" href="/validation">
+                View all validation tasks
+              </Link>
+            </div>
+            {validationTasks.length > 0 ? (
+              <div className="investigation-task-list">
+                {validationTasks.slice(0, 6).map((task) => (
+                  <article className="investigation-task-card" key={task.task_id}>
+                    <div className="validation-task-card__topline">
+                      <span
+                        className={`severity-chip severity-chip--${task.severity.toLowerCase()}`}
+                      >
+                        {task.severity}
+                      </span>
+                      <span className={`status-chip status-chip--${task.status}`}>
+                        {task.status.replaceAll("_", " ")}
+                      </span>
+                      <strong>{task.priority_score.toFixed(1)}</strong>
+                    </div>
+                    <h3>{task.task_type.replaceAll("_", " ")}</h3>
+                    <p>{task.recommended_action}</p>
+                    <DefinitionList
+                      items={[
+                        ["Expected artifact", task.expected_artifact],
+                        ["Blocking reason", task.blocking_reason],
+                        ["Evidence gap", task.evidence_gap],
+                        ["Source gap", task.source_gap]
+                      ]}
+                    />
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p>No validation tasks are generated for this constraint.</p>
+            )}
           </InvestigationSection>
 
           <InvestigationSection title="Archetype Reasoning">

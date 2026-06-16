@@ -2,7 +2,7 @@
 
 Economic X-Ray Vision is a local-first constraint intelligence engine. It structures constraint hypotheses, scores them deterministically, evaluates evidence quality, separates source provenance from claim support, proposes validation and intervention paths, identifies recurring bottleneck archetypes across industries, and maps relationships between constraints.
 
-The current system is a Next.js app backed by TypeScript data modules, local JSON intake records, generated TypeScript data, and JSON export artifacts. It does not use external APIs, cloud services, authentication, scraping, or SQLite runtime wiring.
+The current system is a Next.js app backed by TypeScript data modules, local JSON intake records, generated TypeScript data, JSON export artifacts, and a generated local SQLite artifact. It does not use external APIs, cloud services, authentication, scraping, or SQLite runtime wiring.
 
 ## System Shape
 
@@ -55,6 +55,14 @@ The constraint network map is built locally from the existing registry and deter
 The `/network` route renders the static graph into an interactive local explorer. It supports text search, industry filtering, archetype filtering, evidence-risk filtering, and focus links such as `/network?focus=hc-admin-001`. Focus mode shows the immediate neighborhood around one constraint without fetching external data.
 
 The network export is written to `data/exports/constraint_network.json`. It uses stable generated metadata so repeated checks do not create meaningless timestamp diffs when the graph content has not changed.
+
+## Validation Tasks
+
+The validation task workflow turns existing evidence weaknesses into a deterministic analyst queue. Tasks are generated from source registry gaps, evidence packs, evidence dossier gaps, validation confidence, and intervention action confidence. The workflow is not editable task persistence; it is a local, inspectable queue that answers which claims, sources, and validation blockers should be handled next.
+
+The `/validation` route renders the generated queue with filters for task type, industry, severity, and status. Each task links back to `/constraints/[id]` and `/network?focus=[id]`.
+
+The task export is written to `data/exports/validation_tasks.json`. The SQLite artifact also includes a `validation_tasks` table, but the app runtime still reads from TypeScript and generated JSON rather than querying SQLite directly.
 
 ## Evidence Packs
 

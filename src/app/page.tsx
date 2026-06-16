@@ -10,6 +10,7 @@ import { DatasetHealthPanel } from "@/components/DatasetHealthPanel";
 import { EvidenceDossierPanel } from "@/components/EvidenceDossierPanel";
 import { InterventionStrategyPanel } from "@/components/InterventionStrategyPanel";
 import { SourceEvidencePanel } from "@/components/SourceEvidencePanel";
+import { ValidationTaskPanel } from "@/components/ValidationTaskPanel";
 import { constraintRegistry } from "@/data/constraintRegistry";
 import {
   archetypeOptions,
@@ -32,6 +33,7 @@ import {
   buildInterventionStrategies,
   summarizeInterventions
 } from "@/lib/interventionSimulator";
+import { buildValidationTaskPortfolio } from "@/lib/validationTasks";
 import type {
   ConstraintArchetypeId,
   ConstraintCategory,
@@ -116,6 +118,11 @@ export default function Home() {
   const interventionSummary = useMemo(
     () => summarizeInterventions(interventionStrategies),
     [interventionStrategies]
+  );
+
+  const validationTaskPortfolio = useMemo(
+    () => buildValidationTaskPortfolio(scoredConstraints),
+    [scoredConstraints]
   );
 
   const archetypePortfolio = useMemo(
@@ -215,6 +222,9 @@ export default function Home() {
             <Link className="dashboard-network-link" href="/network">
               Open Constraint Network
             </Link>
+            <Link className="dashboard-network-link" href="/validation">
+              Open Validation Queue
+            </Link>
           </div>
 
           <div className="priority-panel" aria-label="Highest priority constraint">
@@ -313,6 +323,8 @@ export default function Home() {
         />
 
         <SourceEvidencePanel portfolio={evidencePackPortfolio} />
+
+        <ValidationTaskPanel portfolio={validationTaskPortfolio} />
 
         <InterventionStrategyPanel
           strategies={interventionStrategies}

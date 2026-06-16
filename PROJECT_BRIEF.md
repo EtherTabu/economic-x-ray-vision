@@ -185,3 +185,9 @@ V13.0 adds local SQLite persistence as a build artifact, not as a runtime depend
 The SQLite layer is intentionally scoped to database credibility and inspection: schema alignment, constraint and score tables, source registry tables, evidence pack tables, build metadata, audit reporting, and inspection queries. Repeated builds compare a content hash before rewriting the database artifact so ordinary checks do not create meaningless database churn.
 
 The next persistence step can move selected runtime reads to SQLite only after the artifact, schema, and audit workflow remain stable.
+
+## V14.0 Technical Note
+
+V14.0 adds a deterministic validation task workflow. The system now generates an analyst queue from source registry gaps, evidence packs, evidence dossier gaps, validation confidence, defensibility scores, and validation-dependent interventions. Tasks are generated artifacts, not user-authored todos, and task status is deterministic rather than editable.
+
+The dashboard includes a compact validation task panel, `/validation` provides a static validation workbench with local filters, and each constraint investigation shows tasks for that specific record. The export `data/exports/validation_tasks.json` and the SQLite `validation_tasks` table preserve the queue for local audit and inspection without making the app runtime depend on SQLite.

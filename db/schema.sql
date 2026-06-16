@@ -133,6 +133,44 @@ CREATE TABLE IF NOT EXISTS evidence_packs (
   FOREIGN KEY (constraint_id) REFERENCES constraints(id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS validation_tasks (
+  task_id TEXT PRIMARY KEY,
+  constraint_id TEXT NOT NULL,
+  constraint_title TEXT NOT NULL,
+  industry TEXT NOT NULL,
+  task_type TEXT NOT NULL CHECK (
+    task_type IN (
+      'primary_document_needed',
+      'source_url_needed',
+      'local_observation_needed',
+      'evidence_gap_resolution',
+      'claim_support_needed',
+      'metric_definition_needed',
+      'validation_interview_needed',
+      'high_opportunity_weak_evidence',
+      'low_defensibility_review',
+      'intervention_validation_needed'
+    )
+  ),
+  task_title TEXT NOT NULL,
+  task_summary TEXT NOT NULL,
+  priority_score REAL NOT NULL CHECK (priority_score BETWEEN 1 AND 10),
+  severity TEXT NOT NULL CHECK (severity IN ('Low', 'Moderate', 'High', 'Critical')),
+  status TEXT NOT NULL CHECK (status IN ('open', 'blocked', 'review_ready')),
+  evidence_gap TEXT NOT NULL,
+  source_gap TEXT NOT NULL,
+  recommended_action TEXT NOT NULL,
+  expected_artifact TEXT NOT NULL,
+  blocking_reason TEXT NOT NULL,
+  generated_from_json TEXT NOT NULL,
+  defensibility_score REAL,
+  validation_confidence REAL,
+  source_ids_json TEXT NOT NULL,
+  investigation_route TEXT NOT NULL,
+  network_route TEXT NOT NULL,
+  FOREIGN KEY (constraint_id) REFERENCES constraints(id) ON DELETE CASCADE
+);
+
 CREATE TABLE IF NOT EXISTS database_builds (
   id TEXT PRIMARY KEY,
   built_at TEXT NOT NULL,
@@ -140,6 +178,7 @@ CREATE TABLE IF NOT EXISTS database_builds (
   record_count INTEGER NOT NULL,
   source_count INTEGER NOT NULL,
   evidence_pack_count INTEGER NOT NULL,
+  validation_task_count INTEGER NOT NULL,
   schema_version TEXT NOT NULL
 );
 
@@ -166,3 +205,11 @@ CREATE INDEX IF NOT EXISTS idx_evidence_packs_defensibility
   ON evidence_packs(defensibility_score DESC);
 CREATE INDEX IF NOT EXISTS idx_evidence_packs_provenance_status
   ON evidence_packs(provenance_status);
+CREATE INDEX IF NOT EXISTS idx_validation_tasks_constraint
+  ON validation_tasks(constraint_id);
+CREATE INDEX IF NOT EXISTS idx_validation_tasks_priority
+  ON validation_tasks(priority_score DESC);
+CREATE INDEX IF NOT EXISTS idx_validation_tasks_type
+  ON validation_tasks(task_type);
+CREATE INDEX IF NOT EXISTS idx_validation_tasks_status
+  ON validation_tasks(status);

@@ -14,6 +14,11 @@ import {
   assessValidationWorkflow,
   type ValidationWorkflowAssessment
 } from "@/lib/validationWorkflow";
+import {
+  buildValidationTaskPortfolio,
+  tasksForConstraint,
+  type ValidationTask
+} from "@/lib/validationTasks";
 import type { ScoredConstraint } from "@/types/constraint";
 
 export type ConstraintInvestigation = {
@@ -22,6 +27,7 @@ export type ConstraintInvestigation = {
   evidenceDossier: EvidenceDossier;
   evidencePack: EvidencePack;
   validationWorkflow: ValidationWorkflowAssessment;
+  validationTasks: ValidationTask[];
   interventionStrategy: InterventionStrategy;
   primaryArchetype: ConstraintArchetype;
   secondaryArchetypes: ConstraintArchetype[];
@@ -42,6 +48,7 @@ export function buildConstraintInvestigation(
   const evidenceDossier = buildEvidenceDossier(constraint);
   const evidencePack = buildEvidencePack(constraint);
   const validationWorkflow = assessValidationWorkflow(constraint);
+  const validationTaskPortfolio = buildValidationTaskPortfolio(allConstraints);
   const interventionStrategy = buildInterventionStrategy(constraint);
   const primaryArchetype = archetypeById[constraint.primary_archetype];
   const secondaryArchetypes = constraint.secondary_archetypes.map(
@@ -60,6 +67,7 @@ export function buildConstraintInvestigation(
     evidenceDossier,
     evidencePack,
     validationWorkflow,
+    validationTasks: tasksForConstraint(validationTaskPortfolio.tasks, constraint.id),
     interventionStrategy,
     primaryArchetype,
     secondaryArchetypes,
