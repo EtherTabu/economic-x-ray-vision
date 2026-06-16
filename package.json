@@ -20,12 +20,13 @@
     "tasks": "npm run network && node scripts/build-validation-tasks.ts && node scripts/audit-validation-tasks.ts",
     "triage": "npm run tasks && node scripts/build-validation-triage.ts && node scripts/audit-validation-triage.ts",
     "evidence-packets": "npm run triage && node scripts/build-validation-evidence-packets.ts && node scripts/audit-validation-evidence-packets.ts",
+    "campaigns": "npm run evidence-packets && node scripts/build-validation-campaigns.ts && node scripts/audit-validation-campaigns.ts",
     "sqlite:build": "npm run tasks && node --no-warnings scripts/build-sqlite.ts",
     "sqlite:audit": "node --no-warnings scripts/audit-sqlite.ts",
     "sqlite:inspect": "node --no-warnings scripts/inspect-sqlite.ts",
     "sqlite:parity": "node --no-warnings scripts/audit-sqlite-parity.ts",
     "sqlite": "npm run sqlite:build && npm run sqlite:audit && npm run sqlite:inspect && npm run sqlite:parity",
-    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run sources && npm run intervention && npm run archetype && npm run network && node scripts/build-validation-tasks.ts && node scripts/audit-validation-tasks.ts && node scripts/build-validation-triage.ts && node scripts/audit-validation-triage.ts && node scripts/build-validation-evidence-packets.ts && node scripts/audit-validation-evidence-packets.ts && node --no-warnings scripts/build-sqlite.ts && npm run sqlite:audit && npm run sqlite:inspect && npm run sqlite:parity && npm run lint && npm run build"
+    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run sources && npm run intervention && npm run archetype && npm run network && node scripts/build-validation-tasks.ts && node scripts/audit-validation-tasks.ts && node scripts/build-validation-triage.ts && node scripts/audit-validation-triage.ts && node scripts/build-validation-evidence-packets.ts && node scripts/audit-validation-evidence-packets.ts && node scripts/build-validation-campaigns.ts && node scripts/audit-validation-campaigns.ts && node --no-warnings scripts/build-sqlite.ts && npm run sqlite:audit && npm run sqlite:inspect && npm run sqlite:parity && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "^15.3.3",

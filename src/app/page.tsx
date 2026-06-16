@@ -231,6 +231,9 @@ export default function Home() {
             <Link className="dashboard-network-link" href="/compare">
               Open Comparison Workspace
             </Link>
+            <Link className="dashboard-network-link" href="/campaigns">
+              Open Campaign Planner
+            </Link>
           </div>
 
           <div className="priority-panel" aria-label="Highest priority constraint">
