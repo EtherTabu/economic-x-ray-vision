@@ -225,6 +225,9 @@ export default function Home() {
             <Link className="dashboard-network-link" href="/validation">
               Open Validation Queue
             </Link>
+            <Link className="dashboard-network-link" href="/sources">
+              Open Source Registry
+            </Link>
           </div>
 
           <div className="priority-panel" aria-label="Highest priority constraint">
