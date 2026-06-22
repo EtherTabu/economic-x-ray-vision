@@ -17,16 +17,33 @@ The project uses a local pipeline that keeps app data, generated exports, and au
 ## Export Flow
 
 ```mermaid
-flowchart LR
+flowchart TD
   A["Seed + Intake + Strategic Records"] --> B["Constraint Registry"]
-  B --> C["Dataset Snapshot"]
-  C --> D["Evidence Dossiers"]
-  D --> E["Intervention Strategies"]
-  E --> F["Archetype Analysis"]
-  C --> G["JSON Exports"]
-  D --> G
-  E --> G
-  F --> G
+  B --> C["Deterministic Scores"]
+  C --> D["Dataset Snapshot"]
+  D --> E["Evidence Dossiers"]
+  E --> F["Source Registry + Evidence Packs"]
+  F --> G["Validation Tasks"]
+  G --> H["Validation Triage"]
+  H --> I["Evidence Request Packets"]
+  I --> J["Validation Campaigns"]
+  F --> K["Intervention Strategies"]
+  K --> L["Archetype Analysis"]
+  L --> M["Constraint Network"]
+  C --> N["Constraint Comparison"]
+  D --> O["SQLite Artifact + Parity Audit"]
+  F --> O
+  G --> O
+  D --> P["JSON Exports"]
+  E --> P
+  F --> P
+  G --> P
+  H --> P
+  I --> P
+  J --> P
+  K --> P
+  L --> P
+  M --> P
 ```
 
 ## Scripts
@@ -35,16 +52,34 @@ flowchart LR
 - `npm run build:data`: validates intake and regenerates app-ready TypeScript intake data.
 - `npm run dataset`: builds and audits the dataset snapshot.
 - `npm run evidence`: builds evidence dossiers and audits validation priorities.
+- `npm run sources`: builds source registry and evidence packs, then audits provenance and source gaps.
 - `npm run intervention`: builds intervention strategies and audits action candidates.
 - `npm run archetype`: builds archetype analysis and audits cross-industry analogs.
+- `npm run network`: builds and audits the constraint network export.
+- `npm run tasks`: builds and audits generated validation tasks.
+- `npm run triage`: builds and audits constraint-level validation triage.
+- `npm run evidence-packets`: builds and audits evidence request packets.
+- `npm run campaigns`: builds and audits validation campaign plans.
+- `npm run sqlite`: builds, audits, inspects, and parity-checks the local SQLite artifact.
 - `npm run check`: runs the full validation, generation, audit, lint, and build sequence.
 
 ## Local Export Artifacts
 
 - `data/exports/constraint_dataset_snapshot.json`
 - `data/exports/evidence_dossiers.json`
+- `data/exports/source_registry.json`
+- `data/exports/evidence_packs.json`
 - `data/exports/intervention_strategies.json`
 - `data/exports/archetype_analysis.json`
+- `data/exports/constraint_network.json`
+- `data/exports/validation_tasks.json`
+- `data/exports/validation_triage.json`
+- `data/exports/validation_evidence_packets.json`
+- `data/exports/validation_campaigns.json`
+- `data/exports/constraint_intelligence.sqlite`
 
 Exports are deterministic where possible. If semantic content is unchanged, existing `generated_at` values are preserved to avoid meaningless Git diffs.
 
+## Runtime Data Boundary
+
+The Next.js app still renders from TypeScript modules and generated JSON-derived structures. SQLite is currently an audit and persistence artifact, not the runtime data source. This boundary keeps the UI stable while the database schema and parity checks mature.

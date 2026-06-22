@@ -211,13 +211,14 @@ export default function Home() {
       <section className="page-main" aria-label="Constraint intelligence list">
         <section className="intelligence-overview" aria-label="Intelligence overview">
           <div className="overview-copy">
-            <p className="section-kicker">V7.0 constraint archetype engine</p>
+            <p className="section-kicker">Constraint intelligence workspace</p>
             <h2>Recognize recurring bottlenecks before they become outcomes.</h2>
             <p>
-              Economic X-Ray Vision combines deterministic scoring, validation
-              confidence, graph position, and opportunity thesis analysis to
-              show where value is being delayed, duplicated, trapped, or
-              underused across strategic operating systems.
+              Economic X-Ray Vision combines deterministic scoring, source
+              defensibility, validation triage, campaign planning, comparison,
+              graph position, and opportunity thesis analysis to show where
+              value is being delayed, duplicated, trapped, or underused across
+              strategic operating systems.
             </p>
             <Link className="dashboard-network-link" href="/network">
               Open Constraint Network

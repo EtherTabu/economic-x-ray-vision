@@ -2,7 +2,7 @@
 
 ## What It Is
 
-Economic X-Ray Vision is a local-first constraint intelligence engine. It maps hidden friction, scores priority and validation confidence, identifies recurring bottleneck archetypes, and proposes evidence-aware intervention strategies.
+Economic X-Ray Vision is a local-first constraint intelligence engine. It maps hidden friction, scores priority and validation confidence, identifies recurring bottleneck archetypes, separates source provenance from claim support, and turns evidence gaps into validation tasks, evidence packets, and campaign plans.
 
 ## Problem It Targets
 
@@ -17,10 +17,13 @@ The project models those constraints directly instead of waiting for late-stage 
 - A local JSON intake contract and generated app data.
 - Deterministic scoring for priority, validation, graph position, and strategy.
 - Evidence dossiers and validation workflow classification.
+- Source registry and evidence pack generation.
+- Validation task, triage, evidence packet, and campaign planning workflow.
 - Intervention strategy generation with first experiments and action confidence.
 - A reusable constraint archetype taxonomy.
 - Cross-industry analog detection.
-- Local JSON exports and audits.
+- Constraint network, comparison, source, validation, campaign, and investigation workspaces.
+- Local JSON exports, SQLite artifact generation, and parity audits.
 
 ## Technical Stack
 
@@ -28,7 +31,7 @@ The project models those constraints directly instead of waiting for late-stage 
 - Next.js App Router
 - React
 - Local JSON and TypeScript data
-- SQLite-ready schema documentation
+- Generated local SQLite artifact
 - Node-based local scripts
 
 ## Why It Is Credible
@@ -44,14 +47,19 @@ The project demonstrates architecture, product thinking, data modeling, local pi
 - 23 archetypes
 - 20 cross-industry analog pairs
 - 52 evidence dossiers
+- 35 source records
+- 52 evidence packs
+- 316 generated validation tasks
+- 10 triaged top validation actions
+- 10 evidence request packets
+- 3 validation campaign modes
 - 52 intervention strategies
 
 ## What Is Next
 
+- Campaign detail workspaces.
+- Local analyst state for notes, status history, and campaign progress.
+- Source artifact library for collected documents, URLs, and claim support.
+- Runtime SQLite read pilot.
 - Real source ingestion with provenance.
-- SQLite persistence for local dataset operations.
-- Richer validation workflows.
-- Domain-specific evidence packs.
-- Constraint graph visualization.
 - Benchmarking against real case studies.
-

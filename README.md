@@ -32,11 +32,15 @@ Economic X-Ray Vision currently:
 - Builds evidence dossiers for each record.
 - Separates source metadata, claim support, evidence gaps, and provenance into local evidence packs.
 - Generates a validation task workflow for source upgrades, evidence gaps, weak claim support, and validation-dependent interventions.
+- Compresses raw validation tasks into triaged next-best validation actions.
+- Builds evidence request packets for the highest-priority validation actions.
+- Plans fast, standard, and deep validation campaigns from triage, source, evidence, and comparison signals.
 - Proposes deterministic intervention strategies and first experiments.
+- Compares 2-4 constraints side by side to explain why one outranks another.
 - Opens a dedicated investigation workspace for each constraint, linking evidence, validation workflow, analogs, archetype reasoning, and intervention strategy.
 - Renders a constraint network map that connects records to archetypes, industries, cross-sector analogs, and intervention paths.
 - Supports network search, filters, and focused neighborhoods via links such as `/network?focus=hc-admin-001`.
-- Exports local JSON artifacts for dataset, evidence, intervention, and archetype analysis.
+- Exports local JSON artifacts and a local SQLite artifact for audit-first inspection.
 
 ## Why It Matters
 
@@ -62,6 +66,12 @@ Current metrics:
 - 7 industries
 - 23 bottleneck archetypes
 - 20 cross-industry analog pairs
+- 35 source records
+- 52 evidence packs
+- 316 generated validation tasks
+- 10 triaged top validation actions
+- 10 evidence request packets
+- 3 validation campaign modes
 - Local-first data and scripts
 - Deterministic scoring
 - No external APIs
@@ -76,12 +86,49 @@ Current metrics:
 - **Source Registry + Evidence Packs**: structures source locators, claim support, citation gaps, provenance limits, and defensibility scores.
 - **Validation Workflow**: classifies records as hypotheses, partially supported claims, or decision-ready candidates.
 - **Validation Task Engine**: generates a local analyst queue from source gaps, weak evidence, low defensibility, and validation-dependent interventions.
+- **Validation Triage Engine**: compresses raw tasks by constraint into ranked next-best validation actions.
+- **Evidence Packet Engine**: turns top validation actions into artifact requests with pass/fail criteria.
+- **Validation Campaign Planner**: groups top actions into fast, standard, and deep campaign plans.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
 - **Cross-Industry Analog Engine**: finds similar constraints in different industries.
 - **Constraint Network Engine**: builds a local graph of constraint, archetype, industry, analog, and intervention relationships, with search/filter/focus exploration in the UI.
+- **Comparison Workspace**: explains relative ranking differences across scores, evidence, source defensibility, interventions, archetypes, and network context.
 - **Investigation Workspace**: renders a focused record-level view from `/constraints/[id]` with the full evidence-to-validation-to-intervention chain.
-- **Dashboard UI**: displays portfolio health, evidence workflow, validation tasks, interventions, archetypes, filters, expanded record inspection, and links into each investigation workspace and network map.
+- **Dashboard UI**: displays portfolio health, evidence workflow, validation tasks, sources, interventions, archetypes, filters, expanded record inspection, and links into each workspace.
+
+## Route Map
+
+- `/`: main constraint intelligence dashboard and filtered record list.
+- `/validation`: validation workbench with triage, evidence packets, and raw task exploration.
+- `/campaigns`: validation campaign planner with fast, standard, and deep campaign modes.
+- `/compare`: side-by-side constraint comparison workspace.
+- `/sources`: source registry workspace for provenance, citation status, and constraint dependencies.
+- `/network`: constraint network explorer with search, filters, and focus links.
+- `/network?focus=hc-admin-001`: focused network neighborhood for one constraint.
+- `/constraints/[id]`: dedicated investigation workspace for one constraint.
+
+## Data Pipeline Map
+
+```mermaid
+flowchart TD
+  A["Seed + Intake + Strategic Records"] --> B["Constraint Registry"]
+  B --> C["Deterministic Scores"]
+  C --> D["Dataset Snapshot"]
+  D --> E["Evidence Dossiers"]
+  E --> F["Source Registry + Evidence Packs"]
+  F --> G["Validation Tasks"]
+  G --> H["Validation Triage"]
+  H --> I["Evidence Request Packets"]
+  I --> J["Validation Campaigns"]
+  F --> K["Intervention Strategies"]
+  C --> L["Archetype Analysis"]
+  L --> M["Constraint Network"]
+  C --> N["Constraint Comparison"]
+  D --> O["SQLite Artifact + Parity Audit"]
+  F --> O
+  G --> O
+```
 
 ## Architecture
 
@@ -95,10 +142,14 @@ flowchart TD
   F --> G["Dataset Snapshot"]
   G --> H["Evidence Dossiers"]
   H --> O["Source Registry + Evidence Packs"]
+  O --> P["Validation Task Queue"]
+  P --> Q["Validation Triage"]
+  Q --> R["Evidence Request Packets"]
+  R --> S["Validation Campaigns"]
   O --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
   J --> N["Constraint Network Map"]
-  O --> P["Validation Task Queue"]
+  F --> T["Constraint Comparison"]
   F --> K["Dashboard Panels"]
   K --> M["Constraint Investigation Workspace"]
   H --> M
@@ -109,12 +160,16 @@ flowchart TD
   G --> L["JSON Exports"]
   H --> L
   O --> L
+  P --> L
+  Q --> L
+  R --> L
+  S --> L
   I --> L
   J --> L
   N --> L
-  P --> L
   J --> K
   P --> K
+  S --> K
 ```
 
 ## Screenshots
@@ -163,6 +218,9 @@ npm run intervention
 npm run archetype
 npm run network
 npm run tasks
+npm run triage
+npm run evidence-packets
+npm run campaigns
 npm run sqlite
 ```
 
@@ -176,6 +234,9 @@ npm run sqlite
 - `data/exports/archetype_analysis.json`
 - `data/exports/constraint_network.json`
 - `data/exports/validation_tasks.json`
+- `data/exports/validation_triage.json`
+- `data/exports/validation_evidence_packets.json`
+- `data/exports/validation_campaigns.json`
 - `data/exports/constraint_intelligence.sqlite`
 
 Generated exports preserve existing `generated_at` values when semantic content is unchanged, which prevents meaningless Git diffs during repeated local checks.
@@ -212,9 +273,11 @@ SQLite is available as a local build artifact at `data/exports/constraint_intell
 
 Future directions:
 
+- Campaign detail workspaces with execution-ready validation plans.
+- Local analyst state for notes, task status history, and campaign progress.
+- Source artifact library for collected documents, URLs, files, and claim support.
+- Runtime SQLite read pilot once the artifact workflow remains stable.
 - Real source ingestion with explicit provenance.
-- Runtime SQLite reads once the artifact workflow remains stable.
 - Richer validation task states and reviewer notes.
 - Domain-specific evidence packs.
-- Graph visualization for constraint relationships and analogs.
 - Benchmarking against real case studies.

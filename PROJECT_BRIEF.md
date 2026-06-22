@@ -191,3 +191,56 @@ The next persistence step can move selected runtime reads to SQLite only after t
 V14.0 adds a deterministic validation task workflow. The system now generates an analyst queue from source registry gaps, evidence packs, evidence dossier gaps, validation confidence, defensibility scores, and validation-dependent interventions. Tasks are generated artifacts, not user-authored todos, and task status is deterministic rather than editable.
 
 The dashboard includes a compact validation task panel, `/validation` provides a static validation workbench with local filters, and each constraint investigation shows tasks for that specific record. The export `data/exports/validation_tasks.json` and the SQLite `validation_tasks` table preserve the queue for local audit and inspection without making the app runtime depend on SQLite.
+
+## V15.0 Technical Note
+
+V15.0 adds validation triage to reduce analyst overload. The raw validation task engine can generate hundreds of tasks, so triage clusters tasks by constraint and blocker type, recalibrates severity so critical is exceptional, calculates validation burden, and selects one next-best validation action per constraint. The export `data/exports/validation_triage.json` preserves the top validation queue and constraint-level triage without adding editable task persistence.
+
+## V16.0 Technical Note
+
+V16.0 adds validation evidence packets. Evidence packets translate the top triage actions into specific artifact requests with evidence needed, source or metric category, artifact checklist, pass/fail criteria, and expected confidence impact. The packet layer remains deterministic and local-first; it does not fetch sources, invent citations, or claim that requested artifacts already exist.
+
+## V17.0 Technical Note
+
+V17.0 adds a source registry workspace at `/sources`. The workspace makes source trust, citation status, provenance weakness, primary-document needs, and source-to-constraint dependencies inspectable from the UI. It builds on source records and evidence packs while preserving the app's generated-data architecture.
+
+## V18.0 Technical Note
+
+V18.0 adds SQLite read-model parity auditing. The app still does not read from SQLite at runtime, but `scripts/audit-sqlite-parity.ts` verifies that the local SQLite artifact can reconstruct core counts and key records from the JSON/static export pipeline. Current parity covers constraints, scores, source records, source links, evidence packs, and validation tasks. Triage, evidence packets, campaigns, and comparison remain JSON/computed layers until the schema is extended.
+
+## V19.0 Technical Note
+
+V19.0 adds a constraint comparison workspace at `/compare`. Analysts can compare 2-4 constraints across priority, validation confidence, evidence defensibility, source quality, intervention readiness, validation burden, archetypes, and network context. The comparison layer explains why one constraint outranks another using deterministic local signals rather than new claims or external data.
+
+## V20.0 Technical Note
+
+V20.0 adds a validation campaign planner at `/campaigns`. Campaigns group top triage actions and evidence packets into fast, standard, and deep validation plans. Each campaign explains selected constraints, required artifacts, source upgrades, expected confidence lift, effort level, and decision use. Campaign output is exported to `data/exports/validation_campaigns.json` and remains deterministic, generated, and non-editable.
+
+## V21.0 Direction
+
+V21.0 is a project memory and navigation hardening phase. The goal is to align README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the real V20 product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
+
+## Current Route Map
+
+- `/`: portfolio dashboard, summary panels, filters, expanded cards, and links into workspaces.
+- `/validation`: validation workbench with triage, evidence packets, and raw generated tasks.
+- `/campaigns`: validation campaign planner with fast, standard, and deep plans.
+- `/compare`: constraint comparison workspace.
+- `/sources`: source registry and evidence pack workspace.
+- `/network`: constraint network explorer with search, filters, and focused neighborhoods.
+- `/constraints/[id]`: record-level investigation workspace.
+
+## Current Data Pipeline
+
+The current pipeline is:
+
+1. Seed, intake, and strategic records enter the constraint registry.
+2. Deterministic scoring produces priority, validation, graph, strategic, and archetype scores.
+3. Dataset exports create the local dataset snapshot.
+4. Evidence dossiers derive proof/disproof conditions, evidence gaps, and validation priority.
+5. Source registry and evidence packs separate source metadata, claim support, gaps, and provenance.
+6. Validation tasks convert weak evidence and source gaps into generated analyst tasks.
+7. Validation triage compresses task volume into next-best actions.
+8. Evidence packets turn top actions into concrete artifact requests.
+9. Campaigns group top validation work into fast, standard, and deep plans.
+10. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.

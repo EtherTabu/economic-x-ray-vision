@@ -43,3 +43,21 @@ Validation tasks are deterministic workflow objects generated from existing loca
 The task engine considers source citation gaps, evidence gaps, claim support level, defensibility score, validation confidence, intervention action confidence, and opportunity score. The result is a prioritized analyst queue with task type, severity, status, recommended action, expected artifact, and links back to the constraint investigation and network focus view.
 
 Current task statuses are generated as `open`, `blocked`, or `review_ready`. Blocked usually means a source artifact is missing, such as a primary document, URL, or local observation record.
+
+## Validation Triage
+
+The triage layer reduces analyst overload by grouping raw validation tasks at the constraint level. It clusters task types into source, evidence, metric, and intervention-blocking groups, computes a validation burden score, recalibrates severity, and selects one next-best validation action per constraint.
+
+Critical severity after triage is intentionally exceptional. The raw task queue may contain many critical items, but the triage layer highlights the constraints where validation debt most blocks decision usefulness.
+
+## Evidence Request Packets
+
+Evidence packets translate top triage actions into concrete artifact requests. Each packet identifies the constraint, evidence needed, request category, artifact checklist, pass criteria, fail criteria, and expected confidence impact.
+
+The packet score is still a heuristic. It represents expected improvement if the requested artifact is collected and passes validation; it is not proof that the evidence exists.
+
+## Validation Campaigns
+
+Validation campaigns group top triage actions and evidence packets into fast, standard, and deep validation plans. Campaigns explain which constraints to validate first, why those records matter, what artifacts to collect, which source upgrades are required, and what confidence lift is expected.
+
+Campaign plans are generated analyst guidance, not persisted project management state. They do not claim real-world savings, do not fetch sources, and do not replace expert validation.

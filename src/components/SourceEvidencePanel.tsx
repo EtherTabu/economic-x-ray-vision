@@ -12,7 +12,7 @@ export function SourceEvidencePanel({ portfolio }: SourceEvidencePanelProps) {
     <section className="source-panel" aria-label="Source registry and evidence packs">
       <div className="source-panel__header">
         <div>
-          <p className="section-kicker">V11.0 source registry</p>
+          <p className="section-kicker">Source registry</p>
           <h2>Evidence packs separate sources, claims, gaps, and provenance.</h2>
         </div>
         <p>

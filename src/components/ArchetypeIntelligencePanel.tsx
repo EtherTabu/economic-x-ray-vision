@@ -14,7 +14,7 @@ export function ArchetypeIntelligencePanel({
     <section className="archetype-panel" aria-label="Archetype intelligence">
       <div className="archetype-panel__header">
         <div>
-          <p className="section-kicker">V7.0 archetype engine</p>
+          <p className="section-kicker">Archetype intelligence</p>
           <h2>Recurring bottleneck patterns across sectors</h2>
         </div>
         <p>

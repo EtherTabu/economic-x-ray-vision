@@ -13,7 +13,7 @@ export function ValidationTaskPanel({ portfolio }: ValidationTaskPanelProps) {
     <section className="validation-panel" aria-label="Validation task workflow">
       <div className="validation-panel__header">
         <div>
-          <p className="section-kicker">V14.0 validation task workflow</p>
+          <p className="section-kicker">Validation task workflow</p>
           <h2>Generated analyst queue for weak evidence and source gaps.</h2>
         </div>
         <div className="validation-panel__actions">

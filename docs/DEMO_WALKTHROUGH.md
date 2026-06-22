@@ -72,7 +72,25 @@ The Validation Task panel turns weak evidence into a generated analyst queue. It
 
 Use `Open Validation Queue` to inspect `/validation`, filter by task type, industry, severity, or status, and jump from each task into the investigation workspace or focused network view.
 
-## 7. Review Archetype Intelligence
+The validation page also shows:
+
+- Triaged top validation actions after raw task clustering.
+- Evidence request packets for the top validation queue.
+- The raw task list for deeper exploration.
+
+## 7. Review Validation Campaigns
+
+Use `Open Campaign Planner` to inspect `/campaigns`. The campaign planner turns the top validation actions and evidence packets into:
+
+- Fast validation sprint.
+- Standard validation campaign.
+- Deep defensibility campaign.
+- Selected constraints for each mode.
+- Required artifacts and source upgrades.
+- Expected confidence lift.
+- Links to investigations, validation, sources, comparison, and network focus views.
+
+## 8. Review Archetype Intelligence
 
 The Archetype Intelligence panel shows recurring bottleneck patterns across industries:
 
@@ -83,7 +101,7 @@ The Archetype Intelligence panel shows recurring bottleneck patterns across indu
 - Cross-industry analog pair
 - Archetype distribution
 
-## 8. Explore The Constraint Network
+## 9. Explore The Constraint Network
 
 Use `Open Constraint Network` from the dashboard to inspect the relationship map. The network page shows:
 
@@ -97,7 +115,18 @@ Use `Open Constraint Network` from the dashboard to inspect the relationship map
 - High intervention leverage clusters.
 - Clickable constraint nodes that open `/constraints/[id]` investigation pages.
 
-## 9. Use Filters
+## 10. Compare Constraints
+
+Use `Open Comparison Workspace` to inspect `/compare`. Compare 2-4 constraints and review:
+
+- Priority and strategic score differences.
+- Evidence strength versus opportunity.
+- Source defensibility and citation weakness.
+- Intervention readiness versus validation risk.
+- Archetype overlap and network context.
+- Links back to constraint investigations, source registry, validation queue, and network focus views.
+
+## 11. Use Filters
 
 Use the filters to compare:
 
@@ -111,7 +140,7 @@ Use the filters to compare:
 
 Example: filter to `Energy / Grid / Interconnection`, then filter by `documentation_chase` or `queue_backlog`.
 
-## 10. Inspect A Constraint Card
+## 12. Inspect A Constraint Card
 
 Open a constraint card and inspect:
 
@@ -127,7 +156,7 @@ Open a constraint card and inspect:
 
 Then use `Open investigation` to move from the dashboard card into the dedicated constraint workspace. The workspace follows the record through overview, score signals, evidence dossier, validation workflow, constraint-specific validation tasks, archetype reasoning, cross-industry analogs, intervention strategy, and a copyable investigation summary.
 
-## 11. Review A Constraint Investigation
+## 13. Review A Constraint Investigation
 
 In the investigation workspace, check:
 
@@ -140,7 +169,7 @@ In the investigation workspace, check:
 - Which generated validation tasks belong to the record.
 - The link back to the network map for relationship exploration.
 
-## 12. Run Locally
+## 14. Run Locally
 
 ```bash
 npm install
