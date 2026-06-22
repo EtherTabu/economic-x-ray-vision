@@ -109,6 +109,13 @@ function CampaignCard({ campaign }: { campaign: ValidationCampaign }) {
         </div>
       </div>
 
+      <Link
+        className="details-link campaign-detail-link"
+        href={`/campaigns/${encodeURIComponent(campaign.campaign_id)}`}
+      >
+        Open campaign workspace
+      </Link>
+
       <div className="campaign-card__brief">
         <Brief label="Timebox" value={campaign.analyst_timebox} />
         <Brief
