@@ -3,6 +3,11 @@ import {
   type ConstraintComparisonRecord
 } from "@/lib/constraintComparison";
 import { buildConstraintNetwork, type ConstraintNetworkEdge } from "@/lib/constraintNetwork";
+import {
+  artifactNeedsForConstraint,
+  buildEvidenceArtifactLibrary,
+  type EvidenceArtifactNeed
+} from "@/lib/evidenceArtifacts";
 import { buildEvidencePackPortfolio, type EvidencePack } from "@/lib/evidencePacks";
 import {
   buildValidationCampaignPortfolio,
@@ -28,6 +33,7 @@ export type CampaignDetailConstraint = {
   evidence_pack?: EvidencePack;
   comparison?: ConstraintComparisonRecord;
   network_edges: ConstraintNetworkEdge[];
+  artifact_needs: EvidenceArtifactNeed[];
   required_artifacts: string[];
   source_upgrades_needed: string[];
   success_criteria: string[];
@@ -62,6 +68,7 @@ export function buildValidationCampaignDetailPortfolio(
   const evidencePackPortfolio = buildEvidencePackPortfolio(constraints);
   const comparisonPortfolio = buildConstraintComparisonPortfolio(constraints);
   const network = buildConstraintNetwork(constraints);
+  const artifactLibrary = buildEvidenceArtifactLibrary(constraints);
 
   const triageByConstraint = new Map(
     triagePortfolio.constraint_triage.map((triage) => [triage.constraint_id, triage])
@@ -81,6 +88,10 @@ export function buildValidationCampaignDetailPortfolio(
       const campaignConstraints = campaign.selected_constraints.map(
         (campaignConstraint, index) =>
           buildCampaignDetailConstraint({
+            artifactNeeds: artifactNeedsForConstraint(
+              artifactLibrary,
+              campaignConstraint.constraint_id
+            ),
             campaignConstraint,
             comparison: comparisonByConstraint.get(campaignConstraint.constraint_id),
             evidencePack: evidencePackByConstraint.get(campaignConstraint.constraint_id),
@@ -118,6 +129,7 @@ export function findValidationCampaignDetail(
 }
 
 function buildCampaignDetailConstraint({
+  artifactNeeds,
   campaignConstraint,
   comparison,
   evidencePack,
@@ -126,6 +138,7 @@ function buildCampaignDetailConstraint({
   rank,
   triage
 }: {
+  artifactNeeds: EvidenceArtifactNeed[];
   campaignConstraint: ValidationCampaignConstraint;
   comparison?: ConstraintComparisonRecord;
   evidencePack?: EvidencePack;
@@ -155,7 +168,9 @@ function buildCampaignDetailConstraint({
     evidence_pack: evidencePack,
     comparison,
     network_edges: networkEdges,
+    artifact_needs: artifactNeeds,
     required_artifacts: unique([
+      ...artifactNeeds.map((artifact) => artifact.artifact_title),
       ...(packet?.artifact_checklist ?? []),
       ...campaignConstraint.required_artifacts,
       triage?.next_best_action.expected_artifact ?? ""

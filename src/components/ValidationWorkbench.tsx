@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { ValidationEvidencePacketPanel } from "@/components/ValidationEvidencePacketPanel";
 import { ValidationTriagePanel } from "@/components/ValidationTriagePanel";
+import type { EvidenceArtifactLibrary } from "@/lib/evidenceArtifacts";
 import type { ValidationEvidencePacketPortfolio } from "@/lib/validationEvidencePackets";
 import type {
   ValidationTask,
@@ -18,11 +19,13 @@ type ValidationWorkbenchProps = {
   portfolio: ValidationTaskPortfolio;
   triage: ValidationTriagePortfolio;
   evidencePackets: ValidationEvidencePacketPortfolio;
+  artifactLibrary: EvidenceArtifactLibrary;
 };
 
 type FilterValue = "All";
 
 export function ValidationWorkbench({
+  artifactLibrary,
   evidencePackets,
   portfolio,
   triage
@@ -120,7 +123,10 @@ export function ValidationWorkbench({
 
       <section className="validation-main" aria-label="Validation workbench">
         <ValidationTriagePanel triage={triage} />
-        <ValidationEvidencePacketPanel portfolio={evidencePackets} />
+        <ValidationEvidencePacketPanel
+          artifactLibrary={artifactLibrary}
+          portfolio={evidencePackets}
+        />
 
         <section className="validation-summary-grid">
           <Metric label="Tasks" value={portfolio.summary.total_tasks} />

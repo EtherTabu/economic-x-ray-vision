@@ -196,6 +196,28 @@ function CampaignConstraintDetail({
         </div>
       </section>
 
+      <section className="campaign-artifact-needs">
+        <h4>Artifact needs</h4>
+        {constraint.artifact_needs.length > 0 ? (
+          <div className="artifact-need-list artifact-need-list--campaign">
+            {constraint.artifact_needs.slice(0, 4).map((artifact) => (
+              <div className="artifact-need-row" key={artifact.artifact_id}>
+                <span>{artifact.artifact_type.replaceAll("_", " ")}</span>
+                <strong>{artifact.artifact_title}</strong>
+                <small>
+                  Priority {artifact.priority.toFixed(1)} | impact +
+                  {artifact.confidence_impact.toFixed(1)} |{" "}
+                  {artifact.status.replaceAll("_", " ")}
+                </small>
+                <p>{artifact.validation_question_answered}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p>No artifact needs are linked for this campaign constraint.</p>
+        )}
+      </section>
+
       <section className="campaign-detail-columns">
         <Checklist title="Required artifacts" items={constraint.required_artifacts} />
         <Checklist title="Success criteria" items={constraint.success_criteria} />

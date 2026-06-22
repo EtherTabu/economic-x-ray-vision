@@ -34,6 +34,7 @@ Economic X-Ray Vision currently:
 - Generates a validation task workflow for source upgrades, evidence gaps, weak claim support, and validation-dependent interventions.
 - Compresses raw validation tasks into triaged next-best validation actions.
 - Builds evidence request packets for the highest-priority validation actions.
+- Defines an evidence artifact library for the documents, datasets, observations, metrics, or primary records needed to validate claims.
 - Plans fast, standard, and deep validation campaigns from triage, source, evidence, and comparison signals.
 - Proposes deterministic intervention strategies and first experiments.
 - Compares 2-4 constraints side by side to explain why one outranks another.
@@ -71,6 +72,7 @@ Current metrics:
 - 316 generated validation tasks
 - 10 triaged top validation actions
 - 10 evidence request packets
+- 276 generated evidence artifact needs
 - 3 validation campaign modes
 - Local-first data and scripts
 - Deterministic scoring
@@ -88,6 +90,7 @@ Current metrics:
 - **Validation Task Engine**: generates a local analyst queue from source gaps, weak evidence, low defensibility, and validation-dependent interventions.
 - **Validation Triage Engine**: compresses raw tasks by constraint into ranked next-best validation actions.
 - **Evidence Packet Engine**: turns top validation actions into artifact requests with pass/fail criteria.
+- **Evidence Artifact Library**: defines the specific documents, observations, metrics, or primary records still needed for validation.
 - **Validation Campaign Planner**: groups top actions into fast, standard, and deep campaign plans.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
@@ -120,7 +123,8 @@ flowchart TD
   F --> G["Validation Tasks"]
   G --> H["Validation Triage"]
   H --> I["Evidence Request Packets"]
-  I --> J["Validation Campaigns"]
+  I --> P["Evidence Artifact Library"]
+  P --> J["Validation Campaigns"]
   F --> K["Intervention Strategies"]
   C --> L["Archetype Analysis"]
   L --> M["Constraint Network"]
@@ -220,6 +224,7 @@ npm run network
 npm run tasks
 npm run triage
 npm run evidence-packets
+npm run artifacts
 npm run campaigns
 npm run sqlite
 ```
@@ -236,6 +241,7 @@ npm run sqlite
 - `data/exports/validation_tasks.json`
 - `data/exports/validation_triage.json`
 - `data/exports/validation_evidence_packets.json`
+- `data/exports/evidence_artifact_library.json`
 - `data/exports/validation_campaigns.json`
 - `data/exports/constraint_intelligence.sqlite`
 

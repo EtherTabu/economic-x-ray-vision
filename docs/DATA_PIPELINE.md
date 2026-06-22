@@ -26,7 +26,8 @@ flowchart TD
   F --> G["Validation Tasks"]
   G --> H["Validation Triage"]
   H --> I["Evidence Request Packets"]
-  I --> J["Validation Campaigns"]
+  I --> Q["Evidence Artifact Library"]
+  Q --> J["Validation Campaigns"]
   F --> K["Intervention Strategies"]
   K --> L["Archetype Analysis"]
   L --> M["Constraint Network"]
@@ -40,6 +41,7 @@ flowchart TD
   G --> P
   H --> P
   I --> P
+  Q --> P
   J --> P
   K --> P
   L --> P
@@ -59,6 +61,7 @@ flowchart TD
 - `npm run tasks`: builds and audits generated validation tasks.
 - `npm run triage`: builds and audits constraint-level validation triage.
 - `npm run evidence-packets`: builds and audits evidence request packets.
+- `npm run artifacts`: builds and audits the evidence artifact library.
 - `npm run campaigns`: builds and audits validation campaign plans.
 - `npm run sqlite`: builds, audits, inspects, and parity-checks the local SQLite artifact.
 - `npm run check`: runs the full validation, generation, audit, lint, and build sequence.
@@ -75,6 +78,7 @@ flowchart TD
 - `data/exports/validation_tasks.json`
 - `data/exports/validation_triage.json`
 - `data/exports/validation_evidence_packets.json`
+- `data/exports/evidence_artifact_library.json`
 - `data/exports/validation_campaigns.json`
 - `data/exports/constraint_intelligence.sqlite`
 

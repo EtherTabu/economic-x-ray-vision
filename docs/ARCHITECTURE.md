@@ -20,7 +20,8 @@ flowchart TD
   O --> P["Validation Tasks"]
   P --> Q["Validation Triage"]
   Q --> R["Evidence Request Packets"]
-  R --> S["Validation Campaigns"]
+  R --> U["Evidence Artifact Library"]
+  U --> S["Validation Campaigns"]
   O --> J["Intervention Strategies"]
   J --> K["Archetype Analysis"]
   K --> M["Constraint Network Map"]
@@ -31,6 +32,7 @@ flowchart TD
   P --> L
   Q --> L
   R --> L
+  U --> L
   S --> L
   J --> L
   K --> L
@@ -96,6 +98,8 @@ The task export is written to `data/exports/validation_tasks.json`. The SQLite a
 The triage layer compresses raw validation tasks into constraint-level priorities. It clusters blockers into source, evidence, metric, and intervention-blocking groups, then selects one next-best validation action per constraint. This is exported to `data/exports/validation_triage.json`.
 
 Evidence request packets turn the top triage queue into artifact requests with pass/fail criteria and expected confidence impact. These packets are exported to `data/exports/validation_evidence_packets.json`.
+
+The evidence artifact library translates packet, source, and triage gaps into the specific artifact needs that future collection should satisfy: primary documents, source URLs, local observations, metric definitions, claim-support memos, and intervention pilot plans. It is exported to `data/exports/evidence_artifact_library.json` and remains a planning contract, not evidence ingestion.
 
 Validation campaigns group the highest-value validation work into fast, standard, and deep plans. Campaigns explain selected constraints, required artifacts, source upgrades, expected confidence lift, effort level, and decision use. They are exported to `data/exports/validation_campaigns.json`.
 

@@ -216,6 +216,10 @@ V19.0 adds a constraint comparison workspace at `/compare`. Analysts can compare
 
 V20.0 adds a validation campaign planner at `/campaigns`. Campaigns group top triage actions and evidence packets into fast, standard, and deep validation plans. Each campaign explains selected constraints, required artifacts, source upgrades, expected confidence lift, effort level, and decision use. Campaign output is exported to `data/exports/validation_campaigns.json` and remains deterministic, generated, and non-editable.
 
+## V23.0 Technical Note
+
+V23.0 adds an evidence artifact contract and generated artifact library. The artifact layer translates evidence packets, source records, evidence packs, and triage gaps into specific needed artifacts such as primary documents, source URLs, local observations, metric definitions, claim-support memos, and intervention pilot plans. The export `data/exports/evidence_artifact_library.json` is a deterministic planning contract for future collection; it does not fetch, upload, scrape, or invent evidence.
+
 ## V21.0 Direction
 
 V21.0 is a project memory and navigation hardening phase. The goal is to align README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the real V20 product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
@@ -242,5 +246,6 @@ The current pipeline is:
 6. Validation tasks convert weak evidence and source gaps into generated analyst tasks.
 7. Validation triage compresses task volume into next-best actions.
 8. Evidence packets turn top actions into concrete artifact requests.
-9. Campaigns group top validation work into fast, standard, and deep plans.
-10. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
+9. The evidence artifact library defines the specific documents, observations, metrics, or source artifacts still needed.
+10. Campaigns group top validation work into fast, standard, and deep plans.
+11. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.

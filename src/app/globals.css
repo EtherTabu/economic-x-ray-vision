@@ -1517,6 +1517,53 @@ h1 {
   font-weight: 700;
 }
 
+.artifact-need-list {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  background: #f7fafc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.artifact-need-list h4,
+.campaign-artifact-needs h4 {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.84rem;
+}
+
+.artifact-need-row {
+  display: grid;
+  gap: 3px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+}
+
+.artifact-need-row:first-of-type {
+  border-top: 0;
+}
+
+.artifact-need-row span,
+.artifact-need-row small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.artifact-need-row strong {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+.artifact-need-row p {
+  margin: 0;
+  color: #344655;
+  line-height: 1.4;
+}
+
 .validation-filter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -3039,6 +3086,7 @@ select {
 .campaign-checklist h4,
 .campaign-detail-card__section h4,
 .campaign-detail-grid h4,
+.campaign-artifact-needs h4,
 .campaign-gap-box h4 {
   margin: 0 0 8px;
   color: var(--muted);
@@ -3108,6 +3156,19 @@ select {
   background: #fbfcfd;
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.campaign-artifact-needs {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  background: #fbfcfd;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.artifact-need-list--campaign {
+  background: #ffffff;
 }
 
 .campaign-detail-grid {

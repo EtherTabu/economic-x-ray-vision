@@ -56,6 +56,12 @@ Evidence packets translate top triage actions into concrete artifact requests. E
 
 The packet score is still a heuristic. It represents expected improvement if the requested artifact is collected and passes validation; it is not proof that the evidence exists.
 
+## Evidence Artifact Library
+
+The evidence artifact library defines what must be collected before weak evidence can become more defensible. Artifact needs can include primary documents, source URLs, local observations, metric definitions, claim-support memos, and intervention pilot plans.
+
+The artifact layer is a deterministic contract for future collection. It does not upload files, fetch sources, invent documents, or claim that requested artifacts already exist.
+
 ## Validation Campaigns
 
 Validation campaigns group top triage actions and evidence packets into fast, standard, and deep validation plans. Campaigns explain which constraints to validate first, why those records matter, what artifacts to collect, which source upgrades are required, and what confidence lift is expected.
