@@ -269,6 +269,12 @@ SQLite is available as a local build artifact at `data/exports/constraint_intell
 - No fake ROI claims.
 - No invented citations.
 
+## Support Development
+
+If this project is useful or you want to support continued local-first intelligence tooling, you can sponsor development through GitHub Sponsors.
+
+[![Support Development](https://img.shields.io/badge/Support-Development-76B900?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/EtherTabu)
+
 ## Roadmap
 
 Future directions:
