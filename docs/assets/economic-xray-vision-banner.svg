@@ -1,0 +1,76 @@
+<svg width="1400" height="460" viewBox="0 0 1400 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Economic X-Ray Vision repository banner</title>
+  <desc id="desc">Dark glass-style banner for the Economic X-Ray Vision Constraint Intelligence Engine with NVDA green accents.</desc>
+  <defs>
+    <radialGradient id="glow-a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1080 120) rotate(139) scale(590 360)">
+      <stop stop-color="#76B900" stop-opacity="0.38"/>
+      <stop offset="0.46" stop-color="#76B900" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#76B900" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(195 390) rotate(-29) scale(430 260)">
+      <stop stop-color="#37D6A5" stop-opacity="0.22"/>
+      <stop offset="0.58" stop-color="#37D6A5" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#37D6A5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="104" y1="72" x2="1294" y2="406" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10161C" stop-opacity="0.92"/>
+      <stop offset="0.52" stop-color="#121A22" stop-opacity="0.76"/>
+      <stop offset="1" stop-color="#18212A" stop-opacity="0.66"/>
+    </linearGradient>
+    <linearGradient id="line" x1="114" y1="78" x2="1290" y2="384" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#76B900" stop-opacity="0.92"/>
+      <stop offset="0.44" stop-color="#C7F66B" stop-opacity="0.44"/>
+      <stop offset="1" stop-color="#76B900" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="62" y="36" width="1276" height="384" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="460" fill="#070B0F"/>
+  <rect width="1400" height="460" fill="url(#glow-a)"/>
+  <rect width="1400" height="460" fill="url(#glow-b)"/>
+
+  <g opacity="0.42">
+    <path d="M0 110H1400" stroke="#24313A"/>
+    <path d="M0 220H1400" stroke="#24313A"/>
+    <path d="M0 330H1400" stroke="#24313A"/>
+    <path d="M178 0V460" stroke="#24313A"/>
+    <path d="M356 0V460" stroke="#24313A"/>
+    <path d="M534 0V460" stroke="#24313A"/>
+    <path d="M712 0V460" stroke="#24313A"/>
+    <path d="M890 0V460" stroke="#24313A"/>
+    <path d="M1068 0V460" stroke="#24313A"/>
+    <path d="M1246 0V460" stroke="#24313A"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="96" y="62" width="1208" height="336" rx="34" fill="url(#panel)" stroke="#33414A"/>
+    <rect x="112" y="78" width="1176" height="304" rx="24" stroke="url(#line)" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M180 260C245 156 318 156 384 260C449 364 522 364 588 260C653 156 726 156 792 260C857 364 930 364 996 260C1061 156 1134 156 1200 260" stroke="#76B900" stroke-width="5" stroke-linecap="round"/>
+    <path d="M180 260C245 214 318 214 384 260C449 306 522 306 588 260C653 214 726 214 792 260C857 306 930 306 996 260C1061 214 1134 214 1200 260" stroke="#C9F76A" stroke-opacity="0.34" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="384" cy="260" r="7" fill="#76B900"/>
+    <circle cx="588" cy="260" r="7" fill="#76B900"/>
+    <circle cx="792" cy="260" r="7" fill="#76B900"/>
+    <circle cx="996" cy="260" r="7" fill="#76B900"/>
+  </g>
+
+  <g>
+    <rect x="152" y="116" width="226" height="34" rx="17" fill="#76B900" fill-opacity="0.12" stroke="#76B900" stroke-opacity="0.72"/>
+    <text x="176" y="138" fill="#CFFB78" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2.4">LOCAL-FIRST INTELLIGENCE</text>
+  </g>
+
+  <text x="152" y="205" fill="#F4F7F8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="-1">Economic X-Ray Vision</text>
+  <text x="154" y="254" fill="#B9C6CD" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="650">Constraint Intelligence Engine</text>
+  <text x="154" y="316" fill="#D9E3E7" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Local-first &#8226; Evidence-aware &#8226; Validation campaigns &#8226; Artifact library</text>
+
+  <g transform="translate(1054 120)">
+    <rect width="178" height="178" rx="24" fill="#0A1117" fill-opacity="0.78" stroke="#76B900" stroke-opacity="0.48"/>
+    <path d="M38 130V49H62V130H38Z" fill="#76B900"/>
+    <path d="M78 130V49H100L139 92V49H162V130H141L101 86V130H78Z" fill="#E7F6D4"/>
+    <path d="M32 148H166" stroke="#76B900" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

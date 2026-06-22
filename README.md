@@ -1,5 +1,7 @@
 # Economic X-Ray Vision
 
+![Economic X-Ray Vision banner](docs/assets/economic-xray-vision-banner.svg)
+
 A local-first constraint intelligence engine for mapping recurring bottlenecks, validation gaps, and intervention paths across strategic operating systems.
 
 Economic X-Ray Vision is an experimental TypeScript + Next.js system for identifying hidden friction before it becomes visible in late-stage outcome metrics. It is not a generic dashboard. It models the queues, handoffs, evidence gaps, approval loops, and capacity mismatches that quietly slow systems down.
@@ -51,7 +53,7 @@ The system treats most records as hypotheses until validation improves. That is 
 
 ## Current Scope
 
-The V7 dataset contains:
+The current dataset spans seven strategic operating domains:
 
 - Healthcare administration
 - Energy / grid / interconnection
@@ -105,6 +107,7 @@ Current metrics:
 - `/`: main constraint intelligence dashboard and filtered record list.
 - `/validation`: validation workbench with triage, evidence packets, and raw task exploration.
 - `/campaigns`: validation campaign planner with fast, standard, and deep campaign modes.
+- `/campaigns/[id]`: execution workspace for one validation campaign.
 - `/compare`: side-by-side constraint comparison workspace.
 - `/sources`: source registry workspace for provenance, citation status, and constraint dependencies.
 - `/network`: constraint network explorer with search, filters, and focus links.
@@ -149,7 +152,8 @@ flowchart TD
   O --> P["Validation Task Queue"]
   P --> Q["Validation Triage"]
   Q --> R["Evidence Request Packets"]
-  R --> S["Validation Campaigns"]
+  R --> U["Evidence Artifact Library"]
+  U --> S["Validation Campaigns"]
   O --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
   J --> N["Constraint Network Map"]
@@ -167,6 +171,7 @@ flowchart TD
   P --> L
   Q --> L
   R --> L
+  U --> L
   S --> L
   I --> L
   J --> L
@@ -285,9 +290,8 @@ If this project is useful or you want to support continued local-first intellige
 
 Future directions:
 
-- Campaign detail workspaces with execution-ready validation plans.
-- Local analyst state for notes, task status history, and campaign progress.
-- Source artifact library for collected documents, URLs, files, and claim support.
+- Local analyst state for notes, artifact collection status, task status history, and campaign progress.
+- Evidence artifact intake workflow for attaching collected documents, URLs, files, and observation records.
 - Runtime SQLite read pilot once the artifact workflow remains stable.
 - Real source ingestion with explicit provenance.
 - Richer validation task states and reviewer notes.

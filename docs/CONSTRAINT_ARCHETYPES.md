@@ -16,7 +16,7 @@ Archetypes make those shared patterns explicit.
 
 ## Current Taxonomy
 
-The V7 taxonomy includes 23 archetypes, including:
+The current taxonomy includes 23 archetypes, including:
 
 - Queue backlog
 - Manual verification drag
@@ -52,4 +52,3 @@ The V7 taxonomy includes 23 archetypes, including:
 ## How Analogs Work
 
 The analog engine compares records across different industries using shared archetypes, affected systems, intervention hints, categories, opportunity types, and score proximity. It does not claim that two industries are identical. It identifies reusable bottleneck patterns that may suggest what to measure or test next.
-

@@ -146,10 +146,9 @@ Future versions may add Python ingestion workers for scraping, AI extraction, NL
 
 Near-term:
 
-- Improve filtering and sorting
-- Add richer score explanations
-- Wire static objects into SQLite when useful
-- Add import/export once the object model stabilizes
+- Add local analyst state for notes, artifact collection status, task status history, and campaign progress
+- Pilot selected SQLite read paths only after parity checks and artifact workflow remain stable
+- Add evidence artifact intake once provenance and validation contracts are ready
 
 Later:
 
@@ -157,8 +156,8 @@ Later:
 - Document parsing
 - Research pipelines
 - AI-assisted extraction
-- Multi-source evidence management
-- Multi-industry expansion
+- Multi-source evidence management with explicit provenance
+- Additional strategic domains when the archetype and validation models justify expansion
 
 ## V7.0 Technical Note
 
@@ -220,9 +219,13 @@ V20.0 adds a validation campaign planner at `/campaigns`. Campaigns group top tr
 
 V23.0 adds an evidence artifact contract and generated artifact library. The artifact layer translates evidence packets, source records, evidence packs, and triage gaps into specific needed artifacts such as primary documents, source URLs, local observations, metric definitions, claim-support memos, and intervention pilot plans. The export `data/exports/evidence_artifact_library.json` is a deterministic planning contract for future collection; it does not fetch, upload, scrape, or invent evidence.
 
-## V21.0 Direction
+## V21.0 Technical Note
 
-V21.0 is a project memory and navigation hardening phase. The goal is to align README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the real V20 product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
+V21.0 aligned README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
+
+## V23.1 Technical Note
+
+V23.1 refreshes repository presentation without changing product behavior. The README now uses a local dark/glass SVG banner with NVDA green accents, current-state route and roadmap language, and first-screen copy that reflects the evidence-aware validation campaign and artifact library system.
 
 ## Current Route Map
 

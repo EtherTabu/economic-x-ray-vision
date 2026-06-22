@@ -19,6 +19,7 @@ The project models those constraints directly instead of waiting for late-stage 
 - Evidence dossiers and validation workflow classification.
 - Source registry and evidence pack generation.
 - Validation task, triage, evidence packet, and campaign planning workflow.
+- Evidence artifact library for primary documents, source URLs, observations, metrics, and claim-support needs.
 - Intervention strategy generation with first experiments and action confidence.
 - A reusable constraint archetype taxonomy.
 - Cross-industry analog detection.
@@ -52,14 +53,14 @@ The project demonstrates architecture, product thinking, data modeling, local pi
 - 316 generated validation tasks
 - 10 triaged top validation actions
 - 10 evidence request packets
+- 276 generated evidence artifact needs
 - 3 validation campaign modes
 - 52 intervention strategies
 
 ## What Is Next
 
-- Campaign detail workspaces.
-- Local analyst state for notes, status history, and campaign progress.
-- Source artifact library for collected documents, URLs, and claim support.
+- Local analyst state for notes, artifact collection status, status history, and campaign progress.
+- Evidence artifact intake for collected documents, URLs, files, and observation records.
 - Runtime SQLite read pilot.
 - Real source ingestion with provenance.
 - Benchmarking against real case studies.
