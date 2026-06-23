@@ -241,6 +241,9 @@ export default function Home() {
             <Link className="dashboard-network-link" href="/reports">
               Open Report Builder
             </Link>
+            <Link className="dashboard-network-link" href="/case-studies">
+              Open Case Studies
+            </Link>
           </div>
 
           <div className="priority-panel" aria-label="Highest priority constraint">

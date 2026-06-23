@@ -1,0 +1,803 @@
+{
+  "generated_at": "2026-06-23T16:48:17.549Z",
+  "summary": {
+    "case_study_count": 1,
+    "included_constraint_count": 8,
+    "evidence_import_count": 0,
+    "source_request_count": 8,
+    "artifact_need_count": 46,
+    "uncovered_artifact_count": 46,
+    "total_workspace_uncovered_artifact_count": 459,
+    "status_distribution": {
+      "evidence-request-backed": 1
+    }
+  },
+  "case_studies": [
+    {
+      "case_study_id": "case-study:ai-data-center-power-grid-interconnection",
+      "title": "AI Data Center Power / Grid Interconnection Bottlenecks",
+      "status": "evidence-request-backed",
+      "thesis": "AI infrastructure deployment can be delayed when compute commissioning, utility load studies, transformer availability, cooling validation, network readiness, and backup generation permits are sequenced in separate queues.",
+      "scope": "One focused mini case study connecting existing data center and grid interconnection constraint hypotheses. It is designed to show the evidence workflow, not to prove a real-world claim.",
+      "included_constraint_ids": [
+        "strategic-037",
+        "strategic-038",
+        "strategic-039",
+        "strategic-040",
+        "strategic-041",
+        "strategic-001",
+        "strategic-002",
+        "strategic-048"
+      ],
+      "system_layers_affected": [
+        "Large-load interconnection and utility study queue",
+        "Substation, transformer, switchgear, and energization readiness",
+        "GPU cluster power delivery and commissioning acceptance",
+        "Liquid cooling validation and thermal operating envelope",
+        "Fiber cross-connect and network provisioning",
+        "Backup generation permitting and resilience commissioning",
+        "Training workload scheduling against physical capacity limits"
+      ],
+      "bottleneck_mechanisms": [
+        "interconnection delay",
+        "GPU cluster power readiness commissioning",
+        "GPU cluster power readiness commissioning validation",
+        "manual verification drag",
+        "Liquid cooling validation",
+        "Liquid cooling validation validation",
+        "handoff leakage",
+        "Fiber cross-connect provisioning",
+        "Fiber cross-connect provisioning validation",
+        "capacity mismatch",
+        "Compute workload capacity scheduling",
+        "Compute workload capacity scheduling validation",
+        "permitting delay",
+        "Backup generation permit readiness",
+        "Backup generation permit readiness validation",
+        "Interconnection study",
+        "Interconnection study validation",
+        "equipment lead time",
+        "Transformer procurement",
+        "Transformer procurement validation",
+        "Large load interconnection study",
+        "Large load interconnection study validation"
+      ],
+      "validation_questions": [
+        "Which queue or owner most often blocks the first production workload after equipment is physically installed?",
+        "How often do load studies, transformer readiness, switchgear, cooling validation, network provisioning, or permit readiness create critical-path delay?",
+        "What metric can compare requested energization date, actual energization date, commissioning acceptance, and production cluster burn-in?",
+        "Which artifact would disprove the thesis by showing that these queues are not materially linked or not on the critical path?",
+        "GPU cluster commissioning dependency on power delivery sequencing: Step-level baseline for GPU cluster power readiness commissioning",
+        "Liquid cooling loop validation bottleneck: Step-level baseline for Liquid cooling validation",
+        "High-density rack deployment stranded by fiber cross-connect backlog: Step-level baseline for Fiber cross-connect provisioning",
+        "AI training workload scheduling against power and cooling envelope mismatch: Step-level baseline for Compute workload capacity scheduling",
+        "Data center backup generation permit readiness drag: Step-level baseline for Backup generation permit readiness",
+        "Grid interconnection queue delay: Step-level baseline for Interconnection study",
+        "Transformer lead-time bottleneck: Step-level baseline for Transformer procurement",
+        "Grid load study queue for large load requests: Step-level baseline for Large load interconnection study"
+      ],
+      "evidence_artifacts_needed": [
+        {
+          "artifact_id": "artifact:cluster:strategic-037:metric",
+          "constraint_id": "strategic-037",
+          "artifact_type": "metric_definition",
+          "artifact_title": "Metric definition with owner, data source, sampling window, and baseline.",
+          "priority": 9.1,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-037:evidence",
+          "constraint_id": "strategic-037",
+          "artifact_type": "claim_support_memo",
+          "artifact_title": "Defensibility review note with source upgrades and claim support decisions.",
+          "priority": 8.5,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-037:source",
+          "constraint_id": "strategic-037",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation note, queue log, interview note, or operational extract.",
+          "priority": 7.7,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-037:intervention-blocking",
+          "constraint_id": "strategic-037",
+          "artifact_type": "intervention_pilot_plan",
+          "artifact_title": "Experiment plan with baseline metric, success threshold, and stop condition.",
+          "priority": 7.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-037:source-data-centers-ai-infrastructure-process-pattern-review",
+          "constraint_id": "strategic-037",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Data Centers / AI Infrastructure process pattern review",
+          "priority": 6.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-037:source-structured-hypothesis-local-operational-evidence-required",
+          "constraint_id": "strategic-037",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Structured hypothesis; local operational evidence required",
+          "priority": 6.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-038:metric",
+          "constraint_id": "strategic-038",
+          "artifact_type": "metric_definition",
+          "artifact_title": "Metric definition with owner, data source, sampling window, and baseline.",
+          "priority": 9.1,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-038:evidence",
+          "constraint_id": "strategic-038",
+          "artifact_type": "claim_support_memo",
+          "artifact_title": "Defensibility review note with source upgrades and claim support decisions.",
+          "priority": 8.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-038:source",
+          "constraint_id": "strategic-038",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation note, queue log, interview note, or operational extract.",
+          "priority": 7.7,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-038:intervention-blocking",
+          "constraint_id": "strategic-038",
+          "artifact_type": "intervention_pilot_plan",
+          "artifact_title": "Experiment plan with baseline metric, success threshold, and stop condition.",
+          "priority": 7.6,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-038:source-data-centers-ai-infrastructure-process-pattern-review",
+          "constraint_id": "strategic-038",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Data Centers / AI Infrastructure process pattern review",
+          "priority": 6.3,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-038:source-structured-hypothesis-local-operational-evidence-required",
+          "constraint_id": "strategic-038",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Structured hypothesis; local operational evidence required",
+          "priority": 6.3,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-039:evidence",
+          "constraint_id": "strategic-039",
+          "artifact_type": "claim_support_memo",
+          "artifact_title": "Evidence note showing whether the gap is supported, reduced, or reduced or refuted.",
+          "priority": 8.9,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-039:intervention-blocking",
+          "constraint_id": "strategic-039",
+          "artifact_type": "intervention_pilot_plan",
+          "artifact_title": "Experiment plan with baseline metric, success threshold, and stop condition.",
+          "priority": 7.7,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-039:source",
+          "constraint_id": "strategic-039",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation note, queue log, interview note, or operational extract.",
+          "priority": 7.6,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-039:source-data-centers-ai-infrastructure-process-pattern-review",
+          "constraint_id": "strategic-039",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Data Centers / AI Infrastructure process pattern review",
+          "priority": 6.3,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-039:source-structured-hypothesis-local-operational-evidence-required",
+          "constraint_id": "strategic-039",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Structured hypothesis; local operational evidence required",
+          "priority": 6.3,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-040:metric",
+          "constraint_id": "strategic-040",
+          "artifact_type": "metric_definition",
+          "artifact_title": "Metric definition with owner, data source, sampling window, and baseline.",
+          "priority": 9.1,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-040:evidence",
+          "constraint_id": "strategic-040",
+          "artifact_type": "claim_support_memo",
+          "artifact_title": "Defensibility review note with source upgrades and claim support decisions.",
+          "priority": 8.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-040:intervention-blocking",
+          "constraint_id": "strategic-040",
+          "artifact_type": "intervention_pilot_plan",
+          "artifact_title": "Experiment plan with baseline metric, success threshold, and stop condition.",
+          "priority": 7.7,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-040:source",
+          "constraint_id": "strategic-040",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation note, queue log, interview note, or operational extract.",
+          "priority": 7.7,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-040:source-data-centers-ai-infrastructure-process-pattern-review",
+          "constraint_id": "strategic-040",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Data Centers / AI Infrastructure process pattern review",
+          "priority": 6.2,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-040:source-structured-hypothesis-local-operational-evidence-required",
+          "constraint_id": "strategic-040",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Structured hypothesis; local operational evidence required",
+          "priority": 6.2,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-041:metric",
+          "constraint_id": "strategic-041",
+          "artifact_type": "metric_definition",
+          "artifact_title": "Metric definition with owner, data source, sampling window, and baseline.",
+          "priority": 9,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-041:evidence",
+          "constraint_id": "strategic-041",
+          "artifact_type": "claim_support_memo",
+          "artifact_title": "Defensibility review note with source upgrades and claim support decisions.",
+          "priority": 8.2,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-041:source",
+          "constraint_id": "strategic-041",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation note, queue log, interview note, or operational extract.",
+          "priority": 7.5,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-041:intervention-blocking",
+          "constraint_id": "strategic-041",
+          "artifact_type": "intervention_pilot_plan",
+          "artifact_title": "Experiment plan with baseline metric, success threshold, and stop condition.",
+          "priority": 7.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-041:source-data-centers-ai-infrastructure-process-pattern-review",
+          "constraint_id": "strategic-041",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Data Centers / AI Infrastructure process pattern review",
+          "priority": 6.3,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-041:source-structured-hypothesis-local-operational-evidence-required",
+          "constraint_id": "strategic-041",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Structured hypothesis; local operational evidence required",
+          "priority": 6.3,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-001:metric",
+          "constraint_id": "strategic-001",
+          "artifact_type": "metric_definition",
+          "artifact_title": "Metric definition with owner, data source, sampling window, and baseline.",
+          "priority": 8.6,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-001:evidence",
+          "constraint_id": "strategic-001",
+          "artifact_type": "claim_support_memo",
+          "artifact_title": "Defensibility review note with source upgrades and claim support decisions.",
+          "priority": 7.8,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-001:source",
+          "constraint_id": "strategic-001",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation note, queue log, interview note, or operational extract.",
+          "priority": 7.2,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-001:intervention-blocking",
+          "constraint_id": "strategic-001",
+          "artifact_type": "intervention_pilot_plan",
+          "artifact_title": "Experiment plan with baseline metric, success threshold, and stop condition.",
+          "priority": 6.8,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-001:source-energy-grid-interconnection-process-pattern-review",
+          "constraint_id": "strategic-001",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Energy / Grid / Interconnection process pattern review",
+          "priority": 5.5,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-001:source-structured-hypothesis-local-operational-evidence-required",
+          "constraint_id": "strategic-001",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Structured hypothesis; local operational evidence required",
+          "priority": 5.5,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-002:evidence",
+          "constraint_id": "strategic-002",
+          "artifact_type": "claim_support_memo",
+          "artifact_title": "Evidence note showing whether the gap is supported, reduced, or reduced or refuted.",
+          "priority": 8.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-002:source",
+          "constraint_id": "strategic-002",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation note, queue log, interview note, or operational extract.",
+          "priority": 7,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-002:intervention-blocking",
+          "constraint_id": "strategic-002",
+          "artifact_type": "intervention_pilot_plan",
+          "artifact_title": "Experiment plan with baseline metric, success threshold, and stop condition.",
+          "priority": 6.9,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-002:source-energy-grid-interconnection-process-pattern-review",
+          "constraint_id": "strategic-002",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Energy / Grid / Interconnection process pattern review",
+          "priority": 5.5,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-002:source-structured-hypothesis-local-operational-evidence-required",
+          "constraint_id": "strategic-002",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Structured hypothesis; local operational evidence required",
+          "priority": 5.5,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-048:metric",
+          "constraint_id": "strategic-048",
+          "artifact_type": "metric_definition",
+          "artifact_title": "Metric definition with owner, data source, sampling window, and baseline.",
+          "priority": 9.1,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-048:evidence",
+          "constraint_id": "strategic-048",
+          "artifact_type": "claim_support_memo",
+          "artifact_title": "Defensibility review note with source upgrades and claim support decisions.",
+          "priority": 8.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-048:source",
+          "constraint_id": "strategic-048",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation note, queue log, interview note, or operational extract.",
+          "priority": 7.7,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:cluster:strategic-048:intervention-blocking",
+          "constraint_id": "strategic-048",
+          "artifact_type": "intervention_pilot_plan",
+          "artifact_title": "Experiment plan with baseline metric, success threshold, and stop condition.",
+          "priority": 7.3,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-048:source-energy-grid-interconnection-process-pattern-review",
+          "constraint_id": "strategic-048",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Energy / Grid / Interconnection process pattern review",
+          "priority": 6.4,
+          "status": "not_collected"
+        },
+        {
+          "artifact_id": "artifact:source:strategic-048:source-structured-hypothesis-local-operational-evidence-required",
+          "constraint_id": "strategic-048",
+          "artifact_type": "local_observation",
+          "artifact_title": "Local observation record for Structured hypothesis; local operational evidence required",
+          "priority": 6.4,
+          "status": "not_collected"
+        }
+      ],
+      "imported_evidence_ids": [],
+      "source_requests": [
+        {
+          "source_request_id": "source-request:strategic-037:case-study",
+          "constraint_id": "strategic-037",
+          "constraint_title": "GPU cluster commissioning dependency on power delivery sequencing",
+          "artifact_ids": [
+            "artifact:cluster:strategic-037:metric",
+            "artifact:cluster:strategic-037:evidence",
+            "artifact:cluster:strategic-037:source",
+            "artifact:cluster:strategic-037:intervention-blocking"
+          ],
+          "source_quality_tier": "Company filing or official technical report",
+          "request_title": "Collect primary or operational evidence for GPU cluster commissioning dependency on power delivery sequencing",
+          "reason": "Current case-study evidence is not imported. The request targets Step-level baseline for GPU cluster power readiness commissioning without changing generated artifact status.",
+          "preferred_source_owner": "Data center commissioning, capacity planning, or operations owner",
+          "expected_artifact_type": "metric_definition"
+        },
+        {
+          "source_request_id": "source-request:strategic-038:case-study",
+          "constraint_id": "strategic-038",
+          "constraint_title": "Liquid cooling loop validation bottleneck",
+          "artifact_ids": [
+            "artifact:cluster:strategic-038:metric",
+            "artifact:cluster:strategic-038:evidence",
+            "artifact:cluster:strategic-038:source",
+            "artifact:cluster:strategic-038:intervention-blocking"
+          ],
+          "source_quality_tier": "Company filing or official technical report",
+          "request_title": "Collect primary or operational evidence for Liquid cooling loop validation bottleneck",
+          "reason": "Current case-study evidence is not imported. The request targets Step-level baseline for Liquid cooling validation without changing generated artifact status.",
+          "preferred_source_owner": "Facilities commissioning, thermal engineering, or data center operations owner",
+          "expected_artifact_type": "metric_definition"
+        },
+        {
+          "source_request_id": "source-request:strategic-039:case-study",
+          "constraint_id": "strategic-039",
+          "constraint_title": "High-density rack deployment stranded by fiber cross-connect backlog",
+          "artifact_ids": [
+            "artifact:cluster:strategic-039:evidence",
+            "artifact:cluster:strategic-039:intervention-blocking",
+            "artifact:cluster:strategic-039:source",
+            "artifact:source:strategic-039:source-data-centers-ai-infrastructure-process-pattern-review"
+          ],
+          "source_quality_tier": "Company filing or official technical report",
+          "request_title": "Collect primary or operational evidence for High-density rack deployment stranded by fiber cross-connect backlog",
+          "reason": "Current case-study evidence is not imported. The request targets Step-level baseline for Fiber cross-connect provisioning without changing generated artifact status.",
+          "preferred_source_owner": "Network provisioning or data center operations owner",
+          "expected_artifact_type": "claim_support_memo"
+        },
+        {
+          "source_request_id": "source-request:strategic-040:case-study",
+          "constraint_id": "strategic-040",
+          "constraint_title": "AI training workload scheduling against power and cooling envelope mismatch",
+          "artifact_ids": [
+            "artifact:cluster:strategic-040:metric",
+            "artifact:cluster:strategic-040:evidence",
+            "artifact:cluster:strategic-040:intervention-blocking",
+            "artifact:cluster:strategic-040:source"
+          ],
+          "source_quality_tier": "Company filing or official technical report",
+          "request_title": "Collect primary or operational evidence for AI training workload scheduling against power and cooling envelope mismatch",
+          "reason": "Current case-study evidence is not imported. The request targets Step-level baseline for Compute workload capacity scheduling without changing generated artifact status.",
+          "preferred_source_owner": "Facilities commissioning, thermal engineering, or data center operations owner",
+          "expected_artifact_type": "metric_definition"
+        },
+        {
+          "source_request_id": "source-request:strategic-041:case-study",
+          "constraint_id": "strategic-041",
+          "constraint_title": "Data center backup generation permit readiness drag",
+          "artifact_ids": [
+            "artifact:cluster:strategic-041:metric",
+            "artifact:cluster:strategic-041:evidence",
+            "artifact:cluster:strategic-041:source",
+            "artifact:cluster:strategic-041:intervention-blocking"
+          ],
+          "source_quality_tier": "Primary public document / regulator / utility / official docket / official filing",
+          "request_title": "Collect primary or operational evidence for Data center backup generation permit readiness drag",
+          "reason": "Current case-study evidence is not imported. The request targets Step-level baseline for Backup generation permit readiness without changing generated artifact status.",
+          "preferred_source_owner": "Environmental permitting, resilience, or facilities commissioning owner",
+          "expected_artifact_type": "metric_definition"
+        },
+        {
+          "source_request_id": "source-request:strategic-001:case-study",
+          "constraint_id": "strategic-001",
+          "constraint_title": "Grid interconnection queue delay",
+          "artifact_ids": [
+            "artifact:cluster:strategic-001:metric",
+            "artifact:cluster:strategic-001:evidence",
+            "artifact:cluster:strategic-001:source",
+            "artifact:cluster:strategic-001:intervention-blocking"
+          ],
+          "source_quality_tier": "Primary public document / regulator / utility / official docket / official filing",
+          "request_title": "Collect primary or operational evidence for Grid interconnection queue delay",
+          "reason": "Current case-study evidence is not imported. The request targets Step-level baseline for Interconnection study without changing generated artifact status.",
+          "preferred_source_owner": "Utility interconnection, load study, asset planning, or grid planning owner",
+          "expected_artifact_type": "metric_definition"
+        },
+        {
+          "source_request_id": "source-request:strategic-002:case-study",
+          "constraint_id": "strategic-002",
+          "constraint_title": "Transformer lead-time bottleneck",
+          "artifact_ids": [
+            "artifact:cluster:strategic-002:evidence",
+            "artifact:cluster:strategic-002:source",
+            "artifact:cluster:strategic-002:intervention-blocking",
+            "artifact:source:strategic-002:source-energy-grid-interconnection-process-pattern-review"
+          ],
+          "source_quality_tier": "Primary public document / regulator / utility / official docket / official filing",
+          "request_title": "Collect primary or operational evidence for Transformer lead-time bottleneck",
+          "reason": "Current case-study evidence is not imported. The request targets Step-level baseline for Transformer procurement without changing generated artifact status.",
+          "preferred_source_owner": "Utility interconnection, load study, asset planning, or grid planning owner",
+          "expected_artifact_type": "claim_support_memo"
+        },
+        {
+          "source_request_id": "source-request:strategic-048:case-study",
+          "constraint_id": "strategic-048",
+          "constraint_title": "Grid load study queue for large load requests",
+          "artifact_ids": [
+            "artifact:cluster:strategic-048:metric",
+            "artifact:cluster:strategic-048:evidence",
+            "artifact:cluster:strategic-048:source",
+            "artifact:cluster:strategic-048:intervention-blocking"
+          ],
+          "source_quality_tier": "Primary public document / regulator / utility / official docket / official filing",
+          "request_title": "Collect primary or operational evidence for Grid load study queue for large load requests",
+          "reason": "Current case-study evidence is not imported. The request targets Step-level baseline for Large load interconnection study without changing generated artifact status.",
+          "preferred_source_owner": "Utility interconnection, load study, asset planning, or grid planning owner",
+          "expected_artifact_type": "metric_definition"
+        }
+      ],
+      "risk_limitation_statement": "This case study is evidence-request-backed. It uses existing constraint hypotheses and generated artifact needs, but no imported evidence record currently supports or completes the case.",
+      "recommended_next_validation_actions": [
+        "Collect a timestamped large-load or interconnection study queue extract for the grid-side constraints.",
+        "Collect a commissioning readiness tracker or acceptance checklist showing power, cooling, network, and backup generation dependencies for the data-center-side constraints.",
+        "Define a shared metric for request date, study completion, energization commitment, commissioning acceptance, and first production workload.",
+        "Map each artifact to a source owner before changing any artifact or analyst state status.",
+        "Use the evidence import contract for metadata only until a real artifact is collected and review-ready."
+      ],
+      "recommended_first_campaign": {
+        "title": "Case-study evidence request campaign",
+        "objective": "Start with source requests for load study timing and GPU cluster commissioning sequencing before attempting intervention claims.",
+        "ordered_constraint_ids": [
+          "strategic-048",
+          "strategic-037",
+          "strategic-001",
+          "strategic-002",
+          "strategic-040",
+          "strategic-038",
+          "strategic-039",
+          "strategic-041"
+        ],
+        "reason": "This order starts with grid-side service commitment timing, then follows the dependency chain into site commissioning and workload execution."
+      },
+      "decision_support_later": [
+        "Prioritize which queue to instrument first in a local validation sprint.",
+        "Decide whether the main near-term blocker is grid study timing, equipment readiness, facility acceptance, or workload scheduling.",
+        "Define an evidence threshold before proposing workflow automation, queue triage, or capacity planning changes."
+      ],
+      "constraints": [
+        {
+          "constraint_id": "strategic-037",
+          "title": "GPU cluster commissioning dependency on power delivery sequencing",
+          "industry": "Data Centers / AI Infrastructure",
+          "priority_score": 6.3,
+          "strategic_score": 7.7,
+          "validation_confidence": 3.6,
+          "primary_archetype": "interconnection_delay",
+          "mechanism": "High-density compute clusters can wait for utility feeds, switchgear, backup power, cooling, and acceptance testing to clear in the right sequence.",
+          "evidence_gaps": [
+            "Step-level baseline for GPU cluster power readiness commissioning",
+            "Observed frequency and owner of delay before Production cluster burn-in"
+          ],
+          "artifact_ids": [
+            "artifact:cluster:strategic-037:metric",
+            "artifact:cluster:strategic-037:evidence",
+            "artifact:cluster:strategic-037:source",
+            "artifact:cluster:strategic-037:intervention-blocking",
+            "artifact:source:strategic-037:source-data-centers-ai-infrastructure-process-pattern-review",
+            "artifact:source:strategic-037:source-structured-hypothesis-local-operational-evidence-required"
+          ],
+          "route": "/constraints/strategic-037",
+          "network_route": "/network?focus=strategic-037"
+        },
+        {
+          "constraint_id": "strategic-038",
+          "title": "Liquid cooling loop validation bottleneck",
+          "industry": "Data Centers / AI Infrastructure",
+          "priority_score": 6.3,
+          "strategic_score": 7.7,
+          "validation_confidence": 3.7,
+          "primary_archetype": "manual_verification_drag",
+          "mechanism": "Dense rack deployments depend on leak testing, flow balancing, sensor calibration, and facilities acceptance before compute load can ramp.",
+          "evidence_gaps": [
+            "Step-level baseline for Liquid cooling validation",
+            "Observed frequency and owner of delay before Rack power-on approval"
+          ],
+          "artifact_ids": [
+            "artifact:cluster:strategic-038:metric",
+            "artifact:cluster:strategic-038:evidence",
+            "artifact:cluster:strategic-038:source",
+            "artifact:cluster:strategic-038:intervention-blocking",
+            "artifact:source:strategic-038:source-data-centers-ai-infrastructure-process-pattern-review",
+            "artifact:source:strategic-038:source-structured-hypothesis-local-operational-evidence-required"
+          ],
+          "route": "/constraints/strategic-038",
+          "network_route": "/network?focus=strategic-038"
+        },
+        {
+          "constraint_id": "strategic-039",
+          "title": "High-density rack deployment stranded by fiber cross-connect backlog",
+          "industry": "Data Centers / AI Infrastructure",
+          "priority_score": 6.5,
+          "strategic_score": 7.9,
+          "validation_confidence": 3.8,
+          "primary_archetype": "handoff_leakage",
+          "mechanism": "Compute racks can be physically installed before network cross-connects, port mapping, and routing approvals are ready.",
+          "evidence_gaps": [
+            "Step-level baseline for Fiber cross-connect provisioning",
+            "Observed frequency and owner of delay before Cluster acceptance testing"
+          ],
+          "artifact_ids": [
+            "artifact:cluster:strategic-039:evidence",
+            "artifact:cluster:strategic-039:intervention-blocking",
+            "artifact:cluster:strategic-039:source",
+            "artifact:source:strategic-039:source-data-centers-ai-infrastructure-process-pattern-review",
+            "artifact:source:strategic-039:source-structured-hypothesis-local-operational-evidence-required"
+          ],
+          "route": "/constraints/strategic-039",
+          "network_route": "/network?focus=strategic-039"
+        },
+        {
+          "constraint_id": "strategic-040",
+          "title": "AI training workload scheduling against power and cooling envelope mismatch",
+          "industry": "Data Centers / AI Infrastructure",
+          "priority_score": 6.3,
+          "strategic_score": 7.8,
+          "validation_confidence": 3.8,
+          "primary_archetype": "capacity_mismatch",
+          "mechanism": "Training jobs, maintenance windows, power limits, and thermal constraints can be planned in separate systems, creating avoidable throttling or idle capacity.",
+          "evidence_gaps": [
+            "Step-level baseline for Compute workload capacity scheduling",
+            "Observed frequency and owner of delay before Training job execution"
+          ],
+          "artifact_ids": [
+            "artifact:cluster:strategic-040:metric",
+            "artifact:cluster:strategic-040:evidence",
+            "artifact:cluster:strategic-040:intervention-blocking",
+            "artifact:cluster:strategic-040:source",
+            "artifact:source:strategic-040:source-data-centers-ai-infrastructure-process-pattern-review",
+            "artifact:source:strategic-040:source-structured-hypothesis-local-operational-evidence-required"
+          ],
+          "route": "/constraints/strategic-040",
+          "network_route": "/network?focus=strategic-040"
+        },
+        {
+          "constraint_id": "strategic-041",
+          "title": "Data center backup generation permit readiness drag",
+          "industry": "Data Centers / AI Infrastructure",
+          "priority_score": 5.8,
+          "strategic_score": 7.3,
+          "validation_confidence": 3.7,
+          "primary_archetype": "permitting_delay",
+          "mechanism": "Backup generation plans can wait on emissions documentation, operating limits, test procedures, and local permit approval before commissioning.",
+          "evidence_gaps": [
+            "Step-level baseline for Backup generation permit readiness",
+            "Observed frequency and owner of delay before Resilience commissioning"
+          ],
+          "artifact_ids": [
+            "artifact:cluster:strategic-041:metric",
+            "artifact:cluster:strategic-041:evidence",
+            "artifact:cluster:strategic-041:source",
+            "artifact:cluster:strategic-041:intervention-blocking",
+            "artifact:source:strategic-041:source-data-centers-ai-infrastructure-process-pattern-review",
+            "artifact:source:strategic-041:source-structured-hypothesis-local-operational-evidence-required"
+          ],
+          "route": "/constraints/strategic-041",
+          "network_route": "/network?focus=strategic-041"
+        },
+        {
+          "constraint_id": "strategic-001",
+          "title": "Grid interconnection queue delay",
+          "industry": "Energy / Grid / Interconnection",
+          "priority_score": 6.3,
+          "strategic_score": 7.7,
+          "validation_confidence": 5.8,
+          "primary_archetype": "interconnection_delay",
+          "mechanism": "Projects wait through sequential study queues before connection requirements and upgrade obligations are clear.",
+          "evidence_gaps": [
+            "Step-level baseline for Interconnection study",
+            "Observed frequency and owner of delay before Project financing"
+          ],
+          "artifact_ids": [
+            "artifact:cluster:strategic-001:metric",
+            "artifact:cluster:strategic-001:evidence",
+            "artifact:cluster:strategic-001:source",
+            "artifact:cluster:strategic-001:intervention-blocking",
+            "artifact:source:strategic-001:source-energy-grid-interconnection-process-pattern-review",
+            "artifact:source:strategic-001:source-structured-hypothesis-local-operational-evidence-required"
+          ],
+          "route": "/constraints/strategic-001",
+          "network_route": "/network?focus=strategic-001"
+        },
+        {
+          "constraint_id": "strategic-002",
+          "title": "Transformer lead-time bottleneck",
+          "industry": "Energy / Grid / Interconnection",
+          "priority_score": 6.3,
+          "strategic_score": 7.6,
+          "validation_confidence": 5.6,
+          "primary_archetype": "equipment_lead_time",
+          "mechanism": "Long-cycle transformer procurement limits the timing of grid upgrades, replacement work, and new service capacity.",
+          "evidence_gaps": [
+            "Step-level baseline for Transformer procurement",
+            "Observed frequency and owner of delay before Energization schedule"
+          ],
+          "artifact_ids": [
+            "artifact:cluster:strategic-002:evidence",
+            "artifact:cluster:strategic-002:source",
+            "artifact:cluster:strategic-002:intervention-blocking",
+            "artifact:source:strategic-002:source-energy-grid-interconnection-process-pattern-review",
+            "artifact:source:strategic-002:source-structured-hypothesis-local-operational-evidence-required"
+          ],
+          "route": "/constraints/strategic-002",
+          "network_route": "/network?focus=strategic-002"
+        },
+        {
+          "constraint_id": "strategic-048",
+          "title": "Grid load study queue for large load requests",
+          "industry": "Energy / Grid / Interconnection",
+          "priority_score": 6.1,
+          "strategic_score": 7.6,
+          "validation_confidence": 3.6,
+          "primary_archetype": "interconnection_delay",
+          "mechanism": "Large load customers can wait for capacity studies, upgrade estimates, protection review, and service agreement decisions before site plans are firm.",
+          "evidence_gaps": [
+            "Step-level baseline for Large load interconnection study",
+            "Observed frequency and owner of delay before Site energization commitment"
+          ],
+          "artifact_ids": [
+            "artifact:cluster:strategic-048:metric",
+            "artifact:cluster:strategic-048:evidence",
+            "artifact:cluster:strategic-048:source",
+            "artifact:cluster:strategic-048:intervention-blocking",
+            "artifact:source:strategic-048:source-energy-grid-interconnection-process-pattern-review",
+            "artifact:source:strategic-048:source-structured-hypothesis-local-operational-evidence-required"
+          ],
+          "route": "/constraints/strategic-048",
+          "network_route": "/network?focus=strategic-048"
+        }
+      ],
+      "report_path": "data/exports/case_study_reports/ai-data-center-power-grid-interconnection-bottlenecks.md"
+    }
+  ]
+}

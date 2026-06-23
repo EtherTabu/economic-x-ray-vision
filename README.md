@@ -41,6 +41,7 @@ Economic X-Ray Vision currently:
 - Matches imported evidence metadata to generated artifact needs and reports uncovered, candidate, blocked, and review-ready coverage.
 - Plans fast, standard, and deep validation campaigns from triage, source, evidence, and comparison signals.
 - Builds deterministic Markdown and JSON analyst reports for validation priorities, evidence coverage, campaigns, and top constraints.
+- Builds a focused evidence-request-backed case study for AI data center power and grid interconnection bottlenecks.
 - Generates a separate local analyst state template for review, collection, assignment, blocking, and campaign progress tracking.
 - Proposes deterministic intervention strategies and first experiments.
 - Compares 2-4 constraints side by side to explain why one outranks another.
@@ -87,6 +88,7 @@ Current metrics:
 - 459 uncovered artifact needs in the evidence matching workspace
 - 3 validation campaign modes
 - 15 deterministic analyst reports
+- 1 evidence-request-backed case study
 - 1060 local analyst state template records
 - Local-first data and scripts
 - Deterministic scoring
@@ -109,6 +111,7 @@ Current metrics:
 - **Evidence Matching Workspace**: connects imported evidence metadata to artifact needs by explicit IDs, constraints, or source records while preserving zero-import honesty.
 - **Validation Campaign Planner**: groups top actions into fast, standard, and deep campaign plans.
 - **Report Builder**: exports compact Markdown and JSON analyst reports from existing local intelligence artifacts.
+- **Case Study Builder**: groups existing constraints, artifact needs, source requests, and limitations into focused evidence-request-backed case studies.
 - **Local Analyst State**: creates a separate non-complete template for tracking future human review and artifact collection progress.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
@@ -126,6 +129,7 @@ Current metrics:
 - `/campaigns`: validation campaign planner with fast, standard, and deep campaign modes.
 - `/campaigns/[id]`: execution workspace for one validation campaign.
 - `/reports`: read-only report index for generated Markdown and JSON analyst reports.
+- `/case-studies`: read-only case-study workspace for focused evidence-request-backed constraint clusters.
 - `/compare`: side-by-side constraint comparison workspace.
 - `/sources`: source registry workspace for provenance, citation status, and constraint dependencies.
 - `/network`: constraint network explorer with search, filters, and focus links.
@@ -151,6 +155,7 @@ flowchart TD
   P --> J["Validation Campaigns"]
   J --> S["Markdown + JSON Reports"]
   R --> S
+  S --> X["Case Study Packs + Reports"]
   F --> K["Intervention Strategies"]
   C --> L["Archetype Analysis"]
   L --> M["Constraint Network"]
@@ -180,6 +185,7 @@ flowchart TD
   V --> W["Evidence Artifact Matching"]
   U --> S["Validation Campaigns"]
   S --> X["Report Builder"]
+  X --> Y["Case Study Builder"]
   O --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
   J --> N["Constraint Network Map"]
@@ -202,6 +208,7 @@ flowchart TD
   W --> L
   S --> L
   X --> L
+  Y --> L
   I --> L
   J --> L
   N --> L
@@ -273,6 +280,7 @@ npm run evidence-imports
 npm run evidence-matches
 npm run campaigns
 npm run reports
+npm run case-studies
 npm run analyst-state
 npm run coverage
 npm run sqlite
@@ -298,6 +306,8 @@ npm run sqlite
 - `data/exports/reports/report_index.json`
 - `data/exports/reports/*.md`
 - `data/exports/reports/*.json`
+- `data/exports/case_studies.json`
+- `data/exports/case_study_reports/*.md`
 - `data/exports/analyst_state_template.json`
 - `data/exports/coverage_density_report.json`
 - `data/exports/constraint_intelligence.sqlite`

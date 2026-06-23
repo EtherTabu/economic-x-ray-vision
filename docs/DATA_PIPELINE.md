@@ -51,6 +51,7 @@ flowchart TD
   J --> R["Analyst State Template"]
   J --> V["Markdown + JSON Reports"]
   U --> V
+  V --> W["Case Study Packs + Reports"]
   F --> K["Intervention Strategies"]
   K --> L["Archetype Analysis"]
   L --> M["Constraint Network"]
@@ -69,6 +70,7 @@ flowchart TD
   U --> P
   J --> P
   V --> P
+  W --> P
   R --> P
   K --> P
   L --> P
@@ -94,6 +96,7 @@ flowchart TD
 - `npm run evidence-matches`: builds and audits evidence-to-artifact matching and uncovered artifact coverage.
 - `npm run campaigns`: builds and audits validation campaign plans.
 - `npm run reports`: builds and audits Markdown and JSON analyst reports.
+- `npm run case-studies`: builds and audits focused evidence-request-backed case studies.
 - `npm run analyst-state`: builds and audits the local analyst state template.
 - `npm run coverage`: builds upstream artifacts and audits frontier coverage density.
 - `npm run sqlite`: builds, audits, inspects, and parity-checks the local SQLite artifact.
@@ -119,6 +122,8 @@ flowchart TD
 - `data/exports/reports/report_index.json`
 - `data/exports/reports/*.md`
 - `data/exports/reports/*.json`
+- `data/exports/case_studies.json`
+- `data/exports/case_study_reports/*.md`
 - `data/exports/analyst_state_template.json`
 - `data/exports/coverage_density_report.json`
 - `data/exports/constraint_intelligence.sqlite`

@@ -249,6 +249,12 @@ V27.0 adds evidence-to-artifact matching as a read-only reporting layer. The exp
 
 V28.0 adds deterministic Markdown and JSON report generation. The report builder writes `data/exports/reports/report_index.json` plus compact report files for validation priorities, evidence coverage, each validation campaign, and the top validation queue constraints. Reports are generated from existing local exports only; they label hypotheses, evidence gaps, artifact needs, validation burden, analyst state, uncovered evidence, next validation actions, and limitations without PDF generation, external APIs, scraping, or fake evidence claims.
 
+## V29.0 Technical Note
+
+V29.0 adds a focused real-world mini case-study layer without broad dataset expansion. The first case study, `case-study:ai-data-center-power-grid-interconnection`, groups eight existing AI data center and grid interconnection constraints into an evidence-request-backed workflow. It links generated artifact needs, source requests, validation questions, limitations, and a Markdown case-study report without adding fake evidence imports, fake source URLs, or completion claims.
+
+The export `data/exports/case_studies.json` and report folder `data/exports/case_study_reports/` are generated from existing local intelligence layers. The `/case-studies` route makes the case-study posture inspectable while preserving the boundary between source requests and collected evidence.
+
 ## V21.0 Technical Note
 
 V21.0 aligned README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
@@ -262,9 +268,12 @@ V23.1 refreshes repository presentation without changing product behavior. The R
 - `/`: portfolio dashboard, summary panels, filters, expanded cards, and links into workspaces.
 - `/validation`: validation workbench with triage, evidence packets, and raw generated tasks.
 - `/campaigns`: validation campaign planner with fast, standard, and deep plans.
+- `/case-studies`: focused evidence-request-backed case-study workspace.
 - `/compare`: constraint comparison workspace.
 - `/sources`: source registry and evidence pack workspace.
 - `/network`: constraint network explorer with search, filters, and focused neighborhoods.
+- `/reports`: read-only report index for generated Markdown and JSON analyst reports.
+- `/evidence`: evidence-to-artifact matching workspace.
 - `/constraints/[id]`: record-level investigation workspace.
 
 ## Current Data Pipeline
@@ -285,6 +294,7 @@ The current pipeline is:
 12. Evidence matching reports artifact coverage without changing generated artifact or analyst-state statuses.
 13. Campaigns group top validation work into fast, standard, and deep plans.
 14. Reports package validation, evidence, campaign, and top constraint findings into Markdown and JSON artifacts.
-15. Analyst state templates track future human progress separately from generated intelligence.
-16. Coverage density audits track frontier-domain expansion and generated-layer growth.
-17. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
+15. Case studies group existing constraints, artifact needs, source requests, validation questions, and limitations into focused evidence-request-backed workflows.
+16. Analyst state templates track future human progress separately from generated intelligence.
+17. Coverage density audits track frontier-domain expansion and generated-layer growth.
+18. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
