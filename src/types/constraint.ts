@@ -31,10 +31,14 @@ export type RecordOrigin = "seed" | "intake";
 
 export type ConstraintIndustry =
   | "Healthcare"
+  | "Data Centers / AI Infrastructure"
   | "Energy / Grid / Interconnection"
+  | "Power Generation / Nuclear / SMR"
   | "Infrastructure / Permitting / Construction"
   | "Semiconductors / Advanced Manufacturing"
   | "Metals / Mining / Critical Inputs"
+  | "Robotics / Automation Deployment"
+  | "Aerospace / Defense / Space Manufacturing"
   | "Logistics / Supply Chain / Industrial Equipment"
   | "Public-Sector Administration / Compliance";
 

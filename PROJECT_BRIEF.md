@@ -146,9 +146,9 @@ Future versions may add Python ingestion workers for scraping, AI extraction, NL
 
 Near-term:
 
-- Add local analyst state for notes, artifact collection status, task status history, and campaign progress
 - Pilot selected SQLite read paths only after parity checks and artifact workflow remain stable
 - Add evidence artifact intake once provenance and validation contracts are ready
+- Add local analyst state editing only after the template, audit, and separation rules remain stable
 
 Later:
 
@@ -223,6 +223,12 @@ V23.0 adds an evidence artifact contract and generated artifact library. The art
 
 V24.0 adds local analyst state as a separate template layer. Generated intelligence remains immutable: constraints, evidence artifacts, validation tasks, campaigns, and generated exports are not mutated to imply human progress. The export `data/exports/analyst_state_template.json` creates unassigned, non-complete state records for artifacts, validation tasks, campaigns, and constraints so future local analyst workflows can track review, collection, blockers, deferrals, and assignments without fake completion claims.
 
+## V25.0 Technical Note
+
+V25.0 expands frontier infrastructure coverage density without adding external sourcing, scraping, APIs, or fake validation claims. The dataset grows from 52 to 84 constraint records with focused hypotheses across data centers and AI infrastructure, power generation and nuclear/SMR, grid interconnection and transmission, semiconductors, critical minerals and refining, robotics deployment, aerospace/defense/space manufacturing, and industrial logistics/field operations.
+
+New records are intentionally evidence-humble: they use operational-pattern source metadata, low evidence strength, unverified validation status, and explicit local evidence requirements. The coverage density audit writes `data/exports/coverage_density_report.json`, comparing the V24 baseline to the current dataset across record count, frontier domain coverage, industry and archetype distribution, evidence posture, validation task growth, evidence artifact growth, and analyst state growth.
+
 ## V21.0 Technical Note
 
 V21.0 aligned README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
@@ -256,4 +262,5 @@ The current pipeline is:
 9. The evidence artifact library defines the specific documents, observations, metrics, or source artifacts still needed.
 10. Campaigns group top validation work into fast, standard, and deep plans.
 11. Analyst state templates track future human progress separately from generated intelligence.
-12. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
+12. Coverage density audits track frontier-domain expansion and generated-layer growth.
+13. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.

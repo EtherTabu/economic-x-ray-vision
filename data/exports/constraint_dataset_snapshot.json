@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-14T23:56:23.117Z",
-  "record_count": 52,
+  "generated_at": "2026-06-23T03:20:32.593Z",
+  "record_count": 84,
   "records": [
     {
       "id": "hc-admin-001",
@@ -5803,79 +5803,3667 @@
         "cross_industry_similarity_score": 9.4,
         "total_priority_score": 5.8
       }
+    },
+    {
+      "id": "strategic-037",
+      "origin": "seed",
+      "industry": "Data Centers / AI Infrastructure",
+      "subsector": "Cluster Commissioning",
+      "title": "GPU cluster commissioning dependency on power delivery sequencing",
+      "category": "Process Handoff",
+      "description": "High-density compute clusters can wait for utility feeds, switchgear, backup power, cooling, and acceptance testing to clear in the right sequence.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in GPU cluster power readiness commissioning.",
+        "Operational review should confirm whether Commissioning readiness tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: interconnection delay."
+      ],
+      "affected_parties": [
+        "Data center operators",
+        "Electrical contractors",
+        "Utility planners",
+        "Compute infrastructure teams"
+      ],
+      "current_process": [
+        "GPU cluster power readiness commissioning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Commissioning readiness tracker.",
+        "Work proceeds only after the constraint clears enough for Production cluster burn-in."
+      ],
+      "resource_waste": [
+        "Idle compute hardware",
+        "Commissioning rework",
+        "Schedule resequencing"
+      ],
+      "time_waste": 9,
+      "capital_waste": 9,
+      "labor_waste": 6,
+      "opportunity_cost": "Expensive compute assets can sit ready before the physical power path is accepted for sustained load.",
+      "estimated_annual_impact": "High for large accelerated-compute deployments",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Data Centers / AI Infrastructure process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside GPU cluster power readiness commissioning.",
+        "Compare Commissioning readiness tracker records with downstream outcomes in Production cluster burn-in."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for GPU cluster power readiness commissioning",
+        "Observed frequency and owner of delay before Production cluster burn-in"
+      ],
+      "upstream_constraints": [
+        "GPU cluster power readiness commissioning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Production cluster burn-in",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "GPU cluster power readiness commissioning",
+        "GPU cluster power readiness commissioning validation",
+        "Production cluster burn-in"
+      ],
+      "affected_systems": [
+        "Commissioning readiness tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument GPU cluster power readiness commissioning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant interconnection delay signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "interconnection_delay",
+      "secondary_archetypes": [
+        "capacity_mismatch",
+        "equipment_lead_time",
+        "infrastructure_siting"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "GPU cluster commissioning dependency on power delivery sequencing matches interconnection delay because the constraint centers on GPU cluster power readiness commissioning and delays Production cluster burn-in.",
+      "scores": {
+        "severity_score": 8.1,
+        "solvability_score": 5.3,
+        "ai_readiness_score": 5.8,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.6,
+        "measurability_score": 4.3,
+        "validation_confidence_score": 3.6,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.7,
+        "opportunity_score": 5.5,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-038",
+      "origin": "seed",
+      "industry": "Data Centers / AI Infrastructure",
+      "subsector": "Thermal Systems",
+      "title": "Liquid cooling loop validation bottleneck",
+      "category": "Manual Verification",
+      "description": "Dense rack deployments depend on leak testing, flow balancing, sensor calibration, and facilities acceptance before compute load can ramp.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Liquid cooling validation.",
+        "Operational review should confirm whether Thermal commissioning checklist captures queue, handoff, or capacity data.",
+        "Initial pattern match: manual verification drag."
+      ],
+      "affected_parties": [
+        "Facilities engineers",
+        "Compute operators",
+        "Cooling vendors",
+        "Commissioning agents"
+      ],
+      "current_process": [
+        "Liquid cooling validation receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Thermal commissioning checklist.",
+        "Work proceeds only after the constraint clears enough for Rack power-on approval."
+      ],
+      "resource_waste": [
+        "Rack idle time",
+        "Manual inspection cycles",
+        "Thermal tuning rework"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "Compute capacity waits while thermal readiness is manually proven and exceptions are resolved.",
+      "estimated_annual_impact": "Moderate to high for high-density data halls",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Data Centers / AI Infrastructure process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Liquid cooling validation.",
+        "Compare Thermal commissioning checklist records with downstream outcomes in Rack power-on approval."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Liquid cooling validation",
+        "Observed frequency and owner of delay before Rack power-on approval"
+      ],
+      "upstream_constraints": [
+        "Liquid cooling validation intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Rack power-on approval",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Liquid cooling validation",
+        "Liquid cooling validation validation",
+        "Rack power-on approval"
+      ],
+      "affected_systems": [
+        "Thermal commissioning checklist",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Liquid cooling validation with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant manual verification drag signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "manual_verification_drag",
+      "secondary_archetypes": [
+        "inspection_delay",
+        "measurement_blind_spot",
+        "capacity_mismatch"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Liquid cooling loop validation bottleneck matches manual verification drag because the constraint centers on Liquid cooling validation and delays Rack power-on approval.",
+      "scores": {
+        "severity_score": 7.8,
+        "solvability_score": 5.6,
+        "ai_readiness_score": 5.5,
+        "overlooked_opportunity_score": 7.2,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 5.7,
+        "total_strategic_score": 7.7,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-039",
+      "origin": "seed",
+      "industry": "Data Centers / AI Infrastructure",
+      "subsector": "Network Readiness",
+      "title": "High-density rack deployment stranded by fiber cross-connect backlog",
+      "category": "Process Handoff",
+      "description": "Compute racks can be physically installed before network cross-connects, port mapping, and routing approvals are ready.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Fiber cross-connect provisioning.",
+        "Operational review should confirm whether Network provisioning queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "affected_parties": [
+        "Network engineers",
+        "Data center operations",
+        "Fiber providers",
+        "Cluster reliability teams"
+      ],
+      "current_process": [
+        "Fiber cross-connect provisioning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Network provisioning queue.",
+        "Work proceeds only after the constraint clears enough for Cluster acceptance testing."
+      ],
+      "resource_waste": [
+        "Idle racks",
+        "Manual status chasing",
+        "Provisioning rework"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Hardware capacity is stranded until network readiness clears across multiple owners.",
+      "estimated_annual_impact": "Moderate to high in fast-ramp compute environments",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 5,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Data Centers / AI Infrastructure process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Fiber cross-connect provisioning.",
+        "Compare Network provisioning queue records with downstream outcomes in Cluster acceptance testing."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Fiber cross-connect provisioning",
+        "Observed frequency and owner of delay before Cluster acceptance testing"
+      ],
+      "upstream_constraints": [
+        "Fiber cross-connect provisioning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Cluster acceptance testing",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Fiber cross-connect provisioning",
+        "Fiber cross-connect provisioning validation",
+        "Cluster acceptance testing"
+      ],
+      "affected_systems": [
+        "Network provisioning queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Fiber cross-connect provisioning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant handoff leakage signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "queue_backlog",
+        "data_fragmentation",
+        "idle_capacity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "High-density rack deployment stranded by fiber cross-connect backlog matches handoff leakage because the constraint centers on Fiber cross-connect provisioning and delays Cluster acceptance testing.",
+      "scores": {
+        "severity_score": 7.5,
+        "solvability_score": 6.6,
+        "ai_readiness_score": 5.9,
+        "overlooked_opportunity_score": 7.3,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.9,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.5
+      }
+    },
+    {
+      "id": "strategic-040",
+      "origin": "seed",
+      "industry": "Data Centers / AI Infrastructure",
+      "subsector": "Compute Operations",
+      "title": "AI training workload scheduling against power and cooling envelope mismatch",
+      "category": "Market Mismatch",
+      "description": "Training jobs, maintenance windows, power limits, and thermal constraints can be planned in separate systems, creating avoidable throttling or idle capacity.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Compute workload capacity scheduling.",
+        "Operational review should confirm whether Cluster scheduler and facilities telemetry captures queue, handoff, or capacity data.",
+        "Initial pattern match: capacity mismatch."
+      ],
+      "affected_parties": [
+        "ML infrastructure teams",
+        "Facilities teams",
+        "Schedulers",
+        "Energy managers"
+      ],
+      "current_process": [
+        "Compute workload capacity scheduling receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Cluster scheduler and facilities telemetry.",
+        "Work proceeds only after the constraint clears enough for Training job execution."
+      ],
+      "resource_waste": [
+        "Idle accelerators",
+        "Thermal throttling",
+        "Schedule conflict resolution"
+      ],
+      "time_waste": 7,
+      "capital_waste": 9,
+      "labor_waste": 5,
+      "opportunity_cost": "Expensive compute capacity is misallocated when workload demand is not matched to physical operating envelopes.",
+      "estimated_annual_impact": "High where accelerated compute utilization governs operating economics",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 7,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Data Centers / AI Infrastructure process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Compute workload capacity scheduling.",
+        "Compare Cluster scheduler and facilities telemetry records with downstream outcomes in Training job execution."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Compute workload capacity scheduling",
+        "Observed frequency and owner of delay before Training job execution"
+      ],
+      "upstream_constraints": [
+        "Compute workload capacity scheduling intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Training job execution",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Compute workload capacity scheduling",
+        "Compute workload capacity scheduling validation",
+        "Training job execution"
+      ],
+      "affected_systems": [
+        "Cluster scheduler and facilities telemetry",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Compute workload capacity scheduling with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant capacity mismatch signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "capacity_mismatch",
+      "secondary_archetypes": [
+        "demand_forecast_mismatch",
+        "measurement_blind_spot",
+        "idle_capacity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "AI training workload scheduling against power and cooling envelope mismatch matches capacity mismatch because the constraint centers on Compute workload capacity scheduling and delays Training job execution.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 6.4,
+        "ai_readiness_score": 6.8,
+        "overlooked_opportunity_score": 6.5,
+        "evidence_score": 3.6,
+        "measurability_score": 5.1,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-041",
+      "origin": "seed",
+      "industry": "Data Centers / AI Infrastructure",
+      "subsector": "Backup Power",
+      "title": "Data center backup generation permit readiness drag",
+      "category": "Compliance Drag",
+      "description": "Backup generation plans can wait on emissions documentation, operating limits, test procedures, and local permit approval before commissioning.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Backup generation permit readiness.",
+        "Operational review should confirm whether Environmental permit package captures queue, handoff, or capacity data.",
+        "Initial pattern match: permitting delay."
+      ],
+      "affected_parties": [
+        "Facilities teams",
+        "Environmental reviewers",
+        "Generator vendors",
+        "Data center owners"
+      ],
+      "current_process": [
+        "Backup generation permit readiness receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Environmental permit package.",
+        "Work proceeds only after the constraint clears enough for Resilience commissioning."
+      ],
+      "resource_waste": [
+        "Permit resubmission",
+        "Equipment idle time",
+        "Consultant rework"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Critical resilience equipment may be physically available before operating approval is ready.",
+      "estimated_annual_impact": "Moderate to high for sites with large standby generation fleets",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 6,
+      "automation_potential": 4,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Data Centers / AI Infrastructure process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Backup generation permit readiness.",
+        "Compare Environmental permit package records with downstream outcomes in Resilience commissioning."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Backup generation permit readiness",
+        "Observed frequency and owner of delay before Resilience commissioning"
+      ],
+      "upstream_constraints": [
+        "Backup generation permit readiness intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Resilience commissioning",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Backup generation permit readiness",
+        "Backup generation permit readiness validation",
+        "Resilience commissioning"
+      ],
+      "affected_systems": [
+        "Environmental permit package",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Backup generation permit readiness with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant permitting delay signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "permitting_delay",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "regulatory_complexity",
+        "project_approval_friction"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Data center backup generation permit readiness drag matches permitting delay because the constraint centers on Backup generation permit readiness and delays Resilience commissioning.",
+      "scores": {
+        "severity_score": 7.5,
+        "solvability_score": 4.7,
+        "ai_readiness_score": 4.8,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 4.7,
+        "total_strategic_score": 7.3,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.8
+      }
+    },
+    {
+      "id": "strategic-042",
+      "origin": "seed",
+      "industry": "Power Generation / Nuclear / SMR",
+      "subsector": "Licensing",
+      "title": "SMR licensing evidence package iteration",
+      "category": "Compliance Drag",
+      "description": "Small modular reactor deployment planning depends on safety, siting, design, operating, and emergency planning evidence packages moving through iterative review.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in SMR licensing evidence package review.",
+        "Operational review should confirm whether Licensing evidence docket captures queue, handoff, or capacity data.",
+        "Initial pattern match: regulatory complexity."
+      ],
+      "affected_parties": [
+        "Project sponsors",
+        "Regulators",
+        "Engineering teams",
+        "Site owners"
+      ],
+      "current_process": [
+        "SMR licensing evidence package review receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Licensing evidence docket.",
+        "Work proceeds only after the constraint clears enough for Construction authorization readiness."
+      ],
+      "resource_waste": [
+        "Document iteration",
+        "Engineering response cycles",
+        "Schedule uncertainty"
+      ],
+      "time_waste": 9,
+      "capital_waste": 9,
+      "labor_waste": 7,
+      "opportunity_cost": "Deployment options wait while evidence packages mature enough for formal approval decisions.",
+      "estimated_annual_impact": "High for first-of-kind or early fleet deployment programs",
+      "growth_trend": "Increasing",
+      "visibility_score": 7,
+      "overlooked_score": 7,
+      "digital_solution_potential": 6,
+      "automation_potential": 4,
+      "ai_potential": 6,
+      "implementation_complexity": 9,
+      "regulatory_complexity": 10,
+      "adoption_complexity": 8,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Power Generation / Nuclear / SMR process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 9,
+      "data_availability": 4,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside SMR licensing evidence package review.",
+        "Compare Licensing evidence docket records with downstream outcomes in Construction authorization readiness."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for SMR licensing evidence package review",
+        "Observed frequency and owner of delay before Construction authorization readiness"
+      ],
+      "upstream_constraints": [
+        "SMR licensing evidence package review intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Construction authorization readiness",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "SMR licensing evidence package review",
+        "SMR licensing evidence package review validation",
+        "Construction authorization readiness"
+      ],
+      "affected_systems": [
+        "Licensing evidence docket",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument SMR licensing evidence package review with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant regulatory complexity signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "regulatory_complexity",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "project_approval_friction",
+        "permitting_delay"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "SMR licensing evidence package iteration matches regulatory complexity because the constraint centers on SMR licensing evidence package review and delays Construction authorization readiness.",
+      "scores": {
+        "severity_score": 8.4,
+        "solvability_score": 3.9,
+        "ai_readiness_score": 5,
+        "overlooked_opportunity_score": 6.2,
+        "evidence_score": 3.6,
+        "measurability_score": 3.5,
+        "validation_confidence_score": 3.4,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.9,
+        "opportunity_score": 4.5,
+        "total_strategic_score": 7.4,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.8
+      }
+    },
+    {
+      "id": "strategic-043",
+      "origin": "seed",
+      "industry": "Power Generation / Nuclear / SMR",
+      "subsector": "Plant Outages",
+      "title": "Turbine outage parts readiness constraint",
+      "category": "Hidden Cost",
+      "description": "Planned outage execution can lose time when long-cycle turbine parts, specialty tools, or qualified crews are not ready for the narrow outage window.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Turbine outage readiness planning.",
+        "Operational review should confirm whether Outage work management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: equipment lead time."
+      ],
+      "affected_parties": [
+        "Plant maintenance teams",
+        "OEM suppliers",
+        "Outage planners",
+        "Operations teams"
+      ],
+      "current_process": [
+        "Turbine outage readiness planning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Outage work management system.",
+        "Work proceeds only after the constraint clears enough for Unit return to service."
+      ],
+      "resource_waste": [
+        "Outage extension",
+        "Crew waiting",
+        "Parts expediting"
+      ],
+      "time_waste": 8,
+      "capital_waste": 9,
+      "labor_waste": 7,
+      "opportunity_cost": "Generating assets can remain unavailable because readiness signals were incomplete before outage execution.",
+      "estimated_annual_impact": "High for large generating units with scarce outage windows",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Power Generation / Nuclear / SMR process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Turbine outage readiness planning.",
+        "Compare Outage work management system records with downstream outcomes in Unit return to service."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Turbine outage readiness planning",
+        "Observed frequency and owner of delay before Unit return to service"
+      ],
+      "upstream_constraints": [
+        "Turbine outage readiness planning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Unit return to service",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Turbine outage readiness planning",
+        "Turbine outage readiness planning validation",
+        "Unit return to service"
+      ],
+      "affected_systems": [
+        "Outage work management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Turbine outage readiness planning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant equipment lead time signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "equipment_lead_time",
+      "secondary_archetypes": [
+        "workforce_constraint",
+        "measurement_blind_spot",
+        "idle_capacity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Turbine outage parts readiness constraint matches equipment lead time because the constraint centers on Turbine outage readiness planning and delays Unit return to service.",
+      "scores": {
+        "severity_score": 7.7,
+        "solvability_score": 5.6,
+        "ai_readiness_score": 5.8,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 5.8,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-044",
+      "origin": "seed",
+      "industry": "Power Generation / Nuclear / SMR",
+      "subsector": "Nuclear Quality",
+      "title": "Nuclear QA document traceability review queue",
+      "category": "Manual Verification",
+      "description": "Safety-related work packages can wait while material certificates, procedure revisions, inspection records, and configuration evidence are manually reconciled.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Nuclear QA traceability review.",
+        "Operational review should confirm whether Quality records repository captures queue, handoff, or capacity data.",
+        "Initial pattern match: manual verification drag."
+      ],
+      "affected_parties": [
+        "Quality assurance teams",
+        "Engineering teams",
+        "Maintenance crews",
+        "Regulatory affairs"
+      ],
+      "current_process": [
+        "Nuclear QA traceability review receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Quality records repository.",
+        "Work proceeds only after the constraint clears enough for Work package release."
+      ],
+      "resource_waste": [
+        "Manual document checks",
+        "Hold points",
+        "Configuration reconciliation"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 8,
+      "opportunity_cost": "Ready work can wait for traceability confidence before field execution proceeds.",
+      "estimated_annual_impact": "Moderate to high in regulated nuclear operations",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 9,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Power Generation / Nuclear / SMR process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Nuclear QA traceability review.",
+        "Compare Quality records repository records with downstream outcomes in Work package release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Nuclear QA traceability review",
+        "Observed frequency and owner of delay before Work package release"
+      ],
+      "upstream_constraints": [
+        "Nuclear QA traceability review intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Work package release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Nuclear QA traceability review",
+        "Nuclear QA traceability review validation",
+        "Work package release"
+      ],
+      "affected_systems": [
+        "Quality records repository",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Nuclear QA traceability review with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant manual verification drag signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "manual_verification_drag",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "regulatory_complexity",
+        "inspection_delay"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Nuclear QA document traceability review queue matches manual verification drag because the constraint centers on Nuclear QA traceability review and delays Work package release.",
+      "scores": {
+        "severity_score": 7.4,
+        "solvability_score": 4.9,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 6.4,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 5.5,
+        "total_strategic_score": 7.5,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.8
+      }
+    },
+    {
+      "id": "strategic-045",
+      "origin": "seed",
+      "industry": "Power Generation / Nuclear / SMR",
+      "subsector": "Grid Protection",
+      "title": "Power plant protection settings review backlog",
+      "category": "Administrative Delay",
+      "description": "Generator interconnection or modification work can wait while protection settings, relay studies, and operating procedures are reviewed across plant and grid owners.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Protection settings review.",
+        "Operational review should confirm whether Relay settings review workflow captures queue, handoff, or capacity data.",
+        "Initial pattern match: interconnection delay."
+      ],
+      "affected_parties": [
+        "Generation owners",
+        "Protection engineers",
+        "Grid operators",
+        "Plant operators"
+      ],
+      "current_process": [
+        "Protection settings review receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Relay settings review workflow.",
+        "Work proceeds only after the constraint clears enough for Generator synchronization approval."
+      ],
+      "resource_waste": [
+        "Engineering queue time",
+        "Test window delays",
+        "Procedure rework"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Physical generation capacity can wait for protection review before safe synchronization.",
+      "estimated_annual_impact": "Moderate for generation modification and interconnection programs",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Power Generation / Nuclear / SMR process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Protection settings review.",
+        "Compare Relay settings review workflow records with downstream outcomes in Generator synchronization approval."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Protection settings review",
+        "Observed frequency and owner of delay before Generator synchronization approval"
+      ],
+      "upstream_constraints": [
+        "Protection settings review intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Generator synchronization approval",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Protection settings review",
+        "Protection settings review validation",
+        "Generator synchronization approval"
+      ],
+      "affected_systems": [
+        "Relay settings review workflow",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Protection settings review with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant interconnection delay signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "interconnection_delay",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "queue_backlog",
+        "regulatory_complexity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Power plant protection settings review backlog matches interconnection delay because the constraint centers on Protection settings review and delays Generator synchronization approval.",
+      "scores": {
+        "severity_score": 7.5,
+        "solvability_score": 5.3,
+        "ai_readiness_score": 5.2,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 5.5,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-046",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Substation Commissioning",
+      "title": "Substation transformer energization test window bottleneck",
+      "category": "Idle Capacity",
+      "description": "New or replacement transformers can wait for crews, test equipment, protection checks, outage windows, and switching orders to align.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Transformer energization testing.",
+        "Operational review should confirm whether Substation commissioning plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: inspection delay."
+      ],
+      "affected_parties": [
+        "Utility operations",
+        "Substation engineers",
+        "Field crews",
+        "Large customers"
+      ],
+      "current_process": [
+        "Transformer energization testing receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Substation commissioning plan.",
+        "Work proceeds only after the constraint clears enough for Service capacity release."
+      ],
+      "resource_waste": [
+        "Equipment idle time",
+        "Crew rescheduling",
+        "Outage window churn"
+      ],
+      "time_waste": 8,
+      "capital_waste": 9,
+      "labor_waste": 6,
+      "opportunity_cost": "Installed grid assets do not unlock capacity until commissioning windows clear.",
+      "estimated_annual_impact": "High where transformer availability and energization windows are constrained",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 4,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Transformer energization testing.",
+        "Compare Substation commissioning plan records with downstream outcomes in Service capacity release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Transformer energization testing",
+        "Observed frequency and owner of delay before Service capacity release"
+      ],
+      "upstream_constraints": [
+        "Transformer energization testing intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Service capacity release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Transformer energization testing",
+        "Transformer energization testing validation",
+        "Service capacity release"
+      ],
+      "affected_systems": [
+        "Substation commissioning plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Transformer energization testing with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant inspection delay signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "inspection_delay",
+      "secondary_archetypes": [
+        "equipment_lead_time",
+        "queue_backlog",
+        "capacity_mismatch"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Substation transformer energization test window bottleneck matches inspection delay because the constraint centers on Transformer energization testing and delays Service capacity release.",
+      "scores": {
+        "severity_score": 7.8,
+        "solvability_score": 5.3,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 6.9,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 5.3,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.2
+      }
+    },
+    {
+      "id": "strategic-047",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Transmission Operations",
+      "title": "Transmission reconductoring outage coordination backlog",
+      "category": "Process Handoff",
+      "description": "Line upgrade work can wait while outage requests, reliability studies, crew plans, materials, and customer impact windows are coordinated.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Transmission outage coordination.",
+        "Operational review should confirm whether Outage coordination platform captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "affected_parties": [
+        "Transmission planners",
+        "Grid operators",
+        "Line crews",
+        "Industrial customers"
+      ],
+      "current_process": [
+        "Transmission outage coordination receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Outage coordination platform.",
+        "Work proceeds only after the constraint clears enough for Line upgrade execution."
+      ],
+      "resource_waste": [
+        "Deferred work",
+        "Crew resequencing",
+        "Material holding time"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Upgrade capacity is delayed when physical work is ready before outage authority and sequencing are aligned.",
+      "estimated_annual_impact": "Moderate to high for grid capacity upgrade portfolios",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Transmission outage coordination.",
+        "Compare Outage coordination platform records with downstream outcomes in Line upgrade execution."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Transmission outage coordination",
+        "Observed frequency and owner of delay before Line upgrade execution"
+      ],
+      "upstream_constraints": [
+        "Transmission outage coordination intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Line upgrade execution",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Transmission outage coordination",
+        "Transmission outage coordination validation",
+        "Line upgrade execution"
+      ],
+      "affected_systems": [
+        "Outage coordination platform",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Transmission outage coordination with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant handoff leakage signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "capacity_mismatch",
+        "queue_backlog",
+        "project_approval_friction"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Transmission reconductoring outage coordination backlog matches handoff leakage because the constraint centers on Transmission outage coordination and delays Line upgrade execution.",
+      "scores": {
+        "severity_score": 7.5,
+        "solvability_score": 5.3,
+        "ai_readiness_score": 5.2,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 5.5,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-048",
+      "origin": "seed",
+      "industry": "Energy / Grid / Interconnection",
+      "subsector": "Large Load Interconnection",
+      "title": "Grid load study queue for large load requests",
+      "category": "Administrative Delay",
+      "description": "Large load customers can wait for capacity studies, upgrade estimates, protection review, and service agreement decisions before site plans are firm.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Large load interconnection study.",
+        "Operational review should confirm whether Load request study queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: interconnection delay."
+      ],
+      "affected_parties": [
+        "Large load customers",
+        "Utilities",
+        "Economic development teams",
+        "Grid planners"
+      ],
+      "current_process": [
+        "Large load interconnection study receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Load request study queue.",
+        "Work proceeds only after the constraint clears enough for Site energization commitment."
+      ],
+      "resource_waste": [
+        "Site selection uncertainty",
+        "Engineering queue time",
+        "Capital planning churn"
+      ],
+      "time_waste": 9,
+      "capital_waste": 9,
+      "labor_waste": 6,
+      "opportunity_cost": "High-demand facilities cannot commit confidently until grid capacity and upgrade obligations are known.",
+      "estimated_annual_impact": "High for power-intensive industrial and compute sites",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 8,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Energy / Grid / Interconnection process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Large load interconnection study.",
+        "Compare Load request study queue records with downstream outcomes in Site energization commitment."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Large load interconnection study",
+        "Observed frequency and owner of delay before Site energization commitment"
+      ],
+      "upstream_constraints": [
+        "Large load interconnection study intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Site energization commitment",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Large load interconnection study",
+        "Large load interconnection study validation",
+        "Site energization commitment"
+      ],
+      "affected_systems": [
+        "Load request study queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Large load interconnection study with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant interconnection delay signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "interconnection_delay",
+      "secondary_archetypes": [
+        "queue_backlog",
+        "demand_forecast_mismatch",
+        "capacity_mismatch"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Grid load study queue for large load requests matches interconnection delay because the constraint centers on Large load interconnection study and delays Site energization commitment.",
+      "scores": {
+        "severity_score": 8.1,
+        "solvability_score": 5,
+        "ai_readiness_score": 5.1,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.6,
+        "measurability_score": 4.3,
+        "validation_confidence_score": 3.6,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.7,
+        "opportunity_score": 5.3,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-049",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Tool Installation",
+      "title": "Fab tool install qualification handoff delay",
+      "category": "Process Handoff",
+      "description": "New production tools wait across facilities hook-up, vendor install, process engineering, metrology, safety signoff, and qualification release.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Fab tool install qualification.",
+        "Operational review should confirm whether Tool qualification tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "affected_parties": [
+        "Fab operations",
+        "Tool vendors",
+        "Facilities teams",
+        "Process engineers"
+      ],
+      "current_process": [
+        "Fab tool install qualification receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Tool qualification tracker.",
+        "Work proceeds only after the constraint clears enough for Production recipe release."
+      ],
+      "resource_waste": [
+        "Tool idle time",
+        "Engineering handoff rework",
+        "Qualification queue aging"
+      ],
+      "time_waste": 8,
+      "capital_waste": 9,
+      "labor_waste": 7,
+      "opportunity_cost": "Capital equipment remains underused until multi-team qualification handoffs are complete.",
+      "estimated_annual_impact": "High in capital-intensive manufacturing ramps",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Fab tool install qualification.",
+        "Compare Tool qualification tracker records with downstream outcomes in Production recipe release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Fab tool install qualification",
+        "Observed frequency and owner of delay before Production recipe release"
+      ],
+      "upstream_constraints": [
+        "Fab tool install qualification intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Production recipe release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Fab tool install qualification",
+        "Fab tool install qualification validation",
+        "Production recipe release"
+      ],
+      "affected_systems": [
+        "Tool qualification tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Fab tool install qualification with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant handoff leakage signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "equipment_lead_time",
+        "manual_verification_drag",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Fab tool install qualification handoff delay matches handoff leakage because the constraint centers on Fab tool install qualification and delays Production recipe release.",
+      "scores": {
+        "severity_score": 8.1,
+        "solvability_score": 5.9,
+        "ai_readiness_score": 6.2,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.8,
+        "opportunity_score": 6,
+        "total_strategic_score": 7.9,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.5
+      }
+    },
+    {
+      "id": "strategic-050",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Specialty Materials",
+      "title": "Specialty gas delivery readiness mismatch",
+      "category": "Information Gap",
+      "description": "Production ramp plans can be constrained by gas supply readiness, cylinder changeover, bulk delivery capacity, hazardous material approvals, and site storage limits.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Specialty gas readiness planning.",
+        "Operational review should confirm whether Materials readiness plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: supply concentration."
+      ],
+      "affected_parties": [
+        "Fab supply chain teams",
+        "Gas suppliers",
+        "Facilities engineers",
+        "EHS reviewers"
+      ],
+      "current_process": [
+        "Specialty gas readiness planning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Materials readiness plan.",
+        "Work proceeds only after the constraint clears enough for Process tool ramp."
+      ],
+      "resource_waste": [
+        "Recipe delay",
+        "Expedite planning",
+        "Material shortage firefighting"
+      ],
+      "time_waste": 7,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Installed equipment cannot ramp if specialty material readiness is not synchronized with process demand.",
+      "estimated_annual_impact": "Moderate to high in advanced manufacturing ramps",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Specialty gas readiness planning.",
+        "Compare Materials readiness plan records with downstream outcomes in Process tool ramp."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Specialty gas readiness planning",
+        "Observed frequency and owner of delay before Process tool ramp"
+      ],
+      "upstream_constraints": [
+        "Specialty gas readiness planning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Process tool ramp",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Specialty gas readiness planning",
+        "Specialty gas readiness planning validation",
+        "Process tool ramp"
+      ],
+      "affected_systems": [
+        "Materials readiness plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Specialty gas readiness planning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant supply concentration signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "supply_concentration",
+      "secondary_archetypes": [
+        "capacity_mismatch",
+        "regulatory_complexity",
+        "demand_forecast_mismatch"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Specialty gas delivery readiness mismatch matches supply concentration because the constraint centers on Specialty gas readiness planning and delays Process tool ramp.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 5.4,
+        "ai_readiness_score": 5.2,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 5.6,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6
+      }
+    },
+    {
+      "id": "strategic-051",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Ramp Planning",
+      "title": "Cleanroom capacity allocation conflict during ramp",
+      "category": "Market Mismatch",
+      "description": "Pilot lots, engineering experiments, rework, maintenance, and production demand can compete for limited cleanroom tool time during ramp.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Cleanroom capacity allocation.",
+        "Operational review should confirm whether Manufacturing dispatch and planning system captures queue, handoff, or capacity data.",
+        "Initial pattern match: capacity mismatch."
+      ],
+      "affected_parties": [
+        "Production planners",
+        "Process engineers",
+        "Maintenance teams",
+        "Customer program teams"
+      ],
+      "current_process": [
+        "Cleanroom capacity allocation receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Manufacturing dispatch and planning system.",
+        "Work proceeds only after the constraint clears enough for Committed customer output."
+      ],
+      "resource_waste": [
+        "Tool queue aging",
+        "Expedite meetings",
+        "Experiment deferral"
+      ],
+      "time_waste": 7,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Capacity can be consumed by low-visibility conflicts instead of the highest-value production or learning path.",
+      "estimated_annual_impact": "High during yield learning and production ramp periods",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 7,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 6,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Cleanroom capacity allocation.",
+        "Compare Manufacturing dispatch and planning system records with downstream outcomes in Committed customer output."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Cleanroom capacity allocation",
+        "Observed frequency and owner of delay before Committed customer output"
+      ],
+      "upstream_constraints": [
+        "Cleanroom capacity allocation intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Committed customer output",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Cleanroom capacity allocation",
+        "Cleanroom capacity allocation validation",
+        "Committed customer output"
+      ],
+      "affected_systems": [
+        "Manufacturing dispatch and planning system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Cleanroom capacity allocation with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant capacity mismatch signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "capacity_mismatch",
+      "secondary_archetypes": [
+        "demand_forecast_mismatch",
+        "measurement_blind_spot",
+        "idle_capacity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Cleanroom capacity allocation conflict during ramp matches capacity mismatch because the constraint centers on Cleanroom capacity allocation and delays Committed customer output.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 6.3,
+        "ai_readiness_score": 6.8,
+        "overlooked_opportunity_score": 6.5,
+        "evidence_score": 3.6,
+        "measurability_score": 5.1,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-052",
+      "origin": "seed",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "subsector": "Advanced Packaging",
+      "title": "Advanced packaging substrate qualification bottleneck",
+      "category": "Manual Verification",
+      "description": "Substrate lots can wait on supplier qualification, reliability evidence, dimensional checks, and customer signoff before packaging capacity converts to shipment.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Packaging substrate qualification.",
+        "Operational review should confirm whether Supplier quality qualification system captures queue, handoff, or capacity data.",
+        "Initial pattern match: vendor qualification."
+      ],
+      "affected_parties": [
+        "Packaging engineers",
+        "Substrate suppliers",
+        "Quality teams",
+        "Customers"
+      ],
+      "current_process": [
+        "Packaging substrate qualification receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Supplier quality qualification system.",
+        "Work proceeds only after the constraint clears enough for Package build release."
+      ],
+      "resource_waste": [
+        "Material hold time",
+        "Quality review cycles",
+        "Customer exception closure"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "Packaging throughput can be constrained by supplier qualification evidence rather than installed equipment alone.",
+      "estimated_annual_impact": "High where substrate readiness gates advanced packaging output",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Semiconductors / Advanced Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Packaging substrate qualification.",
+        "Compare Supplier quality qualification system records with downstream outcomes in Package build release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Packaging substrate qualification",
+        "Observed frequency and owner of delay before Package build release"
+      ],
+      "upstream_constraints": [
+        "Packaging substrate qualification intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Package build release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Packaging substrate qualification",
+        "Packaging substrate qualification validation",
+        "Package build release"
+      ],
+      "affected_systems": [
+        "Supplier quality qualification system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Packaging substrate qualification with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant vendor qualification signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "vendor_qualification",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "supply_concentration",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Advanced packaging substrate qualification bottleneck matches vendor qualification because the constraint centers on Packaging substrate qualification and delays Package build release.",
+      "scores": {
+        "severity_score": 7.8,
+        "solvability_score": 6.2,
+        "ai_readiness_score": 6.2,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.9,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.5
+      }
+    },
+    {
+      "id": "strategic-053",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Offtake Qualification",
+      "title": "Critical mineral assay-to-offtake qualification delay",
+      "category": "Manual Verification",
+      "description": "Potential buyers often require repeat assays, sample chain-of-custody, impurity profiles, and processing fit evidence before offtake terms can advance.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Assay-to-offtake qualification.",
+        "Operational review should confirm whether Sample qualification tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: vendor qualification."
+      ],
+      "affected_parties": [
+        "Mine developers",
+        "Refiners",
+        "Offtake buyers",
+        "Laboratories"
+      ],
+      "current_process": [
+        "Assay-to-offtake qualification receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Sample qualification tracker.",
+        "Work proceeds only after the constraint clears enough for Offtake agreement decision."
+      ],
+      "resource_waste": [
+        "Sample retesting",
+        "Commercial delay",
+        "Technical clarification cycles"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Material supply can remain commercially stranded until buyers trust the assay and processing evidence.",
+      "estimated_annual_impact": "High for critical input projects seeking bankable demand signals",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 4,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Assay-to-offtake qualification.",
+        "Compare Sample qualification tracker records with downstream outcomes in Offtake agreement decision."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Assay-to-offtake qualification",
+        "Observed frequency and owner of delay before Offtake agreement decision"
+      ],
+      "upstream_constraints": [
+        "Assay-to-offtake qualification intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Offtake agreement decision",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Assay-to-offtake qualification",
+        "Assay-to-offtake qualification validation",
+        "Offtake agreement decision"
+      ],
+      "affected_systems": [
+        "Sample qualification tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Assay-to-offtake qualification with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant vendor qualification signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "vendor_qualification",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "documentation_chase",
+        "supply_concentration"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Critical mineral assay-to-offtake qualification delay matches vendor qualification because the constraint centers on Assay-to-offtake qualification and delays Offtake agreement decision.",
+      "scores": {
+        "severity_score": 7.5,
+        "solvability_score": 5.4,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.6,
+        "measurability_score": 3.9,
+        "validation_confidence_score": 3.5,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 5.6,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-054",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Processing Inputs",
+      "title": "Leach circuit reagent supply concentration risk",
+      "category": "Hidden Cost",
+      "description": "Hydrometallurgical processing output can depend on a narrow set of reagent suppliers, storage limits, delivery timing, and quality certificates.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Reagent supply readiness planning.",
+        "Operational review should confirm whether Process input supply plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: supply concentration."
+      ],
+      "affected_parties": [
+        "Processing operators",
+        "Reagent suppliers",
+        "Procurement teams",
+        "Production planners"
+      ],
+      "current_process": [
+        "Reagent supply readiness planning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Process input supply plan.",
+        "Work proceeds only after the constraint clears enough for Leach circuit throughput."
+      ],
+      "resource_waste": [
+        "Production derate",
+        "Emergency procurement",
+        "Inventory buffers"
+      ],
+      "time_waste": 7,
+      "capital_waste": 8,
+      "labor_waste": 5,
+      "opportunity_cost": "Processing capacity can be derated by input availability rather than plant equipment capacity.",
+      "estimated_annual_impact": "Moderate to high for reagent-sensitive processing operations",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Reagent supply readiness planning.",
+        "Compare Process input supply plan records with downstream outcomes in Leach circuit throughput."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Reagent supply readiness planning",
+        "Observed frequency and owner of delay before Leach circuit throughput"
+      ],
+      "upstream_constraints": [
+        "Reagent supply readiness planning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Leach circuit throughput",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Reagent supply readiness planning",
+        "Reagent supply readiness planning validation",
+        "Leach circuit throughput"
+      ],
+      "affected_systems": [
+        "Process input supply plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Reagent supply readiness planning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant supply concentration signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "supply_concentration",
+      "secondary_archetypes": [
+        "processing_capacity",
+        "demand_forecast_mismatch",
+        "equipment_lead_time"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Leach circuit reagent supply concentration risk matches supply concentration because the constraint centers on Reagent supply readiness planning and delays Leach circuit throughput.",
+      "scores": {
+        "severity_score": 6.9,
+        "solvability_score": 5.7,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.1,
+        "opportunity_score": 5.5,
+        "total_strategic_score": 7.5,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6
+      }
+    },
+    {
+      "id": "strategic-055",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Environmental Monitoring",
+      "title": "Tailings permit monitoring data gap",
+      "category": "Compliance Drag",
+      "description": "Tailings operations depend on inspection, water quality, geotechnical, and reporting evidence that may be fragmented across teams and reporting periods.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Tailings monitoring evidence reporting.",
+        "Operational review should confirm whether Environmental monitoring repository captures queue, handoff, or capacity data.",
+        "Initial pattern match: measurement blind spot."
+      ],
+      "affected_parties": [
+        "Mine operators",
+        "Environmental teams",
+        "Regulators",
+        "Community stakeholders"
+      ],
+      "current_process": [
+        "Tailings monitoring evidence reporting receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Environmental monitoring repository.",
+        "Work proceeds only after the constraint clears enough for Permit compliance decision."
+      ],
+      "resource_waste": [
+        "Manual data reconciliation",
+        "Reporting rework",
+        "Compliance review delay"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Operational flexibility can be constrained when monitoring evidence is not decision-ready.",
+      "estimated_annual_impact": "High for regulated mine and processing sites",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 9,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Tailings monitoring evidence reporting.",
+        "Compare Environmental monitoring repository records with downstream outcomes in Permit compliance decision."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Tailings monitoring evidence reporting",
+        "Observed frequency and owner of delay before Permit compliance decision"
+      ],
+      "upstream_constraints": [
+        "Tailings monitoring evidence reporting intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Permit compliance decision",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Tailings monitoring evidence reporting",
+        "Tailings monitoring evidence reporting validation",
+        "Permit compliance decision"
+      ],
+      "affected_systems": [
+        "Environmental monitoring repository",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Tailings monitoring evidence reporting with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant measurement blind spot signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "measurement_blind_spot",
+      "secondary_archetypes": [
+        "regulatory_complexity",
+        "documentation_chase",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Tailings permit monitoring data gap matches measurement blind spot because the constraint centers on Tailings monitoring evidence reporting and delays Permit compliance decision.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 5,
+        "ai_readiness_score": 4.9,
+        "overlooked_opportunity_score": 6.3,
+        "evidence_score": 3.6,
+        "measurability_score": 4.3,
+        "validation_confidence_score": 3.6,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 5.1,
+        "total_strategic_score": 7.3,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.7
+      }
+    },
+    {
+      "id": "strategic-056",
+      "origin": "seed",
+      "industry": "Metals / Mining / Critical Inputs",
+      "subsector": "Refining Operations",
+      "title": "Refinery sample lot release queue",
+      "category": "Administrative Delay",
+      "description": "Refined material lots can wait on lab analysis, impurity checks, customer specification matching, and release approval before shipment.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Refined lot quality release.",
+        "Operational review should confirm whether Laboratory information management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "affected_parties": [
+        "Refinery operators",
+        "Laboratories",
+        "Quality teams",
+        "Customers"
+      ],
+      "current_process": [
+        "Refined lot quality release receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Laboratory information management system.",
+        "Work proceeds only after the constraint clears enough for Customer shipment release."
+      ],
+      "resource_waste": [
+        "Inventory hold time",
+        "Lab queue aging",
+        "Customer expedite work"
+      ],
+      "time_waste": 7,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Finished material value remains locked until quality evidence clears release gates.",
+      "estimated_annual_impact": "Moderate to high for specification-sensitive refined inputs",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Metals / Mining / Critical Inputs process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Refined lot quality release.",
+        "Compare Laboratory information management system records with downstream outcomes in Customer shipment release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Refined lot quality release",
+        "Observed frequency and owner of delay before Customer shipment release"
+      ],
+      "upstream_constraints": [
+        "Refined lot quality release intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Customer shipment release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Refined lot quality release",
+        "Refined lot quality release validation",
+        "Customer shipment release"
+      ],
+      "affected_systems": [
+        "Laboratory information management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Refined lot quality release with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant queue backlog signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "processing_capacity",
+        "documentation_chase"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Refinery sample lot release queue matches queue backlog because the constraint centers on Refined lot quality release and delays Customer shipment release.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 6.3,
+        "ai_readiness_score": 6.1,
+        "overlooked_opportunity_score": 6.9,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-057",
+      "origin": "seed",
+      "industry": "Robotics / Automation Deployment",
+      "subsector": "Safety Validation",
+      "title": "Industrial robot cell safety validation bottleneck",
+      "category": "Compliance Drag",
+      "description": "Robot cells often require risk assessments, guarding checks, interlock testing, operator signoff, and safety documentation before production use.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Robot cell safety validation.",
+        "Operational review should confirm whether Safety validation checklist captures queue, handoff, or capacity data.",
+        "Initial pattern match: inspection delay."
+      ],
+      "affected_parties": [
+        "Automation engineers",
+        "EHS teams",
+        "Line operators",
+        "Systems integrators"
+      ],
+      "current_process": [
+        "Robot cell safety validation receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Safety validation checklist.",
+        "Work proceeds only after the constraint clears enough for Production cell release."
+      ],
+      "resource_waste": [
+        "Cell idle time",
+        "Safety review rework",
+        "Operator training delay"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "Automation assets can sit installed while safety evidence and operating acceptance catch up.",
+      "estimated_annual_impact": "Moderate to high for multi-cell automation programs",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 7,
+      "automation_potential": 6,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Robotics / Automation Deployment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Robot cell safety validation.",
+        "Compare Safety validation checklist records with downstream outcomes in Production cell release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Robot cell safety validation",
+        "Observed frequency and owner of delay before Production cell release"
+      ],
+      "upstream_constraints": [
+        "Robot cell safety validation intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Production cell release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Robot cell safety validation",
+        "Robot cell safety validation validation",
+        "Production cell release"
+      ],
+      "affected_systems": [
+        "Safety validation checklist",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Robot cell safety validation with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant inspection delay signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "inspection_delay",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "documentation_chase",
+        "regulatory_complexity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Industrial robot cell safety validation bottleneck matches inspection delay because the constraint centers on Robot cell safety validation and delays Production cell release.",
+      "scores": {
+        "severity_score": 7.8,
+        "solvability_score": 5.6,
+        "ai_readiness_score": 5.2,
+        "overlooked_opportunity_score": 6.5,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 5.5,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
+    },
+    {
+      "id": "strategic-058",
+      "origin": "seed",
+      "industry": "Robotics / Automation Deployment",
+      "subsector": "Mobile Robotics",
+      "title": "Autonomous mobile robot site mapping rework",
+      "category": "Information Gap",
+      "description": "Mobile robot deployments can require repeated map updates when aisles, temporary storage, charging zones, and human traffic patterns change.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Mobile robot site mapping.",
+        "Operational review should confirm whether Robot fleet map repository captures queue, handoff, or capacity data.",
+        "Initial pattern match: data fragmentation."
+      ],
+      "affected_parties": [
+        "Warehouse operators",
+        "Robotics integrators",
+        "Process engineers",
+        "Safety teams"
+      ],
+      "current_process": [
+        "Mobile robot site mapping receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Robot fleet map repository.",
+        "Work proceeds only after the constraint clears enough for Autonomous route release."
+      ],
+      "resource_waste": [
+        "Mapping rework",
+        "Route exception handling",
+        "Operator intervention"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Automation throughput is limited when the operating environment drifts faster than maps and controls are updated.",
+      "estimated_annual_impact": "Moderate in dynamic warehouse and industrial sites",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 7,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Robotics / Automation Deployment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Mobile robot site mapping.",
+        "Compare Robot fleet map repository records with downstream outcomes in Autonomous route release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Mobile robot site mapping",
+        "Observed frequency and owner of delay before Autonomous route release"
+      ],
+      "upstream_constraints": [
+        "Mobile robot site mapping intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Autonomous route release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Mobile robot site mapping",
+        "Mobile robot site mapping validation",
+        "Autonomous route release"
+      ],
+      "affected_systems": [
+        "Robot fleet map repository",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Mobile robot site mapping with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant data fragmentation signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "data_fragmentation",
+      "secondary_archetypes": [
+        "measurement_blind_spot",
+        "capacity_mismatch",
+        "handoff_leakage"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Autonomous mobile robot site mapping rework matches data fragmentation because the constraint centers on Mobile robot site mapping and delays Autonomous route release.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 6.6,
+        "ai_readiness_score": 6.7,
+        "overlooked_opportunity_score": 7.2,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 6.7,
+        "total_strategic_score": 8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.5
+      }
+    },
+    {
+      "id": "strategic-059",
+      "origin": "seed",
+      "industry": "Robotics / Automation Deployment",
+      "subsector": "Flexible Automation",
+      "title": "End effector changeover programming queue",
+      "category": "Administrative Delay",
+      "description": "Flexible robot cells can wait for gripper configuration, path updates, PLC changes, and validation when product mix changes.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in End effector changeover programming.",
+        "Operational review should confirm whether Automation change request queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "affected_parties": [
+        "Controls engineers",
+        "Manufacturing engineers",
+        "Line supervisors",
+        "Maintenance teams"
+      ],
+      "current_process": [
+        "End effector changeover programming receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Automation change request queue.",
+        "Work proceeds only after the constraint clears enough for New product run release."
+      ],
+      "resource_waste": [
+        "Engineer queue time",
+        "Cell downtime",
+        "Manual workaround labor"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Flexible automation loses value when changes require scarce programming capacity.",
+      "estimated_annual_impact": "Moderate for high-mix manufacturing automation",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Robotics / Automation Deployment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside End effector changeover programming.",
+        "Compare Automation change request queue records with downstream outcomes in New product run release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for End effector changeover programming",
+        "Observed frequency and owner of delay before New product run release"
+      ],
+      "upstream_constraints": [
+        "End effector changeover programming intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "New product run release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "End effector changeover programming",
+        "End effector changeover programming validation",
+        "New product run release"
+      ],
+      "affected_systems": [
+        "Automation change request queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument End effector changeover programming with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant queue backlog signal."
+      ],
+      "opportunity_type": "Automation",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "workforce_constraint",
+        "capacity_mismatch",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "End effector changeover programming queue matches queue backlog because the constraint centers on End effector changeover programming and delays New product run release.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 6.7,
+        "ai_readiness_score": 6.4,
+        "overlooked_opportunity_score": 7.2,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 6.8,
+        "total_strategic_score": 8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.5
+      }
+    },
+    {
+      "id": "strategic-060",
+      "origin": "seed",
+      "industry": "Robotics / Automation Deployment",
+      "subsector": "Machine Vision",
+      "title": "Vision model exception tuning handoff",
+      "category": "Process Handoff",
+      "description": "Vision-guided automation can stall when false rejects, lighting variation, edge cases, and model tuning requests move between operations and controls teams.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Vision exception tuning.",
+        "Operational review should confirm whether Vision model issue tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "affected_parties": [
+        "Quality engineers",
+        "Controls engineers",
+        "Line operators",
+        "Automation vendors"
+      ],
+      "current_process": [
+        "Vision exception tuning receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Vision model issue tracker.",
+        "Work proceeds only after the constraint clears enough for Automated inspection release."
+      ],
+      "resource_waste": [
+        "Manual inspection fallback",
+        "False reject rework",
+        "Engineering escalation"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 8,
+      "opportunity_cost": "Automation remains supervised or bypassed when exception learning loops are not closed quickly.",
+      "estimated_annual_impact": "Moderate to high for inspection-heavy automated lines",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 8,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Robotics / Automation Deployment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Vision exception tuning.",
+        "Compare Vision model issue tracker records with downstream outcomes in Automated inspection release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Vision exception tuning",
+        "Observed frequency and owner of delay before Automated inspection release"
+      ],
+      "upstream_constraints": [
+        "Vision exception tuning intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Automated inspection release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Vision exception tuning",
+        "Vision exception tuning validation",
+        "Automated inspection release"
+      ],
+      "affected_systems": [
+        "Vision model issue tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Vision exception tuning with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant handoff leakage signal."
+      ],
+      "opportunity_type": "Automation",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "measurement_blind_spot",
+        "manual_verification_drag",
+        "data_fragmentation"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Vision model exception tuning handoff matches handoff leakage because the constraint centers on Vision exception tuning and delays Automated inspection release.",
+      "scores": {
+        "severity_score": 7.5,
+        "solvability_score": 6.7,
+        "ai_readiness_score": 7.2,
+        "overlooked_opportunity_score": 7.3,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.5,
+        "opportunity_score": 7,
+        "total_strategic_score": 8.2,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.7
+      }
+    },
+    {
+      "id": "strategic-061",
+      "origin": "seed",
+      "industry": "Aerospace / Defense / Space Manufacturing",
+      "subsector": "Supplier Quality",
+      "title": "Launch supplier nonconformance closure loop",
+      "category": "Manual Verification",
+      "description": "Supplier nonconformances can cycle through root cause, disposition, engineering review, customer approval, and corrective action before hardware release.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Supplier nonconformance closure.",
+        "Operational review should confirm whether Nonconformance management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: manual verification drag."
+      ],
+      "affected_parties": [
+        "Supplier quality teams",
+        "Manufacturing engineers",
+        "Program managers",
+        "Customers"
+      ],
+      "current_process": [
+        "Supplier nonconformance closure receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Nonconformance management system.",
+        "Work proceeds only after the constraint clears enough for Flight hardware release."
+      ],
+      "resource_waste": [
+        "Hardware hold time",
+        "Engineering review cycles",
+        "Supplier response chasing"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 8,
+      "opportunity_cost": "Mission-critical hardware can be physically complete but blocked by unresolved quality evidence.",
+      "estimated_annual_impact": "High for complex aerospace and defense supply chains",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 7,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Aerospace / Defense / Space Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Supplier nonconformance closure.",
+        "Compare Nonconformance management system records with downstream outcomes in Flight hardware release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Supplier nonconformance closure",
+        "Observed frequency and owner of delay before Flight hardware release"
+      ],
+      "upstream_constraints": [
+        "Supplier nonconformance closure intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Flight hardware release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Supplier nonconformance closure",
+        "Supplier nonconformance closure validation",
+        "Flight hardware release"
+      ],
+      "affected_systems": [
+        "Nonconformance management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Supplier nonconformance closure with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant manual verification drag signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "manual_verification_drag",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "vendor_qualification",
+        "queue_backlog"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Launch supplier nonconformance closure loop matches manual verification drag because the constraint centers on Supplier nonconformance closure and delays Flight hardware release.",
+      "scores": {
+        "severity_score": 8.1,
+        "solvability_score": 5.9,
+        "ai_readiness_score": 6.4,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.8,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.5
+      }
+    },
+    {
+      "id": "strategic-062",
+      "origin": "seed",
+      "industry": "Aerospace / Defense / Space Manufacturing",
+      "subsector": "Configuration Management",
+      "title": "Space vehicle test article configuration traceability gap",
+      "category": "Information Gap",
+      "description": "Test articles can accumulate configuration changes, deviations, temporary repairs, and instrumentation updates that must be reconciled before test evidence is trusted.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Test article configuration reconciliation.",
+        "Operational review should confirm whether Configuration control system captures queue, handoff, or capacity data.",
+        "Initial pattern match: data fragmentation."
+      ],
+      "affected_parties": [
+        "Test engineers",
+        "Configuration managers",
+        "Manufacturing teams",
+        "Program leadership"
+      ],
+      "current_process": [
+        "Test article configuration reconciliation receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Configuration control system.",
+        "Work proceeds only after the constraint clears enough for Test data acceptance."
+      ],
+      "resource_waste": [
+        "Data caveat review",
+        "Manual reconciliation",
+        "Retest risk"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "Test evidence loses decision value when configuration state is not aligned with test results.",
+      "estimated_annual_impact": "High for fast-iteration hardware programs",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Aerospace / Defense / Space Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 8,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Test article configuration reconciliation.",
+        "Compare Configuration control system records with downstream outcomes in Test data acceptance."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Test article configuration reconciliation",
+        "Observed frequency and owner of delay before Test data acceptance"
+      ],
+      "upstream_constraints": [
+        "Test article configuration reconciliation intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Test data acceptance",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Test article configuration reconciliation",
+        "Test article configuration reconciliation validation",
+        "Test data acceptance"
+      ],
+      "affected_systems": [
+        "Configuration control system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Test article configuration reconciliation with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant data fragmentation signal."
+      ],
+      "opportunity_type": "Data Quality",
+      "primary_archetype": "data_fragmentation",
+      "secondary_archetypes": [
+        "measurement_blind_spot",
+        "documentation_chase",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Space vehicle test article configuration traceability gap matches data fragmentation because the constraint centers on Test article configuration reconciliation and delays Test data acceptance.",
+      "scores": {
+        "severity_score": 7.8,
+        "solvability_score": 5.9,
+        "ai_readiness_score": 5.9,
+        "overlooked_opportunity_score": 7.3,
+        "evidence_score": 3.6,
+        "measurability_score": 4.3,
+        "validation_confidence_score": 3.6,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 6.1,
+        "total_strategic_score": 7.9,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.4
+      }
+    },
+    {
+      "id": "strategic-063",
+      "origin": "seed",
+      "industry": "Aerospace / Defense / Space Manufacturing",
+      "subsector": "Inspection",
+      "title": "Defense component first article inspection backlog",
+      "category": "Compliance Drag",
+      "description": "First article approvals can wait on dimensional evidence, material certs, process records, inspection capacity, and customer review.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in First article inspection approval.",
+        "Operational review should confirm whether Inspection evidence package captures queue, handoff, or capacity data.",
+        "Initial pattern match: inspection delay."
+      ],
+      "affected_parties": [
+        "Quality inspectors",
+        "Suppliers",
+        "Program offices",
+        "Manufacturing teams"
+      ],
+      "current_process": [
+        "First article inspection approval receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Inspection evidence package.",
+        "Work proceeds only after the constraint clears enough for Production lot release."
+      ],
+      "resource_waste": [
+        "Inspection queue time",
+        "Supplier resubmission",
+        "Lot hold inventory"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Production scaling waits for evidence-backed approval of initial article conformance.",
+      "estimated_annual_impact": "Moderate to high in regulated defense manufacturing",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 7,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 8,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Aerospace / Defense / Space Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside First article inspection approval.",
+        "Compare Inspection evidence package records with downstream outcomes in Production lot release."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for First article inspection approval",
+        "Observed frequency and owner of delay before Production lot release"
+      ],
+      "upstream_constraints": [
+        "First article inspection approval intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Production lot release",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "First article inspection approval",
+        "First article inspection approval validation",
+        "Production lot release"
+      ],
+      "affected_systems": [
+        "Inspection evidence package",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument First article inspection approval with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant inspection delay signal."
+      ],
+      "opportunity_type": "Compliance Simplification",
+      "primary_archetype": "inspection_delay",
+      "secondary_archetypes": [
+        "documentation_chase",
+        "vendor_qualification",
+        "manual_verification_drag"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Defense component first article inspection backlog matches inspection delay because the constraint centers on First article inspection approval and delays Production lot release.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 5.2,
+        "ai_readiness_score": 5.1,
+        "overlooked_opportunity_score": 6.3,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 5.2,
+        "total_strategic_score": 7.4,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 5.8
+      }
+    },
+    {
+      "id": "strategic-064",
+      "origin": "seed",
+      "industry": "Aerospace / Defense / Space Manufacturing",
+      "subsector": "Test Operations",
+      "title": "Propulsion test stand scheduling bottleneck",
+      "category": "Idle Capacity",
+      "description": "Hardware, crews, instrumentation, hazardous operations windows, and test stand availability must align before propulsion tests can execute.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Propulsion test stand scheduling.",
+        "Operational review should confirm whether Test operations schedule captures queue, handoff, or capacity data.",
+        "Initial pattern match: processing capacity."
+      ],
+      "affected_parties": [
+        "Test operations teams",
+        "Propulsion engineers",
+        "Safety teams",
+        "Program managers"
+      ],
+      "current_process": [
+        "Propulsion test stand scheduling receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Test operations schedule.",
+        "Work proceeds only after the constraint clears enough for Test campaign completion."
+      ],
+      "resource_waste": [
+        "Hardware waiting",
+        "Crew standby",
+        "Instrumentation reconfiguration"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "Development learning velocity is constrained when scarce test infrastructure is not synchronized with hardware readiness.",
+      "estimated_annual_impact": "High for hardware programs gated by physical test capacity",
+      "growth_trend": "Increasing",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 5,
+      "ai_potential": 6,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 7,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Aerospace / Defense / Space Manufacturing process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Propulsion test stand scheduling.",
+        "Compare Test operations schedule records with downstream outcomes in Test campaign completion."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Propulsion test stand scheduling",
+        "Observed frequency and owner of delay before Test campaign completion"
+      ],
+      "upstream_constraints": [
+        "Propulsion test stand scheduling intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Test campaign completion",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Propulsion test stand scheduling",
+        "Propulsion test stand scheduling validation",
+        "Test campaign completion"
+      ],
+      "affected_systems": [
+        "Test operations schedule",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Propulsion test stand scheduling with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant processing capacity signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "processing_capacity",
+      "secondary_archetypes": [
+        "capacity_mismatch",
+        "queue_backlog",
+        "infrastructure_siting"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Propulsion test stand scheduling bottleneck matches processing capacity because the constraint centers on Propulsion test stand scheduling and delays Test campaign completion.",
+      "scores": {
+        "severity_score": 7.8,
+        "solvability_score": 5.7,
+        "ai_readiness_score": 5.9,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.6,
+        "opportunity_score": 5.8,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.3
+      }
+    },
+    {
+      "id": "strategic-065",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Field Service",
+      "title": "Field service parts availability causing asset downtime",
+      "category": "Idle Capacity",
+      "description": "Remote or industrial assets can remain down when diagnosis, parts availability, technician dispatch, and site access do not align.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Field service parts readiness.",
+        "Operational review should confirm whether Service parts planning system captures queue, handoff, or capacity data.",
+        "Initial pattern match: capacity mismatch."
+      ],
+      "affected_parties": [
+        "Field service teams",
+        "Asset owners",
+        "Parts planners",
+        "Technicians"
+      ],
+      "current_process": [
+        "Field service parts readiness receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Service parts planning system.",
+        "Work proceeds only after the constraint clears enough for Asset return to service."
+      ],
+      "resource_waste": [
+        "Asset downtime",
+        "Technician return visits",
+        "Expedite freight"
+      ],
+      "time_waste": 8,
+      "capital_waste": 8,
+      "labor_waste": 7,
+      "opportunity_cost": "Equipment availability is lost when repair readiness is constrained by parts and dispatch mismatch.",
+      "estimated_annual_impact": "High for asset-intensive field operations",
+      "growth_trend": "Stable",
+      "visibility_score": 6,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Field service parts readiness.",
+        "Compare Service parts planning system records with downstream outcomes in Asset return to service."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Field service parts readiness",
+        "Observed frequency and owner of delay before Asset return to service"
+      ],
+      "upstream_constraints": [
+        "Field service parts readiness intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Asset return to service",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Field service parts readiness",
+        "Field service parts readiness validation",
+        "Asset return to service"
+      ],
+      "affected_systems": [
+        "Service parts planning system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Field service parts readiness with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant capacity mismatch signal."
+      ],
+      "opportunity_type": "Capacity Optimization",
+      "primary_archetype": "capacity_mismatch",
+      "secondary_archetypes": [
+        "equipment_lead_time",
+        "demand_forecast_mismatch",
+        "idle_capacity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Field service parts availability causing asset downtime matches capacity mismatch because the constraint centers on Field service parts readiness and delays Asset return to service.",
+      "scores": {
+        "severity_score": 7.4,
+        "solvability_score": 6.6,
+        "ai_readiness_score": 6.4,
+        "overlooked_opportunity_score": 7,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.9,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.5
+      }
+    },
+    {
+      "id": "strategic-066",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Depot Repair",
+      "title": "Depot repair triage backlog for mission equipment",
+      "category": "Administrative Delay",
+      "description": "Returned equipment can wait for fault intake, repair disposition, parts kitting, technician assignment, and test acceptance.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Depot repair triage.",
+        "Operational review should confirm whether Repair management queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "affected_parties": [
+        "Depot operators",
+        "Field units",
+        "Repair technicians",
+        "Inventory planners"
+      ],
+      "current_process": [
+        "Depot repair triage receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Repair management queue.",
+        "Work proceeds only after the constraint clears enough for Equipment redeployment."
+      ],
+      "resource_waste": [
+        "Repair queue aging",
+        "Parts chasing",
+        "Idle equipment inventory"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Serviceable capacity is trapped while repair work waits for triage and readiness decisions.",
+      "estimated_annual_impact": "Moderate to high where equipment availability drives operations",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 6,
+      "ai_potential": 6,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 5,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 6,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Depot repair triage.",
+        "Compare Repair management queue records with downstream outcomes in Equipment redeployment."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Depot repair triage",
+        "Observed frequency and owner of delay before Equipment redeployment"
+      ],
+      "upstream_constraints": [
+        "Depot repair triage intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Equipment redeployment",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Depot repair triage",
+        "Depot repair triage validation",
+        "Equipment redeployment"
+      ],
+      "affected_systems": [
+        "Repair management queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Depot repair triage with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant queue backlog signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "queue_backlog",
+      "secondary_archetypes": [
+        "manual_verification_drag",
+        "equipment_lead_time",
+        "processing_capacity"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Depot repair triage backlog for mission equipment matches queue backlog because the constraint centers on Depot repair triage and delays Equipment redeployment.",
+      "scores": {
+        "severity_score": 7.1,
+        "solvability_score": 6.4,
+        "ai_readiness_score": 6.2,
+        "overlooked_opportunity_score": 7.2,
+        "evidence_score": 3.6,
+        "measurability_score": 5,
+        "validation_confidence_score": 3.8,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.2,
+        "opportunity_score": 6.3,
+        "total_strategic_score": 7.8,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.4
+      }
+    },
+    {
+      "id": "strategic-067",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Equipment Reliability",
+      "title": "Heavy equipment telematics fault classification blind spot",
+      "category": "Information Gap",
+      "description": "Fault codes, operator notes, maintenance history, and site conditions can remain disconnected, making it hard to prioritize actual failure risk.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Telematics fault classification.",
+        "Operational review should confirm whether Fleet telemetry and maintenance system captures queue, handoff, or capacity data.",
+        "Initial pattern match: measurement blind spot."
+      ],
+      "affected_parties": [
+        "Maintenance planners",
+        "Equipment operators",
+        "Reliability engineers",
+        "Fleet managers"
+      ],
+      "current_process": [
+        "Telematics fault classification receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Fleet telemetry and maintenance system.",
+        "Work proceeds only after the constraint clears enough for Maintenance work order prioritization."
+      ],
+      "resource_waste": [
+        "False alarms",
+        "Missed failure signals",
+        "Unplanned downtime"
+      ],
+      "time_waste": 7,
+      "capital_waste": 8,
+      "labor_waste": 6,
+      "opportunity_cost": "Maintenance resources can chase low-value alerts while higher-risk assets degrade.",
+      "estimated_annual_impact": "Moderate to high for distributed heavy equipment fleets",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 8,
+      "automation_potential": 7,
+      "ai_potential": 8,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 4,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Telematics fault classification.",
+        "Compare Fleet telemetry and maintenance system records with downstream outcomes in Maintenance work order prioritization."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Telematics fault classification",
+        "Observed frequency and owner of delay before Maintenance work order prioritization"
+      ],
+      "upstream_constraints": [
+        "Telematics fault classification intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Maintenance work order prioritization",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Telematics fault classification",
+        "Telematics fault classification validation",
+        "Maintenance work order prioritization"
+      ],
+      "affected_systems": [
+        "Fleet telemetry and maintenance system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Telematics fault classification with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant measurement blind spot signal."
+      ],
+      "opportunity_type": "Automation",
+      "primary_archetype": "measurement_blind_spot",
+      "secondary_archetypes": [
+        "data_fragmentation",
+        "demand_forecast_mismatch",
+        "hidden_cost_shift"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Heavy equipment telematics fault classification blind spot matches measurement blind spot because the constraint centers on Telematics fault classification and delays Maintenance work order prioritization.",
+      "scores": {
+        "severity_score": 7.2,
+        "solvability_score": 6.8,
+        "ai_readiness_score": 7.2,
+        "overlooked_opportunity_score": 7.2,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.3,
+        "opportunity_score": 7,
+        "total_strategic_score": 8.1,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.6
+      }
+    },
+    {
+      "id": "strategic-068",
+      "origin": "seed",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "subsector": "Remote Field Operations",
+      "title": "Remote site mobilization permit and access coordination delay",
+      "category": "Process Handoff",
+      "description": "Field work at remote sites can wait on access permits, escorts, safety inductions, equipment mobilization, weather windows, and customer readiness.",
+      "evidence": [
+        "Hypothesis signal: recurring delay or rework in Remote site mobilization coordination.",
+        "Operational review should confirm whether Field mobilization tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "affected_parties": [
+        "Field operations teams",
+        "Site owners",
+        "HSE teams",
+        "Logistics coordinators"
+      ],
+      "current_process": [
+        "Remote site mobilization coordination receives work from upstream requestors.",
+        "Teams check documents, capacity, readiness, or exceptions in Field mobilization tracker.",
+        "Work proceeds only after the constraint clears enough for On-site work execution."
+      ],
+      "resource_waste": [
+        "Crew standby",
+        "Equipment staging delay",
+        "Travel resequencing"
+      ],
+      "time_waste": 8,
+      "capital_waste": 7,
+      "labor_waste": 8,
+      "opportunity_cost": "Field capacity is lost when access, safety, and logistics dependencies clear out of sequence.",
+      "estimated_annual_impact": "Moderate to high for distributed infrastructure and industrial field work",
+      "growth_trend": "Stable",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 6,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 7,
+      "confidence": 4,
+      "sources": [
+        "Structured hypothesis; local operational evidence required",
+        "Logistics / Supply Chain / Industrial Equipment process pattern review"
+      ],
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a strategic pattern hypothesis. It is useful for archetype analysis but requires local process data before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time and exception rate inside Remote site mobilization coordination.",
+        "Compare Field mobilization tracker records with downstream outcomes in On-site work execution."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Remote site mobilization coordination",
+        "Observed frequency and owner of delay before On-site work execution"
+      ],
+      "upstream_constraints": [
+        "Remote site mobilization coordination intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "On-site work execution",
+        "Approval or release decision",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Remote site mobilization coordination",
+        "Remote site mobilization coordination validation",
+        "On-site work execution"
+      ],
+      "affected_systems": [
+        "Field mobilization tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "solution_hypotheses": [
+        "Instrument Remote site mobilization coordination with owner, age, and exception reason fields.",
+        "Create a bounded pilot to reduce the dominant handoff leakage signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "permitting_delay",
+        "workforce_constraint",
+        "capacity_mismatch"
+      ],
+      "archetype_confidence": 8,
+      "archetype_reasoning": "Remote site mobilization permit and access coordination delay matches handoff leakage because the constraint centers on Remote site mobilization coordination and delays On-site work execution.",
+      "scores": {
+        "severity_score": 7.4,
+        "solvability_score": 5.6,
+        "ai_readiness_score": 5.4,
+        "overlooked_opportunity_score": 7.1,
+        "evidence_score": 3.6,
+        "measurability_score": 4.7,
+        "validation_confidence_score": 3.7,
+        "constraint_density_score": 10,
+        "downstream_impact_score": 8.4,
+        "opportunity_score": 5.6,
+        "total_strategic_score": 7.6,
+        "archetype_spread_score": 10,
+        "cross_industry_similarity_score": 9.4,
+        "total_priority_score": 6.1
+      }
     }
   ],
   "dataset_summary": {
-    "seed_records": 48,
+    "seed_records": 80,
     "intake_records": 4,
     "industry_distribution": {
       "Healthcare": 16,
-      "Energy / Grid / Interconnection": 6,
+      "Energy / Grid / Interconnection": 9,
       "Infrastructure / Permitting / Construction": 6,
-      "Semiconductors / Advanced Manufacturing": 6,
-      "Metals / Mining / Critical Inputs": 6,
-      "Logistics / Supply Chain / Industrial Equipment": 6,
-      "Public-Sector Administration / Compliance": 6
+      "Semiconductors / Advanced Manufacturing": 10,
+      "Metals / Mining / Critical Inputs": 10,
+      "Logistics / Supply Chain / Industrial Equipment": 10,
+      "Public-Sector Administration / Compliance": 6,
+      "Data Centers / AI Infrastructure": 5,
+      "Power Generation / Nuclear / SMR": 4,
+      "Robotics / Automation Deployment": 4,
+      "Aerospace / Defense / Space Manufacturing": 4
     },
     "category_distribution": {
-      "Administrative Delay": 9,
-      "Manual Verification": 7,
+      "Administrative Delay": 14,
+      "Manual Verification": 12,
       "Revenue Leakage": 1,
-      "Information Gap": 6,
-      "Process Handoff": 5,
+      "Information Gap": 10,
+      "Process Handoff": 11,
       "Duplicated Work": 4,
-      "Compliance Drag": 7,
-      "Idle Capacity": 5,
-      "Hidden Cost": 5,
-      "Market Mismatch": 3
+      "Compliance Drag": 12,
+      "Idle Capacity": 8,
+      "Hidden Cost": 7,
+      "Market Mismatch": 5
     },
     "archetype_distribution": {
-      "queue_backlog": 6,
-      "manual_verification_drag": 2,
+      "queue_backlog": 9,
+      "manual_verification_drag": 5,
       "documentation_chase": 5,
-      "handoff_leakage": 4,
+      "handoff_leakage": 9,
       "hidden_cost_shift": 2,
       "duplicated_work": 3,
-      "capacity_mismatch": 2,
-      "regulatory_complexity": 1,
+      "capacity_mismatch": 5,
+      "regulatory_complexity": 2,
       "support_channel_overload": 1,
-      "measurement_blind_spot": 5,
-      "data_fragmentation": 2,
-      "interconnection_delay": 1,
-      "equipment_lead_time": 3,
-      "permitting_delay": 2,
-      "inspection_delay": 2,
-      "vendor_qualification": 4,
+      "measurement_blind_spot": 7,
+      "data_fragmentation": 4,
+      "interconnection_delay": 4,
+      "equipment_lead_time": 4,
+      "permitting_delay": 3,
+      "inspection_delay": 5,
+      "vendor_qualification": 6,
       "infrastructure_siting": 1,
-      "processing_capacity": 2,
-      "supply_concentration": 1,
+      "processing_capacity": 3,
+      "supply_concentration": 3,
       "project_approval_friction": 2,
       "demand_forecast_mismatch": 1
     },
     "opportunity_type_distribution": {
-      "Automation": 8,
-      "Data Quality": 13,
-      "Workflow Redesign": 17,
-      "Compliance Simplification": 5,
-      "Capacity Optimization": 9
+      "Automation": 11,
+      "Data Quality": 23,
+      "Workflow Redesign": 24,
+      "Compliance Simplification": 10,
+      "Capacity Optimization": 16
     },
     "evidence_dossier_summary": {
-      "total_dossiers": 52,
+      "total_dossiers": 84,
       "decision_ready_records": 4,
-      "needs_evidence_records": 46,
-      "high_priority_validation_records": 27,
-      "high_opportunity_weak_evidence_records": 43,
+      "needs_evidence_records": 78,
+      "high_priority_validation_records": 59,
+      "high_opportunity_weak_evidence_records": 75,
       "validation_status_distribution": {
-        "unvalidated": 22,
+        "unvalidated": 54,
         "needs_evidence": 24,
         "partially_supported": 2,
         "evidence_backed": 3,
         "validated": 1
       },
-      "average_validation_priority_score": 7.4
+      "average_validation_priority_score": 7.7
     },
     "intervention_summary": {
-      "total_strategies": 52,
+      "total_strategies": 84,
       "top_fast_wins": [
         "Appointment call queue overflow",
         "Insurance eligibility verification before each visit",
@@ -5888,7 +9476,7 @@
         "Medical necessity documentation chase",
         "Prior authorization rework loops",
         "Medication prior authorization exceptions",
-        "Manual quality measure abstraction"
+        "Vision model exception tuning handoff"
       ],
       "high_upside_high_friction": [
         "Claim denial triage and resubmission",
@@ -5908,49 +9496,53 @@
         "automation_assist": 4,
         "workflow_redesign": 1,
         "policy_simplification": 1,
-        "evidence_collection": 46
+        "evidence_collection": 78
       },
-      "average_action_confidence": 5.5,
+      "average_action_confidence": 5.1,
       "highest_priority_intervention": "Automation Assist for Claims processing"
     },
     "archetype_summary": {
       "total_archetypes_detected": 23,
-      "most_widespread_archetype": "Documentation Chase",
-      "highest_priority_archetype": "Manual Verification Drag",
+      "most_widespread_archetype": "Manual Verification Drag",
+      "highest_priority_archetype": "Duplicated Work",
       "most_under_validated_archetype": "Equipment Lead Time",
-      "highest_intervention_opportunity_archetype": "Manual Verification Drag",
+      "highest_intervention_opportunity_archetype": "Duplicated Work",
       "cross_industry_analog_count": 20,
       "archetype_distribution": {
-        "queue_backlog": 6,
-        "manual_verification_drag": 2,
+        "queue_backlog": 9,
+        "manual_verification_drag": 5,
         "documentation_chase": 5,
-        "handoff_leakage": 4,
+        "handoff_leakage": 9,
         "hidden_cost_shift": 2,
         "duplicated_work": 3,
-        "capacity_mismatch": 2,
-        "regulatory_complexity": 1,
+        "capacity_mismatch": 5,
+        "regulatory_complexity": 2,
         "support_channel_overload": 1,
-        "measurement_blind_spot": 5,
-        "data_fragmentation": 2,
-        "interconnection_delay": 1,
-        "equipment_lead_time": 3,
-        "permitting_delay": 2,
-        "inspection_delay": 2,
-        "vendor_qualification": 4,
+        "measurement_blind_spot": 7,
+        "data_fragmentation": 4,
+        "interconnection_delay": 4,
+        "equipment_lead_time": 4,
+        "permitting_delay": 3,
+        "inspection_delay": 5,
+        "vendor_qualification": 6,
         "infrastructure_siting": 1,
-        "processing_capacity": 2,
-        "supply_concentration": 1,
+        "processing_capacity": 3,
+        "supply_concentration": 3,
         "project_approval_friction": 2,
         "demand_forecast_mismatch": 1
       },
       "industry_distribution": {
         "Healthcare": 16,
-        "Energy / Grid / Interconnection": 6,
+        "Energy / Grid / Interconnection": 9,
         "Infrastructure / Permitting / Construction": 6,
-        "Semiconductors / Advanced Manufacturing": 6,
-        "Metals / Mining / Critical Inputs": 6,
-        "Logistics / Supply Chain / Industrial Equipment": 6,
-        "Public-Sector Administration / Compliance": 6
+        "Semiconductors / Advanced Manufacturing": 10,
+        "Metals / Mining / Critical Inputs": 10,
+        "Logistics / Supply Chain / Industrial Equipment": 10,
+        "Public-Sector Administration / Compliance": 6,
+        "Data Centers / AI Infrastructure": 5,
+        "Power Generation / Nuclear / SMR": 4,
+        "Robotics / Automation Deployment": 4,
+        "Aerospace / Defense / Space Manufacturing": 4
       }
     }
   },
@@ -5958,7 +9550,7 @@
     "severity_score": {
       "min": 5.6,
       "max": 8.4,
-      "average": 6.9
+      "average": 7.2
     },
     "solvability_score": {
       "min": 3.3,
@@ -5968,27 +9560,27 @@
     "ai_readiness_score": {
       "min": 4.4,
       "max": 7.7,
-      "average": 6.1
+      "average": 6
     },
     "overlooked_opportunity_score": {
       "min": 5.6,
       "max": 7.3,
-      "average": 6.7
+      "average": 6.8
     },
     "evidence_score": {
-      "min": 3.7,
+      "min": 3.6,
       "max": 8.9,
-      "average": 5.3
+      "average": 4.7
     },
     "measurability_score": {
-      "min": 3.9,
+      "min": 3.5,
       "max": 7.7,
-      "average": 5.4
+      "average": 5.2
     },
     "validation_confidence_score": {
-      "min": 3.8,
+      "min": 3.4,
       "max": 8.1,
-      "average": 5.3
+      "average": 4.7
     },
     "constraint_density_score": {
       "min": 10,
@@ -5998,12 +9590,12 @@
     "downstream_impact_score": {
       "min": 7.4,
       "max": 9,
-      "average": 8.1
+      "average": 8.2
     },
     "opportunity_score": {
       "min": 4.2,
       "max": 7.6,
-      "average": 6.1
+      "average": 6
     },
     "total_strategic_score": {
       "min": 7,
@@ -6013,7 +9605,7 @@
     "archetype_spread_score": {
       "min": 8.9,
       "max": 10,
-      "average": 9.8
+      "average": 9.9
     },
     "cross_industry_similarity_score": {
       "min": 8.9,
@@ -6027,11 +9619,11 @@
     }
   },
   "quality_summary": {
-    "total_records": 52,
-    "seed_records": 48,
+    "total_records": 84,
+    "seed_records": 80,
     "intake_records": 4,
-    "data_quality_score": 7.8,
-    "validation_coverage_score": 1.2,
+    "data_quality_score": 7.7,
+    "validation_coverage_score": 0.7,
     "evidence_completeness_score": 10,
     "relationship_completeness_score": 10,
     "records_needing_validation": [
@@ -6085,9 +9677,41 @@
       "strategic-033",
       "strategic-034",
       "strategic-035",
-      "strategic-036"
+      "strategic-036",
+      "strategic-037",
+      "strategic-038",
+      "strategic-039",
+      "strategic-040",
+      "strategic-041",
+      "strategic-042",
+      "strategic-043",
+      "strategic-044",
+      "strategic-045",
+      "strategic-046",
+      "strategic-047",
+      "strategic-048",
+      "strategic-049",
+      "strategic-050",
+      "strategic-051",
+      "strategic-052",
+      "strategic-053",
+      "strategic-054",
+      "strategic-055",
+      "strategic-056",
+      "strategic-057",
+      "strategic-058",
+      "strategic-059",
+      "strategic-060",
+      "strategic-061",
+      "strategic-062",
+      "strategic-063",
+      "strategic-064",
+      "strategic-065",
+      "strategic-066",
+      "strategic-067",
+      "strategic-068"
     ],
-    "strongest_under_validated_opportunity": "Chip equipment lead-time coordination",
+    "strongest_under_validated_opportunity": "Vision model exception tuning handoff",
     "missing_evidence_fields": {},
     "missing_relationship_fields": {},
     "low_validation_confidence_records": [
@@ -6136,7 +9760,39 @@
       "strategic-033",
       "strategic-034",
       "strategic-035",
-      "strategic-036"
+      "strategic-036",
+      "strategic-037",
+      "strategic-038",
+      "strategic-039",
+      "strategic-040",
+      "strategic-041",
+      "strategic-042",
+      "strategic-043",
+      "strategic-044",
+      "strategic-045",
+      "strategic-046",
+      "strategic-047",
+      "strategic-048",
+      "strategic-049",
+      "strategic-050",
+      "strategic-051",
+      "strategic-052",
+      "strategic-053",
+      "strategic-054",
+      "strategic-055",
+      "strategic-056",
+      "strategic-057",
+      "strategic-058",
+      "strategic-059",
+      "strategic-060",
+      "strategic-061",
+      "strategic-062",
+      "strategic-063",
+      "strategic-064",
+      "strategic-065",
+      "strategic-066",
+      "strategic-067",
+      "strategic-068"
     ],
     "high_strategic_score_records": [
       "hc-admin-001",
@@ -6148,72 +9804,83 @@
       "hc-admin-007",
       "hc-admin-009",
       "hc-admin-010",
-      "hc-intake-003"
+      "hc-intake-003",
+      "strategic-058",
+      "strategic-059",
+      "strategic-060",
+      "strategic-061",
+      "strategic-067"
     ],
     "high_opportunity_weak_evidence_records": [
       "hc-admin-002",
       "hc-admin-009",
       "hc-intake-001",
-      "strategic-023"
+      "strategic-023",
+      "strategic-060",
+      "strategic-067"
     ],
     "duplicate_ids": [],
     "invalid_source_evidence_metadata": [],
     "category_distribution": {
-      "Administrative Delay": 9,
-      "Manual Verification": 7,
+      "Administrative Delay": 14,
+      "Manual Verification": 12,
       "Revenue Leakage": 1,
-      "Information Gap": 6,
-      "Process Handoff": 5,
+      "Information Gap": 10,
+      "Process Handoff": 11,
       "Duplicated Work": 4,
-      "Compliance Drag": 7,
-      "Idle Capacity": 5,
-      "Hidden Cost": 5,
-      "Market Mismatch": 3
+      "Compliance Drag": 12,
+      "Idle Capacity": 8,
+      "Hidden Cost": 7,
+      "Market Mismatch": 5
     },
     "industry_distribution": {
       "Healthcare": 16,
-      "Energy / Grid / Interconnection": 6,
+      "Energy / Grid / Interconnection": 9,
       "Infrastructure / Permitting / Construction": 6,
-      "Semiconductors / Advanced Manufacturing": 6,
-      "Metals / Mining / Critical Inputs": 6,
-      "Logistics / Supply Chain / Industrial Equipment": 6,
-      "Public-Sector Administration / Compliance": 6
+      "Semiconductors / Advanced Manufacturing": 10,
+      "Metals / Mining / Critical Inputs": 10,
+      "Logistics / Supply Chain / Industrial Equipment": 10,
+      "Public-Sector Administration / Compliance": 6,
+      "Data Centers / AI Infrastructure": 5,
+      "Power Generation / Nuclear / SMR": 4,
+      "Robotics / Automation Deployment": 4,
+      "Aerospace / Defense / Space Manufacturing": 4
     },
     "archetype_distribution": {
-      "queue_backlog": 6,
-      "manual_verification_drag": 2,
+      "queue_backlog": 9,
+      "manual_verification_drag": 5,
       "documentation_chase": 5,
-      "handoff_leakage": 4,
+      "handoff_leakage": 9,
       "hidden_cost_shift": 2,
       "duplicated_work": 3,
-      "capacity_mismatch": 2,
-      "regulatory_complexity": 1,
+      "capacity_mismatch": 5,
+      "regulatory_complexity": 2,
       "support_channel_overload": 1,
-      "measurement_blind_spot": 5,
-      "data_fragmentation": 2,
-      "interconnection_delay": 1,
-      "equipment_lead_time": 3,
-      "permitting_delay": 2,
-      "inspection_delay": 2,
-      "vendor_qualification": 4,
+      "measurement_blind_spot": 7,
+      "data_fragmentation": 4,
+      "interconnection_delay": 4,
+      "equipment_lead_time": 4,
+      "permitting_delay": 3,
+      "inspection_delay": 5,
+      "vendor_qualification": 6,
       "infrastructure_siting": 1,
-      "processing_capacity": 2,
-      "supply_concentration": 1,
+      "processing_capacity": 3,
+      "supply_concentration": 3,
       "project_approval_friction": 2,
       "demand_forecast_mismatch": 1
     },
     "opportunity_type_distribution": {
-      "Automation": 8,
-      "Data Quality": 13,
-      "Workflow Redesign": 17,
-      "Compliance Simplification": 5,
-      "Capacity Optimization": 9
+      "Automation": 11,
+      "Data Quality": 23,
+      "Workflow Redesign": 24,
+      "Compliance Simplification": 10,
+      "Capacity Optimization": 16
     },
     "score_range_summary": {
       "severity_score": {
         "min": 5.6,
         "max": 8.4,
-        "average": 6.9
+        "average": 7.2
       },
       "solvability_score": {
         "min": 3.3,
@@ -6223,27 +9890,27 @@
       "ai_readiness_score": {
         "min": 4.4,
         "max": 7.7,
-        "average": 6.1
+        "average": 6
       },
       "overlooked_opportunity_score": {
         "min": 5.6,
         "max": 7.3,
-        "average": 6.7
+        "average": 6.8
       },
       "evidence_score": {
-        "min": 3.7,
+        "min": 3.6,
         "max": 8.9,
-        "average": 5.3
+        "average": 4.7
       },
       "measurability_score": {
-        "min": 3.9,
+        "min": 3.5,
         "max": 7.7,
-        "average": 5.4
+        "average": 5.2
       },
       "validation_confidence_score": {
-        "min": 3.8,
+        "min": 3.4,
         "max": 8.1,
-        "average": 5.3
+        "average": 4.7
       },
       "constraint_density_score": {
         "min": 10,
@@ -6253,12 +9920,12 @@
       "downstream_impact_score": {
         "min": 7.4,
         "max": 9,
-        "average": 8.1
+        "average": 8.2
       },
       "opportunity_score": {
         "min": 4.2,
         "max": 7.6,
-        "average": 6.1
+        "average": 6
       },
       "total_strategic_score": {
         "min": 7,
@@ -6268,7 +9935,7 @@
       "archetype_spread_score": {
         "min": 8.9,
         "max": 10,
-        "average": 9.8
+        "average": 9.9
       },
       "cross_industry_similarity_score": {
         "min": 8.9,

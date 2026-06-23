@@ -54,30 +54,34 @@ The system treats most records as hypotheses until validation improves. That is 
 
 ## Current Scope
 
-The current dataset spans seven strategic operating domains:
+The current dataset spans eleven strategic operating domains:
 
 - Healthcare administration
+- Data centers / AI infrastructure
 - Energy / grid / interconnection
+- Power generation / nuclear / SMR
 - Infrastructure / permitting / construction
 - Semiconductors / advanced manufacturing
 - Metals / mining / critical inputs
+- Robotics / automation deployment
+- Aerospace / defense / space manufacturing
 - Logistics / supply chain / industrial equipment
 - Public-sector administration / compliance
 
 Current metrics:
 
-- 52 constraint records
-- 7 industries
+- 84 constraint records
+- 11 industries
 - 23 bottleneck archetypes
 - 20 cross-industry analog pairs
-- 35 source records
-- 52 evidence packs
-- 316 generated validation tasks
+- 39 source records
+- 84 evidence packs
+- 514 generated validation tasks
 - 10 triaged top validation actions
 - 10 evidence request packets
-- 276 generated evidence artifact needs
+- 459 generated evidence artifact needs
 - 3 validation campaign modes
-- 647 local analyst state template records
+- 1060 local analyst state template records
 - Local-first data and scripts
 - Deterministic scoring
 - No external APIs
@@ -235,6 +239,7 @@ npm run evidence-packets
 npm run artifacts
 npm run campaigns
 npm run analyst-state
+npm run coverage
 npm run sqlite
 ```
 
@@ -253,6 +258,7 @@ npm run sqlite
 - `data/exports/evidence_artifact_library.json`
 - `data/exports/validation_campaigns.json`
 - `data/exports/analyst_state_template.json`
+- `data/exports/coverage_density_report.json`
 - `data/exports/constraint_intelligence.sqlite`
 
 Generated exports preserve existing `generated_at` values when semantic content is unchanged, which prevents meaningless Git diffs during repeated local checks.

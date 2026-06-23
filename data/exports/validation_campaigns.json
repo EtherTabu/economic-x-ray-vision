@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T17:50:23.625Z",
+  "generated_at": "2026-06-23T03:18:52.821Z",
   "summary": {
     "campaign_count": 3,
     "total_selected_constraints": 19,
@@ -22,47 +22,47 @@
       "analyst_timebox": "1-2 analyst days",
       "selected_constraints": [
         {
-          "constraint_id": "strategic-010",
-          "constraint_title": "Right-of-way utility relocation sequencing delay",
-          "industry": "Infrastructure / Permitting / Construction",
-          "priority_score": 6,
-          "strategic_score": 7.5,
-          "validation_confidence": 4,
-          "validation_burden_score": 9.9,
-          "evidence_defensibility": 4.9,
+          "constraint_id": "strategic-067",
+          "constraint_title": "Heavy equipment telematics fault classification blind spot",
+          "industry": "Logistics / Supply Chain / Industrial Equipment",
+          "priority_score": 6.6,
+          "strategic_score": 8.1,
+          "validation_confidence": 3.7,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.8,
           "expected_confidence_lift": 1.6,
-          "why_selected": "Right-of-way utility relocation sequencing delay was selected because validation burden is 9.9, priority is 6.0, and the next artifact is metric.",
+          "why_selected": "Heavy equipment telematics fault classification blind spot was selected because validation burden is 10.0, priority is 6.6, and the next artifact is metric.",
           "required_artifacts": [
-            "Constraint ID and title: strategic-010 / Right-of-way utility relocation sequencing delay",
-            "Linked triage task ID: task:strategic-010:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+            "Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+            "Linked triage task ID: task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
             "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
             "Metric definition with numerator, denominator, and unit",
             "Data owner, source system, collection window, and refresh cadence"
           ],
           "source_upgrades_needed": [
-            "Attach the specific primary document for Infrastructure / Permitting / Construction process pattern review."
+            "Add local operational evidence from Fleet telemetry and maintenance system."
           ],
           "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-010",
-          "validation_route": "/validation?industry=Infrastructure%20%2F%20Permitting%20%2F%20Construction",
+          "investigation_route": "/constraints/strategic-067",
+          "validation_route": "/validation?industry=Logistics%20%2F%20Supply%20Chain%20%2F%20Industrial%20Equipment",
           "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-010,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-010"
+          "comparison_route": "/compare?ids=strategic-067,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-067"
         },
         {
-          "constraint_id": "strategic-019",
-          "constraint_title": "Refining and smelting capacity bottleneck",
+          "constraint_id": "strategic-053",
+          "constraint_title": "Critical mineral assay-to-offtake qualification delay",
           "industry": "Metals / Mining / Critical Inputs",
-          "priority_score": 5.8,
-          "strategic_score": 7.3,
-          "validation_confidence": 3.8,
-          "validation_burden_score": 9.9,
+          "priority_score": 6.1,
+          "strategic_score": 7.6,
+          "validation_confidence": 3.5,
+          "validation_burden_score": 10,
           "evidence_defensibility": 4.7,
           "expected_confidence_lift": 1.6,
-          "why_selected": "Refining and smelting capacity bottleneck was selected because validation burden is 9.9, priority is 5.8, and the next artifact is metric.",
+          "why_selected": "Critical mineral assay-to-offtake qualification delay was selected because validation burden is 10.0, priority is 6.1, and the next artifact is metric.",
           "required_artifacts": [
-            "Constraint ID and title: strategic-019 / Refining and smelting capacity bottleneck",
-            "Linked triage task ID: task:strategic-019:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
+            "Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+            "Linked triage task ID: task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
             "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
             "Metric definition with numerator, denominator, and unit",
             "Data owner, source system, collection window, and refresh cadence"
@@ -71,64 +71,63 @@
             "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
           ],
           "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-019",
+          "investigation_route": "/constraints/strategic-053",
           "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
           "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-019,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-019"
+          "comparison_route": "/compare?ids=strategic-053,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-053"
         },
         {
-          "constraint_id": "strategic-013",
-          "constraint_title": "Chip equipment lead-time coordination",
-          "industry": "Semiconductors / Advanced Manufacturing",
-          "priority_score": 6.4,
-          "strategic_score": 7.8,
-          "validation_confidence": 4,
-          "validation_burden_score": 9.6,
-          "evidence_defensibility": 4.9,
-          "expected_confidence_lift": 1.5,
-          "why_selected": "Chip equipment lead-time coordination was selected because validation burden is 9.6, priority is 6.4, and the next artifact is metric.",
+          "constraint_id": "strategic-054",
+          "constraint_title": "Leach circuit reagent supply concentration risk",
+          "industry": "Metals / Mining / Critical Inputs",
+          "priority_score": 6,
+          "strategic_score": 7.5,
+          "validation_confidence": 3.7,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.8,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Leach circuit reagent supply concentration risk was selected because validation burden is 10.0, priority is 6.0, and the next artifact is metric.",
           "required_artifacts": [
-            "Constraint ID and title: strategic-013 / Chip equipment lead-time coordination",
-            "Linked triage task ID: task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification",
+            "Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+            "Linked triage task ID: task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
             "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
             "Metric definition with numerator, denominator, and unit",
             "Data owner, source system, collection window, and refresh cadence"
           ],
           "source_upgrades_needed": [
-            "Add local operational evidence from Equipment readiness tracker."
+            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
           ],
           "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-013",
-          "validation_route": "/validation?industry=Semiconductors%20%2F%20Advanced%20Manufacturing",
+          "investigation_route": "/constraints/strategic-054",
+          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
           "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-013,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-013"
+          "comparison_route": "/compare?ids=strategic-054,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-054"
         }
       ],
       "required_artifacts": [
-        "Constraint ID and title: strategic-010 / Right-of-way utility relocation sequencing delay",
-        "Linked triage task ID: task:strategic-010:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+        "Linked triage task ID: task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
         "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
         "Metric definition with numerator, denominator, and unit",
         "Data owner, source system, collection window, and refresh cadence",
-        "Constraint ID and title: strategic-019 / Refining and smelting capacity bottleneck",
-        "Linked triage task ID: task:strategic-019:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
-        "Constraint ID and title: strategic-013 / Chip equipment lead-time coordination",
-        "Linked triage task ID: task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification"
+        "Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+        "Linked triage task ID: task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+        "Linked triage task ID: task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput"
       ],
       "source_upgrades_needed": [
-        "Attach the specific primary document for Infrastructure / Permitting / Construction process pattern review.",
-        "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review.",
-        "Add local operational evidence from Equipment readiness tracker."
+        "Add local operational evidence from Fleet telemetry and maintenance system.",
+        "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
       ],
       "expected_confidence_lift": {
-        "total_estimated_lift": 4.7,
+        "total_estimated_lift": 4.8,
         "average_estimated_lift": 1.6,
         "explanation": "Fast validation sprint targets 3 constraints with estimated average validation confidence lift of 1.6 points if artifacts pass."
       },
       "decision_use": "Decide which top constraints deserve deeper evidence packets or can be deprioritized quickly.",
-      "why_this_campaign": "Fast validation sprint covers 3 constraints across 3 industries. The highest burden record is Right-of-way utility relocation sequencing delay."
+      "why_this_campaign": "Fast validation sprint covers 3 constraints across 2 industries. The highest burden record is Heavy equipment telematics fault classification blind spot."
     },
     {
       "campaign_id": "validation-campaign:standard",
@@ -139,6 +138,90 @@
       "analyst_timebox": "1 analyst week",
       "selected_constraints": [
         {
+          "constraint_id": "strategic-067",
+          "constraint_title": "Heavy equipment telematics fault classification blind spot",
+          "industry": "Logistics / Supply Chain / Industrial Equipment",
+          "priority_score": 6.6,
+          "strategic_score": 8.1,
+          "validation_confidence": 3.7,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.8,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Heavy equipment telematics fault classification blind spot was selected because validation burden is 10.0, priority is 6.6, and the next artifact is metric.",
+          "required_artifacts": [
+            "Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+            "Linked triage task ID: task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+            "Metric definition with numerator, denominator, and unit",
+            "Data owner, source system, collection window, and refresh cadence"
+          ],
+          "source_upgrades_needed": [
+            "Add local operational evidence from Fleet telemetry and maintenance system."
+          ],
+          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+          "investigation_route": "/constraints/strategic-067",
+          "validation_route": "/validation?industry=Logistics%20%2F%20Supply%20Chain%20%2F%20Industrial%20Equipment",
+          "source_route": "/sources",
+          "comparison_route": "/compare?ids=strategic-067,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-067"
+        },
+        {
+          "constraint_id": "strategic-053",
+          "constraint_title": "Critical mineral assay-to-offtake qualification delay",
+          "industry": "Metals / Mining / Critical Inputs",
+          "priority_score": 6.1,
+          "strategic_score": 7.6,
+          "validation_confidence": 3.5,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.7,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Critical mineral assay-to-offtake qualification delay was selected because validation burden is 10.0, priority is 6.1, and the next artifact is metric.",
+          "required_artifacts": [
+            "Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+            "Linked triage task ID: task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+            "Metric definition with numerator, denominator, and unit",
+            "Data owner, source system, collection window, and refresh cadence"
+          ],
+          "source_upgrades_needed": [
+            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
+          ],
+          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+          "investigation_route": "/constraints/strategic-053",
+          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
+          "source_route": "/sources",
+          "comparison_route": "/compare?ids=strategic-053,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-053"
+        },
+        {
+          "constraint_id": "strategic-054",
+          "constraint_title": "Leach circuit reagent supply concentration risk",
+          "industry": "Metals / Mining / Critical Inputs",
+          "priority_score": 6,
+          "strategic_score": 7.5,
+          "validation_confidence": 3.7,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.8,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Leach circuit reagent supply concentration risk was selected because validation burden is 10.0, priority is 6.0, and the next artifact is metric.",
+          "required_artifacts": [
+            "Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+            "Linked triage task ID: task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+            "Metric definition with numerator, denominator, and unit",
+            "Data owner, source system, collection window, and refresh cadence"
+          ],
+          "source_upgrades_needed": [
+            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
+          ],
+          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+          "investigation_route": "/constraints/strategic-054",
+          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
+          "source_route": "/sources",
+          "comparison_route": "/compare?ids=strategic-054,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-054"
+        },
+        {
           "constraint_id": "strategic-010",
           "constraint_title": "Right-of-way utility relocation sequencing delay",
           "industry": "Infrastructure / Permitting / Construction",
@@ -167,6 +250,34 @@
           "network_route": "/network?focus=strategic-010"
         },
         {
+          "constraint_id": "strategic-055",
+          "constraint_title": "Tailings permit monitoring data gap",
+          "industry": "Metals / Mining / Critical Inputs",
+          "priority_score": 5.7,
+          "strategic_score": 7.3,
+          "validation_confidence": 3.6,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.7,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Tailings permit monitoring data gap was selected because validation burden is 10.0, priority is 5.7, and the next artifact is metric.",
+          "required_artifacts": [
+            "Constraint ID and title: strategic-055 / Tailings permit monitoring data gap",
+            "Linked triage task ID: task:strategic-055:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+            "Metric definition with numerator, denominator, and unit",
+            "Data owner, source system, collection window, and refresh cadence"
+          ],
+          "source_upgrades_needed": [
+            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
+          ],
+          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+          "investigation_route": "/constraints/strategic-055",
+          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
+          "source_route": "/sources",
+          "comparison_route": "/compare?ids=strategic-055,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-055"
+        },
+        {
           "constraint_id": "strategic-019",
           "constraint_title": "Refining and smelting capacity bottleneck",
           "industry": "Metals / Mining / Critical Inputs",
@@ -193,150 +304,37 @@
           "source_route": "/sources",
           "comparison_route": "/compare?ids=strategic-019,hc-admin-001,strategic-020",
           "network_route": "/network?focus=strategic-019"
-        },
-        {
-          "constraint_id": "strategic-013",
-          "constraint_title": "Chip equipment lead-time coordination",
-          "industry": "Semiconductors / Advanced Manufacturing",
-          "priority_score": 6.4,
-          "strategic_score": 7.8,
-          "validation_confidence": 4,
-          "validation_burden_score": 9.6,
-          "evidence_defensibility": 4.9,
-          "expected_confidence_lift": 1.5,
-          "why_selected": "Chip equipment lead-time coordination was selected because validation burden is 9.6, priority is 6.4, and the next artifact is metric.",
-          "required_artifacts": [
-            "Constraint ID and title: strategic-013 / Chip equipment lead-time coordination",
-            "Linked triage task ID: task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification",
-            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-            "Metric definition with numerator, denominator, and unit",
-            "Data owner, source system, collection window, and refresh cadence"
-          ],
-          "source_upgrades_needed": [
-            "Add local operational evidence from Equipment readiness tracker."
-          ],
-          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-013",
-          "validation_route": "/validation?industry=Semiconductors%20%2F%20Advanced%20Manufacturing",
-          "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-013,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-013"
-        },
-        {
-          "constraint_id": "strategic-020",
-          "constraint_title": "Critical mineral processing qualification delay",
-          "industry": "Metals / Mining / Critical Inputs",
-          "priority_score": 5.8,
-          "strategic_score": 7.3,
-          "validation_confidence": 3.8,
-          "validation_burden_score": 9.9,
-          "evidence_defensibility": 4.8,
-          "expected_confidence_lift": 1.6,
-          "why_selected": "Critical mineral processing qualification delay was selected because validation burden is 9.9, priority is 5.8, and the next artifact is metric.",
-          "required_artifacts": [
-            "Constraint ID and title: strategic-020 / Critical mineral processing qualification delay",
-            "Linked triage task ID: task:strategic-020:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-approved-input-sourcing",
-            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-            "Metric definition with numerator, denominator, and unit",
-            "Data owner, source system, collection window, and refresh cadence"
-          ],
-          "source_upgrades_needed": [
-            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
-          ],
-          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-020",
-          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
-          "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-020,hc-admin-001,strategic-014",
-          "network_route": "/network?focus=strategic-020"
-        },
-        {
-          "constraint_id": "strategic-017",
-          "constraint_title": "Silver byproduct supply dependency",
-          "industry": "Metals / Mining / Critical Inputs",
-          "priority_score": 5.7,
-          "strategic_score": 7.2,
-          "validation_confidence": 3.8,
-          "validation_burden_score": 9.9,
-          "evidence_defensibility": 4.7,
-          "expected_confidence_lift": 1.6,
-          "why_selected": "Silver byproduct supply dependency was selected because validation burden is 9.9, priority is 5.7, and the next artifact is metric.",
-          "required_artifacts": [
-            "Constraint ID and title: strategic-017 / Silver byproduct supply dependency",
-            "Linked triage task ID: task:strategic-017:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-industrial-input-availability",
-            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-            "Metric definition with numerator, denominator, and unit",
-            "Data owner, source system, collection window, and refresh cadence"
-          ],
-          "source_upgrades_needed": [
-            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
-          ],
-          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-017",
-          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
-          "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-017,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-017"
-        },
-        {
-          "constraint_id": "strategic-014",
-          "constraint_title": "Yield learning cycle delay",
-          "industry": "Semiconductors / Advanced Manufacturing",
-          "priority_score": 6.3,
-          "strategic_score": 7.8,
-          "validation_confidence": 4,
-          "validation_burden_score": 9.6,
-          "evidence_defensibility": 4.9,
-          "expected_confidence_lift": 1.5,
-          "why_selected": "Yield learning cycle delay was selected because validation burden is 9.6, priority is 6.3, and the next artifact is metric.",
-          "required_artifacts": [
-            "Constraint ID and title: strategic-014 / Yield learning cycle delay",
-            "Linked triage task ID: task:strategic-014:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-production-ramp",
-            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-            "Metric definition with numerator, denominator, and unit",
-            "Data owner, source system, collection window, and refresh cadence"
-          ],
-          "source_upgrades_needed": [
-            "Add local operational evidence from Manufacturing execution analytics."
-          ],
-          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-014",
-          "validation_route": "/validation?industry=Semiconductors%20%2F%20Advanced%20Manufacturing",
-          "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-014,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-014"
         }
       ],
       "required_artifacts": [
-        "Constraint ID and title: strategic-010 / Right-of-way utility relocation sequencing delay",
-        "Linked triage task ID: task:strategic-010:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+        "Linked triage task ID: task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
         "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
         "Metric definition with numerator, denominator, and unit",
         "Data owner, source system, collection window, and refresh cadence",
+        "Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+        "Linked triage task ID: task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+        "Linked triage task ID: task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "Constraint ID and title: strategic-010 / Right-of-way utility relocation sequencing delay",
+        "Linked triage task ID: task:strategic-010:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "Constraint ID and title: strategic-055 / Tailings permit monitoring data gap",
+        "Linked triage task ID: task:strategic-055:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
         "Constraint ID and title: strategic-019 / Refining and smelting capacity bottleneck",
-        "Linked triage task ID: task:strategic-019:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
-        "Constraint ID and title: strategic-013 / Chip equipment lead-time coordination",
-        "Linked triage task ID: task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification",
-        "Constraint ID and title: strategic-020 / Critical mineral processing qualification delay",
-        "Linked triage task ID: task:strategic-020:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-approved-input-sourcing",
-        "Constraint ID and title: strategic-017 / Silver byproduct supply dependency",
-        "Linked triage task ID: task:strategic-017:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-industrial-input-availability",
-        "Constraint ID and title: strategic-014 / Yield learning cycle delay",
-        "Linked triage task ID: task:strategic-014:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-production-ramp"
+        "Linked triage task ID: task:strategic-019:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input"
       ],
       "source_upgrades_needed": [
-        "Attach the specific primary document for Infrastructure / Permitting / Construction process pattern review.",
+        "Add local operational evidence from Fleet telemetry and maintenance system.",
         "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review.",
-        "Add local operational evidence from Equipment readiness tracker.",
-        "Add local operational evidence from Manufacturing execution analytics."
+        "Attach the specific primary document for Infrastructure / Permitting / Construction process pattern review."
       ],
       "expected_confidence_lift": {
-        "total_estimated_lift": 9.4,
+        "total_estimated_lift": 9.6,
         "average_estimated_lift": 1.6,
         "explanation": "Standard validation campaign targets 6 constraints with estimated average validation confidence lift of 1.6 points if artifacts pass."
       },
       "decision_use": "Decide which constraints are strong enough for comparison, source upgrade, and measurement-first intervention planning.",
-      "why_this_campaign": "Standard validation campaign covers 6 constraints across 3 industries. The highest burden record is Right-of-way utility relocation sequencing delay."
+      "why_this_campaign": "Standard validation campaign covers 6 constraints across 3 industries. The highest burden record is Heavy equipment telematics fault classification blind spot."
     },
     {
       "campaign_id": "validation-campaign:deep",
@@ -347,6 +345,90 @@
       "analyst_timebox": "2-3 analyst weeks",
       "selected_constraints": [
         {
+          "constraint_id": "strategic-067",
+          "constraint_title": "Heavy equipment telematics fault classification blind spot",
+          "industry": "Logistics / Supply Chain / Industrial Equipment",
+          "priority_score": 6.6,
+          "strategic_score": 8.1,
+          "validation_confidence": 3.7,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.8,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Heavy equipment telematics fault classification blind spot was selected because validation burden is 10.0, priority is 6.6, and the next artifact is metric.",
+          "required_artifacts": [
+            "Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+            "Linked triage task ID: task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+            "Metric definition with numerator, denominator, and unit",
+            "Data owner, source system, collection window, and refresh cadence"
+          ],
+          "source_upgrades_needed": [
+            "Add local operational evidence from Fleet telemetry and maintenance system."
+          ],
+          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+          "investigation_route": "/constraints/strategic-067",
+          "validation_route": "/validation?industry=Logistics%20%2F%20Supply%20Chain%20%2F%20Industrial%20Equipment",
+          "source_route": "/sources",
+          "comparison_route": "/compare?ids=strategic-067,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-067"
+        },
+        {
+          "constraint_id": "strategic-053",
+          "constraint_title": "Critical mineral assay-to-offtake qualification delay",
+          "industry": "Metals / Mining / Critical Inputs",
+          "priority_score": 6.1,
+          "strategic_score": 7.6,
+          "validation_confidence": 3.5,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.7,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Critical mineral assay-to-offtake qualification delay was selected because validation burden is 10.0, priority is 6.1, and the next artifact is metric.",
+          "required_artifacts": [
+            "Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+            "Linked triage task ID: task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+            "Metric definition with numerator, denominator, and unit",
+            "Data owner, source system, collection window, and refresh cadence"
+          ],
+          "source_upgrades_needed": [
+            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
+          ],
+          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+          "investigation_route": "/constraints/strategic-053",
+          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
+          "source_route": "/sources",
+          "comparison_route": "/compare?ids=strategic-053,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-053"
+        },
+        {
+          "constraint_id": "strategic-054",
+          "constraint_title": "Leach circuit reagent supply concentration risk",
+          "industry": "Metals / Mining / Critical Inputs",
+          "priority_score": 6,
+          "strategic_score": 7.5,
+          "validation_confidence": 3.7,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.8,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Leach circuit reagent supply concentration risk was selected because validation burden is 10.0, priority is 6.0, and the next artifact is metric.",
+          "required_artifacts": [
+            "Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+            "Linked triage task ID: task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+            "Metric definition with numerator, denominator, and unit",
+            "Data owner, source system, collection window, and refresh cadence"
+          ],
+          "source_upgrades_needed": [
+            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
+          ],
+          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+          "investigation_route": "/constraints/strategic-054",
+          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
+          "source_route": "/sources",
+          "comparison_route": "/compare?ids=strategic-054,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-054"
+        },
+        {
           "constraint_id": "strategic-010",
           "constraint_title": "Right-of-way utility relocation sequencing delay",
           "industry": "Infrastructure / Permitting / Construction",
@@ -375,6 +457,34 @@
           "network_route": "/network?focus=strategic-010"
         },
         {
+          "constraint_id": "strategic-055",
+          "constraint_title": "Tailings permit monitoring data gap",
+          "industry": "Metals / Mining / Critical Inputs",
+          "priority_score": 5.7,
+          "strategic_score": 7.3,
+          "validation_confidence": 3.6,
+          "validation_burden_score": 10,
+          "evidence_defensibility": 4.7,
+          "expected_confidence_lift": 1.6,
+          "why_selected": "Tailings permit monitoring data gap was selected because validation burden is 10.0, priority is 5.7, and the next artifact is metric.",
+          "required_artifacts": [
+            "Constraint ID and title: strategic-055 / Tailings permit monitoring data gap",
+            "Linked triage task ID: task:strategic-055:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+            "Metric definition with numerator, denominator, and unit",
+            "Data owner, source system, collection window, and refresh cadence"
+          ],
+          "source_upgrades_needed": [
+            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
+          ],
+          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+          "investigation_route": "/constraints/strategic-055",
+          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
+          "source_route": "/sources",
+          "comparison_route": "/compare?ids=strategic-055,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-055"
+        },
+        {
           "constraint_id": "strategic-019",
           "constraint_title": "Refining and smelting capacity bottleneck",
           "industry": "Metals / Mining / Critical Inputs",
@@ -401,34 +511,6 @@
           "source_route": "/sources",
           "comparison_route": "/compare?ids=strategic-019,hc-admin-001,strategic-020",
           "network_route": "/network?focus=strategic-019"
-        },
-        {
-          "constraint_id": "strategic-013",
-          "constraint_title": "Chip equipment lead-time coordination",
-          "industry": "Semiconductors / Advanced Manufacturing",
-          "priority_score": 6.4,
-          "strategic_score": 7.8,
-          "validation_confidence": 4,
-          "validation_burden_score": 9.6,
-          "evidence_defensibility": 4.9,
-          "expected_confidence_lift": 1.5,
-          "why_selected": "Chip equipment lead-time coordination was selected because validation burden is 9.6, priority is 6.4, and the next artifact is metric.",
-          "required_artifacts": [
-            "Constraint ID and title: strategic-013 / Chip equipment lead-time coordination",
-            "Linked triage task ID: task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification",
-            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-            "Metric definition with numerator, denominator, and unit",
-            "Data owner, source system, collection window, and refresh cadence"
-          ],
-          "source_upgrades_needed": [
-            "Add local operational evidence from Equipment readiness tracker."
-          ],
-          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-013",
-          "validation_route": "/validation?industry=Semiconductors%20%2F%20Advanced%20Manufacturing",
-          "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-013,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-013"
         },
         {
           "constraint_id": "strategic-020",
@@ -487,88 +569,32 @@
           "network_route": "/network?focus=strategic-017"
         },
         {
-          "constraint_id": "strategic-014",
-          "constraint_title": "Yield learning cycle delay",
-          "industry": "Semiconductors / Advanced Manufacturing",
+          "constraint_id": "strategic-056",
+          "constraint_title": "Refinery sample lot release queue",
+          "industry": "Metals / Mining / Critical Inputs",
           "priority_score": 6.3,
           "strategic_score": 7.8,
-          "validation_confidence": 4,
-          "validation_burden_score": 9.6,
-          "evidence_defensibility": 4.9,
-          "expected_confidence_lift": 1.5,
-          "why_selected": "Yield learning cycle delay was selected because validation burden is 9.6, priority is 6.3, and the next artifact is metric.",
-          "required_artifacts": [
-            "Constraint ID and title: strategic-014 / Yield learning cycle delay",
-            "Linked triage task ID: task:strategic-014:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-production-ramp",
-            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-            "Metric definition with numerator, denominator, and unit",
-            "Data owner, source system, collection window, and refresh cadence"
-          ],
-          "source_upgrades_needed": [
-            "Add local operational evidence from Manufacturing execution analytics."
-          ],
-          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-014",
-          "validation_route": "/validation?industry=Semiconductors%20%2F%20Advanced%20Manufacturing",
-          "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-014,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-014"
-        },
-        {
-          "constraint_id": "strategic-011",
-          "constraint_title": "Semiconductor fab utility readiness",
-          "industry": "Semiconductors / Advanced Manufacturing",
-          "priority_score": 6.1,
-          "strategic_score": 7.6,
-          "validation_confidence": 3.9,
-          "validation_burden_score": 9.6,
+          "validation_confidence": 3.8,
+          "validation_burden_score": 9.9,
           "evidence_defensibility": 4.8,
-          "expected_confidence_lift": 1.5,
-          "why_selected": "Semiconductor fab utility readiness was selected because validation burden is 9.6, priority is 6.1, and the next artifact is metric.",
+          "expected_confidence_lift": 1.2,
+          "why_selected": "Refinery sample lot release queue was selected because validation burden is 9.9, priority is 6.3, and the next artifact is claim.",
           "required_artifacts": [
-            "Constraint ID and title: strategic-011 / Semiconductor fab utility readiness",
-            "Linked triage task ID: task:strategic-011:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-tool-installation",
+            "Constraint ID and title: strategic-056 / Refinery sample lot release queue",
+            "Linked triage task ID: task:strategic-056:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-customer-shipment-release",
             "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-            "Metric definition with numerator, denominator, and unit",
-            "Data owner, source system, collection window, and refresh cadence"
+            "Claim being tested and the exact gap being resolved",
+            "Supporting or contradicting evidence note with source IDs where available"
           ],
           "source_upgrades_needed": [
-            "Add local operational evidence from Site readiness plan."
+            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
           ],
-          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-011",
-          "validation_route": "/validation?industry=Semiconductors%20%2F%20Advanced%20Manufacturing",
+          "decision_use": "Determines whether the constraint claim is supported, narrowed, or rejected.",
+          "investigation_route": "/constraints/strategic-056",
+          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
           "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-011,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-011"
-        },
-        {
-          "constraint_id": "strategic-005",
-          "constraint_title": "Distributed energy hosting capacity uncertainty",
-          "industry": "Energy / Grid / Interconnection",
-          "priority_score": 6.1,
-          "strategic_score": 7.7,
-          "validation_confidence": 4,
-          "validation_burden_score": 9.5,
-          "evidence_defensibility": 4.9,
-          "expected_confidence_lift": 1.5,
-          "why_selected": "Distributed energy hosting capacity uncertainty was selected because validation burden is 9.5, priority is 6.1, and the next artifact is metric.",
-          "required_artifacts": [
-            "Constraint ID and title: strategic-005 / Distributed energy hosting capacity uncertainty",
-            "Linked triage task ID: task:strategic-005:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-connection-application",
-            "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-            "Metric definition with numerator, denominator, and unit",
-            "Data owner, source system, collection window, and refresh cadence"
-          ],
-          "source_upgrades_needed": [
-            "Add local operational evidence from Distribution planning data."
-          ],
-          "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-          "investigation_route": "/constraints/strategic-005",
-          "validation_route": "/validation?industry=Energy%20%2F%20Grid%20%2F%20Interconnection",
-          "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-005,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-005"
+          "comparison_route": "/compare?ids=strategic-056,hc-admin-001,strategic-020",
+          "network_route": "/network?focus=strategic-056"
         },
         {
           "constraint_id": "strategic-018",
@@ -597,71 +623,47 @@
           "source_route": "/sources",
           "comparison_route": "/compare?ids=strategic-018,hc-admin-001,strategic-020",
           "network_route": "/network?focus=strategic-018"
-        },
-        {
-          "constraint_id": "strategic-034",
-          "constraint_title": "Mine maintenance shutdown workpack readiness gap",
-          "industry": "Metals / Mining / Critical Inputs",
-          "priority_score": 6.2,
-          "strategic_score": 7.7,
-          "validation_confidence": 4,
-          "validation_burden_score": 9.5,
-          "evidence_defensibility": 4.9,
-          "expected_confidence_lift": 1.1,
-          "why_selected": "Mine maintenance shutdown workpack readiness gap was selected because validation burden is 9.5, priority is 6.2, and the next artifact is evidence.",
-          "required_artifacts": [
-            "Evidence note showing whether the gap is confirmed, reduced, or disproven."
-          ],
-          "source_upgrades_needed": [
-            "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review."
-          ],
-          "decision_use": "Determines whether the constraint remains prioritized for analyst review.",
-          "investigation_route": "/constraints/strategic-034",
-          "validation_route": "/validation?industry=Metals%20%2F%20Mining%20%2F%20Critical%20Inputs",
-          "source_route": "/sources",
-          "comparison_route": "/compare?ids=strategic-034,hc-admin-001,strategic-020",
-          "network_route": "/network?focus=strategic-034"
         }
       ],
       "required_artifacts": [
-        "Constraint ID and title: strategic-010 / Right-of-way utility relocation sequencing delay",
-        "Linked triage task ID: task:strategic-010:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+        "Linked triage task ID: task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
         "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
         "Metric definition with numerator, denominator, and unit",
         "Data owner, source system, collection window, and refresh cadence",
+        "Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+        "Linked triage task ID: task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+        "Linked triage task ID: task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "Constraint ID and title: strategic-010 / Right-of-way utility relocation sequencing delay",
+        "Linked triage task ID: task:strategic-010:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "Constraint ID and title: strategic-055 / Tailings permit monitoring data gap",
+        "Linked triage task ID: task:strategic-055:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
         "Constraint ID and title: strategic-019 / Refining and smelting capacity bottleneck",
         "Linked triage task ID: task:strategic-019:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
-        "Constraint ID and title: strategic-013 / Chip equipment lead-time coordination",
-        "Linked triage task ID: task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification",
         "Constraint ID and title: strategic-020 / Critical mineral processing qualification delay",
         "Linked triage task ID: task:strategic-020:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-approved-input-sourcing",
         "Constraint ID and title: strategic-017 / Silver byproduct supply dependency",
         "Linked triage task ID: task:strategic-017:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-industrial-input-availability",
-        "Constraint ID and title: strategic-014 / Yield learning cycle delay",
-        "Linked triage task ID: task:strategic-014:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-production-ramp",
-        "Constraint ID and title: strategic-011 / Semiconductor fab utility readiness",
-        "Linked triage task ID: task:strategic-011:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-tool-installation",
-        "Constraint ID and title: strategic-005 / Distributed energy hosting capacity uncertainty",
-        "Linked triage task ID: task:strategic-005:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-connection-application",
+        "Constraint ID and title: strategic-056 / Refinery sample lot release queue",
+        "Linked triage task ID: task:strategic-056:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-customer-shipment-release",
+        "Claim being tested and the exact gap being resolved",
+        "Supporting or contradicting evidence note with source IDs where available",
         "Constraint ID and title: strategic-018 / Gold project approval and capital sequencing friction",
-        "Linked triage task ID: task:strategic-018:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-construction-mobilization",
-        "Evidence note showing whether the gap is confirmed, reduced, or disproven."
+        "Linked triage task ID: task:strategic-018:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-construction-mobilization"
       ],
       "source_upgrades_needed": [
-        "Attach the specific primary document for Infrastructure / Permitting / Construction process pattern review.",
+        "Add local operational evidence from Fleet telemetry and maintenance system.",
         "Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review.",
-        "Add local operational evidence from Equipment readiness tracker.",
-        "Add local operational evidence from Manufacturing execution analytics.",
-        "Add local operational evidence from Site readiness plan.",
-        "Add local operational evidence from Distribution planning data."
+        "Attach the specific primary document for Infrastructure / Permitting / Construction process pattern review."
       ],
       "expected_confidence_lift": {
-        "total_estimated_lift": 15.1,
-        "average_estimated_lift": 1.5,
-        "explanation": "Deep defensibility campaign targets 10 constraints with estimated average validation confidence lift of 1.5 points if artifacts pass."
+        "total_estimated_lift": 15.6,
+        "average_estimated_lift": 1.6,
+        "explanation": "Deep defensibility campaign targets 10 constraints with estimated average validation confidence lift of 1.6 points if artifacts pass."
       },
       "decision_use": "Decide which top opportunities can move from hypothesis to defensible intelligence before intervention sequencing.",
-      "why_this_campaign": "Deep defensibility campaign covers 10 constraints across 4 industries. The highest burden record is Right-of-way utility relocation sequencing delay."
+      "why_this_campaign": "Deep defensibility campaign covers 10 constraints across 3 industries. The highest burden record is Heavy equipment telematics fault classification blind spot."
     }
   ]
 }

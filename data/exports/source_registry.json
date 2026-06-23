@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T12:16:56.307Z",
+  "generated_at": "2026-06-23T03:18:51.030Z",
   "sources": [
     {
       "source_id": "source:administrative-simplification-and-medical-review-workflow-guidance",
@@ -13,6 +13,22 @@
       "citation_status": "needs-url",
       "trust_weight": 8.2,
       "verification_need": "Attach source URL, publication date, and scope notes."
+    },
+    {
+      "source_id": "source:aerospace-defense-space-manufacturing-process-pattern-review",
+      "title": "Aerospace / Defense / Space Manufacturing process pattern review",
+      "source_type": "Operational Pattern",
+      "publisher": "Aerospace / Defense / Space Manufacturing process pattern review",
+      "referenced_by": [
+        "strategic-061",
+        "strategic-062",
+        "strategic-063",
+        "strategic-064"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 4.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
     },
     {
       "source_id": "source:ahima-release-of-information-resources",
@@ -158,6 +174,23 @@
       "verification_need": "Attach source URL, publication date, and scope notes."
     },
     {
+      "source_id": "source:data-centers-ai-infrastructure-process-pattern-review",
+      "title": "Data Centers / AI Infrastructure process pattern review",
+      "source_type": "Operational Pattern",
+      "publisher": "Data Centers / AI Infrastructure process pattern review",
+      "referenced_by": [
+        "strategic-037",
+        "strategic-038",
+        "strategic-039",
+        "strategic-040",
+        "strategic-041"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 4.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
       "source_id": "source:energy-grid-interconnection-process-pattern-review",
       "title": "Energy / Grid / Interconnection process pattern review",
       "source_type": "Operational Pattern",
@@ -168,11 +201,14 @@
         "strategic-003",
         "strategic-004",
         "strategic-005",
-        "strategic-031"
+        "strategic-031",
+        "strategic-046",
+        "strategic-047",
+        "strategic-048"
       ],
       "provenance_level": "operational-pattern",
       "citation_status": "local-observation-needed",
-      "trust_weight": 5.2,
+      "trust_weight": 4.9,
       "verification_need": "Attach local observation notes, logs, or interview records."
     },
     {
@@ -282,7 +318,11 @@
         "strategic-023",
         "strategic-024",
         "strategic-025",
-        "strategic-035"
+        "strategic-035",
+        "strategic-065",
+        "strategic-066",
+        "strategic-067",
+        "strategic-068"
       ],
       "provenance_level": "operational-pattern",
       "citation_status": "local-observation-needed",
@@ -313,7 +353,11 @@
         "strategic-018",
         "strategic-019",
         "strategic-020",
-        "strategic-034"
+        "strategic-034",
+        "strategic-053",
+        "strategic-054",
+        "strategic-055",
+        "strategic-056"
       ],
       "provenance_level": "source-title-only",
       "citation_status": "needs-primary-document",
@@ -425,6 +469,22 @@
       "verification_need": "Attach local observation notes, logs, or interview records."
     },
     {
+      "source_id": "source:power-generation-nuclear-smr-process-pattern-review",
+      "title": "Power Generation / Nuclear / SMR process pattern review",
+      "source_type": "Operational Pattern",
+      "publisher": "Power Generation / Nuclear / SMR process pattern review",
+      "referenced_by": [
+        "strategic-042",
+        "strategic-043",
+        "strategic-044",
+        "strategic-045"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 4.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
       "source_id": "source:public-sector-administration-compliance-process-pattern-review",
       "title": "Public-Sector Administration / Compliance process pattern review",
       "source_type": "Government",
@@ -456,6 +516,22 @@
       "verification_need": "Attach source URL, publication date, and scope notes."
     },
     {
+      "source_id": "source:robotics-automation-deployment-process-pattern-review",
+      "title": "Robotics / Automation Deployment process pattern review",
+      "source_type": "Operational Pattern",
+      "publisher": "Robotics / Automation Deployment process pattern review",
+      "referenced_by": [
+        "strategic-057",
+        "strategic-058",
+        "strategic-059",
+        "strategic-060"
+      ],
+      "provenance_level": "operational-pattern",
+      "citation_status": "local-observation-needed",
+      "trust_weight": 4.8,
+      "verification_need": "Attach local observation notes, logs, or interview records."
+    },
+    {
       "source_id": "source:semiconductors-advanced-manufacturing-process-pattern-review",
       "title": "Semiconductors / Advanced Manufacturing process pattern review",
       "source_type": "Operational Pattern",
@@ -466,7 +542,11 @@
         "strategic-013",
         "strategic-014",
         "strategic-015",
-        "strategic-033"
+        "strategic-033",
+        "strategic-049",
+        "strategic-050",
+        "strategic-051",
+        "strategic-052"
       ],
       "provenance_level": "operational-pattern",
       "citation_status": "local-observation-needed",
@@ -514,7 +594,39 @@
         "strategic-033",
         "strategic-034",
         "strategic-035",
-        "strategic-036"
+        "strategic-036",
+        "strategic-037",
+        "strategic-038",
+        "strategic-039",
+        "strategic-040",
+        "strategic-041",
+        "strategic-042",
+        "strategic-043",
+        "strategic-044",
+        "strategic-045",
+        "strategic-046",
+        "strategic-047",
+        "strategic-048",
+        "strategic-049",
+        "strategic-050",
+        "strategic-051",
+        "strategic-052",
+        "strategic-053",
+        "strategic-054",
+        "strategic-055",
+        "strategic-056",
+        "strategic-057",
+        "strategic-058",
+        "strategic-059",
+        "strategic-060",
+        "strategic-061",
+        "strategic-062",
+        "strategic-063",
+        "strategic-064",
+        "strategic-065",
+        "strategic-066",
+        "strategic-067",
+        "strategic-068"
       ],
       "provenance_level": "operational-pattern",
       "citation_status": "local-observation-needed",
@@ -523,18 +635,18 @@
     }
   ],
   "summary": {
-    "source_count": 35,
-    "constraint_coverage_count": 52,
-    "average_trust_weight": 7.3,
+    "source_count": 39,
+    "constraint_coverage_count": 84,
+    "average_trust_weight": 7.1,
     "provenance_distribution": {
       "secondary-reference": 7,
-      "source-title-only": 19,
-      "operational-pattern": 9
+      "operational-pattern": 13,
+      "source-title-only": 19
     },
     "citation_status_distribution": {
       "needs-url": 12,
-      "needs-primary-document": 14,
-      "local-observation-needed": 9
+      "local-observation-needed": 13,
+      "needs-primary-document": 14
     },
     "sources_needing_primary_documents": 14
   }

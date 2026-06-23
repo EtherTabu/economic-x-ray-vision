@@ -136,7 +136,7 @@ try {
   console.log(`- schema version: ${build.schema_version}`);
 
   if (
-    counts.constraints !== 52 ||
+    counts.constraints === 0 ||
     counts.scores !== counts.constraints ||
     counts.evidencePacks !== counts.constraints ||
     counts.validationTasks === 0 ||

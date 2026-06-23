@@ -1,22 +1,490 @@
 {
-  "generated_at": "2026-06-14T23:53:28.277Z",
-  "dossier_count": 52,
+  "generated_at": "2026-06-23T03:18:50.784Z",
+  "dossier_count": 84,
   "validation_summary": {
-    "total_dossiers": 52,
+    "total_dossiers": 84,
     "decision_ready_records": 4,
-    "needs_evidence_records": 46,
-    "high_priority_validation_records": 27,
-    "high_opportunity_weak_evidence_records": 43,
+    "needs_evidence_records": 78,
+    "high_priority_validation_records": 59,
+    "high_opportunity_weak_evidence_records": 75,
     "validation_status_distribution": {
-      "unvalidated": 22,
+      "unvalidated": 54,
       "needs_evidence": 24,
       "partially_supported": 2,
       "evidence_backed": 3,
       "validated": 1
     },
-    "average_validation_priority_score": 7.4
+    "average_validation_priority_score": 7.7
   },
   "dossiers": [
+    {
+      "constraint_id": "strategic-060",
+      "constraint_title": "Vision model exception tuning handoff",
+      "core_claim": "Vision model exception tuning handoff creates process handoff through Vision exception tuning.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Vision exception tuning.",
+        "Operational review should confirm whether Vision model issue tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Vision exception tuning",
+        "Observed frequency and owner of delay before Automated inspection release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring process handoff in Vision exception tuning.",
+        "Measured waste aligns with time 7/10, labor 8/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Automated inspection release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring process handoff friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Vision exception tuning."
+      ],
+      "recommended_validation_steps": [
+        "Measure Vision exception tuning using local operational logs.",
+        "Validate whether Step-level baseline for Vision exception tuning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Vision exception tuning with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Vision model issue tracker logs",
+        "Vision exception tuning timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Vision model exception tuning handoff frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Vision exception tuning improve Automated inspection release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Vision exception tuning using local operational logs.",
+        "Validate whether Step-level baseline for Vision exception tuning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Vision exception tuning with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 8.5
+    },
+    {
+      "constraint_id": "strategic-067",
+      "constraint_title": "Heavy equipment telematics fault classification blind spot",
+      "core_claim": "Heavy equipment telematics fault classification blind spot creates information gap through Telematics fault classification.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Telematics fault classification.",
+        "Operational review should confirm whether Fleet telemetry and maintenance system captures queue, handoff, or capacity data.",
+        "Initial pattern match: measurement blind spot."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Telematics fault classification",
+        "Observed frequency and owner of delay before Maintenance work order prioritization"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring information gap in Telematics fault classification.",
+        "Measured waste aligns with time 7/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Maintenance work order prioritization."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring information gap friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Telematics fault classification."
+      ],
+      "recommended_validation_steps": [
+        "Measure Telematics fault classification using local operational logs.",
+        "Validate whether Step-level baseline for Telematics fault classification materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Telematics fault classification with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Fleet telemetry and maintenance system logs",
+        "Telematics fault classification timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Heavy equipment telematics fault classification blind spot frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Telematics fault classification improve Maintenance work order prioritization?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Telematics fault classification using local operational logs.",
+        "Validate whether Step-level baseline for Telematics fault classification materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Telematics fault classification with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 8.5
+    },
+    {
+      "constraint_id": "strategic-058",
+      "constraint_title": "Autonomous mobile robot site mapping rework",
+      "core_claim": "Autonomous mobile robot site mapping rework creates information gap through Mobile robot site mapping.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Mobile robot site mapping.",
+        "Operational review should confirm whether Robot fleet map repository captures queue, handoff, or capacity data.",
+        "Initial pattern match: data fragmentation."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Mobile robot site mapping",
+        "Observed frequency and owner of delay before Autonomous route release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring information gap in Mobile robot site mapping.",
+        "Measured waste aligns with time 7/10, labor 7/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Autonomous route release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring information gap friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Mobile robot site mapping."
+      ],
+      "recommended_validation_steps": [
+        "Measure Mobile robot site mapping using local operational logs.",
+        "Validate whether Step-level baseline for Mobile robot site mapping materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Mobile robot site mapping with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Robot fleet map repository logs",
+        "Mobile robot site mapping timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Autonomous mobile robot site mapping rework frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Mobile robot site mapping improve Autonomous route release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Mobile robot site mapping using local operational logs.",
+        "Validate whether Step-level baseline for Mobile robot site mapping materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Mobile robot site mapping with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 8.4
+    },
+    {
+      "constraint_id": "strategic-059",
+      "constraint_title": "End effector changeover programming queue",
+      "core_claim": "End effector changeover programming queue creates administrative delay through End effector changeover programming.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in End effector changeover programming.",
+        "Operational review should confirm whether Automation change request queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for End effector changeover programming",
+        "Observed frequency and owner of delay before New product run release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring administrative delay in End effector changeover programming.",
+        "Measured waste aligns with time 7/10, labor 7/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in New product run release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring administrative delay friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify End effector changeover programming."
+      ],
+      "recommended_validation_steps": [
+        "Measure End effector changeover programming using local operational logs.",
+        "Validate whether Step-level baseline for End effector changeover programming materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument End effector changeover programming with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Automation change request queue logs",
+        "End effector changeover programming timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is End effector changeover programming queue frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing End effector changeover programming improve New product run release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure End effector changeover programming using local operational logs.",
+        "Validate whether Step-level baseline for End effector changeover programming materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument End effector changeover programming with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 8.4
+    },
+    {
+      "constraint_id": "strategic-039",
+      "constraint_title": "High-density rack deployment stranded by fiber cross-connect backlog",
+      "core_claim": "High-density rack deployment stranded by fiber cross-connect backlog creates process handoff through Fiber cross-connect provisioning.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Fiber cross-connect provisioning.",
+        "Operational review should confirm whether Network provisioning queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Fiber cross-connect provisioning",
+        "Observed frequency and owner of delay before Cluster acceptance testing"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring process handoff in Fiber cross-connect provisioning.",
+        "Measured waste aligns with time 8/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Cluster acceptance testing."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring process handoff friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Fiber cross-connect provisioning."
+      ],
+      "recommended_validation_steps": [
+        "Measure Fiber cross-connect provisioning using local operational logs.",
+        "Validate whether Step-level baseline for Fiber cross-connect provisioning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Fiber cross-connect provisioning with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Network provisioning queue logs",
+        "Fiber cross-connect provisioning timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is High-density rack deployment stranded by fiber cross-connect backlog frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Fiber cross-connect provisioning improve Cluster acceptance testing?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Fiber cross-connect provisioning using local operational logs.",
+        "Validate whether Step-level baseline for Fiber cross-connect provisioning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Fiber cross-connect provisioning with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.3
+    },
+    {
+      "constraint_id": "strategic-052",
+      "constraint_title": "Advanced packaging substrate qualification bottleneck",
+      "core_claim": "Advanced packaging substrate qualification bottleneck creates manual verification through Packaging substrate qualification.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Packaging substrate qualification.",
+        "Operational review should confirm whether Supplier quality qualification system captures queue, handoff, or capacity data.",
+        "Initial pattern match: vendor qualification."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Packaging substrate qualification",
+        "Observed frequency and owner of delay before Package build release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring manual verification in Packaging substrate qualification.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Package build release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring manual verification friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Packaging substrate qualification."
+      ],
+      "recommended_validation_steps": [
+        "Measure Packaging substrate qualification using local operational logs.",
+        "Validate whether Step-level baseline for Packaging substrate qualification materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Packaging substrate qualification with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Supplier quality qualification system logs",
+        "Packaging substrate qualification timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Advanced packaging substrate qualification bottleneck frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Packaging substrate qualification improve Package build release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Packaging substrate qualification using local operational logs.",
+        "Validate whether Step-level baseline for Packaging substrate qualification materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Packaging substrate qualification with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.3
+    },
+    {
+      "constraint_id": "strategic-061",
+      "constraint_title": "Launch supplier nonconformance closure loop",
+      "core_claim": "Launch supplier nonconformance closure loop creates manual verification through Supplier nonconformance closure.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Supplier nonconformance closure.",
+        "Operational review should confirm whether Nonconformance management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: manual verification drag."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Supplier nonconformance closure",
+        "Observed frequency and owner of delay before Flight hardware release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring manual verification in Supplier nonconformance closure.",
+        "Measured waste aligns with time 8/10, labor 8/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Flight hardware release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring manual verification friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Supplier nonconformance closure."
+      ],
+      "recommended_validation_steps": [
+        "Measure Supplier nonconformance closure using local operational logs.",
+        "Validate whether Step-level baseline for Supplier nonconformance closure materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Supplier nonconformance closure with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Nonconformance management system logs",
+        "Supplier nonconformance closure timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Launch supplier nonconformance closure loop frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Supplier nonconformance closure improve Flight hardware release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Supplier nonconformance closure using local operational logs.",
+        "Validate whether Step-level baseline for Supplier nonconformance closure materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Supplier nonconformance closure with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful as a high-priority hypothesis, not yet as a validated claim.",
+      "decision_ready": false,
+      "validation_priority_score": 8.3
+    },
+    {
+      "constraint_id": "strategic-062",
+      "constraint_title": "Space vehicle test article configuration traceability gap",
+      "core_claim": "Space vehicle test article configuration traceability gap creates information gap through Test article configuration reconciliation.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.6,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Test article configuration reconciliation.",
+        "Operational review should confirm whether Configuration control system captures queue, handoff, or capacity data.",
+        "Initial pattern match: data fragmentation."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Test article configuration reconciliation",
+        "Observed frequency and owner of delay before Test data acceptance"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring information gap in Test article configuration reconciliation.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Test data acceptance."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring information gap friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Test article configuration reconciliation."
+      ],
+      "recommended_validation_steps": [
+        "Measure Test article configuration reconciliation using local operational logs.",
+        "Validate whether Step-level baseline for Test article configuration reconciliation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Test article configuration reconciliation with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Configuration control system logs",
+        "Test article configuration reconciliation timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Space vehicle test article configuration traceability gap frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Test article configuration reconciliation improve Test data acceptance?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Test article configuration reconciliation using local operational logs.",
+        "Validate whether Step-level baseline for Test article configuration reconciliation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Test article configuration reconciliation with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.3
+    },
+    {
+      "constraint_id": "strategic-065",
+      "constraint_title": "Field service parts availability causing asset downtime",
+      "core_claim": "Field service parts availability causing asset downtime creates idle capacity through Field service parts readiness.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Field service parts readiness.",
+        "Operational review should confirm whether Service parts planning system captures queue, handoff, or capacity data.",
+        "Initial pattern match: capacity mismatch."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Field service parts readiness",
+        "Observed frequency and owner of delay before Asset return to service"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring idle capacity in Field service parts readiness.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Asset return to service."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring idle capacity friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Field service parts readiness."
+      ],
+      "recommended_validation_steps": [
+        "Measure Field service parts readiness using local operational logs.",
+        "Validate whether Step-level baseline for Field service parts readiness materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Field service parts readiness with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Service parts planning system logs",
+        "Field service parts readiness timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Field service parts availability causing asset downtime frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Field service parts readiness improve Asset return to service?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Field service parts readiness using local operational logs.",
+        "Validate whether Step-level baseline for Field service parts readiness materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Field service parts readiness with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.3
+    },
     {
       "constraint_id": "strategic-028",
       "constraint_title": "Occupational license renewal documentation chase",
@@ -116,6 +584,266 @@
         "Measure Quality exception closure using local operational logs.",
         "Validate whether Step-level baseline for Quality exception closure materially changes the opportunity score.",
         "Compare outcomes before and after a small intervention using Instrument Quality exception closure with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.2
+    },
+    {
+      "constraint_id": "strategic-040",
+      "constraint_title": "AI training workload scheduling against power and cooling envelope mismatch",
+      "core_claim": "AI training workload scheduling against power and cooling envelope mismatch creates market mismatch through Compute workload capacity scheduling.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Compute workload capacity scheduling.",
+        "Operational review should confirm whether Cluster scheduler and facilities telemetry captures queue, handoff, or capacity data.",
+        "Initial pattern match: capacity mismatch."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Compute workload capacity scheduling",
+        "Observed frequency and owner of delay before Training job execution"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring market mismatch in Compute workload capacity scheduling.",
+        "Measured waste aligns with time 7/10, labor 5/10, or capital 9/10 assumptions.",
+        "Downstream effects appear in Training job execution."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring market mismatch friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Compute workload capacity scheduling."
+      ],
+      "recommended_validation_steps": [
+        "Measure Compute workload capacity scheduling using local operational logs.",
+        "Validate whether Step-level baseline for Compute workload capacity scheduling materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Compute workload capacity scheduling with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Cluster scheduler and facilities telemetry logs",
+        "Compute workload capacity scheduling timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is AI training workload scheduling against power and cooling envelope mismatch frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Compute workload capacity scheduling improve Training job execution?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Compute workload capacity scheduling using local operational logs.",
+        "Validate whether Step-level baseline for Compute workload capacity scheduling materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Compute workload capacity scheduling with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.2
+    },
+    {
+      "constraint_id": "strategic-049",
+      "constraint_title": "Fab tool install qualification handoff delay",
+      "core_claim": "Fab tool install qualification handoff delay creates process handoff through Fab tool install qualification.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Fab tool install qualification.",
+        "Operational review should confirm whether Tool qualification tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Fab tool install qualification",
+        "Observed frequency and owner of delay before Production recipe release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring process handoff in Fab tool install qualification.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 9/10 assumptions.",
+        "Downstream effects appear in Production recipe release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring process handoff friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Fab tool install qualification."
+      ],
+      "recommended_validation_steps": [
+        "Measure Fab tool install qualification using local operational logs.",
+        "Validate whether Step-level baseline for Fab tool install qualification materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Fab tool install qualification with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Tool qualification tracker logs",
+        "Fab tool install qualification timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Fab tool install qualification handoff delay frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Fab tool install qualification improve Production recipe release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Fab tool install qualification using local operational logs.",
+        "Validate whether Step-level baseline for Fab tool install qualification materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Fab tool install qualification with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.2
+    },
+    {
+      "constraint_id": "strategic-051",
+      "constraint_title": "Cleanroom capacity allocation conflict during ramp",
+      "core_claim": "Cleanroom capacity allocation conflict during ramp creates market mismatch through Cleanroom capacity allocation.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Cleanroom capacity allocation.",
+        "Operational review should confirm whether Manufacturing dispatch and planning system captures queue, handoff, or capacity data.",
+        "Initial pattern match: capacity mismatch."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Cleanroom capacity allocation",
+        "Observed frequency and owner of delay before Committed customer output"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring market mismatch in Cleanroom capacity allocation.",
+        "Measured waste aligns with time 7/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Committed customer output."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring market mismatch friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Cleanroom capacity allocation."
+      ],
+      "recommended_validation_steps": [
+        "Measure Cleanroom capacity allocation using local operational logs.",
+        "Validate whether Step-level baseline for Cleanroom capacity allocation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Cleanroom capacity allocation with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Manufacturing dispatch and planning system logs",
+        "Cleanroom capacity allocation timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Cleanroom capacity allocation conflict during ramp frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Cleanroom capacity allocation improve Committed customer output?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Cleanroom capacity allocation using local operational logs.",
+        "Validate whether Step-level baseline for Cleanroom capacity allocation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Cleanroom capacity allocation with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.2
+    },
+    {
+      "constraint_id": "strategic-056",
+      "constraint_title": "Refinery sample lot release queue",
+      "core_claim": "Refinery sample lot release queue creates administrative delay through Refined lot quality release.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Refined lot quality release.",
+        "Operational review should confirm whether Laboratory information management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Refined lot quality release",
+        "Observed frequency and owner of delay before Customer shipment release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring administrative delay in Refined lot quality release.",
+        "Measured waste aligns with time 7/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Customer shipment release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring administrative delay friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Refined lot quality release."
+      ],
+      "recommended_validation_steps": [
+        "Measure Refined lot quality release using local operational logs.",
+        "Validate whether Step-level baseline for Refined lot quality release materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Refined lot quality release with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Laboratory information management system logs",
+        "Refined lot quality release timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Refinery sample lot release queue frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Refined lot quality release improve Customer shipment release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Refined lot quality release using local operational logs.",
+        "Validate whether Step-level baseline for Refined lot quality release materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Refined lot quality release with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.2
+    },
+    {
+      "constraint_id": "strategic-066",
+      "constraint_title": "Depot repair triage backlog for mission equipment",
+      "core_claim": "Depot repair triage backlog for mission equipment creates administrative delay through Depot repair triage.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Depot repair triage.",
+        "Operational review should confirm whether Repair management queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: queue backlog."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Depot repair triage",
+        "Observed frequency and owner of delay before Equipment redeployment"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring administrative delay in Depot repair triage.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Equipment redeployment."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring administrative delay friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Depot repair triage."
+      ],
+      "recommended_validation_steps": [
+        "Measure Depot repair triage using local operational logs.",
+        "Validate whether Step-level baseline for Depot repair triage materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Depot repair triage with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Repair management queue logs",
+        "Depot repair triage timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Depot repair triage backlog for mission equipment frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Depot repair triage improve Equipment redeployment?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Depot repair triage using local operational logs.",
+        "Validate whether Step-level baseline for Depot repair triage materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Depot repair triage with owner, age, and exception reason fields.."
       ],
       "decision_usefulness": "Useful for research queueing and evidence collection.",
       "decision_ready": false,
@@ -434,6 +1162,162 @@
       "validation_priority_score": 8.1
     },
     {
+      "constraint_id": "strategic-038",
+      "constraint_title": "Liquid cooling loop validation bottleneck",
+      "core_claim": "Liquid cooling loop validation bottleneck creates manual verification through Liquid cooling validation.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Liquid cooling validation.",
+        "Operational review should confirm whether Thermal commissioning checklist captures queue, handoff, or capacity data.",
+        "Initial pattern match: manual verification drag."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Liquid cooling validation",
+        "Observed frequency and owner of delay before Rack power-on approval"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring manual verification in Liquid cooling validation.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Rack power-on approval."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring manual verification friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Liquid cooling validation."
+      ],
+      "recommended_validation_steps": [
+        "Measure Liquid cooling validation using local operational logs.",
+        "Validate whether Step-level baseline for Liquid cooling validation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Liquid cooling validation with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Thermal commissioning checklist logs",
+        "Liquid cooling validation timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Liquid cooling loop validation bottleneck frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Liquid cooling validation improve Rack power-on approval?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Liquid cooling validation using local operational logs.",
+        "Validate whether Step-level baseline for Liquid cooling validation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Liquid cooling validation with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.1
+    },
+    {
+      "constraint_id": "strategic-043",
+      "constraint_title": "Turbine outage parts readiness constraint",
+      "core_claim": "Turbine outage parts readiness constraint creates hidden cost through Turbine outage readiness planning.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Turbine outage readiness planning.",
+        "Operational review should confirm whether Outage work management system captures queue, handoff, or capacity data.",
+        "Initial pattern match: equipment lead time."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Turbine outage readiness planning",
+        "Observed frequency and owner of delay before Unit return to service"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring hidden cost in Turbine outage readiness planning.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 9/10 assumptions.",
+        "Downstream effects appear in Unit return to service."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring hidden cost friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Turbine outage readiness planning."
+      ],
+      "recommended_validation_steps": [
+        "Measure Turbine outage readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Turbine outage readiness planning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Turbine outage readiness planning with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Outage work management system logs",
+        "Turbine outage readiness planning timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Turbine outage parts readiness constraint frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Turbine outage readiness planning improve Unit return to service?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Turbine outage readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Turbine outage readiness planning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Turbine outage readiness planning with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.1
+    },
+    {
+      "constraint_id": "strategic-064",
+      "constraint_title": "Propulsion test stand scheduling bottleneck",
+      "core_claim": "Propulsion test stand scheduling bottleneck creates idle capacity through Propulsion test stand scheduling.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Propulsion test stand scheduling.",
+        "Operational review should confirm whether Test operations schedule captures queue, handoff, or capacity data.",
+        "Initial pattern match: processing capacity."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Propulsion test stand scheduling",
+        "Observed frequency and owner of delay before Test campaign completion"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring idle capacity in Propulsion test stand scheduling.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Test campaign completion."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring idle capacity friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Propulsion test stand scheduling."
+      ],
+      "recommended_validation_steps": [
+        "Measure Propulsion test stand scheduling using local operational logs.",
+        "Validate whether Step-level baseline for Propulsion test stand scheduling materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Propulsion test stand scheduling with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Test operations schedule logs",
+        "Propulsion test stand scheduling timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Propulsion test stand scheduling bottleneck frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Propulsion test stand scheduling improve Test campaign completion?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Propulsion test stand scheduling using local operational logs.",
+        "Validate whether Step-level baseline for Propulsion test stand scheduling materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Propulsion test stand scheduling with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8.1
+    },
+    {
       "constraint_id": "strategic-013",
       "constraint_title": "Chip equipment lead-time coordination",
       "core_claim": "Chip equipment lead-time coordination creates hidden cost through Tool procurement and install planning.",
@@ -584,6 +1468,318 @@
         "Measure Shutdown workpack planning using local operational logs.",
         "Validate whether Step-level baseline for Shutdown workpack planning materially changes the opportunity score.",
         "Compare outcomes before and after a small intervention using Instrument Shutdown workpack planning with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8
+    },
+    {
+      "constraint_id": "strategic-037",
+      "constraint_title": "GPU cluster commissioning dependency on power delivery sequencing",
+      "core_claim": "GPU cluster commissioning dependency on power delivery sequencing creates process handoff through GPU cluster power readiness commissioning.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.6,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in GPU cluster power readiness commissioning.",
+        "Operational review should confirm whether Commissioning readiness tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: interconnection delay."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for GPU cluster power readiness commissioning",
+        "Observed frequency and owner of delay before Production cluster burn-in"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring process handoff in GPU cluster power readiness commissioning.",
+        "Measured waste aligns with time 9/10, labor 6/10, or capital 9/10 assumptions.",
+        "Downstream effects appear in Production cluster burn-in."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring process handoff friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify GPU cluster power readiness commissioning."
+      ],
+      "recommended_validation_steps": [
+        "Measure GPU cluster power readiness commissioning using local operational logs.",
+        "Validate whether Step-level baseline for GPU cluster power readiness commissioning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument GPU cluster power readiness commissioning with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Commissioning readiness tracker logs",
+        "GPU cluster power readiness commissioning timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is GPU cluster commissioning dependency on power delivery sequencing frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing GPU cluster power readiness commissioning improve Production cluster burn-in?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure GPU cluster power readiness commissioning using local operational logs.",
+        "Validate whether Step-level baseline for GPU cluster power readiness commissioning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument GPU cluster power readiness commissioning with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8
+    },
+    {
+      "constraint_id": "strategic-045",
+      "constraint_title": "Power plant protection settings review backlog",
+      "core_claim": "Power plant protection settings review backlog creates administrative delay through Protection settings review.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Protection settings review.",
+        "Operational review should confirm whether Relay settings review workflow captures queue, handoff, or capacity data.",
+        "Initial pattern match: interconnection delay."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Protection settings review",
+        "Observed frequency and owner of delay before Generator synchronization approval"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring administrative delay in Protection settings review.",
+        "Measured waste aligns with time 8/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Generator synchronization approval."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring administrative delay friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Protection settings review."
+      ],
+      "recommended_validation_steps": [
+        "Measure Protection settings review using local operational logs.",
+        "Validate whether Step-level baseline for Protection settings review materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Protection settings review with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Relay settings review workflow logs",
+        "Protection settings review timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Power plant protection settings review backlog frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Protection settings review improve Generator synchronization approval?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Protection settings review using local operational logs.",
+        "Validate whether Step-level baseline for Protection settings review materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Protection settings review with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8
+    },
+    {
+      "constraint_id": "strategic-047",
+      "constraint_title": "Transmission reconductoring outage coordination backlog",
+      "core_claim": "Transmission reconductoring outage coordination backlog creates process handoff through Transmission outage coordination.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Transmission outage coordination.",
+        "Operational review should confirm whether Outage coordination platform captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Transmission outage coordination",
+        "Observed frequency and owner of delay before Line upgrade execution"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring process handoff in Transmission outage coordination.",
+        "Measured waste aligns with time 8/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Line upgrade execution."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring process handoff friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Transmission outage coordination."
+      ],
+      "recommended_validation_steps": [
+        "Measure Transmission outage coordination using local operational logs.",
+        "Validate whether Step-level baseline for Transmission outage coordination materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Transmission outage coordination with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Outage coordination platform logs",
+        "Transmission outage coordination timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Transmission reconductoring outage coordination backlog frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Transmission outage coordination improve Line upgrade execution?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Transmission outage coordination using local operational logs.",
+        "Validate whether Step-level baseline for Transmission outage coordination materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Transmission outage coordination with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8
+    },
+    {
+      "constraint_id": "strategic-050",
+      "constraint_title": "Specialty gas delivery readiness mismatch",
+      "core_claim": "Specialty gas delivery readiness mismatch creates information gap through Specialty gas readiness planning.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Specialty gas readiness planning.",
+        "Operational review should confirm whether Materials readiness plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: supply concentration."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Specialty gas readiness planning",
+        "Observed frequency and owner of delay before Process tool ramp"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring information gap in Specialty gas readiness planning.",
+        "Measured waste aligns with time 7/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Process tool ramp."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring information gap friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Specialty gas readiness planning."
+      ],
+      "recommended_validation_steps": [
+        "Measure Specialty gas readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Specialty gas readiness planning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Specialty gas readiness planning with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Materials readiness plan logs",
+        "Specialty gas readiness planning timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Specialty gas delivery readiness mismatch frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Specialty gas readiness planning improve Process tool ramp?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Specialty gas readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Specialty gas readiness planning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Specialty gas readiness planning with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8
+    },
+    {
+      "constraint_id": "strategic-053",
+      "constraint_title": "Critical mineral assay-to-offtake qualification delay",
+      "core_claim": "Critical mineral assay-to-offtake qualification delay creates manual verification through Assay-to-offtake qualification.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.5,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Assay-to-offtake qualification.",
+        "Operational review should confirm whether Sample qualification tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: vendor qualification."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Assay-to-offtake qualification",
+        "Observed frequency and owner of delay before Offtake agreement decision"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring manual verification in Assay-to-offtake qualification.",
+        "Measured waste aligns with time 8/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Offtake agreement decision."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring manual verification friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Assay-to-offtake qualification."
+      ],
+      "recommended_validation_steps": [
+        "Measure Assay-to-offtake qualification using local operational logs.",
+        "Validate whether Step-level baseline for Assay-to-offtake qualification materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Assay-to-offtake qualification with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Sample qualification tracker logs",
+        "Assay-to-offtake qualification timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Critical mineral assay-to-offtake qualification delay frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Assay-to-offtake qualification improve Offtake agreement decision?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Assay-to-offtake qualification using local operational logs.",
+        "Validate whether Step-level baseline for Assay-to-offtake qualification materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Assay-to-offtake qualification with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 8
+    },
+    {
+      "constraint_id": "strategic-068",
+      "constraint_title": "Remote site mobilization permit and access coordination delay",
+      "core_claim": "Remote site mobilization permit and access coordination delay creates process handoff through Remote site mobilization coordination.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Remote site mobilization coordination.",
+        "Operational review should confirm whether Field mobilization tracker captures queue, handoff, or capacity data.",
+        "Initial pattern match: handoff leakage."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Remote site mobilization coordination",
+        "Observed frequency and owner of delay before On-site work execution"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring process handoff in Remote site mobilization coordination.",
+        "Measured waste aligns with time 8/10, labor 8/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in On-site work execution."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring process handoff friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Remote site mobilization coordination."
+      ],
+      "recommended_validation_steps": [
+        "Measure Remote site mobilization coordination using local operational logs.",
+        "Validate whether Step-level baseline for Remote site mobilization coordination materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Remote site mobilization coordination with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Field mobilization tracker logs",
+        "Remote site mobilization coordination timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Remote site mobilization permit and access coordination delay frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Remote site mobilization coordination improve On-site work execution?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Remote site mobilization coordination using local operational logs.",
+        "Validate whether Step-level baseline for Remote site mobilization coordination materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Remote site mobilization coordination with owner, age, and exception reason fields.."
       ],
       "decision_usefulness": "Useful for research queueing and evidence collection.",
       "decision_ready": false,
@@ -746,6 +1942,266 @@
       "validation_priority_score": 7.9
     },
     {
+      "constraint_id": "strategic-044",
+      "constraint_title": "Nuclear QA document traceability review queue",
+      "core_claim": "Nuclear QA document traceability review queue creates manual verification through Nuclear QA traceability review.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Nuclear QA traceability review.",
+        "Operational review should confirm whether Quality records repository captures queue, handoff, or capacity data.",
+        "Initial pattern match: manual verification drag."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Nuclear QA traceability review",
+        "Observed frequency and owner of delay before Work package release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring manual verification in Nuclear QA traceability review.",
+        "Measured waste aligns with time 8/10, labor 8/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Work package release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring manual verification friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Nuclear QA traceability review."
+      ],
+      "recommended_validation_steps": [
+        "Measure Nuclear QA traceability review using local operational logs.",
+        "Validate whether Step-level baseline for Nuclear QA traceability review materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Nuclear QA traceability review with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Quality records repository logs",
+        "Nuclear QA traceability review timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Nuclear QA document traceability review queue frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Nuclear QA traceability review improve Work package release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Nuclear QA traceability review using local operational logs.",
+        "Validate whether Step-level baseline for Nuclear QA traceability review materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Nuclear QA traceability review with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.9
+    },
+    {
+      "constraint_id": "strategic-046",
+      "constraint_title": "Substation transformer energization test window bottleneck",
+      "core_claim": "Substation transformer energization test window bottleneck creates idle capacity through Transformer energization testing.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Transformer energization testing.",
+        "Operational review should confirm whether Substation commissioning plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: inspection delay."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Transformer energization testing",
+        "Observed frequency and owner of delay before Service capacity release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring idle capacity in Transformer energization testing.",
+        "Measured waste aligns with time 8/10, labor 6/10, or capital 9/10 assumptions.",
+        "Downstream effects appear in Service capacity release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring idle capacity friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Transformer energization testing."
+      ],
+      "recommended_validation_steps": [
+        "Measure Transformer energization testing using local operational logs.",
+        "Validate whether Step-level baseline for Transformer energization testing materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Transformer energization testing with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Substation commissioning plan logs",
+        "Transformer energization testing timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Substation transformer energization test window bottleneck frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Transformer energization testing improve Service capacity release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Transformer energization testing using local operational logs.",
+        "Validate whether Step-level baseline for Transformer energization testing materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Transformer energization testing with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.9
+    },
+    {
+      "constraint_id": "strategic-048",
+      "constraint_title": "Grid load study queue for large load requests",
+      "core_claim": "Grid load study queue for large load requests creates administrative delay through Large load interconnection study.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.6,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Large load interconnection study.",
+        "Operational review should confirm whether Load request study queue captures queue, handoff, or capacity data.",
+        "Initial pattern match: interconnection delay."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Large load interconnection study",
+        "Observed frequency and owner of delay before Site energization commitment"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring administrative delay in Large load interconnection study.",
+        "Measured waste aligns with time 9/10, labor 6/10, or capital 9/10 assumptions.",
+        "Downstream effects appear in Site energization commitment."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring administrative delay friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Large load interconnection study."
+      ],
+      "recommended_validation_steps": [
+        "Measure Large load interconnection study using local operational logs.",
+        "Validate whether Step-level baseline for Large load interconnection study materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Large load interconnection study with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Load request study queue logs",
+        "Large load interconnection study timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Grid load study queue for large load requests frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Large load interconnection study improve Site energization commitment?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Large load interconnection study using local operational logs.",
+        "Validate whether Step-level baseline for Large load interconnection study materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Large load interconnection study with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.9
+    },
+    {
+      "constraint_id": "strategic-054",
+      "constraint_title": "Leach circuit reagent supply concentration risk",
+      "core_claim": "Leach circuit reagent supply concentration risk creates hidden cost through Reagent supply readiness planning.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Reagent supply readiness planning.",
+        "Operational review should confirm whether Process input supply plan captures queue, handoff, or capacity data.",
+        "Initial pattern match: supply concentration."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Reagent supply readiness planning",
+        "Observed frequency and owner of delay before Leach circuit throughput"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring hidden cost in Reagent supply readiness planning.",
+        "Measured waste aligns with time 7/10, labor 5/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Leach circuit throughput."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring hidden cost friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Reagent supply readiness planning."
+      ],
+      "recommended_validation_steps": [
+        "Measure Reagent supply readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Reagent supply readiness planning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Reagent supply readiness planning with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Process input supply plan logs",
+        "Reagent supply readiness planning timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Leach circuit reagent supply concentration risk frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Reagent supply readiness planning improve Leach circuit throughput?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Reagent supply readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Reagent supply readiness planning materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Reagent supply readiness planning with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.9
+    },
+    {
+      "constraint_id": "strategic-057",
+      "constraint_title": "Industrial robot cell safety validation bottleneck",
+      "core_claim": "Industrial robot cell safety validation bottleneck creates compliance drag through Robot cell safety validation.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.8,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Robot cell safety validation.",
+        "Operational review should confirm whether Safety validation checklist captures queue, handoff, or capacity data.",
+        "Initial pattern match: inspection delay."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Robot cell safety validation",
+        "Observed frequency and owner of delay before Production cell release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring compliance drag in Robot cell safety validation.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Production cell release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring compliance drag friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Robot cell safety validation."
+      ],
+      "recommended_validation_steps": [
+        "Measure Robot cell safety validation using local operational logs.",
+        "Validate whether Step-level baseline for Robot cell safety validation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Robot cell safety validation with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Safety validation checklist logs",
+        "Robot cell safety validation timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Industrial robot cell safety validation bottleneck frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Robot cell safety validation improve Production cell release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Robot cell safety validation using local operational logs.",
+        "Validate whether Step-level baseline for Robot cell safety validation materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Robot cell safety validation with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.9
+    },
+    {
       "constraint_id": "strategic-003",
       "constraint_title": "Utility upgrade review backlog",
       "core_claim": "Utility upgrade review backlog creates process handoff through Utility upgrade review.",
@@ -896,6 +2352,110 @@
         "Measure Fab utility readiness tracking using local operational logs.",
         "Validate whether Step-level baseline for Fab utility readiness tracking materially changes the opportunity score.",
         "Compare outcomes before and after a small intervention using Instrument Fab utility readiness tracking with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.8
+    },
+    {
+      "constraint_id": "strategic-055",
+      "constraint_title": "Tailings permit monitoring data gap",
+      "core_claim": "Tailings permit monitoring data gap creates compliance drag through Tailings monitoring evidence reporting.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.6,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Tailings monitoring evidence reporting.",
+        "Operational review should confirm whether Environmental monitoring repository captures queue, handoff, or capacity data.",
+        "Initial pattern match: measurement blind spot."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Tailings monitoring evidence reporting",
+        "Observed frequency and owner of delay before Permit compliance decision"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring compliance drag in Tailings monitoring evidence reporting.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Permit compliance decision."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring compliance drag friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Tailings monitoring evidence reporting."
+      ],
+      "recommended_validation_steps": [
+        "Measure Tailings monitoring evidence reporting using local operational logs.",
+        "Validate whether Step-level baseline for Tailings monitoring evidence reporting materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Tailings monitoring evidence reporting with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Environmental monitoring repository logs",
+        "Tailings monitoring evidence reporting timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Tailings permit monitoring data gap frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Tailings monitoring evidence reporting improve Permit compliance decision?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Tailings monitoring evidence reporting using local operational logs.",
+        "Validate whether Step-level baseline for Tailings monitoring evidence reporting materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Tailings monitoring evidence reporting with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.8
+    },
+    {
+      "constraint_id": "strategic-063",
+      "constraint_title": "Defense component first article inspection backlog",
+      "core_claim": "Defense component first article inspection backlog creates compliance drag through First article inspection approval.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in First article inspection approval.",
+        "Operational review should confirm whether Inspection evidence package captures queue, handoff, or capacity data.",
+        "Initial pattern match: inspection delay."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for First article inspection approval",
+        "Observed frequency and owner of delay before Production lot release"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring compliance drag in First article inspection approval.",
+        "Measured waste aligns with time 8/10, labor 7/10, or capital 7/10 assumptions.",
+        "Downstream effects appear in Production lot release."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring compliance drag friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify First article inspection approval."
+      ],
+      "recommended_validation_steps": [
+        "Measure First article inspection approval using local operational logs.",
+        "Validate whether Step-level baseline for First article inspection approval materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument First article inspection approval with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Inspection evidence package logs",
+        "First article inspection approval timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Defense component first article inspection backlog frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing First article inspection approval improve Production lot release?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure First article inspection approval using local operational logs.",
+        "Validate whether Step-level baseline for First article inspection approval materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument First article inspection approval with owner, age, and exception reason fields.."
       ],
       "decision_usefulness": "Useful for research queueing and evidence collection.",
       "decision_ready": false,
@@ -1104,6 +2664,110 @@
         "Measure Critical mineral processor qualification using local operational logs.",
         "Validate whether Step-level baseline for Critical mineral processor qualification materially changes the opportunity score.",
         "Compare outcomes before and after a small intervention using Instrument Critical mineral processor qualification with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.7
+    },
+    {
+      "constraint_id": "strategic-041",
+      "constraint_title": "Data center backup generation permit readiness drag",
+      "core_claim": "Data center backup generation permit readiness drag creates compliance drag through Backup generation permit readiness.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.7,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in Backup generation permit readiness.",
+        "Operational review should confirm whether Environmental permit package captures queue, handoff, or capacity data.",
+        "Initial pattern match: permitting delay."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for Backup generation permit readiness",
+        "Observed frequency and owner of delay before Resilience commissioning"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring compliance drag in Backup generation permit readiness.",
+        "Measured waste aligns with time 8/10, labor 6/10, or capital 8/10 assumptions.",
+        "Downstream effects appear in Resilience commissioning."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring compliance drag friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify Backup generation permit readiness."
+      ],
+      "recommended_validation_steps": [
+        "Measure Backup generation permit readiness using local operational logs.",
+        "Validate whether Step-level baseline for Backup generation permit readiness materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Backup generation permit readiness with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Environmental permit package logs",
+        "Backup generation permit readiness timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is Data center backup generation permit readiness drag frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing Backup generation permit readiness improve Resilience commissioning?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure Backup generation permit readiness using local operational logs.",
+        "Validate whether Step-level baseline for Backup generation permit readiness materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument Backup generation permit readiness with owner, age, and exception reason fields.."
+      ],
+      "decision_usefulness": "Useful for research queueing and evidence collection.",
+      "decision_ready": false,
+      "validation_priority_score": 7.7
+    },
+    {
+      "constraint_id": "strategic-042",
+      "constraint_title": "SMR licensing evidence package iteration",
+      "core_claim": "SMR licensing evidence package iteration creates compliance drag through SMR licensing evidence package review.",
+      "current_validation_status": "unvalidated",
+      "current_validation_confidence": 3.4,
+      "evidence_strength": "Low",
+      "evidence_risk_level": "High",
+      "evidence_summary": "Low evidence based on operational pattern inputs with 2 listed source signal(s).",
+      "known_evidence": [
+        "Hypothesis signal: recurring delay or rework in SMR licensing evidence package review.",
+        "Operational review should confirm whether Licensing evidence docket captures queue, handoff, or capacity data.",
+        "Initial pattern match: regulatory complexity."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for SMR licensing evidence package review",
+        "Observed frequency and owner of delay before Construction authorization readiness"
+      ],
+      "what_would_prove_this_true": [
+        "Operational data confirms recurring compliance drag in SMR licensing evidence package review.",
+        "Measured waste aligns with time 9/10, labor 7/10, or capital 9/10 assumptions.",
+        "Downstream effects appear in Construction authorization readiness."
+      ],
+      "what_would_disprove_this": [
+        "Local records show little or no recurring compliance drag friction.",
+        "Measured labor, time, or capital waste is materially lower than current assumptions.",
+        "The affected systems do not contain enough data to verify SMR licensing evidence package review."
+      ],
+      "recommended_validation_steps": [
+        "Measure SMR licensing evidence package review using local operational logs.",
+        "Validate whether Step-level baseline for SMR licensing evidence package review materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument SMR licensing evidence package review with owner, age, and exception reason fields.."
+      ],
+      "recommended_source_types": [
+        "Local Licensing evidence docket logs",
+        "SMR licensing evidence package review timestamps or queues",
+        "Operational Pattern benchmark comparison"
+      ],
+      "red_team_questions": [
+        "Is SMR licensing evidence package iteration frequent enough locally to matter?",
+        "Could the observed waste be caused by an upstream issue instead?",
+        "Would fixing SMR licensing evidence package review improve Construction authorization readiness?"
+      ],
+      "confidence_upgrade_path": [
+        "Measure SMR licensing evidence package review using local operational logs.",
+        "Validate whether Step-level baseline for SMR licensing evidence package review materially changes the opportunity score.",
+        "Compare outcomes before and after a small intervention using Instrument SMR licensing evidence package review with owner, age, and exception reason fields.."
       ],
       "decision_usefulness": "Useful for research queueing and evidence collection.",
       "decision_ready": false,

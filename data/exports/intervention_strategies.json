@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-14T23:53:40.777Z",
-  "strategy_count": 52,
-  "record_count": 52,
+  "generated_at": "2026-06-23T03:18:51.246Z",
+  "strategy_count": 84,
+  "record_count": 84,
   "intervention_summary": {
-    "total_strategies": 52,
+    "total_strategies": 84,
     "top_fast_wins": [
       "Appointment call queue overflow",
       "Insurance eligibility verification before each visit",
@@ -16,7 +16,7 @@
       "Medical necessity documentation chase",
       "Prior authorization rework loops",
       "Medication prior authorization exceptions",
-      "Manual quality measure abstraction"
+      "Vision model exception tuning handoff"
     ],
     "high_upside_high_friction": [
       "Claim denial triage and resubmission",
@@ -36,9 +36,9 @@
       "automation_assist": 4,
       "workflow_redesign": 1,
       "policy_simplification": 1,
-      "evidence_collection": 46
+      "evidence_collection": 78
     },
-    "average_action_confidence": 5.5,
+    "average_action_confidence": 5.1,
     "highest_priority_intervention": "Automation Assist for Claims processing"
   },
   "strategies": [
@@ -745,6 +745,114 @@
       "recommended_next_step": "Validate Step-level baseline for Vendor onboarding before rollout; use the intervention as a measurement experiment."
     },
     {
+      "constraint_id": "strategic-060",
+      "constraint_title": "Vision model exception tuning handoff",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Vision exception tuning",
+      "intervention_thesis": "Evidence Collection could reduce process handoff in Vision exception tuning without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows process handoff, automation potential, and downstream impact in Automated inspection release.",
+      "expected_unlock": "Relative unlock: improve Automated inspection release by reducing friction across Vision exception tuning and Vision model issue tracker.",
+      "affected_processes": [
+        "Vision exception tuning",
+        "Vision exception tuning validation",
+        "Automated inspection release"
+      ],
+      "affected_systems": [
+        "Vision model issue tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Vision exception tuning using local operational logs.",
+        "Validate whether Step-level baseline for Vision exception tuning materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring process handoff in Vision exception tuning.",
+        "Staff can test changes in Vision exception tuning without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Vision exception tuning before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Vision exception tuning",
+        "Shorter delay before Automated inspection release",
+        "Fewer exceptions in Vision model issue tracker"
+      ],
+      "failure_modes": [
+        "Local records show little recurring process handoff friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Vision exception tuning."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 6.3,
+      "pilotability_score": 5.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.9,
+      "time_to_impact_score": 5.1,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.6,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 6.2,
+      "intervention_priority_score": 5.2,
+      "action_confidence": 4.8,
+      "recommended_next_step": "Validate Step-level baseline for Vision exception tuning before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-067",
+      "constraint_title": "Heavy equipment telematics fault classification blind spot",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Telematics fault classification",
+      "intervention_thesis": "Evidence Collection could reduce information gap in Telematics fault classification without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows information gap, automation potential, and downstream impact in Maintenance work order prioritization.",
+      "expected_unlock": "Relative unlock: improve Maintenance work order prioritization by reducing friction across Telematics fault classification and Fleet telemetry and maintenance system.",
+      "affected_processes": [
+        "Telematics fault classification",
+        "Telematics fault classification validation",
+        "Maintenance work order prioritization"
+      ],
+      "affected_systems": [
+        "Fleet telemetry and maintenance system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Telematics fault classification using local operational logs.",
+        "Validate whether Step-level baseline for Telematics fault classification materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring information gap in Telematics fault classification.",
+        "Staff can test changes in Telematics fault classification without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Telematics fault classification before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Telematics fault classification",
+        "Shorter delay before Maintenance work order prioritization",
+        "Fewer exceptions in Fleet telemetry and maintenance system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring information gap friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Telematics fault classification."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 6.3,
+      "pilotability_score": 5.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.8,
+      "time_to_impact_score": 5.1,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.9,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 6.2,
+      "intervention_priority_score": 5.2,
+      "action_confidence": 4.8,
+      "recommended_next_step": "Validate Step-level baseline for Telematics fault classification before rollout; use the intervention as a measurement experiment."
+    },
+    {
       "constraint_id": "hc-admin-006",
       "constraint_title": "Provider credentialing packet duplication",
       "intervention_type": "evidence_collection",
@@ -1177,6 +1285,168 @@
       "recommended_next_step": "Validate Step-level baseline for Quality exception closure before rollout; use the intervention as a measurement experiment."
     },
     {
+      "constraint_id": "strategic-039",
+      "constraint_title": "High-density rack deployment stranded by fiber cross-connect backlog",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Fiber cross-connect provisioning",
+      "intervention_thesis": "Evidence Collection could reduce process handoff in Fiber cross-connect provisioning without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows process handoff, workflow redesign potential, and downstream impact in Cluster acceptance testing.",
+      "expected_unlock": "Relative unlock: improve Cluster acceptance testing by reducing friction across Fiber cross-connect provisioning and Network provisioning queue.",
+      "affected_processes": [
+        "Fiber cross-connect provisioning",
+        "Fiber cross-connect provisioning validation",
+        "Cluster acceptance testing"
+      ],
+      "affected_systems": [
+        "Network provisioning queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Fiber cross-connect provisioning using local operational logs.",
+        "Validate whether Step-level baseline for Fiber cross-connect provisioning materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring process handoff in Fiber cross-connect provisioning.",
+        "Staff can test changes in Fiber cross-connect provisioning without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Fiber cross-connect provisioning before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Fiber cross-connect provisioning",
+        "Shorter delay before Cluster acceptance testing",
+        "Fewer exceptions in Network provisioning queue"
+      ],
+      "failure_modes": [
+        "Local records show little recurring process handoff friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Fiber cross-connect provisioning."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.8,
+      "pilotability_score": 5.3,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.6,
+      "time_to_impact_score": 5.2,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.9,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.9,
+      "intervention_priority_score": 5,
+      "action_confidence": 4.7,
+      "recommended_next_step": "Validate Step-level baseline for Fiber cross-connect provisioning before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-059",
+      "constraint_title": "End effector changeover programming queue",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for End effector changeover programming",
+      "intervention_thesis": "Evidence Collection could reduce administrative delay in End effector changeover programming without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows administrative delay, automation potential, and downstream impact in New product run release.",
+      "expected_unlock": "Relative unlock: improve New product run release by reducing friction across End effector changeover programming and Automation change request queue.",
+      "affected_processes": [
+        "End effector changeover programming",
+        "End effector changeover programming validation",
+        "New product run release"
+      ],
+      "affected_systems": [
+        "Automation change request queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure End effector changeover programming using local operational logs.",
+        "Validate whether Step-level baseline for End effector changeover programming materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring administrative delay in End effector changeover programming.",
+        "Staff can test changes in End effector changeover programming without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument End effector changeover programming before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in End effector changeover programming",
+        "Shorter delay before New product run release",
+        "Fewer exceptions in Automation change request queue"
+      ],
+      "failure_modes": [
+        "Local records show little recurring administrative delay friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify End effector changeover programming."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.4,
+      "pilotability_score": 5.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.7,
+      "time_to_impact_score": 5.1,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.6,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 6,
+      "intervention_priority_score": 5,
+      "action_confidence": 4.7,
+      "recommended_next_step": "Validate Step-level baseline for End effector changeover programming before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-065",
+      "constraint_title": "Field service parts availability causing asset downtime",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Field service parts readiness",
+      "intervention_thesis": "Evidence Collection could reduce idle capacity in Field service parts readiness without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows idle capacity, capacity optimization potential, and downstream impact in Asset return to service.",
+      "expected_unlock": "Relative unlock: improve Asset return to service by reducing friction across Field service parts readiness and Service parts planning system.",
+      "affected_processes": [
+        "Field service parts readiness",
+        "Field service parts readiness validation",
+        "Asset return to service"
+      ],
+      "affected_systems": [
+        "Service parts planning system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Field service parts readiness using local operational logs.",
+        "Validate whether Step-level baseline for Field service parts readiness materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring idle capacity in Field service parts readiness.",
+        "Staff can test changes in Field service parts readiness without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Field service parts readiness before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Field service parts readiness",
+        "Shorter delay before Asset return to service",
+        "Fewer exceptions in Service parts planning system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring idle capacity friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Field service parts readiness."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.4,
+      "pilotability_score": 5.3,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.6,
+      "time_to_impact_score": 5.2,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.9,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 6,
+      "intervention_priority_score": 5,
+      "action_confidence": 4.7,
+      "recommended_next_step": "Validate Step-level baseline for Field service parts readiness before rollout; use the intervention as a measurement experiment."
+    },
+    {
       "constraint_id": "hc-admin-004",
       "constraint_title": "Referral leakage from manual handoffs",
       "intervention_type": "evidence_collection",
@@ -1391,6 +1661,168 @@
       "intervention_priority_score": 4.9,
       "action_confidence": 4.8,
       "recommended_next_step": "Validate Step-level baseline for Outage crew dispatch before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-056",
+      "constraint_title": "Refinery sample lot release queue",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Refined lot quality release",
+      "intervention_thesis": "Evidence Collection could reduce administrative delay in Refined lot quality release without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows administrative delay, data quality potential, and downstream impact in Customer shipment release.",
+      "expected_unlock": "Relative unlock: improve Customer shipment release by reducing friction across Refined lot quality release and Laboratory information management system.",
+      "affected_processes": [
+        "Refined lot quality release",
+        "Refined lot quality release validation",
+        "Customer shipment release"
+      ],
+      "affected_systems": [
+        "Laboratory information management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Refined lot quality release using local operational logs.",
+        "Validate whether Step-level baseline for Refined lot quality release materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring administrative delay in Refined lot quality release.",
+        "Staff can test changes in Refined lot quality release without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Refined lot quality release before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Refined lot quality release",
+        "Shorter delay before Customer shipment release",
+        "Fewer exceptions in Laboratory information management system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring administrative delay friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Refined lot quality release."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.2,
+      "pilotability_score": 5,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 5,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.8,
+      "intervention_priority_score": 4.9,
+      "action_confidence": 4.6,
+      "recommended_next_step": "Validate Step-level baseline for Refined lot quality release before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-058",
+      "constraint_title": "Autonomous mobile robot site mapping rework",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Mobile robot site mapping",
+      "intervention_thesis": "Evidence Collection could reduce information gap in Mobile robot site mapping without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows information gap, data quality potential, and downstream impact in Autonomous route release.",
+      "expected_unlock": "Relative unlock: improve Autonomous route release by reducing friction across Mobile robot site mapping and Robot fleet map repository.",
+      "affected_processes": [
+        "Mobile robot site mapping",
+        "Mobile robot site mapping validation",
+        "Autonomous route release"
+      ],
+      "affected_systems": [
+        "Robot fleet map repository",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Mobile robot site mapping using local operational logs.",
+        "Validate whether Step-level baseline for Mobile robot site mapping materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring information gap in Mobile robot site mapping.",
+        "Staff can test changes in Mobile robot site mapping without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Mobile robot site mapping before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Mobile robot site mapping",
+        "Shorter delay before Autonomous route release",
+        "Fewer exceptions in Robot fleet map repository"
+      ],
+      "failure_modes": [
+        "Local records show little recurring information gap friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Mobile robot site mapping."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.8,
+      "pilotability_score": 5,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.7,
+      "time_to_impact_score": 5,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.1,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.9,
+      "intervention_priority_score": 4.9,
+      "action_confidence": 4.7,
+      "recommended_next_step": "Validate Step-level baseline for Mobile robot site mapping before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-066",
+      "constraint_title": "Depot repair triage backlog for mission equipment",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Depot repair triage",
+      "intervention_thesis": "Evidence Collection could reduce administrative delay in Depot repair triage without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows administrative delay, workflow redesign potential, and downstream impact in Equipment redeployment.",
+      "expected_unlock": "Relative unlock: improve Equipment redeployment by reducing friction across Depot repair triage and Repair management queue.",
+      "affected_processes": [
+        "Depot repair triage",
+        "Depot repair triage validation",
+        "Equipment redeployment"
+      ],
+      "affected_systems": [
+        "Repair management queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Depot repair triage using local operational logs.",
+        "Validate whether Step-level baseline for Depot repair triage materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring administrative delay in Depot repair triage.",
+        "Staff can test changes in Depot repair triage without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Depot repair triage before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Depot repair triage",
+        "Shorter delay before Equipment redeployment",
+        "Fewer exceptions in Repair management queue"
+      ],
+      "failure_modes": [
+        "Local records show little recurring administrative delay friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Depot repair triage."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.2,
+      "pilotability_score": 5.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 5.1,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5.5,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.9,
+      "intervention_priority_score": 4.9,
+      "action_confidence": 4.7,
+      "recommended_next_step": "Validate Step-level baseline for Depot repair triage before rollout; use the intervention as a measurement experiment."
     },
     {
       "constraint_id": "hc-admin-008",
@@ -1715,6 +2147,114 @@
       "intervention_priority_score": 4.8,
       "action_confidence": 4.7,
       "recommended_next_step": "Validate Step-level baseline for Cold chain exception handling before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-040",
+      "constraint_title": "AI training workload scheduling against power and cooling envelope mismatch",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Compute workload capacity scheduling",
+      "intervention_thesis": "Evidence Collection could reduce market mismatch in Compute workload capacity scheduling without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows market mismatch, capacity optimization potential, and downstream impact in Training job execution.",
+      "expected_unlock": "Relative unlock: improve Training job execution by reducing friction across Compute workload capacity scheduling and Cluster scheduler and facilities telemetry.",
+      "affected_processes": [
+        "Compute workload capacity scheduling",
+        "Compute workload capacity scheduling validation",
+        "Training job execution"
+      ],
+      "affected_systems": [
+        "Cluster scheduler and facilities telemetry",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Compute workload capacity scheduling using local operational logs.",
+        "Validate whether Step-level baseline for Compute workload capacity scheduling materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring market mismatch in Compute workload capacity scheduling.",
+        "Staff can test changes in Compute workload capacity scheduling without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Compute workload capacity scheduling before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Compute workload capacity scheduling",
+        "Shorter delay before Training job execution",
+        "Fewer exceptions in Cluster scheduler and facilities telemetry"
+      ],
+      "failure_modes": [
+        "Local records show little recurring market mismatch friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Compute workload capacity scheduling."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.8,
+      "pilotability_score": 4.8,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 4.5,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 5.7,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.7,
+      "intervention_priority_score": 4.8,
+      "action_confidence": 4.6,
+      "recommended_next_step": "Validate Step-level baseline for Compute workload capacity scheduling before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-051",
+      "constraint_title": "Cleanroom capacity allocation conflict during ramp",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Cleanroom capacity allocation",
+      "intervention_thesis": "Evidence Collection could reduce market mismatch in Cleanroom capacity allocation without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows market mismatch, capacity optimization potential, and downstream impact in Committed customer output.",
+      "expected_unlock": "Relative unlock: improve Committed customer output by reducing friction across Cleanroom capacity allocation and Manufacturing dispatch and planning system.",
+      "affected_processes": [
+        "Cleanroom capacity allocation",
+        "Cleanroom capacity allocation validation",
+        "Committed customer output"
+      ],
+      "affected_systems": [
+        "Manufacturing dispatch and planning system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Cleanroom capacity allocation using local operational logs.",
+        "Validate whether Step-level baseline for Cleanroom capacity allocation materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring market mismatch in Cleanroom capacity allocation.",
+        "Staff can test changes in Cleanroom capacity allocation without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Cleanroom capacity allocation before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Cleanroom capacity allocation",
+        "Shorter delay before Committed customer output",
+        "Fewer exceptions in Manufacturing dispatch and planning system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring market mismatch friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Cleanroom capacity allocation."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.8,
+      "pilotability_score": 4.8,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 4.5,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 5.4,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.7,
+      "intervention_priority_score": 4.8,
+      "action_confidence": 4.6,
+      "recommended_next_step": "Validate Step-level baseline for Cleanroom capacity allocation before rollout; use the intervention as a measurement experiment."
     },
     {
       "constraint_id": "strategic-006",
@@ -2095,6 +2635,222 @@
       "recommended_next_step": "Validate Step-level baseline for Code enforcement reinspection before rollout; use the intervention as a measurement experiment."
     },
     {
+      "constraint_id": "strategic-049",
+      "constraint_title": "Fab tool install qualification handoff delay",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Fab tool install qualification",
+      "intervention_thesis": "Evidence Collection could reduce process handoff in Fab tool install qualification without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows process handoff, workflow redesign potential, and downstream impact in Production recipe release.",
+      "expected_unlock": "Relative unlock: improve Production recipe release by reducing friction across Fab tool install qualification and Tool qualification tracker.",
+      "affected_processes": [
+        "Fab tool install qualification",
+        "Fab tool install qualification validation",
+        "Production recipe release"
+      ],
+      "affected_systems": [
+        "Tool qualification tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Fab tool install qualification using local operational logs.",
+        "Validate whether Step-level baseline for Fab tool install qualification materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring process handoff in Fab tool install qualification.",
+        "Staff can test changes in Fab tool install qualification without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Fab tool install qualification before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Fab tool install qualification",
+        "Shorter delay before Production recipe release",
+        "Fewer exceptions in Tool qualification tracker"
+      ],
+      "failure_modes": [
+        "Local records show little recurring process handoff friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Fab tool install qualification."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.2,
+      "pilotability_score": 4.5,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.6,
+      "time_to_impact_score": 4.3,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4.9,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.5,
+      "intervention_priority_score": 4.6,
+      "action_confidence": 4.5,
+      "recommended_next_step": "Validate Step-level baseline for Fab tool install qualification before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-052",
+      "constraint_title": "Advanced packaging substrate qualification bottleneck",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Packaging substrate qualification",
+      "intervention_thesis": "Evidence Collection could reduce manual verification in Packaging substrate qualification without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows manual verification, data quality potential, and downstream impact in Package build release.",
+      "expected_unlock": "Relative unlock: improve Package build release by reducing friction across Packaging substrate qualification and Supplier quality qualification system.",
+      "affected_processes": [
+        "Packaging substrate qualification",
+        "Packaging substrate qualification validation",
+        "Package build release"
+      ],
+      "affected_systems": [
+        "Supplier quality qualification system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Packaging substrate qualification using local operational logs.",
+        "Validate whether Step-level baseline for Packaging substrate qualification materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring manual verification in Packaging substrate qualification.",
+        "Staff can test changes in Packaging substrate qualification without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Packaging substrate qualification before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Packaging substrate qualification",
+        "Shorter delay before Package build release",
+        "Fewer exceptions in Supplier quality qualification system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring manual verification friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Packaging substrate qualification."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.2,
+      "pilotability_score": 4.5,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.7,
+      "time_to_impact_score": 4.3,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4.9,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.5,
+      "intervention_priority_score": 4.6,
+      "action_confidence": 4.5,
+      "recommended_next_step": "Validate Step-level baseline for Packaging substrate qualification before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-054",
+      "constraint_title": "Leach circuit reagent supply concentration risk",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Reagent supply readiness planning",
+      "intervention_thesis": "Evidence Collection could reduce hidden cost in Reagent supply readiness planning without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows hidden cost, capacity optimization potential, and downstream impact in Leach circuit throughput.",
+      "expected_unlock": "Relative unlock: improve Leach circuit throughput by reducing friction across Reagent supply readiness planning and Process input supply plan.",
+      "affected_processes": [
+        "Reagent supply readiness planning",
+        "Reagent supply readiness planning validation",
+        "Leach circuit throughput"
+      ],
+      "affected_systems": [
+        "Process input supply plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Reagent supply readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Reagent supply readiness planning materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring hidden cost in Reagent supply readiness planning.",
+        "Staff can test changes in Reagent supply readiness planning without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Reagent supply readiness planning before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Reagent supply readiness planning",
+        "Shorter delay before Leach circuit throughput",
+        "Fewer exceptions in Process input supply plan"
+      ],
+      "failure_modes": [
+        "Local records show little recurring hidden cost friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Reagent supply readiness planning."
+      ],
+      "operational_risk": "Moderate",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.5,
+      "pilotability_score": 4.9,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.1,
+      "time_to_impact_score": 4.9,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 5,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.5,
+      "intervention_priority_score": 4.6,
+      "action_confidence": 4.5,
+      "recommended_next_step": "Validate Step-level baseline for Reagent supply readiness planning before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-068",
+      "constraint_title": "Remote site mobilization permit and access coordination delay",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Remote site mobilization coordination",
+      "intervention_thesis": "Evidence Collection could reduce process handoff in Remote site mobilization coordination without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows process handoff, workflow redesign potential, and downstream impact in On-site work execution.",
+      "expected_unlock": "Relative unlock: improve On-site work execution by reducing friction across Remote site mobilization coordination and Field mobilization tracker.",
+      "affected_processes": [
+        "Remote site mobilization coordination",
+        "Remote site mobilization coordination validation",
+        "On-site work execution"
+      ],
+      "affected_systems": [
+        "Field mobilization tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Remote site mobilization coordination using local operational logs.",
+        "Validate whether Step-level baseline for Remote site mobilization coordination materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring process handoff in Remote site mobilization coordination.",
+        "Staff can test changes in Remote site mobilization coordination without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Remote site mobilization coordination before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Remote site mobilization coordination",
+        "Shorter delay before On-site work execution",
+        "Fewer exceptions in Field mobilization tracker"
+      ],
+      "failure_modes": [
+        "Local records show little recurring process handoff friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Remote site mobilization coordination."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 6,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.5,
+      "pilotability_score": 4.8,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.3,
+      "time_to_impact_score": 4.9,
+      "implementation_complexity_score": 5,
+      "operational_risk_score": 4.6,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.5,
+      "intervention_priority_score": 4.6,
+      "action_confidence": 4.5,
+      "recommended_next_step": "Validate Step-level baseline for Remote site mobilization coordination before rollout; use the intervention as a measurement experiment."
+    },
+    {
       "constraint_id": "strategic-002",
       "constraint_title": "Transformer lead-time bottleneck",
       "intervention_type": "evidence_collection",
@@ -2203,6 +2959,168 @@
       "recommended_next_step": "Validate Step-level baseline for Benefits eligibility verification before rollout; use the intervention as a measurement experiment."
     },
     {
+      "constraint_id": "strategic-038",
+      "constraint_title": "Liquid cooling loop validation bottleneck",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Liquid cooling validation",
+      "intervention_thesis": "Evidence Collection could reduce manual verification in Liquid cooling validation without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows manual verification, data quality potential, and downstream impact in Rack power-on approval.",
+      "expected_unlock": "Relative unlock: improve Rack power-on approval by reducing friction across Liquid cooling validation and Thermal commissioning checklist.",
+      "affected_processes": [
+        "Liquid cooling validation",
+        "Liquid cooling validation validation",
+        "Rack power-on approval"
+      ],
+      "affected_systems": [
+        "Thermal commissioning checklist",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Liquid cooling validation using local operational logs.",
+        "Validate whether Step-level baseline for Liquid cooling validation materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring manual verification in Liquid cooling validation.",
+        "Staff can test changes in Liquid cooling validation without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Liquid cooling validation before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Liquid cooling validation",
+        "Shorter delay before Rack power-on approval",
+        "Fewer exceptions in Thermal commissioning checklist"
+      ],
+      "failure_modes": [
+        "Local records show little recurring manual verification friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Liquid cooling validation."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.6,
+      "pilotability_score": 4.5,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.4,
+      "time_to_impact_score": 4.3,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4.9,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.4,
+      "intervention_priority_score": 4.5,
+      "action_confidence": 4.4,
+      "recommended_next_step": "Validate Step-level baseline for Liquid cooling validation before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-043",
+      "constraint_title": "Turbine outage parts readiness constraint",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Turbine outage readiness planning",
+      "intervention_thesis": "Evidence Collection could reduce hidden cost in Turbine outage readiness planning without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows hidden cost, data quality potential, and downstream impact in Unit return to service.",
+      "expected_unlock": "Relative unlock: improve Unit return to service by reducing friction across Turbine outage readiness planning and Outage work management system.",
+      "affected_processes": [
+        "Turbine outage readiness planning",
+        "Turbine outage readiness planning validation",
+        "Unit return to service"
+      ],
+      "affected_systems": [
+        "Outage work management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Turbine outage readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Turbine outage readiness planning materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring hidden cost in Turbine outage readiness planning.",
+        "Staff can test changes in Turbine outage readiness planning without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Turbine outage readiness planning before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Turbine outage readiness planning",
+        "Shorter delay before Unit return to service",
+        "Fewer exceptions in Outage work management system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring hidden cost friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Turbine outage readiness planning."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5,
+      "pilotability_score": 4.5,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 4.3,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4.8,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.4,
+      "intervention_priority_score": 4.5,
+      "action_confidence": 4.4,
+      "recommended_next_step": "Validate Step-level baseline for Turbine outage readiness planning before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-061",
+      "constraint_title": "Launch supplier nonconformance closure loop",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Supplier nonconformance closure",
+      "intervention_thesis": "Evidence Collection could reduce manual verification in Supplier nonconformance closure without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows manual verification, data quality potential, and downstream impact in Flight hardware release.",
+      "expected_unlock": "Relative unlock: improve Flight hardware release by reducing friction across Supplier nonconformance closure and Nonconformance management system.",
+      "affected_processes": [
+        "Supplier nonconformance closure",
+        "Supplier nonconformance closure validation",
+        "Flight hardware release"
+      ],
+      "affected_systems": [
+        "Nonconformance management system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Supplier nonconformance closure using local operational logs.",
+        "Validate whether Step-level baseline for Supplier nonconformance closure materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring manual verification in Supplier nonconformance closure.",
+        "Staff can test changes in Supplier nonconformance closure without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Supplier nonconformance closure before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Supplier nonconformance closure",
+        "Shorter delay before Flight hardware release",
+        "Fewer exceptions in Nonconformance management system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring manual verification friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Supplier nonconformance closure."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5.6,
+      "pilotability_score": 4.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.8,
+      "time_to_impact_score": 4.1,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.5,
+      "intervention_priority_score": 4.5,
+      "action_confidence": 4.5,
+      "recommended_next_step": "Validate Step-level baseline for Supplier nonconformance closure before rollout; use the intervention as a measurement experiment."
+    },
+    {
       "constraint_id": "strategic-015",
       "constraint_title": "Specialty material qualification lag",
       "intervention_type": "evidence_collection",
@@ -2257,6 +3175,168 @@
       "recommended_next_step": "Validate Step-level baseline for Material supplier qualification before rollout; use the intervention as a measurement experiment."
     },
     {
+      "constraint_id": "strategic-046",
+      "constraint_title": "Substation transformer energization test window bottleneck",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Transformer energization testing",
+      "intervention_thesis": "Evidence Collection could reduce idle capacity in Transformer energization testing without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows idle capacity, capacity optimization potential, and downstream impact in Service capacity release.",
+      "expected_unlock": "Relative unlock: improve Service capacity release by reducing friction across Transformer energization testing and Substation commissioning plan.",
+      "affected_processes": [
+        "Transformer energization testing",
+        "Transformer energization testing validation",
+        "Service capacity release"
+      ],
+      "affected_systems": [
+        "Substation commissioning plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Transformer energization testing using local operational logs.",
+        "Validate whether Step-level baseline for Transformer energization testing materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring idle capacity in Transformer energization testing.",
+        "Staff can test changes in Transformer energization testing without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Transformer energization testing before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Transformer energization testing",
+        "Shorter delay before Service capacity release",
+        "Fewer exceptions in Substation commissioning plan"
+      ],
+      "failure_modes": [
+        "Local records show little recurring idle capacity friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Transformer energization testing."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.5,
+      "pilotability_score": 4.5,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.3,
+      "time_to_impact_score": 4.3,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4.8,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.3,
+      "intervention_priority_score": 4.4,
+      "action_confidence": 4.4,
+      "recommended_next_step": "Validate Step-level baseline for Transformer energization testing before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-062",
+      "constraint_title": "Space vehicle test article configuration traceability gap",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Test article configuration reconciliation",
+      "intervention_thesis": "Evidence Collection could reduce information gap in Test article configuration reconciliation without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows information gap, data quality potential, and downstream impact in Test data acceptance.",
+      "expected_unlock": "Relative unlock: improve Test data acceptance by reducing friction across Test article configuration reconciliation and Configuration control system.",
+      "affected_processes": [
+        "Test article configuration reconciliation",
+        "Test article configuration reconciliation validation",
+        "Test data acceptance"
+      ],
+      "affected_systems": [
+        "Configuration control system",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Test article configuration reconciliation using local operational logs.",
+        "Validate whether Step-level baseline for Test article configuration reconciliation materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring information gap in Test article configuration reconciliation.",
+        "Staff can test changes in Test article configuration reconciliation without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Test article configuration reconciliation before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Test article configuration reconciliation",
+        "Shorter delay before Test data acceptance",
+        "Fewer exceptions in Configuration control system"
+      ],
+      "failure_modes": [
+        "Local records show little recurring information gap friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Test article configuration reconciliation."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5,
+      "pilotability_score": 4.1,
+      "evidence_dependency_score": 7.4,
+      "expected_unlock_score": 7.6,
+      "time_to_impact_score": 4.1,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4,
+      "validation_readiness_score": 3.6,
+      "total_intervention_score": 5.3,
+      "intervention_priority_score": 4.4,
+      "action_confidence": 4.4,
+      "recommended_next_step": "Validate Step-level baseline for Test article configuration reconciliation before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-064",
+      "constraint_title": "Propulsion test stand scheduling bottleneck",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Propulsion test stand scheduling",
+      "intervention_thesis": "Evidence Collection could reduce idle capacity in Propulsion test stand scheduling without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows idle capacity, capacity optimization potential, and downstream impact in Test campaign completion.",
+      "expected_unlock": "Relative unlock: improve Test campaign completion by reducing friction across Propulsion test stand scheduling and Test operations schedule.",
+      "affected_processes": [
+        "Propulsion test stand scheduling",
+        "Propulsion test stand scheduling validation",
+        "Test campaign completion"
+      ],
+      "affected_systems": [
+        "Test operations schedule",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Propulsion test stand scheduling using local operational logs.",
+        "Validate whether Step-level baseline for Propulsion test stand scheduling materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring idle capacity in Propulsion test stand scheduling.",
+        "Staff can test changes in Propulsion test stand scheduling without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Propulsion test stand scheduling before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Propulsion test stand scheduling",
+        "Shorter delay before Test campaign completion",
+        "Fewer exceptions in Test operations schedule"
+      ],
+      "failure_modes": [
+        "Local records show little recurring idle capacity friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Propulsion test stand scheduling."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5,
+      "pilotability_score": 4.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.5,
+      "time_to_impact_score": 4.1,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.3,
+      "intervention_priority_score": 4.4,
+      "action_confidence": 4.4,
+      "recommended_next_step": "Validate Step-level baseline for Propulsion test stand scheduling before rollout; use the intervention as a measurement experiment."
+    },
+    {
       "constraint_id": "strategic-017",
       "constraint_title": "Silver byproduct supply dependency",
       "intervention_type": "evidence_collection",
@@ -2309,6 +3389,114 @@
       "intervention_priority_score": 4.3,
       "action_confidence": 4.4,
       "recommended_next_step": "Validate Step-level baseline for Byproduct supply planning before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-050",
+      "constraint_title": "Specialty gas delivery readiness mismatch",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Specialty gas readiness planning",
+      "intervention_thesis": "Evidence Collection could reduce information gap in Specialty gas readiness planning without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows information gap, data quality potential, and downstream impact in Process tool ramp.",
+      "expected_unlock": "Relative unlock: improve Process tool ramp by reducing friction across Specialty gas readiness planning and Materials readiness plan.",
+      "affected_processes": [
+        "Specialty gas readiness planning",
+        "Specialty gas readiness planning validation",
+        "Process tool ramp"
+      ],
+      "affected_systems": [
+        "Materials readiness plan",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Specialty gas readiness planning using local operational logs.",
+        "Validate whether Step-level baseline for Specialty gas readiness planning materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring information gap in Specialty gas readiness planning.",
+        "Staff can test changes in Specialty gas readiness planning without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Specialty gas readiness planning before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Specialty gas readiness planning",
+        "Shorter delay before Process tool ramp",
+        "Fewer exceptions in Materials readiness plan"
+      ],
+      "failure_modes": [
+        "Local records show little recurring information gap friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Specialty gas readiness planning."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.4,
+      "pilotability_score": 4.3,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.2,
+      "time_to_impact_score": 4.2,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4.4,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.2,
+      "intervention_priority_score": 4.3,
+      "action_confidence": 4.4,
+      "recommended_next_step": "Validate Step-level baseline for Specialty gas readiness planning before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-057",
+      "constraint_title": "Industrial robot cell safety validation bottleneck",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Robot cell safety validation",
+      "intervention_thesis": "Evidence Collection could reduce compliance drag in Robot cell safety validation without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows compliance drag, compliance simplification potential, and downstream impact in Production cell release.",
+      "expected_unlock": "Relative unlock: improve Production cell release by reducing friction across Robot cell safety validation and Safety validation checklist.",
+      "affected_processes": [
+        "Robot cell safety validation",
+        "Robot cell safety validation validation",
+        "Production cell release"
+      ],
+      "affected_systems": [
+        "Safety validation checklist",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Robot cell safety validation using local operational logs.",
+        "Validate whether Step-level baseline for Robot cell safety validation materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring compliance drag in Robot cell safety validation.",
+        "Staff can test changes in Robot cell safety validation without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Robot cell safety validation before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Robot cell safety validation",
+        "Shorter delay before Production cell release",
+        "Fewer exceptions in Safety validation checklist"
+      ],
+      "failure_modes": [
+        "Local records show little recurring compliance drag friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Robot cell safety validation."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.4,
+      "pilotability_score": 4.3,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.3,
+      "time_to_impact_score": 4.2,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.1,
+      "intervention_priority_score": 4.3,
+      "action_confidence": 4.3,
+      "recommended_next_step": "Validate Step-level baseline for Robot cell safety validation before rollout; use the intervention as a measurement experiment."
     },
     {
       "constraint_id": "strategic-003",
@@ -2473,6 +3661,330 @@
       "recommended_next_step": "Validate Step-level baseline for Critical mineral processor qualification before rollout; use the intervention as a measurement experiment."
     },
     {
+      "constraint_id": "strategic-045",
+      "constraint_title": "Power plant protection settings review backlog",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Protection settings review",
+      "intervention_thesis": "Evidence Collection could reduce administrative delay in Protection settings review without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows administrative delay, workflow redesign potential, and downstream impact in Generator synchronization approval.",
+      "expected_unlock": "Relative unlock: improve Generator synchronization approval by reducing friction across Protection settings review and Relay settings review workflow.",
+      "affected_processes": [
+        "Protection settings review",
+        "Protection settings review validation",
+        "Generator synchronization approval"
+      ],
+      "affected_systems": [
+        "Relay settings review workflow",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Protection settings review using local operational logs.",
+        "Validate whether Step-level baseline for Protection settings review materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring administrative delay in Protection settings review.",
+        "Staff can test changes in Protection settings review without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Protection settings review before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Protection settings review",
+        "Shorter delay before Generator synchronization approval",
+        "Fewer exceptions in Relay settings review workflow"
+      ],
+      "failure_modes": [
+        "Local records show little recurring administrative delay friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Protection settings review."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.4,
+      "pilotability_score": 4.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.3,
+      "time_to_impact_score": 4.1,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.1,
+      "intervention_priority_score": 4.2,
+      "action_confidence": 4.3,
+      "recommended_next_step": "Validate Step-level baseline for Protection settings review before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-047",
+      "constraint_title": "Transmission reconductoring outage coordination backlog",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Transmission outage coordination",
+      "intervention_thesis": "Evidence Collection could reduce process handoff in Transmission outage coordination without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows process handoff, workflow redesign potential, and downstream impact in Line upgrade execution.",
+      "expected_unlock": "Relative unlock: improve Line upgrade execution by reducing friction across Transmission outage coordination and Outage coordination platform.",
+      "affected_processes": [
+        "Transmission outage coordination",
+        "Transmission outage coordination validation",
+        "Line upgrade execution"
+      ],
+      "affected_systems": [
+        "Outage coordination platform",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Transmission outage coordination using local operational logs.",
+        "Validate whether Step-level baseline for Transmission outage coordination materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring process handoff in Transmission outage coordination.",
+        "Staff can test changes in Transmission outage coordination without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Transmission outage coordination before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Transmission outage coordination",
+        "Shorter delay before Line upgrade execution",
+        "Fewer exceptions in Outage coordination platform"
+      ],
+      "failure_modes": [
+        "Local records show little recurring process handoff friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Transmission outage coordination."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.4,
+      "pilotability_score": 4.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.3,
+      "time_to_impact_score": 4.1,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 5.1,
+      "intervention_priority_score": 4.2,
+      "action_confidence": 4.3,
+      "recommended_next_step": "Validate Step-level baseline for Transmission outage coordination before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-053",
+      "constraint_title": "Critical mineral assay-to-offtake qualification delay",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Assay-to-offtake qualification",
+      "intervention_thesis": "Evidence Collection could reduce manual verification in Assay-to-offtake qualification without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows manual verification, data quality potential, and downstream impact in Offtake agreement decision.",
+      "expected_unlock": "Relative unlock: improve Offtake agreement decision by reducing friction across Assay-to-offtake qualification and Sample qualification tracker.",
+      "affected_processes": [
+        "Assay-to-offtake qualification",
+        "Assay-to-offtake qualification validation",
+        "Offtake agreement decision"
+      ],
+      "affected_systems": [
+        "Sample qualification tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Assay-to-offtake qualification using local operational logs.",
+        "Validate whether Step-level baseline for Assay-to-offtake qualification materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring manual verification in Assay-to-offtake qualification.",
+        "Staff can test changes in Assay-to-offtake qualification without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Assay-to-offtake qualification before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Assay-to-offtake qualification",
+        "Shorter delay before Offtake agreement decision",
+        "Fewer exceptions in Sample qualification tracker"
+      ],
+      "failure_modes": [
+        "Local records show little recurring manual verification friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Assay-to-offtake qualification."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.5,
+      "pilotability_score": 4.1,
+      "evidence_dependency_score": 7.5,
+      "expected_unlock_score": 7.3,
+      "time_to_impact_score": 4.1,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 4.4,
+      "validation_readiness_score": 3.5,
+      "total_intervention_score": 5.1,
+      "intervention_priority_score": 4.2,
+      "action_confidence": 4.2,
+      "recommended_next_step": "Validate Step-level baseline for Assay-to-offtake qualification before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-037",
+      "constraint_title": "GPU cluster commissioning dependency on power delivery sequencing",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for GPU cluster power readiness commissioning",
+      "intervention_thesis": "Evidence Collection could reduce process handoff in GPU cluster power readiness commissioning without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows process handoff, capacity optimization potential, and downstream impact in Production cluster burn-in.",
+      "expected_unlock": "Relative unlock: improve Production cluster burn-in by reducing friction across GPU cluster power readiness commissioning and Commissioning readiness tracker.",
+      "affected_processes": [
+        "GPU cluster power readiness commissioning",
+        "GPU cluster power readiness commissioning validation",
+        "Production cluster burn-in"
+      ],
+      "affected_systems": [
+        "Commissioning readiness tracker",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure GPU cluster power readiness commissioning using local operational logs.",
+        "Validate whether Step-level baseline for GPU cluster power readiness commissioning materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring process handoff in GPU cluster power readiness commissioning.",
+        "Staff can test changes in GPU cluster power readiness commissioning without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument GPU cluster power readiness commissioning before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in GPU cluster power readiness commissioning",
+        "Shorter delay before Production cluster burn-in",
+        "Fewer exceptions in Commissioning readiness tracker"
+      ],
+      "failure_modes": [
+        "Local records show little recurring process handoff friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify GPU cluster power readiness commissioning."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 8,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 5,
+      "pilotability_score": 3.8,
+      "evidence_dependency_score": 7.4,
+      "expected_unlock_score": 7.4,
+      "time_to_impact_score": 3.5,
+      "implementation_complexity_score": 3,
+      "operational_risk_score": 4.3,
+      "validation_readiness_score": 3.6,
+      "total_intervention_score": 5,
+      "intervention_priority_score": 4.1,
+      "action_confidence": 4.2,
+      "recommended_next_step": "Validate Step-level baseline for GPU cluster power readiness commissioning before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-041",
+      "constraint_title": "Data center backup generation permit readiness drag",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Backup generation permit readiness",
+      "intervention_thesis": "Evidence Collection could reduce compliance drag in Backup generation permit readiness without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows compliance drag, compliance simplification potential, and downstream impact in Resilience commissioning.",
+      "expected_unlock": "Relative unlock: improve Resilience commissioning by reducing friction across Backup generation permit readiness and Environmental permit package.",
+      "affected_processes": [
+        "Backup generation permit readiness",
+        "Backup generation permit readiness validation",
+        "Resilience commissioning"
+      ],
+      "affected_systems": [
+        "Environmental permit package",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Backup generation permit readiness using local operational logs.",
+        "Validate whether Step-level baseline for Backup generation permit readiness materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring compliance drag in Backup generation permit readiness.",
+        "Staff can test changes in Backup generation permit readiness without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Backup generation permit readiness before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Backup generation permit readiness",
+        "Shorter delay before Resilience commissioning",
+        "Fewer exceptions in Environmental permit package"
+      ],
+      "failure_modes": [
+        "Local records show little recurring compliance drag friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Backup generation permit readiness."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.1,
+      "pilotability_score": 4.2,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 6.9,
+      "time_to_impact_score": 4.1,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 3.9,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 4.9,
+      "intervention_priority_score": 4.1,
+      "action_confidence": 4.2,
+      "recommended_next_step": "Validate Step-level baseline for Backup generation permit readiness before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-063",
+      "constraint_title": "Defense component first article inspection backlog",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for First article inspection approval",
+      "intervention_thesis": "Evidence Collection could reduce compliance drag in First article inspection approval without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows compliance drag, compliance simplification potential, and downstream impact in Production lot release.",
+      "expected_unlock": "Relative unlock: improve Production lot release by reducing friction across First article inspection approval and Inspection evidence package.",
+      "affected_processes": [
+        "First article inspection approval",
+        "First article inspection approval validation",
+        "Production lot release"
+      ],
+      "affected_systems": [
+        "Inspection evidence package",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure First article inspection approval using local operational logs.",
+        "Validate whether Step-level baseline for First article inspection approval materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring compliance drag in First article inspection approval.",
+        "Staff can test changes in First article inspection approval without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument First article inspection approval before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in First article inspection approval",
+        "Shorter delay before Production lot release",
+        "Fewer exceptions in Inspection evidence package"
+      ],
+      "failure_modes": [
+        "Local records show little recurring compliance drag friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify First article inspection approval."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.3,
+      "pilotability_score": 4.1,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7,
+      "time_to_impact_score": 4.1,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 3.6,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 4.9,
+      "intervention_priority_score": 4.1,
+      "action_confidence": 4.2,
+      "recommended_next_step": "Validate Step-level baseline for First article inspection approval before rollout; use the intervention as a measurement experiment."
+    },
+    {
       "constraint_id": "strategic-001",
       "constraint_title": "Grid interconnection queue delay",
       "intervention_type": "evidence_collection",
@@ -2581,6 +4093,60 @@
       "recommended_next_step": "Validate Step-level baseline for Fab utility readiness tracking before rollout; use the intervention as a measurement experiment."
     },
     {
+      "constraint_id": "strategic-055",
+      "constraint_title": "Tailings permit monitoring data gap",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Tailings monitoring evidence reporting",
+      "intervention_thesis": "Evidence Collection could reduce compliance drag in Tailings monitoring evidence reporting without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows compliance drag, compliance simplification potential, and downstream impact in Permit compliance decision.",
+      "expected_unlock": "Relative unlock: improve Permit compliance decision by reducing friction across Tailings monitoring evidence reporting and Environmental monitoring repository.",
+      "affected_processes": [
+        "Tailings monitoring evidence reporting",
+        "Tailings monitoring evidence reporting validation",
+        "Permit compliance decision"
+      ],
+      "affected_systems": [
+        "Environmental monitoring repository",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Tailings monitoring evidence reporting using local operational logs.",
+        "Validate whether Step-level baseline for Tailings monitoring evidence reporting materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring compliance drag in Tailings monitoring evidence reporting.",
+        "Staff can test changes in Tailings monitoring evidence reporting without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Tailings monitoring evidence reporting before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Tailings monitoring evidence reporting",
+        "Shorter delay before Permit compliance decision",
+        "Fewer exceptions in Environmental monitoring repository"
+      ],
+      "failure_modes": [
+        "Local records show little recurring compliance drag friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Tailings monitoring evidence reporting."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 7,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.2,
+      "pilotability_score": 3.8,
+      "evidence_dependency_score": 7.4,
+      "expected_unlock_score": 7,
+      "time_to_impact_score": 3.9,
+      "implementation_complexity_score": 4,
+      "operational_risk_score": 3.1,
+      "validation_readiness_score": 3.6,
+      "total_intervention_score": 4.8,
+      "intervention_priority_score": 4,
+      "action_confidence": 4.1,
+      "recommended_next_step": "Validate Step-level baseline for Tailings monitoring evidence reporting before rollout; use the intervention as a measurement experiment."
+    },
+    {
       "constraint_id": "strategic-019",
       "constraint_title": "Refining and smelting capacity bottleneck",
       "intervention_type": "evidence_collection",
@@ -2633,6 +4199,114 @@
       "intervention_priority_score": 3.9,
       "action_confidence": 4.2,
       "recommended_next_step": "Validate Step-level baseline for Mineral processing allocation before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-044",
+      "constraint_title": "Nuclear QA document traceability review queue",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Nuclear QA traceability review",
+      "intervention_thesis": "Evidence Collection could reduce manual verification in Nuclear QA traceability review without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows manual verification, data quality potential, and downstream impact in Work package release.",
+      "expected_unlock": "Relative unlock: improve Work package release by reducing friction across Nuclear QA traceability review and Quality records repository.",
+      "affected_processes": [
+        "Nuclear QA traceability review",
+        "Nuclear QA traceability review validation",
+        "Work package release"
+      ],
+      "affected_systems": [
+        "Quality records repository",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Nuclear QA traceability review using local operational logs.",
+        "Validate whether Step-level baseline for Nuclear QA traceability review materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring manual verification in Nuclear QA traceability review.",
+        "Staff can test changes in Nuclear QA traceability review without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Nuclear QA traceability review before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Nuclear QA traceability review",
+        "Shorter delay before Work package release",
+        "Fewer exceptions in Quality records repository"
+      ],
+      "failure_modes": [
+        "Local records show little recurring manual verification friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Nuclear QA traceability review."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 8,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.7,
+      "pilotability_score": 3.5,
+      "evidence_dependency_score": 7.3,
+      "expected_unlock_score": 7.2,
+      "time_to_impact_score": 3.3,
+      "implementation_complexity_score": 3,
+      "operational_risk_score": 2.9,
+      "validation_readiness_score": 3.7,
+      "total_intervention_score": 4.7,
+      "intervention_priority_score": 3.9,
+      "action_confidence": 4.1,
+      "recommended_next_step": "Validate Step-level baseline for Nuclear QA traceability review before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-048",
+      "constraint_title": "Grid load study queue for large load requests",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for Large load interconnection study",
+      "intervention_thesis": "Evidence Collection could reduce administrative delay in Large load interconnection study without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows administrative delay, workflow redesign potential, and downstream impact in Site energization commitment.",
+      "expected_unlock": "Relative unlock: improve Site energization commitment by reducing friction across Large load interconnection study and Load request study queue.",
+      "affected_processes": [
+        "Large load interconnection study",
+        "Large load interconnection study validation",
+        "Site energization commitment"
+      ],
+      "affected_systems": [
+        "Load request study queue",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure Large load interconnection study using local operational logs.",
+        "Validate whether Step-level baseline for Large load interconnection study materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring administrative delay in Large load interconnection study.",
+        "Staff can test changes in Large load interconnection study without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument Large load interconnection study before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in Large load interconnection study",
+        "Shorter delay before Site energization commitment",
+        "Fewer exceptions in Load request study queue"
+      ],
+      "failure_modes": [
+        "Local records show little recurring administrative delay friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify Large load interconnection study."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 8,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.3,
+      "pilotability_score": 3.5,
+      "evidence_dependency_score": 7.4,
+      "expected_unlock_score": 7.3,
+      "time_to_impact_score": 3.3,
+      "implementation_complexity_score": 3,
+      "operational_risk_score": 3.4,
+      "validation_readiness_score": 3.6,
+      "total_intervention_score": 4.7,
+      "intervention_priority_score": 3.9,
+      "action_confidence": 4.1,
+      "recommended_next_step": "Validate Step-level baseline for Large load interconnection study before rollout; use the intervention as a measurement experiment."
     },
     {
       "constraint_id": "strategic-004",
@@ -2849,6 +4523,60 @@
       "intervention_priority_score": 3.3,
       "action_confidence": 4.9,
       "recommended_next_step": "Validate Step-level baseline for Mine permit review before rollout; use the intervention as a measurement experiment."
+    },
+    {
+      "constraint_id": "strategic-042",
+      "constraint_title": "SMR licensing evidence package iteration",
+      "intervention_type": "evidence_collection",
+      "intervention_name": "Evidence Collection for SMR licensing evidence package review",
+      "intervention_thesis": "Evidence Collection could reduce compliance drag in SMR licensing evidence package review without assuming unproven financial ROI.",
+      "why_this_fits": "Evidence Collection fits because the record shows compliance drag, compliance simplification potential, and downstream impact in Construction authorization readiness.",
+      "expected_unlock": "Relative unlock: improve Construction authorization readiness by reducing friction across SMR licensing evidence package review and Licensing evidence docket.",
+      "affected_processes": [
+        "SMR licensing evidence package review",
+        "SMR licensing evidence package review validation",
+        "Construction authorization readiness"
+      ],
+      "affected_systems": [
+        "Licensing evidence docket",
+        "Shared tracking workflow",
+        "Operational reporting"
+      ],
+      "required_evidence": [
+        "Measure SMR licensing evidence package review using local operational logs.",
+        "Validate whether Step-level baseline for SMR licensing evidence package review materially changes the opportunity score."
+      ],
+      "key_assumptions": [
+        "Operational data confirms recurring compliance drag in SMR licensing evidence package review.",
+        "Staff can test changes in SMR licensing evidence package review without broad rollout.",
+        "Affected systems can produce before/after measurements."
+      ],
+      "first_experiment": "Run a measurement-first test: instrument SMR licensing evidence package review before changing workflow.",
+      "success_metrics": [
+        "Reduced manual touches in SMR licensing evidence package review",
+        "Shorter delay before Construction authorization readiness",
+        "Fewer exceptions in Licensing evidence docket"
+      ],
+      "failure_modes": [
+        "Local records show little recurring compliance drag friction.",
+        "Measured waste is materially lower than current assumptions.",
+        "Systems do not contain enough data to verify SMR licensing evidence package review."
+      ],
+      "operational_risk": "High",
+      "implementation_complexity": 9,
+      "time_to_impact": "Long",
+      "ai_leverage_score": 4.5,
+      "pilotability_score": 2.4,
+      "evidence_dependency_score": 7.5,
+      "expected_unlock_score": 7.1,
+      "time_to_impact_score": 2.2,
+      "implementation_complexity_score": 2,
+      "operational_risk_score": 1.9,
+      "validation_readiness_score": 3.5,
+      "total_intervention_score": 4,
+      "intervention_priority_score": 3.2,
+      "action_confidence": 3.7,
+      "recommended_next_step": "Validate Step-level baseline for SMR licensing evidence package review before rollout; use the intervention as a measurement experiment."
     }
   ]
 }

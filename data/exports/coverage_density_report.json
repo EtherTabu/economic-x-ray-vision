@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-06-23T03:18:53.245Z",
+  "baseline": {
+    "record_count": 52,
+    "validation_task_count": 316,
+    "evidence_artifact_count": 276,
+    "analyst_state_record_count": 647
+  },
+  "current": {
+    "record_count": 84,
+    "records_added_since_baseline": 32,
+    "validation_task_count": 514,
+    "evidence_artifact_count": 459,
+    "analyst_state_record_count": 1060
+  },
+  "growth": {
+    "validation_task_growth": 198,
+    "evidence_artifact_growth": 183,
+    "analyst_state_growth": 413
+  },
+  "coverage_summary": {
+    "frontier_infrastructure_coverage_count": 56,
+    "records_by_frontier_domain": {
+      "Data centers / AI infrastructure": 5,
+      "Power generation / nuclear / SMR": 4,
+      "Grid interconnection / transmission": 9,
+      "Semiconductors / advanced manufacturing": 10,
+      "Critical minerals / refining": 10,
+      "Robotics / automation deployment": 4,
+      "Aerospace / defense / space manufacturing": 4,
+      "Industrial logistics / field operations": 10
+    },
+    "under_covered_domains_remaining": [],
+    "records_by_industry": {
+      "Healthcare": 16,
+      "Energy / Grid / Interconnection": 9,
+      "Infrastructure / Permitting / Construction": 6,
+      "Semiconductors / Advanced Manufacturing": 10,
+      "Metals / Mining / Critical Inputs": 10,
+      "Logistics / Supply Chain / Industrial Equipment": 10,
+      "Public-Sector Administration / Compliance": 6,
+      "Data Centers / AI Infrastructure": 5,
+      "Power Generation / Nuclear / SMR": 4,
+      "Robotics / Automation Deployment": 4,
+      "Aerospace / Defense / Space Manufacturing": 4
+    },
+    "records_by_archetype": {
+      "queue_backlog": 9,
+      "manual_verification_drag": 5,
+      "documentation_chase": 5,
+      "handoff_leakage": 9,
+      "hidden_cost_shift": 2,
+      "duplicated_work": 3,
+      "capacity_mismatch": 5,
+      "regulatory_complexity": 2,
+      "support_channel_overload": 1,
+      "measurement_blind_spot": 7,
+      "data_fragmentation": 4,
+      "interconnection_delay": 4,
+      "equipment_lead_time": 4,
+      "permitting_delay": 3,
+      "inspection_delay": 5,
+      "vendor_qualification": 6,
+      "infrastructure_siting": 1,
+      "processing_capacity": 3,
+      "supply_concentration": 3,
+      "project_approval_friction": 2,
+      "demand_forecast_mismatch": 1
+    },
+    "records_by_evidence_strength": {
+      "High": 6,
+      "Moderate": 24,
+      "Low": 54
+    },
+    "records_by_validation_status": {
+      "Partially Validated": 5,
+      "Plausible": 24,
+      "Validated": 1,
+      "Unverified": 54
+    }
+  },
+  "quality_signals": {
+    "duplicate_ids": [],
+    "high_opportunity_weak_evidence_records": [
+      "hc-admin-002",
+      "hc-admin-009",
+      "hc-intake-001",
+      "strategic-023",
+      "strategic-060",
+      "strategic-067"
+    ],
+    "high_opportunity_weak_evidence_count": 6,
+    "high_priority_artifacts": 129,
+    "analyst_state_status_distribution": {
+      "not_started": 3,
+      "unreviewed": 84,
+      "not_collected": 459,
+      "open": 398,
+      "blocked": 116
+    }
+  }
+}

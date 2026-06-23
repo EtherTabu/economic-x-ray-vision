@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-15T11:58:48.974Z",
-  "record_count": 52,
+  "generated_at": "2026-06-23T03:18:51.734Z",
+  "record_count": 84,
   "nodes": [
     {
       "id": "archetype:capacity_mismatch",
@@ -869,6 +869,466 @@
       "route": "/constraints/strategic-036"
     },
     {
+      "id": "constraint:strategic-037",
+      "label": "GPU cluster commissioning dependency on power delivery sequencing",
+      "type": "constraint",
+      "industry": "Data Centers / AI Infrastructure",
+      "archetype": "interconnection_delay",
+      "priority_score": 6.3,
+      "validation_confidence": 3.6,
+      "strategic_score": 7.7,
+      "intervention_score": 4.1,
+      "action_confidence": 4.2,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-037"
+    },
+    {
+      "id": "constraint:strategic-038",
+      "label": "Liquid cooling loop validation bottleneck",
+      "type": "constraint",
+      "industry": "Data Centers / AI Infrastructure",
+      "archetype": "manual_verification_drag",
+      "priority_score": 6.3,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.7,
+      "intervention_score": 4.5,
+      "action_confidence": 4.4,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-038"
+    },
+    {
+      "id": "constraint:strategic-039",
+      "label": "High-density rack deployment stranded by fiber cross-connect backlog",
+      "type": "constraint",
+      "industry": "Data Centers / AI Infrastructure",
+      "archetype": "handoff_leakage",
+      "priority_score": 6.5,
+      "validation_confidence": 3.8,
+      "strategic_score": 7.9,
+      "intervention_score": 5,
+      "action_confidence": 4.7,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-039"
+    },
+    {
+      "id": "constraint:strategic-040",
+      "label": "AI training workload scheduling against power and cooling envelope mismatch",
+      "type": "constraint",
+      "industry": "Data Centers / AI Infrastructure",
+      "archetype": "capacity_mismatch",
+      "priority_score": 6.3,
+      "validation_confidence": 3.8,
+      "strategic_score": 7.8,
+      "intervention_score": 4.8,
+      "action_confidence": 4.6,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-040"
+    },
+    {
+      "id": "constraint:strategic-041",
+      "label": "Data center backup generation permit readiness drag",
+      "type": "constraint",
+      "industry": "Data Centers / AI Infrastructure",
+      "archetype": "permitting_delay",
+      "priority_score": 5.8,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.3,
+      "intervention_score": 4.1,
+      "action_confidence": 4.2,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-041"
+    },
+    {
+      "id": "constraint:strategic-042",
+      "label": "SMR licensing evidence package iteration",
+      "type": "constraint",
+      "industry": "Power Generation / Nuclear / SMR",
+      "archetype": "regulatory_complexity",
+      "priority_score": 5.8,
+      "validation_confidence": 3.4,
+      "strategic_score": 7.4,
+      "intervention_score": 3.2,
+      "action_confidence": 3.7,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-042"
+    },
+    {
+      "id": "constraint:strategic-043",
+      "label": "Turbine outage parts readiness constraint",
+      "type": "constraint",
+      "industry": "Power Generation / Nuclear / SMR",
+      "archetype": "equipment_lead_time",
+      "priority_score": 6.3,
+      "validation_confidence": 3.8,
+      "strategic_score": 7.8,
+      "intervention_score": 4.5,
+      "action_confidence": 4.4,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-043"
+    },
+    {
+      "id": "constraint:strategic-044",
+      "label": "Nuclear QA document traceability review queue",
+      "type": "constraint",
+      "industry": "Power Generation / Nuclear / SMR",
+      "archetype": "manual_verification_drag",
+      "priority_score": 5.8,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.5,
+      "intervention_score": 3.9,
+      "action_confidence": 4.1,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-044"
+    },
+    {
+      "id": "constraint:strategic-045",
+      "label": "Power plant protection settings review backlog",
+      "type": "constraint",
+      "industry": "Power Generation / Nuclear / SMR",
+      "archetype": "interconnection_delay",
+      "priority_score": 6.1,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.6,
+      "intervention_score": 4.2,
+      "action_confidence": 4.3,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-045"
+    },
+    {
+      "id": "constraint:strategic-046",
+      "label": "Substation transformer energization test window bottleneck",
+      "type": "constraint",
+      "industry": "Energy / Grid / Interconnection",
+      "archetype": "inspection_delay",
+      "priority_score": 6.2,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.6,
+      "intervention_score": 4.4,
+      "action_confidence": 4.4,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-046"
+    },
+    {
+      "id": "constraint:strategic-047",
+      "label": "Transmission reconductoring outage coordination backlog",
+      "type": "constraint",
+      "industry": "Energy / Grid / Interconnection",
+      "archetype": "handoff_leakage",
+      "priority_score": 6.1,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.6,
+      "intervention_score": 4.2,
+      "action_confidence": 4.3,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-047"
+    },
+    {
+      "id": "constraint:strategic-048",
+      "label": "Grid load study queue for large load requests",
+      "type": "constraint",
+      "industry": "Energy / Grid / Interconnection",
+      "archetype": "interconnection_delay",
+      "priority_score": 6.1,
+      "validation_confidence": 3.6,
+      "strategic_score": 7.6,
+      "intervention_score": 3.9,
+      "action_confidence": 4.1,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-048"
+    },
+    {
+      "id": "constraint:strategic-049",
+      "label": "Fab tool install qualification handoff delay",
+      "type": "constraint",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "archetype": "handoff_leakage",
+      "priority_score": 6.5,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.9,
+      "intervention_score": 4.6,
+      "action_confidence": 4.5,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-049"
+    },
+    {
+      "id": "constraint:strategic-050",
+      "label": "Specialty gas delivery readiness mismatch",
+      "type": "constraint",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "archetype": "supply_concentration",
+      "priority_score": 6,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.6,
+      "intervention_score": 4.3,
+      "action_confidence": 4.4,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-050"
+    },
+    {
+      "id": "constraint:strategic-051",
+      "label": "Cleanroom capacity allocation conflict during ramp",
+      "type": "constraint",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "archetype": "capacity_mismatch",
+      "priority_score": 6.3,
+      "validation_confidence": 3.8,
+      "strategic_score": 7.8,
+      "intervention_score": 4.8,
+      "action_confidence": 4.6,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-051"
+    },
+    {
+      "id": "constraint:strategic-052",
+      "label": "Advanced packaging substrate qualification bottleneck",
+      "type": "constraint",
+      "industry": "Semiconductors / Advanced Manufacturing",
+      "archetype": "vendor_qualification",
+      "priority_score": 6.5,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.9,
+      "intervention_score": 4.6,
+      "action_confidence": 4.5,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-052"
+    },
+    {
+      "id": "constraint:strategic-053",
+      "label": "Critical mineral assay-to-offtake qualification delay",
+      "type": "constraint",
+      "industry": "Metals / Mining / Critical Inputs",
+      "archetype": "vendor_qualification",
+      "priority_score": 6.1,
+      "validation_confidence": 3.5,
+      "strategic_score": 7.6,
+      "intervention_score": 4.2,
+      "action_confidence": 4.2,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-053"
+    },
+    {
+      "id": "constraint:strategic-054",
+      "label": "Leach circuit reagent supply concentration risk",
+      "type": "constraint",
+      "industry": "Metals / Mining / Critical Inputs",
+      "archetype": "supply_concentration",
+      "priority_score": 6,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.5,
+      "intervention_score": 4.6,
+      "action_confidence": 4.5,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-054"
+    },
+    {
+      "id": "constraint:strategic-055",
+      "label": "Tailings permit monitoring data gap",
+      "type": "constraint",
+      "industry": "Metals / Mining / Critical Inputs",
+      "archetype": "measurement_blind_spot",
+      "priority_score": 5.7,
+      "validation_confidence": 3.6,
+      "strategic_score": 7.3,
+      "intervention_score": 4,
+      "action_confidence": 4.1,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-055"
+    },
+    {
+      "id": "constraint:strategic-056",
+      "label": "Refinery sample lot release queue",
+      "type": "constraint",
+      "industry": "Metals / Mining / Critical Inputs",
+      "archetype": "queue_backlog",
+      "priority_score": 6.3,
+      "validation_confidence": 3.8,
+      "strategic_score": 7.8,
+      "intervention_score": 4.9,
+      "action_confidence": 4.6,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-056"
+    },
+    {
+      "id": "constraint:strategic-057",
+      "label": "Industrial robot cell safety validation bottleneck",
+      "type": "constraint",
+      "industry": "Robotics / Automation Deployment",
+      "archetype": "inspection_delay",
+      "priority_score": 6.1,
+      "validation_confidence": 3.8,
+      "strategic_score": 7.6,
+      "intervention_score": 4.3,
+      "action_confidence": 4.3,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-057"
+    },
+    {
+      "id": "constraint:strategic-058",
+      "label": "Autonomous mobile robot site mapping rework",
+      "type": "constraint",
+      "industry": "Robotics / Automation Deployment",
+      "archetype": "data_fragmentation",
+      "priority_score": 6.5,
+      "validation_confidence": 3.8,
+      "strategic_score": 8,
+      "intervention_score": 4.9,
+      "action_confidence": 4.7,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-058"
+    },
+    {
+      "id": "constraint:strategic-059",
+      "label": "End effector changeover programming queue",
+      "type": "constraint",
+      "industry": "Robotics / Automation Deployment",
+      "archetype": "queue_backlog",
+      "priority_score": 6.5,
+      "validation_confidence": 3.8,
+      "strategic_score": 8,
+      "intervention_score": 5,
+      "action_confidence": 4.7,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-059"
+    },
+    {
+      "id": "constraint:strategic-060",
+      "label": "Vision model exception tuning handoff",
+      "type": "constraint",
+      "industry": "Robotics / Automation Deployment",
+      "archetype": "handoff_leakage",
+      "priority_score": 6.7,
+      "validation_confidence": 3.8,
+      "strategic_score": 8.2,
+      "intervention_score": 5.2,
+      "action_confidence": 4.8,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-060"
+    },
+    {
+      "id": "constraint:strategic-061",
+      "label": "Launch supplier nonconformance closure loop",
+      "type": "constraint",
+      "industry": "Aerospace / Defense / Space Manufacturing",
+      "archetype": "manual_verification_drag",
+      "priority_score": 6.5,
+      "validation_confidence": 3.7,
+      "strategic_score": 8,
+      "intervention_score": 4.5,
+      "action_confidence": 4.5,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-061"
+    },
+    {
+      "id": "constraint:strategic-062",
+      "label": "Space vehicle test article configuration traceability gap",
+      "type": "constraint",
+      "industry": "Aerospace / Defense / Space Manufacturing",
+      "archetype": "data_fragmentation",
+      "priority_score": 6.4,
+      "validation_confidence": 3.6,
+      "strategic_score": 7.9,
+      "intervention_score": 4.4,
+      "action_confidence": 4.4,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-062"
+    },
+    {
+      "id": "constraint:strategic-063",
+      "label": "Defense component first article inspection backlog",
+      "type": "constraint",
+      "industry": "Aerospace / Defense / Space Manufacturing",
+      "archetype": "inspection_delay",
+      "priority_score": 5.8,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.4,
+      "intervention_score": 4.1,
+      "action_confidence": 4.2,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-063"
+    },
+    {
+      "id": "constraint:strategic-064",
+      "label": "Propulsion test stand scheduling bottleneck",
+      "type": "constraint",
+      "industry": "Aerospace / Defense / Space Manufacturing",
+      "archetype": "processing_capacity",
+      "priority_score": 6.3,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.8,
+      "intervention_score": 4.4,
+      "action_confidence": 4.4,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-064"
+    },
+    {
+      "id": "constraint:strategic-065",
+      "label": "Field service parts availability causing asset downtime",
+      "type": "constraint",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "archetype": "capacity_mismatch",
+      "priority_score": 6.5,
+      "validation_confidence": 3.8,
+      "strategic_score": 7.9,
+      "intervention_score": 5,
+      "action_confidence": 4.7,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-065"
+    },
+    {
+      "id": "constraint:strategic-066",
+      "label": "Depot repair triage backlog for mission equipment",
+      "type": "constraint",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "archetype": "queue_backlog",
+      "priority_score": 6.4,
+      "validation_confidence": 3.8,
+      "strategic_score": 7.8,
+      "intervention_score": 4.9,
+      "action_confidence": 4.7,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-066"
+    },
+    {
+      "id": "constraint:strategic-067",
+      "label": "Heavy equipment telematics fault classification blind spot",
+      "type": "constraint",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "archetype": "measurement_blind_spot",
+      "priority_score": 6.6,
+      "validation_confidence": 3.7,
+      "strategic_score": 8.1,
+      "intervention_score": 5.2,
+      "action_confidence": 4.8,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-067"
+    },
+    {
+      "id": "constraint:strategic-068",
+      "label": "Remote site mobilization permit and access coordination delay",
+      "type": "constraint",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "archetype": "handoff_leakage",
+      "priority_score": 6.1,
+      "validation_confidence": 3.7,
+      "strategic_score": 7.6,
+      "intervention_score": 4.6,
+      "action_confidence": 4.5,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-068"
+    },
+    {
+      "id": "industry:aerospace-defense-space-manufacturing",
+      "label": "Aerospace / Defense / Space Manufacturing",
+      "type": "industry",
+      "industry": "Aerospace / Defense / Space Manufacturing"
+    },
+    {
+      "id": "industry:data-centers-ai-infrastructure",
+      "label": "Data Centers / AI Infrastructure",
+      "type": "industry",
+      "industry": "Data Centers / AI Infrastructure"
+    },
+    {
       "id": "industry:energy-grid-interconnection",
       "label": "Energy / Grid / Interconnection",
       "type": "industry",
@@ -899,10 +1359,22 @@
       "industry": "Metals / Mining / Critical Inputs"
     },
     {
+      "id": "industry:power-generation-nuclear-smr",
+      "label": "Power Generation / Nuclear / SMR",
+      "type": "industry",
+      "industry": "Power Generation / Nuclear / SMR"
+    },
+    {
       "id": "industry:public-sector-administration-compliance",
       "label": "Public-Sector Administration / Compliance",
       "type": "industry",
       "industry": "Public-Sector Administration / Compliance"
+    },
+    {
+      "id": "industry:robotics-automation-deployment",
+      "label": "Robotics / Automation Deployment",
+      "type": "industry",
+      "industry": "Robotics / Automation Deployment"
     },
     {
       "id": "industry:semiconductors-advanced-manufacturing",
@@ -922,7 +1394,7 @@
       "label": "evidence collection",
       "type": "intervention",
       "intervention_score": 4.6,
-      "action_confidence": 4.6
+      "action_confidence": 4.5
     },
     {
       "id": "intervention:policy_simplification",
@@ -942,10 +1414,28 @@
   "edges": [
     {
       "source": "archetype:capacity_mismatch",
-      "target": "industry:energy-grid-interconnection",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Capacity Mismatch appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:capacity_mismatch->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:capacity_mismatch",
+      "target": "industry:data-centers-ai-infrastructure",
       "type": "archetype_industry",
       "label": "Appears in industry",
       "strength": 6,
+      "explanation": "Capacity Mismatch appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:capacity_mismatch->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "archetype:capacity_mismatch",
+      "target": "industry:energy-grid-interconnection",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 9,
       "explanation": "Capacity Mismatch appears in Energy / Grid / Interconnection.",
       "id": "archetype_industry:archetype:capacity_mismatch->industry:energy-grid-interconnection"
     },
@@ -963,7 +1453,7 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 7,
       "explanation": "Capacity Mismatch appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:capacity_mismatch->industry:logistics-supply-chain-industrial-equipment"
     },
@@ -978,12 +1468,39 @@
     },
     {
       "source": "archetype:capacity_mismatch",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Capacity Mismatch appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:capacity_mismatch->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "archetype:capacity_mismatch",
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 6,
+      "strength": 8,
       "explanation": "Capacity Mismatch appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:capacity_mismatch->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "archetype:data_fragmentation",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Data Fragmentation appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:data_fragmentation->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:data_fragmentation",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Data Fragmentation appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:data_fragmentation->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:data_fragmentation",
@@ -1008,7 +1525,7 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 6,
       "explanation": "Data Fragmentation appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:data_fragmentation->industry:logistics-supply-chain-industrial-equipment"
     },
@@ -1023,6 +1540,15 @@
     },
     {
       "source": "archetype:data_fragmentation",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Data Fragmentation appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:data_fragmentation->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "archetype:data_fragmentation",
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
@@ -1032,10 +1558,19 @@
     },
     {
       "source": "archetype:demand_forecast_mismatch",
-      "target": "industry:energy-grid-interconnection",
+      "target": "industry:data-centers-ai-infrastructure",
       "type": "archetype_industry",
       "label": "Appears in industry",
       "strength": 4,
+      "explanation": "Demand Forecast Mismatch appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:demand_forecast_mismatch->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "archetype:demand_forecast_mismatch",
+      "target": "industry:energy-grid-interconnection",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
       "explanation": "Demand Forecast Mismatch appears in Energy / Grid / Interconnection.",
       "id": "archetype_industry:archetype:demand_forecast_mismatch->industry:energy-grid-interconnection"
     },
@@ -1053,7 +1588,7 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 7,
       "explanation": "Demand Forecast Mismatch appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:demand_forecast_mismatch->industry:logistics-supply-chain-industrial-equipment"
     },
@@ -1062,7 +1597,7 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Demand Forecast Mismatch appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:demand_forecast_mismatch->industry:metals-mining-critical-inputs"
     },
@@ -1071,9 +1606,27 @@
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 6,
       "explanation": "Demand Forecast Mismatch appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:demand_forecast_mismatch->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "archetype:documentation_chase",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 6,
+      "explanation": "Documentation Chase appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:documentation_chase->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:documentation_chase",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Documentation Chase appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:documentation_chase->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:documentation_chase",
@@ -1116,9 +1669,18 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 7,
+      "strength": 10,
       "explanation": "Documentation Chase appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:documentation_chase->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:documentation_chase",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Documentation Chase appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:documentation_chase->industry:power-generation-nuclear-smr"
     },
     {
       "source": "archetype:documentation_chase",
@@ -1128,6 +1690,15 @@
       "strength": 7,
       "explanation": "Documentation Chase appears in Public-Sector Administration / Compliance.",
       "id": "archetype_industry:archetype:documentation_chase->industry:public-sector-administration-compliance"
+    },
+    {
+      "source": "archetype:documentation_chase",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Documentation Chase appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:documentation_chase->industry:robotics-automation-deployment"
     },
     {
       "source": "archetype:documentation_chase",
@@ -1176,10 +1747,19 @@
     },
     {
       "source": "archetype:equipment_lead_time",
-      "target": "industry:energy-grid-interconnection",
+      "target": "industry:data-centers-ai-infrastructure",
       "type": "archetype_industry",
       "label": "Appears in industry",
       "strength": 4,
+      "explanation": "Equipment Lead Time appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:equipment_lead_time->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "archetype:equipment_lead_time",
+      "target": "industry:energy-grid-interconnection",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
       "explanation": "Equipment Lead Time appears in Energy / Grid / Interconnection.",
       "id": "archetype_industry:archetype:equipment_lead_time->industry:energy-grid-interconnection"
     },
@@ -1188,7 +1768,7 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 7,
       "explanation": "Equipment Lead Time appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:equipment_lead_time->industry:logistics-supply-chain-industrial-equipment"
     },
@@ -1197,25 +1777,43 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 6,
       "explanation": "Equipment Lead Time appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:equipment_lead_time->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:equipment_lead_time",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Equipment Lead Time appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:equipment_lead_time->industry:power-generation-nuclear-smr"
     },
     {
       "source": "archetype:equipment_lead_time",
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Equipment Lead Time appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:equipment_lead_time->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "archetype:handoff_leakage",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Handoff Leakage appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:handoff_leakage->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:handoff_leakage",
       "target": "industry:energy-grid-interconnection",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Handoff Leakage appears in Energy / Grid / Interconnection.",
       "id": "archetype_industry:archetype:handoff_leakage->industry:energy-grid-interconnection"
     },
@@ -1242,9 +1840,27 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 6,
       "explanation": "Handoff Leakage appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:handoff_leakage->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
+      "source": "archetype:handoff_leakage",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Handoff Leakage appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:handoff_leakage->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "archetype:handoff_leakage",
+      "target": "industry:semiconductors-advanced-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Handoff Leakage appears in Semiconductors / Advanced Manufacturing.",
+      "id": "archetype_industry:archetype:handoff_leakage->industry:semiconductors-advanced-manufacturing"
     },
     {
       "source": "archetype:hidden_cost_shift",
@@ -1269,7 +1885,7 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 6,
+      "strength": 7,
       "explanation": "Hidden Cost Shift appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:hidden_cost_shift->industry:logistics-supply-chain-industrial-equipment"
     },
@@ -1281,6 +1897,15 @@
       "strength": 4,
       "explanation": "Hidden Cost Shift appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:hidden_cost_shift->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:idle_capacity",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Idle Capacity appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:idle_capacity->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:idle_capacity",
@@ -1314,18 +1939,45 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Idle Capacity appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:idle_capacity->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
+      "source": "archetype:idle_capacity",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Idle Capacity appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:idle_capacity->industry:power-generation-nuclear-smr"
     },
     {
       "source": "archetype:idle_capacity",
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Idle Capacity appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:idle_capacity->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "archetype:infrastructure_siting",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Infrastructure Siting appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:infrastructure_siting->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:infrastructure_siting",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Infrastructure Siting appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:infrastructure_siting->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:infrastructure_siting",
@@ -1356,12 +2008,48 @@
     },
     {
       "source": "archetype:inspection_delay",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Inspection Delay appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:inspection_delay->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:inspection_delay",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Inspection Delay appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:inspection_delay->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "archetype:inspection_delay",
+      "target": "industry:energy-grid-interconnection",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Inspection Delay appears in Energy / Grid / Interconnection.",
+      "id": "archetype_industry:archetype:inspection_delay->industry:energy-grid-interconnection"
+    },
+    {
+      "source": "archetype:inspection_delay",
       "target": "industry:infrastructure-permitting-construction",
       "type": "archetype_industry",
       "label": "Appears in industry",
       "strength": 4,
       "explanation": "Inspection Delay appears in Infrastructure / Permitting / Construction.",
       "id": "archetype_industry:archetype:inspection_delay->industry:infrastructure-permitting-construction"
+    },
+    {
+      "source": "archetype:inspection_delay",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Inspection Delay appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:inspection_delay->industry:power-generation-nuclear-smr"
     },
     {
       "source": "archetype:inspection_delay",
@@ -1373,13 +2061,40 @@
       "id": "archetype_industry:archetype:inspection_delay->industry:public-sector-administration-compliance"
     },
     {
+      "source": "archetype:inspection_delay",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Inspection Delay appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:inspection_delay->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "archetype:interconnection_delay",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Interconnection Delay appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:interconnection_delay->industry:data-centers-ai-infrastructure"
+    },
+    {
       "source": "archetype:interconnection_delay",
       "target": "industry:energy-grid-interconnection",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 6,
+      "strength": 7,
       "explanation": "Interconnection Delay appears in Energy / Grid / Interconnection.",
       "id": "archetype_industry:archetype:interconnection_delay->industry:energy-grid-interconnection"
+    },
+    {
+      "source": "archetype:interconnection_delay",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Interconnection Delay appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:interconnection_delay->industry:power-generation-nuclear-smr"
     },
     {
       "source": "archetype:interconnection_delay",
@@ -1389,6 +2104,24 @@
       "strength": 4,
       "explanation": "Interconnection Delay appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:interconnection_delay->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "archetype:manual_verification_drag",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 6,
+      "explanation": "Manual Verification Drag appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:manual_verification_drag->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:manual_verification_drag",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Manual Verification Drag appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:manual_verification_drag->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:manual_verification_drag",
@@ -1413,7 +2146,7 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Manual Verification Drag appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:manual_verification_drag->industry:logistics-supply-chain-industrial-equipment"
     },
@@ -1422,9 +2155,18 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 7,
       "explanation": "Manual Verification Drag appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:manual_verification_drag->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:manual_verification_drag",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Manual Verification Drag appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:manual_verification_drag->industry:power-generation-nuclear-smr"
     },
     {
       "source": "archetype:manual_verification_drag",
@@ -1437,12 +2179,39 @@
     },
     {
       "source": "archetype:manual_verification_drag",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 6,
+      "explanation": "Manual Verification Drag appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:manual_verification_drag->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "archetype:manual_verification_drag",
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 7,
       "explanation": "Manual Verification Drag appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:manual_verification_drag->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "archetype:measurement_blind_spot",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Measurement Blind Spot appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:measurement_blind_spot->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:measurement_blind_spot",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Measurement Blind Spot appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:measurement_blind_spot->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:measurement_blind_spot",
@@ -1467,7 +2236,7 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 6,
       "explanation": "Measurement Blind Spot appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:measurement_blind_spot->industry:logistics-supply-chain-industrial-equipment"
     },
@@ -1476,18 +2245,45 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Measurement Blind Spot appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:measurement_blind_spot->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:measurement_blind_spot",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Measurement Blind Spot appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:measurement_blind_spot->industry:power-generation-nuclear-smr"
+    },
+    {
+      "source": "archetype:measurement_blind_spot",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Measurement Blind Spot appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:measurement_blind_spot->industry:robotics-automation-deployment"
     },
     {
       "source": "archetype:measurement_blind_spot",
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Measurement Blind Spot appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:measurement_blind_spot->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "archetype:permitting_delay",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Permitting Delay appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:permitting_delay->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:permitting_delay",
@@ -1509,12 +2305,39 @@
     },
     {
       "source": "archetype:permitting_delay",
+      "target": "industry:logistics-supply-chain-industrial-equipment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Permitting Delay appears in Logistics / Supply Chain / Industrial Equipment.",
+      "id": "archetype_industry:archetype:permitting_delay->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
+      "source": "archetype:permitting_delay",
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
       "strength": 5,
       "explanation": "Permitting Delay appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:permitting_delay->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:permitting_delay",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Permitting Delay appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:permitting_delay->industry:power-generation-nuclear-smr"
+    },
+    {
+      "source": "archetype:processing_capacity",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Processing Capacity appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:processing_capacity->industry:aerospace-defense-space-manufacturing"
     },
     {
       "source": "archetype:processing_capacity",
@@ -1539,7 +2362,7 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 6,
       "explanation": "Processing Capacity appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:processing_capacity->industry:logistics-supply-chain-industrial-equipment"
     },
@@ -1548,7 +2371,7 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 7,
       "explanation": "Processing Capacity appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:processing_capacity->industry:metals-mining-critical-inputs"
     },
@@ -1563,10 +2386,19 @@
     },
     {
       "source": "archetype:project_approval_friction",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Project Approval Friction appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:project_approval_friction->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "archetype:project_approval_friction",
       "target": "industry:energy-grid-interconnection",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 6,
       "explanation": "Project Approval Friction appears in Energy / Grid / Interconnection.",
       "id": "archetype_industry:archetype:project_approval_friction->industry:energy-grid-interconnection"
     },
@@ -1590,6 +2422,15 @@
     },
     {
       "source": "archetype:project_approval_friction",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Project Approval Friction appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:project_approval_friction->industry:power-generation-nuclear-smr"
+    },
+    {
+      "source": "archetype:project_approval_friction",
       "target": "industry:public-sector-administration-compliance",
       "type": "archetype_industry",
       "label": "Appears in industry",
@@ -1608,10 +2449,28 @@
     },
     {
       "source": "archetype:queue_backlog",
-      "target": "industry:energy-grid-interconnection",
+      "target": "industry:aerospace-defense-space-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
       "strength": 5,
+      "explanation": "Queue Backlog appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:queue_backlog->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:queue_backlog",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Queue Backlog appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:queue_backlog->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "archetype:queue_backlog",
+      "target": "industry:energy-grid-interconnection",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 8,
       "explanation": "Queue Backlog appears in Energy / Grid / Interconnection.",
       "id": "archetype_industry:archetype:queue_backlog->industry:energy-grid-interconnection"
     },
@@ -1638,9 +2497,27 @@
       "target": "industry:logistics-supply-chain-industrial-equipment",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Queue Backlog appears in Logistics / Supply Chain / Industrial Equipment.",
       "id": "archetype_industry:archetype:queue_backlog->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
+      "source": "archetype:queue_backlog",
+      "target": "industry:metals-mining-critical-inputs",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Queue Backlog appears in Metals / Mining / Critical Inputs.",
+      "id": "archetype_industry:archetype:queue_backlog->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:queue_backlog",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Queue Backlog appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:queue_backlog->industry:power-generation-nuclear-smr"
     },
     {
       "source": "archetype:queue_backlog",
@@ -1653,12 +2530,30 @@
     },
     {
       "source": "archetype:queue_backlog",
-      "target": "industry:semiconductors-advanced-manufacturing",
+      "target": "industry:robotics-automation-deployment",
       "type": "archetype_industry",
       "label": "Appears in industry",
       "strength": 4,
+      "explanation": "Queue Backlog appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:queue_backlog->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "archetype:queue_backlog",
+      "target": "industry:semiconductors-advanced-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 6,
       "explanation": "Queue Backlog appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:queue_backlog->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "archetype:regulatory_complexity",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Regulatory Complexity appears in Data Centers / AI Infrastructure.",
+      "id": "archetype_industry:archetype:regulatory_complexity->industry:data-centers-ai-infrastructure"
     },
     {
       "source": "archetype:regulatory_complexity",
@@ -1692,9 +2587,18 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Regulatory Complexity appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:regulatory_complexity->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:regulatory_complexity",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 6,
+      "explanation": "Regulatory Complexity appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:regulatory_complexity->industry:power-generation-nuclear-smr"
     },
     {
       "source": "archetype:regulatory_complexity",
@@ -1704,6 +2608,24 @@
       "strength": 5,
       "explanation": "Regulatory Complexity appears in Public-Sector Administration / Compliance.",
       "id": "archetype_industry:archetype:regulatory_complexity->industry:public-sector-administration-compliance"
+    },
+    {
+      "source": "archetype:regulatory_complexity",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Regulatory Complexity appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:regulatory_complexity->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "archetype:regulatory_complexity",
+      "target": "industry:semiconductors-advanced-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Regulatory Complexity appears in Semiconductors / Advanced Manufacturing.",
+      "id": "archetype_industry:archetype:regulatory_complexity->industry:semiconductors-advanced-manufacturing"
     },
     {
       "source": "archetype:supply_concentration",
@@ -1719,7 +2641,7 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 6,
+      "strength": 8,
       "explanation": "Supply Concentration appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:supply_concentration->industry:metals-mining-critical-inputs"
     },
@@ -1728,7 +2650,7 @@
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 5,
+      "strength": 7,
       "explanation": "Supply Concentration appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:supply_concentration->industry:semiconductors-advanced-manufacturing"
     },
@@ -1770,6 +2692,15 @@
     },
     {
       "source": "archetype:vendor_qualification",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 5,
+      "explanation": "Vendor Qualification appears in Aerospace / Defense / Space Manufacturing.",
+      "id": "archetype_industry:archetype:vendor_qualification->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "archetype:vendor_qualification",
       "target": "industry:healthcare",
       "type": "archetype_industry",
       "label": "Appears in industry",
@@ -1800,7 +2731,7 @@
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Vendor Qualification appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:vendor_qualification->industry:metals-mining-critical-inputs"
     },
@@ -1809,7 +2740,7 @@
       "target": "industry:semiconductors-advanced-manufacturing",
       "type": "archetype_industry",
       "label": "Appears in industry",
-      "strength": 4,
+      "strength": 5,
       "explanation": "Vendor Qualification appears in Semiconductors / Advanced Manufacturing.",
       "id": "archetype_industry:archetype:vendor_qualification->industry:semiconductors-advanced-manufacturing"
     },
@@ -1833,12 +2764,39 @@
     },
     {
       "source": "archetype:workforce_constraint",
+      "target": "industry:logistics-supply-chain-industrial-equipment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Workforce Constraint appears in Logistics / Supply Chain / Industrial Equipment.",
+      "id": "archetype_industry:archetype:workforce_constraint->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
+      "source": "archetype:workforce_constraint",
       "target": "industry:metals-mining-critical-inputs",
       "type": "archetype_industry",
       "label": "Appears in industry",
       "strength": 4,
       "explanation": "Workforce Constraint appears in Metals / Mining / Critical Inputs.",
       "id": "archetype_industry:archetype:workforce_constraint->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "archetype:workforce_constraint",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Workforce Constraint appears in Power Generation / Nuclear / SMR.",
+      "id": "archetype_industry:archetype:workforce_constraint->industry:power-generation-nuclear-smr"
+    },
+    {
+      "source": "archetype:workforce_constraint",
+      "target": "industry:robotics-automation-deployment",
+      "type": "archetype_industry",
+      "label": "Appears in industry",
+      "strength": 4,
+      "explanation": "Workforce Constraint appears in Robotics / Automation Deployment.",
+      "id": "archetype_industry:archetype:workforce_constraint->industry:robotics-automation-deployment"
     },
     {
       "source": "archetype:workforce_constraint",
@@ -1877,6 +2835,24 @@
       "id": "cross_industry_analog:constraint:hc-admin-001->constraint:strategic-033"
     },
     {
+      "source": "constraint:hc-admin-001",
+      "target": "constraint:strategic-056",
+      "type": "cross_industry_analog",
+      "label": "Prior authorization rework loops / Refinery sample lot release queue",
+      "strength": 10,
+      "explanation": "Prior authorization rework loops and Refinery sample lot release queue share queue backlog across different industries.",
+      "id": "cross_industry_analog:constraint:hc-admin-001->constraint:strategic-056"
+    },
+    {
+      "source": "constraint:hc-admin-004",
+      "target": "constraint:strategic-058",
+      "type": "cross_industry_analog",
+      "label": "Referral leakage from manual handoffs / Autonomous mobile robot site mapping rework",
+      "strength": 10,
+      "explanation": "Referral leakage from manual handoffs and Autonomous mobile robot site mapping rework share handoff leakage across different industries.",
+      "id": "cross_industry_analog:constraint:hc-admin-004->constraint:strategic-058"
+    },
+    {
       "source": "constraint:hc-admin-005",
       "target": "constraint:strategic-035",
       "type": "cross_industry_analog",
@@ -1895,6 +2871,15 @@
       "id": "cross_industry_analog:constraint:hc-admin-006->constraint:strategic-008"
     },
     {
+      "source": "constraint:hc-admin-007",
+      "target": "constraint:strategic-059",
+      "type": "cross_industry_analog",
+      "label": "Medication prior authorization exceptions / End effector changeover programming queue",
+      "strength": 10,
+      "explanation": "Medication prior authorization exceptions and End effector changeover programming queue share capacity mismatch across different industries.",
+      "id": "cross_industry_analog:constraint:hc-admin-007->constraint:strategic-059"
+    },
+    {
       "source": "constraint:hc-admin-008",
       "target": "constraint:strategic-027",
       "type": "cross_industry_analog",
@@ -1904,6 +2889,24 @@
       "id": "cross_industry_analog:constraint:hc-admin-008->constraint:strategic-027"
     },
     {
+      "source": "constraint:hc-admin-008",
+      "target": "constraint:strategic-055",
+      "type": "cross_industry_analog",
+      "label": "Release of information request backlog / Tailings permit monitoring data gap",
+      "strength": 10,
+      "explanation": "Release of information request backlog and Tailings permit monitoring data gap share regulatory complexity across different industries.",
+      "id": "cross_industry_analog:constraint:hc-admin-008->constraint:strategic-055"
+    },
+    {
+      "source": "constraint:hc-admin-008",
+      "target": "constraint:strategic-057",
+      "type": "cross_industry_analog",
+      "label": "Release of information request backlog / Industrial robot cell safety validation bottleneck",
+      "strength": 10,
+      "explanation": "Release of information request backlog and Industrial robot cell safety validation bottleneck share regulatory complexity across different industries.",
+      "id": "cross_industry_analog:constraint:hc-admin-008->constraint:strategic-057"
+    },
+    {
       "source": "constraint:hc-admin-010",
       "target": "constraint:strategic-033",
       "type": "cross_industry_analog",
@@ -1911,6 +2914,24 @@
       "strength": 10,
       "explanation": "Manual quality measure abstraction and Customer quality exception closure queue share queue backlog across different industries.",
       "id": "cross_industry_analog:constraint:hc-admin-010->constraint:strategic-033"
+    },
+    {
+      "source": "constraint:hc-admin-011",
+      "target": "constraint:strategic-056",
+      "type": "cross_industry_analog",
+      "label": "Patient statement confusion and support calls / Refinery sample lot release queue",
+      "strength": 10,
+      "explanation": "Patient statement confusion and support calls and Refinery sample lot release queue share queue backlog across different industries.",
+      "id": "cross_industry_analog:constraint:hc-admin-011->constraint:strategic-056"
+    },
+    {
+      "source": "constraint:hc-admin-011",
+      "target": "constraint:strategic-061",
+      "type": "cross_industry_analog",
+      "label": "Patient statement confusion and support calls / Launch supplier nonconformance closure loop",
+      "strength": 10,
+      "explanation": "Patient statement confusion and support calls and Launch supplier nonconformance closure loop share queue backlog across different industries.",
+      "id": "cross_industry_analog:constraint:hc-admin-011->constraint:strategic-061"
     },
     {
       "source": "constraint:hc-intake-003",
@@ -1965,69 +2986,6 @@
       "strength": 10,
       "explanation": "Transformer lead-time bottleneck and Refining and smelting capacity bottleneck share equipment lead time across different industries.",
       "id": "cross_industry_analog:constraint:strategic-002->constraint:strategic-019"
-    },
-    {
-      "source": "constraint:strategic-003",
-      "target": "constraint:strategic-010",
-      "type": "cross_industry_analog",
-      "label": "Utility upgrade review backlog / Right-of-way utility relocation sequencing delay",
-      "strength": 10,
-      "explanation": "Utility upgrade review backlog and Right-of-way utility relocation sequencing delay share handoff leakage across different industries.",
-      "id": "cross_industry_analog:constraint:strategic-003->constraint:strategic-010"
-    },
-    {
-      "source": "constraint:strategic-004",
-      "target": "constraint:strategic-006",
-      "type": "cross_industry_analog",
-      "label": "Transmission permitting documentation drag / Construction permit review delay",
-      "strength": 10,
-      "explanation": "Transmission permitting documentation drag and Construction permit review delay share documentation chase across different industries.",
-      "id": "cross_industry_analog:constraint:strategic-004->constraint:strategic-006"
-    },
-    {
-      "source": "constraint:strategic-004",
-      "target": "constraint:strategic-009",
-      "type": "cross_industry_analog",
-      "label": "Transmission permitting documentation drag / Environmental review documentation chase",
-      "strength": 10,
-      "explanation": "Transmission permitting documentation drag and Environmental review documentation chase share documentation chase across different industries.",
-      "id": "cross_industry_analog:constraint:strategic-004->constraint:strategic-009"
-    },
-    {
-      "source": "constraint:strategic-004",
-      "target": "constraint:strategic-016",
-      "type": "cross_industry_analog",
-      "label": "Transmission permitting documentation drag / Copper mine permitting delay",
-      "strength": 10,
-      "explanation": "Transmission permitting documentation drag and Copper mine permitting delay share documentation chase across different industries.",
-      "id": "cross_industry_analog:constraint:strategic-004->constraint:strategic-016"
-    },
-    {
-      "source": "constraint:strategic-006",
-      "target": "constraint:strategic-016",
-      "type": "cross_industry_analog",
-      "label": "Construction permit review delay / Copper mine permitting delay",
-      "strength": 10,
-      "explanation": "Construction permit review delay and Copper mine permitting delay share permitting delay across different industries.",
-      "id": "cross_industry_analog:constraint:strategic-006->constraint:strategic-016"
-    },
-    {
-      "source": "constraint:strategic-008",
-      "target": "constraint:strategic-015",
-      "type": "cross_industry_analog",
-      "label": "Contractor qualification friction / Specialty material qualification lag",
-      "strength": 10,
-      "explanation": "Contractor qualification friction and Specialty material qualification lag share vendor qualification across different industries.",
-      "id": "cross_industry_analog:constraint:strategic-008->constraint:strategic-015"
-    },
-    {
-      "source": "constraint:strategic-008",
-      "target": "constraint:strategic-020",
-      "type": "cross_industry_analog",
-      "label": "Contractor qualification friction / Critical mineral processing qualification delay",
-      "strength": 10,
-      "explanation": "Contractor qualification friction and Critical mineral processing qualification delay share vendor qualification across different industries.",
-      "id": "cross_industry_analog:constraint:strategic-008->constraint:strategic-020"
     },
     {
       "source": "constraint:hc-admin-001",
@@ -2498,6 +3456,294 @@
       "id": "industry_membership:constraint:strategic-036->industry:public-sector-administration-compliance"
     },
     {
+      "source": "constraint:strategic-037",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "GPU cluster commissioning dependency on power delivery sequencing is part of Data Centers / AI Infrastructure.",
+      "id": "industry_membership:constraint:strategic-037->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "constraint:strategic-038",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Liquid cooling loop validation bottleneck is part of Data Centers / AI Infrastructure.",
+      "id": "industry_membership:constraint:strategic-038->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "constraint:strategic-039",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "High-density rack deployment stranded by fiber cross-connect backlog is part of Data Centers / AI Infrastructure.",
+      "id": "industry_membership:constraint:strategic-039->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "constraint:strategic-040",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "AI training workload scheduling against power and cooling envelope mismatch is part of Data Centers / AI Infrastructure.",
+      "id": "industry_membership:constraint:strategic-040->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "constraint:strategic-041",
+      "target": "industry:data-centers-ai-infrastructure",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Data center backup generation permit readiness drag is part of Data Centers / AI Infrastructure.",
+      "id": "industry_membership:constraint:strategic-041->industry:data-centers-ai-infrastructure"
+    },
+    {
+      "source": "constraint:strategic-042",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "SMR licensing evidence package iteration is part of Power Generation / Nuclear / SMR.",
+      "id": "industry_membership:constraint:strategic-042->industry:power-generation-nuclear-smr"
+    },
+    {
+      "source": "constraint:strategic-043",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Turbine outage parts readiness constraint is part of Power Generation / Nuclear / SMR.",
+      "id": "industry_membership:constraint:strategic-043->industry:power-generation-nuclear-smr"
+    },
+    {
+      "source": "constraint:strategic-044",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Nuclear QA document traceability review queue is part of Power Generation / Nuclear / SMR.",
+      "id": "industry_membership:constraint:strategic-044->industry:power-generation-nuclear-smr"
+    },
+    {
+      "source": "constraint:strategic-045",
+      "target": "industry:power-generation-nuclear-smr",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Power plant protection settings review backlog is part of Power Generation / Nuclear / SMR.",
+      "id": "industry_membership:constraint:strategic-045->industry:power-generation-nuclear-smr"
+    },
+    {
+      "source": "constraint:strategic-046",
+      "target": "industry:energy-grid-interconnection",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Substation transformer energization test window bottleneck is part of Energy / Grid / Interconnection.",
+      "id": "industry_membership:constraint:strategic-046->industry:energy-grid-interconnection"
+    },
+    {
+      "source": "constraint:strategic-047",
+      "target": "industry:energy-grid-interconnection",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Transmission reconductoring outage coordination backlog is part of Energy / Grid / Interconnection.",
+      "id": "industry_membership:constraint:strategic-047->industry:energy-grid-interconnection"
+    },
+    {
+      "source": "constraint:strategic-048",
+      "target": "industry:energy-grid-interconnection",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Grid load study queue for large load requests is part of Energy / Grid / Interconnection.",
+      "id": "industry_membership:constraint:strategic-048->industry:energy-grid-interconnection"
+    },
+    {
+      "source": "constraint:strategic-049",
+      "target": "industry:semiconductors-advanced-manufacturing",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Fab tool install qualification handoff delay is part of Semiconductors / Advanced Manufacturing.",
+      "id": "industry_membership:constraint:strategic-049->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "constraint:strategic-050",
+      "target": "industry:semiconductors-advanced-manufacturing",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Specialty gas delivery readiness mismatch is part of Semiconductors / Advanced Manufacturing.",
+      "id": "industry_membership:constraint:strategic-050->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "constraint:strategic-051",
+      "target": "industry:semiconductors-advanced-manufacturing",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Cleanroom capacity allocation conflict during ramp is part of Semiconductors / Advanced Manufacturing.",
+      "id": "industry_membership:constraint:strategic-051->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "constraint:strategic-052",
+      "target": "industry:semiconductors-advanced-manufacturing",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Advanced packaging substrate qualification bottleneck is part of Semiconductors / Advanced Manufacturing.",
+      "id": "industry_membership:constraint:strategic-052->industry:semiconductors-advanced-manufacturing"
+    },
+    {
+      "source": "constraint:strategic-053",
+      "target": "industry:metals-mining-critical-inputs",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Critical mineral assay-to-offtake qualification delay is part of Metals / Mining / Critical Inputs.",
+      "id": "industry_membership:constraint:strategic-053->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "constraint:strategic-054",
+      "target": "industry:metals-mining-critical-inputs",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Leach circuit reagent supply concentration risk is part of Metals / Mining / Critical Inputs.",
+      "id": "industry_membership:constraint:strategic-054->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "constraint:strategic-055",
+      "target": "industry:metals-mining-critical-inputs",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Tailings permit monitoring data gap is part of Metals / Mining / Critical Inputs.",
+      "id": "industry_membership:constraint:strategic-055->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "constraint:strategic-056",
+      "target": "industry:metals-mining-critical-inputs",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Refinery sample lot release queue is part of Metals / Mining / Critical Inputs.",
+      "id": "industry_membership:constraint:strategic-056->industry:metals-mining-critical-inputs"
+    },
+    {
+      "source": "constraint:strategic-057",
+      "target": "industry:robotics-automation-deployment",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Industrial robot cell safety validation bottleneck is part of Robotics / Automation Deployment.",
+      "id": "industry_membership:constraint:strategic-057->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "constraint:strategic-058",
+      "target": "industry:robotics-automation-deployment",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Autonomous mobile robot site mapping rework is part of Robotics / Automation Deployment.",
+      "id": "industry_membership:constraint:strategic-058->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "constraint:strategic-059",
+      "target": "industry:robotics-automation-deployment",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "End effector changeover programming queue is part of Robotics / Automation Deployment.",
+      "id": "industry_membership:constraint:strategic-059->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "constraint:strategic-060",
+      "target": "industry:robotics-automation-deployment",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Vision model exception tuning handoff is part of Robotics / Automation Deployment.",
+      "id": "industry_membership:constraint:strategic-060->industry:robotics-automation-deployment"
+    },
+    {
+      "source": "constraint:strategic-061",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Launch supplier nonconformance closure loop is part of Aerospace / Defense / Space Manufacturing.",
+      "id": "industry_membership:constraint:strategic-061->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "constraint:strategic-062",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Space vehicle test article configuration traceability gap is part of Aerospace / Defense / Space Manufacturing.",
+      "id": "industry_membership:constraint:strategic-062->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "constraint:strategic-063",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Defense component first article inspection backlog is part of Aerospace / Defense / Space Manufacturing.",
+      "id": "industry_membership:constraint:strategic-063->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "constraint:strategic-064",
+      "target": "industry:aerospace-defense-space-manufacturing",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Propulsion test stand scheduling bottleneck is part of Aerospace / Defense / Space Manufacturing.",
+      "id": "industry_membership:constraint:strategic-064->industry:aerospace-defense-space-manufacturing"
+    },
+    {
+      "source": "constraint:strategic-065",
+      "target": "industry:logistics-supply-chain-industrial-equipment",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Field service parts availability causing asset downtime is part of Logistics / Supply Chain / Industrial Equipment.",
+      "id": "industry_membership:constraint:strategic-065->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
+      "source": "constraint:strategic-066",
+      "target": "industry:logistics-supply-chain-industrial-equipment",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Depot repair triage backlog for mission equipment is part of Logistics / Supply Chain / Industrial Equipment.",
+      "id": "industry_membership:constraint:strategic-066->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
+      "source": "constraint:strategic-067",
+      "target": "industry:logistics-supply-chain-industrial-equipment",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Heavy equipment telematics fault classification blind spot is part of Logistics / Supply Chain / Industrial Equipment.",
+      "id": "industry_membership:constraint:strategic-067->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
+      "source": "constraint:strategic-068",
+      "target": "industry:logistics-supply-chain-industrial-equipment",
+      "type": "industry_membership",
+      "label": "Industry",
+      "strength": 6,
+      "explanation": "Remote site mobilization permit and access coordination delay is part of Logistics / Supply Chain / Industrial Equipment.",
+      "id": "industry_membership:constraint:strategic-068->industry:logistics-supply-chain-industrial-equipment"
+    },
+    {
       "source": "constraint:hc-admin-001",
       "target": "intervention:automation_assist",
       "type": "intervention_type",
@@ -2966,6 +4212,294 @@
       "id": "intervention_type:constraint:strategic-036->intervention:evidence_collection"
     },
     {
+      "source": "constraint:strategic-037",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.1,
+      "explanation": "GPU cluster commissioning dependency on power delivery sequencing maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-037->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-038",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.5,
+      "explanation": "Liquid cooling loop validation bottleneck maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-038->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-039",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 5,
+      "explanation": "High-density rack deployment stranded by fiber cross-connect backlog maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-039->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-040",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.8,
+      "explanation": "AI training workload scheduling against power and cooling envelope mismatch maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-040->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-041",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.1,
+      "explanation": "Data center backup generation permit readiness drag maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-041->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-042",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 3.2,
+      "explanation": "SMR licensing evidence package iteration maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-042->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-043",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.5,
+      "explanation": "Turbine outage parts readiness constraint maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-043->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-044",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 3.9,
+      "explanation": "Nuclear QA document traceability review queue maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-044->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-045",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.2,
+      "explanation": "Power plant protection settings review backlog maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-045->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-046",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.4,
+      "explanation": "Substation transformer energization test window bottleneck maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-046->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-047",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.2,
+      "explanation": "Transmission reconductoring outage coordination backlog maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-047->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-048",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 3.9,
+      "explanation": "Grid load study queue for large load requests maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-048->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-049",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.6,
+      "explanation": "Fab tool install qualification handoff delay maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-049->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-050",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.3,
+      "explanation": "Specialty gas delivery readiness mismatch maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-050->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-051",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.8,
+      "explanation": "Cleanroom capacity allocation conflict during ramp maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-051->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-052",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.6,
+      "explanation": "Advanced packaging substrate qualification bottleneck maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-052->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-053",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.2,
+      "explanation": "Critical mineral assay-to-offtake qualification delay maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-053->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-054",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.6,
+      "explanation": "Leach circuit reagent supply concentration risk maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-054->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-055",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4,
+      "explanation": "Tailings permit monitoring data gap maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-055->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-056",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.9,
+      "explanation": "Refinery sample lot release queue maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-056->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-057",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.3,
+      "explanation": "Industrial robot cell safety validation bottleneck maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-057->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-058",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.9,
+      "explanation": "Autonomous mobile robot site mapping rework maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-058->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-059",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 5,
+      "explanation": "End effector changeover programming queue maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-059->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-060",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 5.2,
+      "explanation": "Vision model exception tuning handoff maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-060->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-061",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.5,
+      "explanation": "Launch supplier nonconformance closure loop maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-061->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-062",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.4,
+      "explanation": "Space vehicle test article configuration traceability gap maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-062->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-063",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.1,
+      "explanation": "Defense component first article inspection backlog maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-063->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-064",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.4,
+      "explanation": "Propulsion test stand scheduling bottleneck maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-064->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-065",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 5,
+      "explanation": "Field service parts availability causing asset downtime maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-065->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-066",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.9,
+      "explanation": "Depot repair triage backlog for mission equipment maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-066->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-067",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 5.2,
+      "explanation": "Heavy equipment telematics fault classification blind spot maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-067->intervention:evidence_collection"
+    },
+    {
+      "source": "constraint:strategic-068",
+      "target": "intervention:evidence_collection",
+      "type": "intervention_type",
+      "label": "Intervention",
+      "strength": 4.6,
+      "explanation": "Remote site mobilization permit and access coordination delay maps to evidence collection.",
+      "id": "intervention_type:constraint:strategic-068->intervention:evidence_collection"
+    },
+    {
       "source": "constraint:hc-admin-001",
       "target": "archetype:queue_backlog",
       "type": "primary_archetype",
@@ -3432,6 +4966,294 @@
       "strength": 8,
       "explanation": "Code enforcement reinspection loop primarily maps to Inspection Delay.",
       "id": "primary_archetype:constraint:strategic-036->archetype:inspection_delay"
+    },
+    {
+      "source": "constraint:strategic-037",
+      "target": "archetype:interconnection_delay",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "GPU cluster commissioning dependency on power delivery sequencing primarily maps to Interconnection Delay.",
+      "id": "primary_archetype:constraint:strategic-037->archetype:interconnection_delay"
+    },
+    {
+      "source": "constraint:strategic-038",
+      "target": "archetype:manual_verification_drag",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Liquid cooling loop validation bottleneck primarily maps to Manual Verification Drag.",
+      "id": "primary_archetype:constraint:strategic-038->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-039",
+      "target": "archetype:handoff_leakage",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "High-density rack deployment stranded by fiber cross-connect backlog primarily maps to Handoff Leakage.",
+      "id": "primary_archetype:constraint:strategic-039->archetype:handoff_leakage"
+    },
+    {
+      "source": "constraint:strategic-040",
+      "target": "archetype:capacity_mismatch",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "AI training workload scheduling against power and cooling envelope mismatch primarily maps to Capacity Mismatch.",
+      "id": "primary_archetype:constraint:strategic-040->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-041",
+      "target": "archetype:permitting_delay",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Data center backup generation permit readiness drag primarily maps to Permitting Delay.",
+      "id": "primary_archetype:constraint:strategic-041->archetype:permitting_delay"
+    },
+    {
+      "source": "constraint:strategic-042",
+      "target": "archetype:regulatory_complexity",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "SMR licensing evidence package iteration primarily maps to Regulatory Complexity.",
+      "id": "primary_archetype:constraint:strategic-042->archetype:regulatory_complexity"
+    },
+    {
+      "source": "constraint:strategic-043",
+      "target": "archetype:equipment_lead_time",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Turbine outage parts readiness constraint primarily maps to Equipment Lead Time.",
+      "id": "primary_archetype:constraint:strategic-043->archetype:equipment_lead_time"
+    },
+    {
+      "source": "constraint:strategic-044",
+      "target": "archetype:manual_verification_drag",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Nuclear QA document traceability review queue primarily maps to Manual Verification Drag.",
+      "id": "primary_archetype:constraint:strategic-044->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-045",
+      "target": "archetype:interconnection_delay",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Power plant protection settings review backlog primarily maps to Interconnection Delay.",
+      "id": "primary_archetype:constraint:strategic-045->archetype:interconnection_delay"
+    },
+    {
+      "source": "constraint:strategic-046",
+      "target": "archetype:inspection_delay",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Substation transformer energization test window bottleneck primarily maps to Inspection Delay.",
+      "id": "primary_archetype:constraint:strategic-046->archetype:inspection_delay"
+    },
+    {
+      "source": "constraint:strategic-047",
+      "target": "archetype:handoff_leakage",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Transmission reconductoring outage coordination backlog primarily maps to Handoff Leakage.",
+      "id": "primary_archetype:constraint:strategic-047->archetype:handoff_leakage"
+    },
+    {
+      "source": "constraint:strategic-048",
+      "target": "archetype:interconnection_delay",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Grid load study queue for large load requests primarily maps to Interconnection Delay.",
+      "id": "primary_archetype:constraint:strategic-048->archetype:interconnection_delay"
+    },
+    {
+      "source": "constraint:strategic-049",
+      "target": "archetype:handoff_leakage",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Fab tool install qualification handoff delay primarily maps to Handoff Leakage.",
+      "id": "primary_archetype:constraint:strategic-049->archetype:handoff_leakage"
+    },
+    {
+      "source": "constraint:strategic-050",
+      "target": "archetype:supply_concentration",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Specialty gas delivery readiness mismatch primarily maps to Supply Concentration.",
+      "id": "primary_archetype:constraint:strategic-050->archetype:supply_concentration"
+    },
+    {
+      "source": "constraint:strategic-051",
+      "target": "archetype:capacity_mismatch",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Cleanroom capacity allocation conflict during ramp primarily maps to Capacity Mismatch.",
+      "id": "primary_archetype:constraint:strategic-051->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-052",
+      "target": "archetype:vendor_qualification",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Advanced packaging substrate qualification bottleneck primarily maps to Vendor Qualification.",
+      "id": "primary_archetype:constraint:strategic-052->archetype:vendor_qualification"
+    },
+    {
+      "source": "constraint:strategic-053",
+      "target": "archetype:vendor_qualification",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Critical mineral assay-to-offtake qualification delay primarily maps to Vendor Qualification.",
+      "id": "primary_archetype:constraint:strategic-053->archetype:vendor_qualification"
+    },
+    {
+      "source": "constraint:strategic-054",
+      "target": "archetype:supply_concentration",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Leach circuit reagent supply concentration risk primarily maps to Supply Concentration.",
+      "id": "primary_archetype:constraint:strategic-054->archetype:supply_concentration"
+    },
+    {
+      "source": "constraint:strategic-055",
+      "target": "archetype:measurement_blind_spot",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Tailings permit monitoring data gap primarily maps to Measurement Blind Spot.",
+      "id": "primary_archetype:constraint:strategic-055->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-056",
+      "target": "archetype:queue_backlog",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Refinery sample lot release queue primarily maps to Queue Backlog.",
+      "id": "primary_archetype:constraint:strategic-056->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-057",
+      "target": "archetype:inspection_delay",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Industrial robot cell safety validation bottleneck primarily maps to Inspection Delay.",
+      "id": "primary_archetype:constraint:strategic-057->archetype:inspection_delay"
+    },
+    {
+      "source": "constraint:strategic-058",
+      "target": "archetype:data_fragmentation",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Autonomous mobile robot site mapping rework primarily maps to Data Fragmentation.",
+      "id": "primary_archetype:constraint:strategic-058->archetype:data_fragmentation"
+    },
+    {
+      "source": "constraint:strategic-059",
+      "target": "archetype:queue_backlog",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "End effector changeover programming queue primarily maps to Queue Backlog.",
+      "id": "primary_archetype:constraint:strategic-059->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-060",
+      "target": "archetype:handoff_leakage",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Vision model exception tuning handoff primarily maps to Handoff Leakage.",
+      "id": "primary_archetype:constraint:strategic-060->archetype:handoff_leakage"
+    },
+    {
+      "source": "constraint:strategic-061",
+      "target": "archetype:manual_verification_drag",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Launch supplier nonconformance closure loop primarily maps to Manual Verification Drag.",
+      "id": "primary_archetype:constraint:strategic-061->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-062",
+      "target": "archetype:data_fragmentation",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Space vehicle test article configuration traceability gap primarily maps to Data Fragmentation.",
+      "id": "primary_archetype:constraint:strategic-062->archetype:data_fragmentation"
+    },
+    {
+      "source": "constraint:strategic-063",
+      "target": "archetype:inspection_delay",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Defense component first article inspection backlog primarily maps to Inspection Delay.",
+      "id": "primary_archetype:constraint:strategic-063->archetype:inspection_delay"
+    },
+    {
+      "source": "constraint:strategic-064",
+      "target": "archetype:processing_capacity",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Propulsion test stand scheduling bottleneck primarily maps to Processing Capacity.",
+      "id": "primary_archetype:constraint:strategic-064->archetype:processing_capacity"
+    },
+    {
+      "source": "constraint:strategic-065",
+      "target": "archetype:capacity_mismatch",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Field service parts availability causing asset downtime primarily maps to Capacity Mismatch.",
+      "id": "primary_archetype:constraint:strategic-065->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-066",
+      "target": "archetype:queue_backlog",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Depot repair triage backlog for mission equipment primarily maps to Queue Backlog.",
+      "id": "primary_archetype:constraint:strategic-066->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-067",
+      "target": "archetype:measurement_blind_spot",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Heavy equipment telematics fault classification blind spot primarily maps to Measurement Blind Spot.",
+      "id": "primary_archetype:constraint:strategic-067->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-068",
+      "target": "archetype:handoff_leakage",
+      "type": "primary_archetype",
+      "label": "Primary archetype",
+      "strength": 8,
+      "explanation": "Remote site mobilization permit and access coordination delay primarily maps to Handoff Leakage.",
+      "id": "primary_archetype:constraint:strategic-068->archetype:handoff_leakage"
     },
     {
       "source": "constraint:hc-admin-001",
@@ -4692,49 +6514,899 @@
       "strength": 5.8,
       "explanation": "Code enforcement reinspection loop also shares Support Channel Overload.",
       "id": "secondary_archetype:constraint:strategic-036->archetype:support_channel_overload"
+    },
+    {
+      "source": "constraint:strategic-037",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "GPU cluster commissioning dependency on power delivery sequencing also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-037->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-037",
+      "target": "archetype:equipment_lead_time",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "GPU cluster commissioning dependency on power delivery sequencing also shares Equipment Lead Time.",
+      "id": "secondary_archetype:constraint:strategic-037->archetype:equipment_lead_time"
+    },
+    {
+      "source": "constraint:strategic-037",
+      "target": "archetype:infrastructure_siting",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "GPU cluster commissioning dependency on power delivery sequencing also shares Infrastructure Siting.",
+      "id": "secondary_archetype:constraint:strategic-037->archetype:infrastructure_siting"
+    },
+    {
+      "source": "constraint:strategic-038",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Liquid cooling loop validation bottleneck also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-038->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-038",
+      "target": "archetype:inspection_delay",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Liquid cooling loop validation bottleneck also shares Inspection Delay.",
+      "id": "secondary_archetype:constraint:strategic-038->archetype:inspection_delay"
+    },
+    {
+      "source": "constraint:strategic-038",
+      "target": "archetype:measurement_blind_spot",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Liquid cooling loop validation bottleneck also shares Measurement Blind Spot.",
+      "id": "secondary_archetype:constraint:strategic-038->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-039",
+      "target": "archetype:data_fragmentation",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "High-density rack deployment stranded by fiber cross-connect backlog also shares Data Fragmentation.",
+      "id": "secondary_archetype:constraint:strategic-039->archetype:data_fragmentation"
+    },
+    {
+      "source": "constraint:strategic-039",
+      "target": "archetype:idle_capacity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "High-density rack deployment stranded by fiber cross-connect backlog also shares Idle Capacity.",
+      "id": "secondary_archetype:constraint:strategic-039->archetype:idle_capacity"
+    },
+    {
+      "source": "constraint:strategic-039",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "High-density rack deployment stranded by fiber cross-connect backlog also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-039->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-040",
+      "target": "archetype:demand_forecast_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "AI training workload scheduling against power and cooling envelope mismatch also shares Demand Forecast Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-040->archetype:demand_forecast_mismatch"
+    },
+    {
+      "source": "constraint:strategic-040",
+      "target": "archetype:idle_capacity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "AI training workload scheduling against power and cooling envelope mismatch also shares Idle Capacity.",
+      "id": "secondary_archetype:constraint:strategic-040->archetype:idle_capacity"
+    },
+    {
+      "source": "constraint:strategic-040",
+      "target": "archetype:measurement_blind_spot",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "AI training workload scheduling against power and cooling envelope mismatch also shares Measurement Blind Spot.",
+      "id": "secondary_archetype:constraint:strategic-040->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-041",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Data center backup generation permit readiness drag also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-041->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-041",
+      "target": "archetype:project_approval_friction",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Data center backup generation permit readiness drag also shares Project Approval Friction.",
+      "id": "secondary_archetype:constraint:strategic-041->archetype:project_approval_friction"
+    },
+    {
+      "source": "constraint:strategic-041",
+      "target": "archetype:regulatory_complexity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Data center backup generation permit readiness drag also shares Regulatory Complexity.",
+      "id": "secondary_archetype:constraint:strategic-041->archetype:regulatory_complexity"
+    },
+    {
+      "source": "constraint:strategic-042",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "SMR licensing evidence package iteration also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-042->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-042",
+      "target": "archetype:permitting_delay",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "SMR licensing evidence package iteration also shares Permitting Delay.",
+      "id": "secondary_archetype:constraint:strategic-042->archetype:permitting_delay"
+    },
+    {
+      "source": "constraint:strategic-042",
+      "target": "archetype:project_approval_friction",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "SMR licensing evidence package iteration also shares Project Approval Friction.",
+      "id": "secondary_archetype:constraint:strategic-042->archetype:project_approval_friction"
+    },
+    {
+      "source": "constraint:strategic-043",
+      "target": "archetype:idle_capacity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Turbine outage parts readiness constraint also shares Idle Capacity.",
+      "id": "secondary_archetype:constraint:strategic-043->archetype:idle_capacity"
+    },
+    {
+      "source": "constraint:strategic-043",
+      "target": "archetype:measurement_blind_spot",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Turbine outage parts readiness constraint also shares Measurement Blind Spot.",
+      "id": "secondary_archetype:constraint:strategic-043->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-043",
+      "target": "archetype:workforce_constraint",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Turbine outage parts readiness constraint also shares Workforce Constraint.",
+      "id": "secondary_archetype:constraint:strategic-043->archetype:workforce_constraint"
+    },
+    {
+      "source": "constraint:strategic-044",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Nuclear QA document traceability review queue also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-044->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-044",
+      "target": "archetype:inspection_delay",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Nuclear QA document traceability review queue also shares Inspection Delay.",
+      "id": "secondary_archetype:constraint:strategic-044->archetype:inspection_delay"
+    },
+    {
+      "source": "constraint:strategic-044",
+      "target": "archetype:regulatory_complexity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Nuclear QA document traceability review queue also shares Regulatory Complexity.",
+      "id": "secondary_archetype:constraint:strategic-044->archetype:regulatory_complexity"
+    },
+    {
+      "source": "constraint:strategic-045",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Power plant protection settings review backlog also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-045->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-045",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Power plant protection settings review backlog also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-045->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-045",
+      "target": "archetype:regulatory_complexity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Power plant protection settings review backlog also shares Regulatory Complexity.",
+      "id": "secondary_archetype:constraint:strategic-045->archetype:regulatory_complexity"
+    },
+    {
+      "source": "constraint:strategic-046",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Substation transformer energization test window bottleneck also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-046->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-046",
+      "target": "archetype:equipment_lead_time",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Substation transformer energization test window bottleneck also shares Equipment Lead Time.",
+      "id": "secondary_archetype:constraint:strategic-046->archetype:equipment_lead_time"
+    },
+    {
+      "source": "constraint:strategic-046",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Substation transformer energization test window bottleneck also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-046->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-047",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Transmission reconductoring outage coordination backlog also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-047->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-047",
+      "target": "archetype:project_approval_friction",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Transmission reconductoring outage coordination backlog also shares Project Approval Friction.",
+      "id": "secondary_archetype:constraint:strategic-047->archetype:project_approval_friction"
+    },
+    {
+      "source": "constraint:strategic-047",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Transmission reconductoring outage coordination backlog also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-047->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-048",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Grid load study queue for large load requests also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-048->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-048",
+      "target": "archetype:demand_forecast_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Grid load study queue for large load requests also shares Demand Forecast Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-048->archetype:demand_forecast_mismatch"
+    },
+    {
+      "source": "constraint:strategic-048",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Grid load study queue for large load requests also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-048->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-049",
+      "target": "archetype:equipment_lead_time",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Fab tool install qualification handoff delay also shares Equipment Lead Time.",
+      "id": "secondary_archetype:constraint:strategic-049->archetype:equipment_lead_time"
+    },
+    {
+      "source": "constraint:strategic-049",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Fab tool install qualification handoff delay also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-049->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-049",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Fab tool install qualification handoff delay also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-049->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-050",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Specialty gas delivery readiness mismatch also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-050->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-050",
+      "target": "archetype:demand_forecast_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Specialty gas delivery readiness mismatch also shares Demand Forecast Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-050->archetype:demand_forecast_mismatch"
+    },
+    {
+      "source": "constraint:strategic-050",
+      "target": "archetype:regulatory_complexity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Specialty gas delivery readiness mismatch also shares Regulatory Complexity.",
+      "id": "secondary_archetype:constraint:strategic-050->archetype:regulatory_complexity"
+    },
+    {
+      "source": "constraint:strategic-051",
+      "target": "archetype:demand_forecast_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Cleanroom capacity allocation conflict during ramp also shares Demand Forecast Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-051->archetype:demand_forecast_mismatch"
+    },
+    {
+      "source": "constraint:strategic-051",
+      "target": "archetype:idle_capacity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Cleanroom capacity allocation conflict during ramp also shares Idle Capacity.",
+      "id": "secondary_archetype:constraint:strategic-051->archetype:idle_capacity"
+    },
+    {
+      "source": "constraint:strategic-051",
+      "target": "archetype:measurement_blind_spot",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Cleanroom capacity allocation conflict during ramp also shares Measurement Blind Spot.",
+      "id": "secondary_archetype:constraint:strategic-051->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-052",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Advanced packaging substrate qualification bottleneck also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-052->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-052",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Advanced packaging substrate qualification bottleneck also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-052->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-052",
+      "target": "archetype:supply_concentration",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Advanced packaging substrate qualification bottleneck also shares Supply Concentration.",
+      "id": "secondary_archetype:constraint:strategic-052->archetype:supply_concentration"
+    },
+    {
+      "source": "constraint:strategic-053",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Critical mineral assay-to-offtake qualification delay also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-053->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-053",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Critical mineral assay-to-offtake qualification delay also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-053->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-053",
+      "target": "archetype:supply_concentration",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Critical mineral assay-to-offtake qualification delay also shares Supply Concentration.",
+      "id": "secondary_archetype:constraint:strategic-053->archetype:supply_concentration"
+    },
+    {
+      "source": "constraint:strategic-054",
+      "target": "archetype:demand_forecast_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Leach circuit reagent supply concentration risk also shares Demand Forecast Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-054->archetype:demand_forecast_mismatch"
+    },
+    {
+      "source": "constraint:strategic-054",
+      "target": "archetype:equipment_lead_time",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Leach circuit reagent supply concentration risk also shares Equipment Lead Time.",
+      "id": "secondary_archetype:constraint:strategic-054->archetype:equipment_lead_time"
+    },
+    {
+      "source": "constraint:strategic-054",
+      "target": "archetype:processing_capacity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Leach circuit reagent supply concentration risk also shares Processing Capacity.",
+      "id": "secondary_archetype:constraint:strategic-054->archetype:processing_capacity"
+    },
+    {
+      "source": "constraint:strategic-055",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Tailings permit monitoring data gap also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-055->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-055",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Tailings permit monitoring data gap also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-055->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-055",
+      "target": "archetype:regulatory_complexity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Tailings permit monitoring data gap also shares Regulatory Complexity.",
+      "id": "secondary_archetype:constraint:strategic-055->archetype:regulatory_complexity"
+    },
+    {
+      "source": "constraint:strategic-056",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Refinery sample lot release queue also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-056->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-056",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Refinery sample lot release queue also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-056->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-056",
+      "target": "archetype:processing_capacity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Refinery sample lot release queue also shares Processing Capacity.",
+      "id": "secondary_archetype:constraint:strategic-056->archetype:processing_capacity"
+    },
+    {
+      "source": "constraint:strategic-057",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Industrial robot cell safety validation bottleneck also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-057->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-057",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Industrial robot cell safety validation bottleneck also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-057->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-057",
+      "target": "archetype:regulatory_complexity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Industrial robot cell safety validation bottleneck also shares Regulatory Complexity.",
+      "id": "secondary_archetype:constraint:strategic-057->archetype:regulatory_complexity"
+    },
+    {
+      "source": "constraint:strategic-058",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Autonomous mobile robot site mapping rework also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-058->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-058",
+      "target": "archetype:handoff_leakage",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Autonomous mobile robot site mapping rework also shares Handoff Leakage.",
+      "id": "secondary_archetype:constraint:strategic-058->archetype:handoff_leakage"
+    },
+    {
+      "source": "constraint:strategic-058",
+      "target": "archetype:measurement_blind_spot",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Autonomous mobile robot site mapping rework also shares Measurement Blind Spot.",
+      "id": "secondary_archetype:constraint:strategic-058->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-059",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "End effector changeover programming queue also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-059->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-059",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "End effector changeover programming queue also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-059->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-059",
+      "target": "archetype:workforce_constraint",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "End effector changeover programming queue also shares Workforce Constraint.",
+      "id": "secondary_archetype:constraint:strategic-059->archetype:workforce_constraint"
+    },
+    {
+      "source": "constraint:strategic-060",
+      "target": "archetype:data_fragmentation",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Vision model exception tuning handoff also shares Data Fragmentation.",
+      "id": "secondary_archetype:constraint:strategic-060->archetype:data_fragmentation"
+    },
+    {
+      "source": "constraint:strategic-060",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Vision model exception tuning handoff also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-060->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-060",
+      "target": "archetype:measurement_blind_spot",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Vision model exception tuning handoff also shares Measurement Blind Spot.",
+      "id": "secondary_archetype:constraint:strategic-060->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-061",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Launch supplier nonconformance closure loop also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-061->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-061",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Launch supplier nonconformance closure loop also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-061->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-061",
+      "target": "archetype:vendor_qualification",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Launch supplier nonconformance closure loop also shares Vendor Qualification.",
+      "id": "secondary_archetype:constraint:strategic-061->archetype:vendor_qualification"
+    },
+    {
+      "source": "constraint:strategic-062",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Space vehicle test article configuration traceability gap also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-062->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-062",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Space vehicle test article configuration traceability gap also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-062->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-062",
+      "target": "archetype:measurement_blind_spot",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Space vehicle test article configuration traceability gap also shares Measurement Blind Spot.",
+      "id": "secondary_archetype:constraint:strategic-062->archetype:measurement_blind_spot"
+    },
+    {
+      "source": "constraint:strategic-063",
+      "target": "archetype:documentation_chase",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Defense component first article inspection backlog also shares Documentation Chase.",
+      "id": "secondary_archetype:constraint:strategic-063->archetype:documentation_chase"
+    },
+    {
+      "source": "constraint:strategic-063",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Defense component first article inspection backlog also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-063->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-063",
+      "target": "archetype:vendor_qualification",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Defense component first article inspection backlog also shares Vendor Qualification.",
+      "id": "secondary_archetype:constraint:strategic-063->archetype:vendor_qualification"
+    },
+    {
+      "source": "constraint:strategic-064",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Propulsion test stand scheduling bottleneck also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-064->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-064",
+      "target": "archetype:infrastructure_siting",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Propulsion test stand scheduling bottleneck also shares Infrastructure Siting.",
+      "id": "secondary_archetype:constraint:strategic-064->archetype:infrastructure_siting"
+    },
+    {
+      "source": "constraint:strategic-064",
+      "target": "archetype:queue_backlog",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Propulsion test stand scheduling bottleneck also shares Queue Backlog.",
+      "id": "secondary_archetype:constraint:strategic-064->archetype:queue_backlog"
+    },
+    {
+      "source": "constraint:strategic-065",
+      "target": "archetype:demand_forecast_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Field service parts availability causing asset downtime also shares Demand Forecast Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-065->archetype:demand_forecast_mismatch"
+    },
+    {
+      "source": "constraint:strategic-065",
+      "target": "archetype:equipment_lead_time",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Field service parts availability causing asset downtime also shares Equipment Lead Time.",
+      "id": "secondary_archetype:constraint:strategic-065->archetype:equipment_lead_time"
+    },
+    {
+      "source": "constraint:strategic-065",
+      "target": "archetype:idle_capacity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Field service parts availability causing asset downtime also shares Idle Capacity.",
+      "id": "secondary_archetype:constraint:strategic-065->archetype:idle_capacity"
+    },
+    {
+      "source": "constraint:strategic-066",
+      "target": "archetype:equipment_lead_time",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Depot repair triage backlog for mission equipment also shares Equipment Lead Time.",
+      "id": "secondary_archetype:constraint:strategic-066->archetype:equipment_lead_time"
+    },
+    {
+      "source": "constraint:strategic-066",
+      "target": "archetype:manual_verification_drag",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Depot repair triage backlog for mission equipment also shares Manual Verification Drag.",
+      "id": "secondary_archetype:constraint:strategic-066->archetype:manual_verification_drag"
+    },
+    {
+      "source": "constraint:strategic-066",
+      "target": "archetype:processing_capacity",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Depot repair triage backlog for mission equipment also shares Processing Capacity.",
+      "id": "secondary_archetype:constraint:strategic-066->archetype:processing_capacity"
+    },
+    {
+      "source": "constraint:strategic-067",
+      "target": "archetype:data_fragmentation",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Heavy equipment telematics fault classification blind spot also shares Data Fragmentation.",
+      "id": "secondary_archetype:constraint:strategic-067->archetype:data_fragmentation"
+    },
+    {
+      "source": "constraint:strategic-067",
+      "target": "archetype:demand_forecast_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Heavy equipment telematics fault classification blind spot also shares Demand Forecast Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-067->archetype:demand_forecast_mismatch"
+    },
+    {
+      "source": "constraint:strategic-067",
+      "target": "archetype:hidden_cost_shift",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Heavy equipment telematics fault classification blind spot also shares Hidden Cost Shift.",
+      "id": "secondary_archetype:constraint:strategic-067->archetype:hidden_cost_shift"
+    },
+    {
+      "source": "constraint:strategic-068",
+      "target": "archetype:capacity_mismatch",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Remote site mobilization permit and access coordination delay also shares Capacity Mismatch.",
+      "id": "secondary_archetype:constraint:strategic-068->archetype:capacity_mismatch"
+    },
+    {
+      "source": "constraint:strategic-068",
+      "target": "archetype:permitting_delay",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Remote site mobilization permit and access coordination delay also shares Permitting Delay.",
+      "id": "secondary_archetype:constraint:strategic-068->archetype:permitting_delay"
+    },
+    {
+      "source": "constraint:strategic-068",
+      "target": "archetype:workforce_constraint",
+      "type": "secondary_archetype",
+      "label": "Secondary archetype",
+      "strength": 5.8,
+      "explanation": "Remote site mobilization permit and access coordination delay also shares Workforce Constraint.",
+      "id": "secondary_archetype:constraint:strategic-068->archetype:workforce_constraint"
     }
   ],
   "summary": {
-    "total_nodes": 86,
-    "total_edges": 417,
-    "constraint_node_count": 52,
+    "total_nodes": 122,
+    "total_edges": 663,
+    "constraint_node_count": 84,
     "archetype_node_count": 23,
-    "industry_node_count": 7,
-    "most_connected_constraint": "Transmission permitting documentation drag",
-    "most_connected_archetype": "Documentation Chase",
+    "industry_node_count": 11,
+    "most_connected_constraint": "Prior authorization rework loops",
+    "most_connected_archetype": "Manual Verification Drag",
     "strongest_cross_industry_bridge": "Prior authorization rework loops / Occupational license renewal documentation chase",
     "weakest_evidence_cluster": "Equipment Lead Time",
-    "highest_intervention_cluster": "Queue Backlog",
-    "highest_priority_cluster": "Manual Verification Drag"
+    "highest_intervention_cluster": "Duplicated Work",
+    "highest_priority_cluster": "Duplicated Work"
   },
   "top_connected_constraints": [
     {
-      "id": "constraint:strategic-004",
-      "label": "Transmission permitting documentation drag",
+      "id": "constraint:hc-admin-001",
+      "label": "Prior authorization rework loops",
       "type": "constraint",
-      "industry": "Energy / Grid / Interconnection",
-      "archetype": "documentation_chase",
-      "priority_score": 6.2,
-      "validation_confidence": 5.4,
-      "strategic_score": 7.5,
-      "intervention_score": 3.8,
-      "action_confidence": 5.2,
-      "evidence_risk": "High",
-      "route": "/constraints/strategic-004"
-    },
-    {
-      "id": "constraint:strategic-008",
-      "label": "Contractor qualification friction",
-      "type": "constraint",
-      "industry": "Infrastructure / Permitting / Construction",
-      "archetype": "vendor_qualification",
-      "priority_score": 6.3,
-      "validation_confidence": 5.8,
-      "strategic_score": 7.8,
-      "intervention_score": 5.2,
-      "action_confidence": 5.9,
-      "evidence_risk": "High",
-      "route": "/constraints/strategic-008"
+      "industry": "Healthcare",
+      "archetype": "queue_backlog",
+      "priority_score": 7.4,
+      "validation_confidence": 7.8,
+      "strategic_score": 8.5,
+      "intervention_score": 6.8,
+      "action_confidence": 7.3,
+      "evidence_risk": "Low",
+      "route": "/constraints/hc-admin-001"
     },
     {
       "id": "constraint:strategic-033",
@@ -4751,18 +7423,18 @@
       "route": "/constraints/strategic-033"
     },
     {
-      "id": "constraint:hc-admin-001",
-      "label": "Prior authorization rework loops",
+      "id": "constraint:hc-admin-008",
+      "label": "Release of information request backlog",
       "type": "constraint",
       "industry": "Healthcare",
-      "archetype": "queue_backlog",
-      "priority_score": 7.4,
-      "validation_confidence": 7.8,
-      "strategic_score": 8.5,
-      "intervention_score": 6.8,
-      "action_confidence": 7.3,
-      "evidence_risk": "Low",
-      "route": "/constraints/hc-admin-001"
+      "archetype": "regulatory_complexity",
+      "priority_score": 6.4,
+      "validation_confidence": 6.4,
+      "strategic_score": 7.6,
+      "intervention_score": 4.8,
+      "action_confidence": 6.2,
+      "evidence_risk": "Moderate",
+      "route": "/constraints/hc-admin-008"
     },
     {
       "id": "constraint:hc-intake-003",
@@ -4791,20 +7463,34 @@
       "action_confidence": 5.6,
       "evidence_risk": "High",
       "route": "/constraints/strategic-002"
+    },
+    {
+      "id": "constraint:strategic-028",
+      "label": "Occupational license renewal documentation chase",
+      "type": "constraint",
+      "industry": "Public-Sector Administration / Compliance",
+      "archetype": "documentation_chase",
+      "priority_score": 6,
+      "validation_confidence": 4.2,
+      "strategic_score": 7.7,
+      "intervention_score": 5.1,
+      "action_confidence": 4.9,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-028"
     }
   ],
   "top_connected_archetypes": [
-    {
-      "id": "archetype:documentation_chase",
-      "label": "Documentation Chase",
-      "type": "archetype",
-      "archetype": "documentation_chase"
-    },
     {
       "id": "archetype:manual_verification_drag",
       "label": "Manual Verification Drag",
       "type": "archetype",
       "archetype": "manual_verification_drag"
+    },
+    {
+      "id": "archetype:documentation_chase",
+      "label": "Documentation Chase",
+      "type": "archetype",
+      "archetype": "documentation_chase"
     },
     {
       "id": "archetype:queue_backlog",
@@ -4819,46 +7505,32 @@
       "archetype": "capacity_mismatch"
     },
     {
+      "id": "archetype:measurement_blind_spot",
+      "label": "Measurement Blind Spot",
+      "type": "archetype",
+      "archetype": "measurement_blind_spot"
+    },
+    {
       "id": "archetype:data_fragmentation",
       "label": "Data Fragmentation",
       "type": "archetype",
       "archetype": "data_fragmentation"
-    },
-    {
-      "id": "archetype:processing_capacity",
-      "label": "Processing Capacity",
-      "type": "archetype",
-      "archetype": "processing_capacity"
     }
   ],
   "bridge_constraints": [
     {
-      "id": "constraint:strategic-004",
-      "label": "Transmission permitting documentation drag",
+      "id": "constraint:hc-admin-001",
+      "label": "Prior authorization rework loops",
       "type": "constraint",
-      "industry": "Energy / Grid / Interconnection",
-      "archetype": "documentation_chase",
-      "priority_score": 6.2,
-      "validation_confidence": 5.4,
-      "strategic_score": 7.5,
-      "intervention_score": 3.8,
-      "action_confidence": 5.2,
-      "evidence_risk": "High",
-      "route": "/constraints/strategic-004"
-    },
-    {
-      "id": "constraint:strategic-008",
-      "label": "Contractor qualification friction",
-      "type": "constraint",
-      "industry": "Infrastructure / Permitting / Construction",
-      "archetype": "vendor_qualification",
-      "priority_score": 6.3,
-      "validation_confidence": 5.8,
-      "strategic_score": 7.8,
-      "intervention_score": 5.2,
-      "action_confidence": 5.9,
-      "evidence_risk": "High",
-      "route": "/constraints/strategic-008"
+      "industry": "Healthcare",
+      "archetype": "queue_backlog",
+      "priority_score": 7.4,
+      "validation_confidence": 7.8,
+      "strategic_score": 8.5,
+      "intervention_score": 6.8,
+      "action_confidence": 7.3,
+      "evidence_risk": "Low",
+      "route": "/constraints/hc-admin-001"
     },
     {
       "id": "constraint:strategic-033",
@@ -4875,18 +7547,18 @@
       "route": "/constraints/strategic-033"
     },
     {
-      "id": "constraint:hc-admin-001",
-      "label": "Prior authorization rework loops",
+      "id": "constraint:hc-admin-008",
+      "label": "Release of information request backlog",
       "type": "constraint",
       "industry": "Healthcare",
-      "archetype": "queue_backlog",
-      "priority_score": 7.4,
-      "validation_confidence": 7.8,
-      "strategic_score": 8.5,
-      "intervention_score": 6.8,
-      "action_confidence": 7.3,
-      "evidence_risk": "Low",
-      "route": "/constraints/hc-admin-001"
+      "archetype": "regulatory_complexity",
+      "priority_score": 6.4,
+      "validation_confidence": 6.4,
+      "strategic_score": 7.6,
+      "intervention_score": 4.8,
+      "action_confidence": 6.2,
+      "evidence_risk": "Moderate",
+      "route": "/constraints/hc-admin-008"
     },
     {
       "id": "constraint:hc-intake-003",
@@ -4915,6 +7587,20 @@
       "action_confidence": 5.6,
       "evidence_risk": "High",
       "route": "/constraints/strategic-002"
+    },
+    {
+      "id": "constraint:strategic-028",
+      "label": "Occupational license renewal documentation chase",
+      "type": "constraint",
+      "industry": "Public-Sector Administration / Compliance",
+      "archetype": "documentation_chase",
+      "priority_score": 6,
+      "validation_confidence": 4.2,
+      "strategic_score": 7.7,
+      "intervention_score": 5.1,
+      "action_confidence": 4.9,
+      "evidence_risk": "High",
+      "route": "/constraints/strategic-028"
     }
   ],
   "weak_evidence_clusters": [
@@ -4922,124 +7608,80 @@
       "id": "equipment_lead_time",
       "label": "Equipment Lead Time",
       "type": "archetype",
-      "record_count": 6,
+      "record_count": 13,
       "average_priority_score": 6.2,
-      "average_validation_confidence": 4.2,
-      "average_intervention_score": 4.7,
+      "average_validation_confidence": 4,
+      "average_intervention_score": 4.6,
       "top_constraints": [
+        "Fab tool install qualification handoff delay",
+        "Field service parts availability causing asset downtime",
         "Chip equipment lead-time coordination",
-        "Transformer lead-time bottleneck",
-        "Mine maintenance shutdown workpack readiness gap",
-        "Heavy equipment availability constraint"
+        "Depot repair triage backlog for mission equipment"
       ]
     },
     {
       "id": "supply_concentration",
       "label": "Supply Concentration",
       "type": "archetype",
-      "record_count": 6,
-      "average_priority_score": 6,
-      "average_validation_confidence": 4.2,
-      "average_intervention_score": 4.3,
+      "record_count": 10,
+      "average_priority_score": 6.1,
+      "average_validation_confidence": 4,
+      "average_intervention_score": 4.4,
       "top_constraints": [
+        "Advanced packaging substrate qualification bottleneck",
         "Chip equipment lead-time coordination",
         "Transformer lead-time bottleneck",
-        "Specialty material qualification lag",
-        "Refining and smelting capacity bottleneck"
+        "Critical mineral assay-to-offtake qualification delay"
       ]
     },
     {
-      "id": "infrastructure_siting",
-      "label": "Infrastructure Siting",
+      "id": "measurement_blind_spot",
+      "label": "Measurement Blind Spot",
       "type": "archetype",
-      "record_count": 3,
-      "average_priority_score": 6.1,
-      "average_validation_confidence": 4.4,
-      "average_intervention_score": 4,
+      "record_count": 16,
+      "average_priority_score": 6.3,
+      "average_validation_confidence": 4.1,
+      "average_intervention_score": 4.8,
       "top_constraints": [
-        "Transmission permitting documentation drag",
-        "Semiconductor fab utility readiness",
-        "Right-of-way utility relocation sequencing delay"
+        "Referral leakage from manual handoffs",
+        "Vision model exception tuning handoff",
+        "Heavy equipment telematics fault classification blind spot",
+        "Preference card mismatch in procedural supply planning"
+      ]
+    },
+    {
+      "id": "capacity_mismatch",
+      "label": "Capacity Mismatch",
+      "type": "archetype",
+      "record_count": 24,
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 4.1,
+      "average_intervention_score": 4.6,
+      "top_constraints": [
+        "Medication prior authorization exceptions",
+        "Autonomous mobile robot site mapping rework",
+        "End effector changeover programming queue",
+        "Field service parts availability causing asset downtime"
       ]
     },
     {
       "id": "interconnection_delay",
       "label": "Interconnection Delay",
       "type": "archetype",
-      "record_count": 4,
+      "record_count": 7,
       "average_priority_score": 6.2,
-      "average_validation_confidence": 4.5,
-      "average_intervention_score": 4.3,
-      "top_constraints": [
-        "Grid interconnection queue delay",
-        "Utility upgrade review backlog",
-        "Distributed energy hosting capacity uncertainty",
-        "Semiconductor fab utility readiness"
-      ]
-    },
-    {
-      "id": "project_approval_friction",
-      "label": "Project Approval Friction",
-      "type": "archetype",
-      "record_count": 9,
-      "average_priority_score": 6.1,
-      "average_validation_confidence": 4.5,
+      "average_validation_confidence": 4.1,
       "average_intervention_score": 4.2,
       "top_constraints": [
-        "Chip equipment lead-time coordination",
-        "Public infrastructure grant review backlog",
         "Grid interconnection queue delay",
-        "Utility upgrade review backlog"
+        "GPU cluster commissioning dependency on power delivery sequencing",
+        "Utility upgrade review backlog",
+        "Distributed energy hosting capacity uncertainty"
       ]
     }
   ],
   "high_intervention_clusters": [
     {
-      "id": "queue_backlog",
-      "label": "Queue Backlog",
-      "type": "archetype",
-      "record_count": 19,
-      "average_priority_score": 6.4,
-      "average_validation_confidence": 5.8,
-      "average_intervention_score": 5.3,
-      "top_constraints": [
-        "Prior authorization rework loops",
-        "Claim denial triage and resubmission",
-        "Medical necessity documentation chase",
-        "Appointment call queue overflow"
-      ]
-    },
-    {
-      "id": "manual_verification_drag",
-      "label": "Manual Verification Drag",
-      "type": "archetype",
-      "record_count": 19,
-      "average_priority_score": 6.5,
-      "average_validation_confidence": 5.9,
-      "average_intervention_score": 5.3,
-      "top_constraints": [
-        "Prior authorization rework loops",
-        "Claim denial triage and resubmission",
-        "Medical necessity documentation chase",
-        "Provider credentialing packet duplication"
-      ]
-    },
-    {
-      "id": "workforce_constraint",
-      "label": "Workforce Constraint",
-      "type": "archetype",
-      "record_count": 4,
-      "average_priority_score": 6.4,
-      "average_validation_confidence": 5.3,
-      "average_intervention_score": 5.3,
-      "top_constraints": [
-        "Medication prior authorization exceptions",
-        "Inspection scheduling bottleneck",
-        "Yield learning cycle delay",
-        "Mine maintenance shutdown workpack readiness gap"
-      ]
-    },
-    {
       "id": "duplicated_work",
       "label": "Duplicated Work",
       "type": "archetype",
@@ -5055,38 +7697,68 @@
       ]
     },
     {
+      "id": "queue_backlog",
+      "label": "Queue Backlog",
+      "type": "archetype",
+      "record_count": 31,
+      "average_priority_score": 6.4,
+      "average_validation_confidence": 5,
+      "average_intervention_score": 5,
+      "top_constraints": [
+        "Prior authorization rework loops",
+        "Claim denial triage and resubmission",
+        "Medical necessity documentation chase",
+        "Appointment call queue overflow"
+      ]
+    },
+    {
+      "id": "manual_verification_drag",
+      "label": "Manual Verification Drag",
+      "type": "archetype",
+      "record_count": 34,
+      "average_priority_score": 6.4,
+      "average_validation_confidence": 4.9,
+      "average_intervention_score": 5,
+      "top_constraints": [
+        "Prior authorization rework loops",
+        "Claim denial triage and resubmission",
+        "Medical necessity documentation chase",
+        "Provider credentialing packet duplication"
+      ]
+    },
+    {
       "id": "data_fragmentation",
       "label": "Data Fragmentation",
       "type": "archetype",
-      "record_count": 11,
+      "record_count": 16,
       "average_priority_score": 6.4,
-      "average_validation_confidence": 5.5,
-      "average_intervention_score": 5.1,
+      "average_validation_confidence": 4.9,
+      "average_intervention_score": 5,
       "top_constraints": [
         "Post-discharge follow-up gaps",
         "Referral leakage from manual handoffs",
-        "Insurance eligibility verification before each visit",
-        "Duplicate demographic collection across intake channels"
+        "Vision model exception tuning handoff",
+        "Insurance eligibility verification before each visit"
+      ]
+    },
+    {
+      "id": "hidden_cost_shift",
+      "label": "Hidden Cost Shift",
+      "type": "archetype",
+      "record_count": 10,
+      "average_priority_score": 6.2,
+      "average_validation_confidence": 4.9,
+      "average_intervention_score": 5,
+      "top_constraints": [
+        "Post-discharge follow-up gaps",
+        "Heavy equipment telematics fault classification blind spot",
+        "Preference card mismatch in procedural supply planning",
+        "Financial assistance screening after billing escalation"
       ]
     }
   ],
   "high_priority_clusters": [
     {
-      "id": "manual_verification_drag",
-      "label": "Manual Verification Drag",
-      "type": "archetype",
-      "record_count": 19,
-      "average_priority_score": 6.5,
-      "average_validation_confidence": 5.9,
-      "average_intervention_score": 5.3,
-      "top_constraints": [
-        "Prior authorization rework loops",
-        "Claim denial triage and resubmission",
-        "Medical necessity documentation chase",
-        "Provider credentialing packet duplication"
-      ]
-    },
-    {
       "id": "duplicated_work",
       "label": "Duplicated Work",
       "type": "archetype",
@@ -5105,10 +7777,10 @@
       "id": "queue_backlog",
       "label": "Queue Backlog",
       "type": "archetype",
-      "record_count": 19,
+      "record_count": 31,
       "average_priority_score": 6.4,
-      "average_validation_confidence": 5.8,
-      "average_intervention_score": 5.3,
+      "average_validation_confidence": 5,
+      "average_intervention_score": 5,
       "top_constraints": [
         "Prior authorization rework loops",
         "Claim denial triage and resubmission",
@@ -5117,33 +7789,48 @@
       ]
     },
     {
-      "id": "data_fragmentation",
-      "label": "Data Fragmentation",
+      "id": "manual_verification_drag",
+      "label": "Manual Verification Drag",
       "type": "archetype",
-      "record_count": 11,
+      "record_count": 34,
       "average_priority_score": 6.4,
-      "average_validation_confidence": 5.5,
-      "average_intervention_score": 5.1,
+      "average_validation_confidence": 4.9,
+      "average_intervention_score": 5,
       "top_constraints": [
-        "Post-discharge follow-up gaps",
-        "Referral leakage from manual handoffs",
-        "Insurance eligibility verification before each visit",
-        "Duplicate demographic collection across intake channels"
+        "Prior authorization rework loops",
+        "Claim denial triage and resubmission",
+        "Medical necessity documentation chase",
+        "Provider credentialing packet duplication"
       ]
     },
     {
-      "id": "workforce_constraint",
-      "label": "Workforce Constraint",
+      "id": "data_fragmentation",
+      "label": "Data Fragmentation",
       "type": "archetype",
-      "record_count": 4,
+      "record_count": 16,
       "average_priority_score": 6.4,
-      "average_validation_confidence": 5.3,
-      "average_intervention_score": 5.3,
+      "average_validation_confidence": 4.9,
+      "average_intervention_score": 5,
       "top_constraints": [
-        "Medication prior authorization exceptions",
-        "Inspection scheduling bottleneck",
-        "Yield learning cycle delay",
-        "Mine maintenance shutdown workpack readiness gap"
+        "Post-discharge follow-up gaps",
+        "Referral leakage from manual handoffs",
+        "Vision model exception tuning handoff",
+        "Insurance eligibility verification before each visit"
+      ]
+    },
+    {
+      "id": "handoff_leakage",
+      "label": "Handoff Leakage",
+      "type": "archetype",
+      "record_count": 13,
+      "average_priority_score": 6.3,
+      "average_validation_confidence": 4.4,
+      "average_intervention_score": 4.7,
+      "top_constraints": [
+        "Referral leakage from manual handoffs",
+        "Vision model exception tuning handoff",
+        "High-density rack deployment stranded by fiber cross-connect backlog",
+        "Fab tool install qualification handoff delay"
       ]
     }
   ]

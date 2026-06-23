@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T16:30:38.255Z",
+  "generated_at": "2026-06-23T03:18:52.416Z",
   "summary": {
     "packet_count": 10,
     "top_queue_coverage": 100,
@@ -7,17 +7,221 @@
       "metric": 9,
       "claim": 1
     },
-    "high_impact_packets": 9,
-    "critical_packets": 7,
-    "average_expected_score_lift": 1.5
+    "high_impact_packets": 10,
+    "critical_packets": 9,
+    "average_expected_score_lift": 1.6
   },
   "packets": [
+    {
+      "packet_id": "packet:strategic-053:task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+      "constraint_id": "strategic-053",
+      "constraint_title": "Critical mineral assay-to-offtake qualification delay",
+      "industry": "Metals / Mining / Critical Inputs",
+      "triage_rank": 1,
+      "triage_action": "Define validation metric: Critical mineral assay-to-offtake qualification delay",
+      "triage_action_summary": "Resolve whether this gap is visible in Sample qualification tracker.",
+      "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.9 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Offtake agreement decision",
+      "validation_burden_score": 10,
+      "recalibrated_severity": "Critical",
+      "request_category": "metric",
+      "cluster_type": "metric",
+      "task_type": "metric_definition_needed",
+      "evidence_needed": "Define the measured signal for Critical mineral assay-to-offtake qualification delay: owner, data source, sampling window, baseline, and pass/fail threshold.",
+      "expected_artifact": "Metric definition with owner, data source, sampling window, and baseline.",
+      "artifact_checklist": [
+        "Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+        "Linked triage task ID: task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+        "Metric definition with numerator, denominator, and unit",
+        "Data owner, source system, collection window, and refresh cadence",
+        "Baseline value or method for establishing the first baseline"
+      ],
+      "pass_criteria": [
+        "Metric can be collected from a named system, owner, or repeatable observation.",
+        "Baseline and sampling window are clear enough for a follow-up validation pass.",
+        "Metric tests the bottleneck described by the triage action rather than a generic outcome."
+      ],
+      "fail_criteria": [
+        "No owner, system, or repeatable observation can produce the metric.",
+        "The proposed measure captures downstream outcomes only after the friction has already occurred.",
+        "The baseline cannot be recreated or compared across a later validation cycle."
+      ],
+      "expected_confidence_impact": {
+        "impact_level": "High",
+        "estimated_score_lift": 1.6,
+        "explanation": "metric evidence is expected to improve validation confidence by about 1.6 points if it passes because 10.0 burden is being driven by metric blockers."
+      },
+      "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+      "analyst_note": "Rank 10.0 critical item. Start with the metric packet before expanding into the remaining 6 generated tasks.",
+      "source_task_ids": [
+        "task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "task:strategic-053:metric_definition_needed:resolve-evidence-gap-step-level-baseline-for-assay-to-offtake-qualification",
+        "task:strategic-053:low_defensibility_review:review-low-defensibility-evidence-pack",
+        "task:strategic-053:claim_support_needed:strengthen-claim-support-for-critical-mineral-assay-to-offtake-qualification-delay",
+        "task:strategic-053:primary_document_needed:attach-primary-document-for-metals-mining-critical-inputs-process-pattern-review"
+      ],
+      "investigation_route": "/constraints/strategic-053",
+      "network_route": "/network?focus=strategic-053"
+    },
+    {
+      "packet_id": "packet:strategic-067:task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+      "constraint_id": "strategic-067",
+      "constraint_title": "Heavy equipment telematics fault classification blind spot",
+      "industry": "Logistics / Supply Chain / Industrial Equipment",
+      "triage_rank": 2,
+      "triage_action": "Define validation metric: Heavy equipment telematics fault classification blind spot",
+      "triage_action_summary": "Resolve whether this gap is visible in Fleet telemetry and maintenance system.",
+      "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 10.0 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Maintenance work order prioritization",
+      "validation_burden_score": 10,
+      "recalibrated_severity": "Critical",
+      "request_category": "metric",
+      "cluster_type": "metric",
+      "task_type": "metric_definition_needed",
+      "evidence_needed": "Define the measured signal for Heavy equipment telematics fault classification blind spot: owner, data source, sampling window, baseline, and pass/fail threshold.",
+      "expected_artifact": "Metric definition with owner, data source, sampling window, and baseline.",
+      "artifact_checklist": [
+        "Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+        "Linked triage task ID: task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+        "Metric definition with numerator, denominator, and unit",
+        "Data owner, source system, collection window, and refresh cadence",
+        "Baseline value or method for establishing the first baseline"
+      ],
+      "pass_criteria": [
+        "Metric can be collected from a named system, owner, or repeatable observation.",
+        "Baseline and sampling window are clear enough for a follow-up validation pass.",
+        "Metric tests the bottleneck described by the triage action rather than a generic outcome."
+      ],
+      "fail_criteria": [
+        "No owner, system, or repeatable observation can produce the metric.",
+        "The proposed measure captures downstream outcomes only after the friction has already occurred.",
+        "The baseline cannot be recreated or compared across a later validation cycle."
+      ],
+      "expected_confidence_impact": {
+        "impact_level": "High",
+        "estimated_score_lift": 1.6,
+        "explanation": "metric evidence is expected to improve validation confidence by about 1.6 points if it passes because 10.0 burden is being driven by metric blockers."
+      },
+      "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+      "analyst_note": "Rank 10.0 critical item. Start with the metric packet before expanding into the remaining 6 generated tasks.",
+      "source_task_ids": [
+        "task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+        "task:strategic-067:metric_definition_needed:resolve-evidence-gap-step-level-baseline-for-telematics-fault-classification",
+        "task:strategic-067:low_defensibility_review:review-low-defensibility-evidence-pack",
+        "task:strategic-067:high_opportunity_weak_evidence:validate-high-opportunity-weak-evidence-record",
+        "task:strategic-067:claim_support_needed:strengthen-claim-support-for-heavy-equipment-telematics-fault-classification-blind-spot"
+      ],
+      "investigation_route": "/constraints/strategic-067",
+      "network_route": "/network?focus=strategic-067"
+    },
+    {
+      "packet_id": "packet:strategic-054:task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+      "constraint_id": "strategic-054",
+      "constraint_title": "Leach circuit reagent supply concentration risk",
+      "industry": "Metals / Mining / Critical Inputs",
+      "triage_rank": 3,
+      "triage_action": "Define validation metric: Leach circuit reagent supply concentration risk",
+      "triage_action_summary": "Resolve whether this gap is visible in Process input supply plan.",
+      "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.8 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Leach circuit throughput",
+      "validation_burden_score": 10,
+      "recalibrated_severity": "Critical",
+      "request_category": "metric",
+      "cluster_type": "metric",
+      "task_type": "metric_definition_needed",
+      "evidence_needed": "Define the measured signal for Leach circuit reagent supply concentration risk: owner, data source, sampling window, baseline, and pass/fail threshold.",
+      "expected_artifact": "Metric definition with owner, data source, sampling window, and baseline.",
+      "artifact_checklist": [
+        "Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+        "Linked triage task ID: task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+        "Metric definition with numerator, denominator, and unit",
+        "Data owner, source system, collection window, and refresh cadence",
+        "Baseline value or method for establishing the first baseline"
+      ],
+      "pass_criteria": [
+        "Metric can be collected from a named system, owner, or repeatable observation.",
+        "Baseline and sampling window are clear enough for a follow-up validation pass.",
+        "Metric tests the bottleneck described by the triage action rather than a generic outcome."
+      ],
+      "fail_criteria": [
+        "No owner, system, or repeatable observation can produce the metric.",
+        "The proposed measure captures downstream outcomes only after the friction has already occurred.",
+        "The baseline cannot be recreated or compared across a later validation cycle."
+      ],
+      "expected_confidence_impact": {
+        "impact_level": "High",
+        "estimated_score_lift": 1.6,
+        "explanation": "metric evidence is expected to improve validation confidence by about 1.6 points if it passes because 10.0 burden is being driven by metric blockers."
+      },
+      "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+      "analyst_note": "Rank 10.0 critical item. Start with the metric packet before expanding into the remaining 6 generated tasks.",
+      "source_task_ids": [
+        "task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "task:strategic-054:metric_definition_needed:resolve-evidence-gap-step-level-baseline-for-reagent-supply-readiness-planning",
+        "task:strategic-054:low_defensibility_review:review-low-defensibility-evidence-pack",
+        "task:strategic-054:claim_support_needed:strengthen-claim-support-for-leach-circuit-reagent-supply-concentration-risk",
+        "task:strategic-054:primary_document_needed:attach-primary-document-for-metals-mining-critical-inputs-process-pattern-review"
+      ],
+      "investigation_route": "/constraints/strategic-054",
+      "network_route": "/network?focus=strategic-054"
+    },
+    {
+      "packet_id": "packet:strategic-055:task:strategic-055:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+      "constraint_id": "strategic-055",
+      "constraint_title": "Tailings permit monitoring data gap",
+      "industry": "Metals / Mining / Critical Inputs",
+      "triage_rank": 4,
+      "triage_action": "Define validation metric: Tailings permit monitoring data gap",
+      "triage_action_summary": "Resolve whether this gap is visible in Environmental monitoring repository.",
+      "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.6 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Permit compliance decision",
+      "validation_burden_score": 10,
+      "recalibrated_severity": "Critical",
+      "request_category": "metric",
+      "cluster_type": "metric",
+      "task_type": "metric_definition_needed",
+      "evidence_needed": "Define the measured signal for Tailings permit monitoring data gap: owner, data source, sampling window, baseline, and pass/fail threshold.",
+      "expected_artifact": "Metric definition with owner, data source, sampling window, and baseline.",
+      "artifact_checklist": [
+        "Constraint ID and title: strategic-055 / Tailings permit monitoring data gap",
+        "Linked triage task ID: task:strategic-055:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+        "Metric definition with numerator, denominator, and unit",
+        "Data owner, source system, collection window, and refresh cadence",
+        "Baseline value or method for establishing the first baseline"
+      ],
+      "pass_criteria": [
+        "Metric can be collected from a named system, owner, or repeatable observation.",
+        "Baseline and sampling window are clear enough for a follow-up validation pass.",
+        "Metric tests the bottleneck described by the triage action rather than a generic outcome."
+      ],
+      "fail_criteria": [
+        "No owner, system, or repeatable observation can produce the metric.",
+        "The proposed measure captures downstream outcomes only after the friction has already occurred.",
+        "The baseline cannot be recreated or compared across a later validation cycle."
+      ],
+      "expected_confidence_impact": {
+        "impact_level": "High",
+        "estimated_score_lift": 1.6,
+        "explanation": "metric evidence is expected to improve validation confidence by about 1.6 points if it passes because 10.0 burden is being driven by metric blockers."
+      },
+      "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
+      "analyst_note": "Rank 10.0 critical item. Start with the metric packet before expanding into the remaining 6 generated tasks.",
+      "source_task_ids": [
+        "task:strategic-055:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+        "task:strategic-055:metric_definition_needed:resolve-evidence-gap-step-level-baseline-for-tailings-monitoring-evidence-reporting",
+        "task:strategic-055:low_defensibility_review:review-low-defensibility-evidence-pack",
+        "task:strategic-055:claim_support_needed:strengthen-claim-support-for-tailings-permit-monitoring-data-gap",
+        "task:strategic-055:primary_document_needed:attach-primary-document-for-metals-mining-critical-inputs-process-pattern-review"
+      ],
+      "investigation_route": "/constraints/strategic-055",
+      "network_route": "/network?focus=strategic-055"
+    },
     {
       "packet_id": "packet:strategic-020:task:strategic-020:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-approved-input-sourcing",
       "constraint_id": "strategic-020",
       "constraint_title": "Critical mineral processing qualification delay",
       "industry": "Metals / Mining / Critical Inputs",
-      "triage_rank": 1,
+      "triage_rank": 5,
       "triage_action": "Define validation metric: Critical mineral processing qualification delay",
       "triage_action_summary": "Resolve whether this gap is visible in Supplier qualification system.",
       "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.5 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Approved input sourcing",
@@ -64,11 +268,62 @@
       "network_route": "/network?focus=strategic-020"
     },
     {
+      "packet_id": "packet:strategic-056:task:strategic-056:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-customer-shipment-release",
+      "constraint_id": "strategic-056",
+      "constraint_title": "Refinery sample lot release queue",
+      "industry": "Metals / Mining / Critical Inputs",
+      "triage_rank": 6,
+      "triage_action": "Resolve evidence blocker: Refinery sample lot release queue",
+      "triage_action_summary": "Resolve whether this gap is visible in Laboratory information management system.",
+      "triage_rationale": "7 generated tasks compress into 3 validation clusters. evidence is the highest-leverage next action because it carries priority 10.0 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Customer shipment release",
+      "validation_burden_score": 9.9,
+      "recalibrated_severity": "Critical",
+      "request_category": "claim",
+      "cluster_type": "evidence",
+      "task_type": "evidence_gap_resolution",
+      "evidence_needed": "Attach claim-level support for Refinery sample lot release queue that confirms, narrows, or rejects the unresolved evidence gap.",
+      "expected_artifact": "Evidence note showing whether the gap is confirmed, reduced, or disproven.",
+      "artifact_checklist": [
+        "Constraint ID and title: strategic-056 / Refinery sample lot release queue",
+        "Linked triage task ID: task:strategic-056:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-customer-shipment-release",
+        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+        "Claim being tested and the exact gap being resolved",
+        "Supporting or contradicting evidence note with source IDs where available",
+        "Residual uncertainty note if the claim remains only partially supported"
+      ],
+      "pass_criteria": [
+        "Evidence directly supports or rejects the core claim behind the triage action.",
+        "Known caveats are recorded rather than hidden.",
+        "The artifact makes the constraint more defensible for analyst review."
+      ],
+      "fail_criteria": [
+        "Evidence is anecdotal and cannot be tied to the stated claim.",
+        "The artifact contradicts the constraint hypothesis without updating the record.",
+        "The claim remains too broad to validate."
+      ],
+      "expected_confidence_impact": {
+        "impact_level": "High",
+        "estimated_score_lift": 1.2,
+        "explanation": "claim evidence is expected to improve validation confidence by about 1.2 points if it passes because 9.9 burden is being driven by evidence blockers."
+      },
+      "decision_use": "Determines whether the constraint claim is supported, narrowed, or rejected.",
+      "analyst_note": "Rank 9.9 critical item. Start with the claim packet before expanding into the remaining 6 generated tasks.",
+      "source_task_ids": [
+        "task:strategic-056:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-customer-shipment-release",
+        "task:strategic-056:evidence_gap_resolution:resolve-evidence-gap-step-level-baseline-for-refined-lot-quality-release",
+        "task:strategic-056:low_defensibility_review:review-low-defensibility-evidence-pack",
+        "task:strategic-056:claim_support_needed:strengthen-claim-support-for-refinery-sample-lot-release-queue",
+        "task:strategic-056:primary_document_needed:attach-primary-document-for-metals-mining-critical-inputs-process-pattern-review"
+      ],
+      "investigation_route": "/constraints/strategic-056",
+      "network_route": "/network?focus=strategic-056"
+    },
+    {
       "packet_id": "packet:strategic-019:task:strategic-019:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
       "constraint_id": "strategic-019",
       "constraint_title": "Refining and smelting capacity bottleneck",
       "industry": "Metals / Mining / Critical Inputs",
-      "triage_rank": 2,
+      "triage_rank": 7,
       "triage_action": "Define validation metric: Refining and smelting capacity bottleneck",
       "triage_action_summary": "Resolve whether this gap is visible in Processing capacity plan.",
       "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.5 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Qualified refined input",
@@ -119,7 +374,7 @@
       "constraint_id": "strategic-010",
       "constraint_title": "Right-of-way utility relocation sequencing delay",
       "industry": "Infrastructure / Permitting / Construction",
-      "triage_rank": 3,
+      "triage_rank": 8,
       "triage_action": "Define validation metric: Right-of-way utility relocation sequencing delay",
       "triage_action_summary": "Resolve whether this gap is visible in Project coordination tracker.",
       "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.6 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Civil construction",
@@ -170,7 +425,7 @@
       "constraint_id": "strategic-017",
       "constraint_title": "Silver byproduct supply dependency",
       "industry": "Metals / Mining / Critical Inputs",
-      "triage_rank": 4,
+      "triage_rank": 9,
       "triage_action": "Define validation metric: Silver byproduct supply dependency",
       "triage_action_summary": "Resolve whether this gap is visible in Commodity supply model.",
       "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.4 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Industrial input availability",
@@ -221,7 +476,7 @@
       "constraint_id": "strategic-018",
       "constraint_title": "Gold project approval and capital sequencing friction",
       "industry": "Metals / Mining / Critical Inputs",
-      "triage_rank": 5,
+      "triage_rank": 10,
       "triage_action": "Define validation metric: Gold project approval and capital sequencing friction",
       "triage_action_summary": "Resolve whether this gap is visible in Capital approval workflow.",
       "triage_rationale": "7 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.2 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Construction mobilization",
@@ -266,261 +521,6 @@
       ],
       "investigation_route": "/constraints/strategic-018",
       "network_route": "/network?focus=strategic-018"
-    },
-    {
-      "packet_id": "packet:strategic-013:task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification",
-      "constraint_id": "strategic-013",
-      "constraint_title": "Chip equipment lead-time coordination",
-      "industry": "Semiconductors / Advanced Manufacturing",
-      "triage_rank": 6,
-      "triage_action": "Define validation metric: Chip equipment lead-time coordination",
-      "triage_action_summary": "Resolve whether this gap is visible in Equipment readiness tracker.",
-      "triage_rationale": "6 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 10.0 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Process qualification",
-      "validation_burden_score": 9.6,
-      "recalibrated_severity": "Critical",
-      "request_category": "metric",
-      "cluster_type": "metric",
-      "task_type": "metric_definition_needed",
-      "evidence_needed": "Define the measured signal for Chip equipment lead-time coordination: owner, data source, sampling window, baseline, and pass/fail threshold.",
-      "expected_artifact": "Metric definition with owner, data source, sampling window, and baseline.",
-      "artifact_checklist": [
-        "Constraint ID and title: strategic-013 / Chip equipment lead-time coordination",
-        "Linked triage task ID: task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification",
-        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-        "Metric definition with numerator, denominator, and unit",
-        "Data owner, source system, collection window, and refresh cadence",
-        "Baseline value or method for establishing the first baseline"
-      ],
-      "pass_criteria": [
-        "Metric can be collected from a named system, owner, or repeatable observation.",
-        "Baseline and sampling window are clear enough for a follow-up validation pass.",
-        "Metric tests the bottleneck described by the triage action rather than a generic outcome."
-      ],
-      "fail_criteria": [
-        "No owner, system, or repeatable observation can produce the metric.",
-        "The proposed measure captures downstream outcomes only after the friction has already occurred.",
-        "The baseline cannot be recreated or compared across a later validation cycle."
-      ],
-      "expected_confidence_impact": {
-        "impact_level": "High",
-        "estimated_score_lift": 1.5,
-        "explanation": "metric evidence is expected to improve validation confidence by about 1.5 points if it passes because 9.6 burden is being driven by metric blockers."
-      },
-      "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-      "analyst_note": "Rank 9.6 critical item. Start with the metric packet before expanding into the remaining 5 generated tasks.",
-      "source_task_ids": [
-        "task:strategic-013:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-process-qualification",
-        "task:strategic-013:metric_definition_needed:resolve-evidence-gap-step-level-baseline-for-tool-procurement-and-install-planning",
-        "task:strategic-013:low_defensibility_review:review-low-defensibility-evidence-pack",
-        "task:strategic-013:claim_support_needed:strengthen-claim-support-for-chip-equipment-lead-time-coordination",
-        "task:strategic-013:local_observation_needed:collect-local-observation-evidence-for-chip-equipment-lead-time-coordination"
-      ],
-      "investigation_route": "/constraints/strategic-013",
-      "network_route": "/network?focus=strategic-013"
-    },
-    {
-      "packet_id": "packet:strategic-011:task:strategic-011:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-tool-installation",
-      "constraint_id": "strategic-011",
-      "constraint_title": "Semiconductor fab utility readiness",
-      "industry": "Semiconductors / Advanced Manufacturing",
-      "triage_rank": 7,
-      "triage_action": "Define validation metric: Semiconductor fab utility readiness",
-      "triage_action_summary": "Resolve whether this gap is visible in Site readiness plan.",
-      "triage_rationale": "6 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.8 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Tool installation",
-      "validation_burden_score": 9.6,
-      "recalibrated_severity": "Critical",
-      "request_category": "metric",
-      "cluster_type": "metric",
-      "task_type": "metric_definition_needed",
-      "evidence_needed": "Define the measured signal for Semiconductor fab utility readiness: owner, data source, sampling window, baseline, and pass/fail threshold.",
-      "expected_artifact": "Metric definition with owner, data source, sampling window, and baseline.",
-      "artifact_checklist": [
-        "Constraint ID and title: strategic-011 / Semiconductor fab utility readiness",
-        "Linked triage task ID: task:strategic-011:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-tool-installation",
-        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-        "Metric definition with numerator, denominator, and unit",
-        "Data owner, source system, collection window, and refresh cadence",
-        "Baseline value or method for establishing the first baseline"
-      ],
-      "pass_criteria": [
-        "Metric can be collected from a named system, owner, or repeatable observation.",
-        "Baseline and sampling window are clear enough for a follow-up validation pass.",
-        "Metric tests the bottleneck described by the triage action rather than a generic outcome."
-      ],
-      "fail_criteria": [
-        "No owner, system, or repeatable observation can produce the metric.",
-        "The proposed measure captures downstream outcomes only after the friction has already occurred.",
-        "The baseline cannot be recreated or compared across a later validation cycle."
-      ],
-      "expected_confidence_impact": {
-        "impact_level": "High",
-        "estimated_score_lift": 1.5,
-        "explanation": "metric evidence is expected to improve validation confidence by about 1.5 points if it passes because 9.6 burden is being driven by metric blockers."
-      },
-      "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-      "analyst_note": "Rank 9.6 critical item. Start with the metric packet before expanding into the remaining 5 generated tasks.",
-      "source_task_ids": [
-        "task:strategic-011:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-tool-installation",
-        "task:strategic-011:metric_definition_needed:resolve-evidence-gap-step-level-baseline-for-fab-utility-readiness-tracking",
-        "task:strategic-011:low_defensibility_review:review-low-defensibility-evidence-pack",
-        "task:strategic-011:claim_support_needed:strengthen-claim-support-for-semiconductor-fab-utility-readiness",
-        "task:strategic-011:local_observation_needed:collect-local-observation-evidence-for-semiconductor-fab-utility-readiness"
-      ],
-      "investigation_route": "/constraints/strategic-011",
-      "network_route": "/network?focus=strategic-011"
-    },
-    {
-      "packet_id": "packet:strategic-014:task:strategic-014:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-production-ramp",
-      "constraint_id": "strategic-014",
-      "constraint_title": "Yield learning cycle delay",
-      "industry": "Semiconductors / Advanced Manufacturing",
-      "triage_rank": 8,
-      "triage_action": "Define validation metric: Yield learning cycle delay",
-      "triage_action_summary": "Resolve whether this gap is visible in Manufacturing execution analytics.",
-      "triage_rationale": "6 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 10.0 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Qualified production ramp",
-      "validation_burden_score": 9.6,
-      "recalibrated_severity": "Critical",
-      "request_category": "metric",
-      "cluster_type": "metric",
-      "task_type": "metric_definition_needed",
-      "evidence_needed": "Define the measured signal for Yield learning cycle delay: owner, data source, sampling window, baseline, and pass/fail threshold.",
-      "expected_artifact": "Metric definition with owner, data source, sampling window, and baseline.",
-      "artifact_checklist": [
-        "Constraint ID and title: strategic-014 / Yield learning cycle delay",
-        "Linked triage task ID: task:strategic-014:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-production-ramp",
-        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-        "Metric definition with numerator, denominator, and unit",
-        "Data owner, source system, collection window, and refresh cadence",
-        "Baseline value or method for establishing the first baseline"
-      ],
-      "pass_criteria": [
-        "Metric can be collected from a named system, owner, or repeatable observation.",
-        "Baseline and sampling window are clear enough for a follow-up validation pass.",
-        "Metric tests the bottleneck described by the triage action rather than a generic outcome."
-      ],
-      "fail_criteria": [
-        "No owner, system, or repeatable observation can produce the metric.",
-        "The proposed measure captures downstream outcomes only after the friction has already occurred.",
-        "The baseline cannot be recreated or compared across a later validation cycle."
-      ],
-      "expected_confidence_impact": {
-        "impact_level": "High",
-        "estimated_score_lift": 1.5,
-        "explanation": "metric evidence is expected to improve validation confidence by about 1.5 points if it passes because 9.6 burden is being driven by metric blockers."
-      },
-      "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-      "analyst_note": "Rank 9.6 critical item. Start with the metric packet before expanding into the remaining 5 generated tasks.",
-      "source_task_ids": [
-        "task:strategic-014:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-production-ramp",
-        "task:strategic-014:metric_definition_needed:resolve-evidence-gap-step-level-baseline-for-yield-learning-cycle",
-        "task:strategic-014:low_defensibility_review:review-low-defensibility-evidence-pack",
-        "task:strategic-014:claim_support_needed:strengthen-claim-support-for-yield-learning-cycle-delay",
-        "task:strategic-014:local_observation_needed:collect-local-observation-evidence-for-yield-learning-cycle-delay"
-      ],
-      "investigation_route": "/constraints/strategic-014",
-      "network_route": "/network?focus=strategic-014"
-    },
-    {
-      "packet_id": "packet:strategic-032:task:strategic-032:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-field-execution",
-      "constraint_id": "strategic-032",
-      "constraint_title": "Capital project change order approval friction",
-      "industry": "Infrastructure / Permitting / Construction",
-      "triage_rank": 9,
-      "triage_action": "Resolve evidence blocker: Capital project change order approval friction",
-      "triage_action_summary": "Resolve whether this gap is visible in Project controls system.",
-      "triage_rationale": "7 generated tasks compress into 3 validation clusters. evidence is the highest-leverage next action because it carries priority 9.6 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Field execution",
-      "validation_burden_score": 9.5,
-      "recalibrated_severity": "High",
-      "request_category": "claim",
-      "cluster_type": "evidence",
-      "task_type": "evidence_gap_resolution",
-      "evidence_needed": "Attach claim-level support for Capital project change order approval friction that confirms, narrows, or rejects the unresolved evidence gap.",
-      "expected_artifact": "Evidence note showing whether the gap is confirmed, reduced, or disproven.",
-      "artifact_checklist": [
-        "Constraint ID and title: strategic-032 / Capital project change order approval friction",
-        "Linked triage task ID: task:strategic-032:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-field-execution",
-        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-        "Claim being tested and the exact gap being resolved",
-        "Supporting or contradicting evidence note with source IDs where available",
-        "Residual uncertainty note if the claim remains only partially supported"
-      ],
-      "pass_criteria": [
-        "Evidence directly supports or rejects the core claim behind the triage action.",
-        "Known caveats are recorded rather than hidden.",
-        "The artifact makes the constraint more defensible for analyst review."
-      ],
-      "fail_criteria": [
-        "Evidence is anecdotal and cannot be tied to the stated claim.",
-        "The artifact contradicts the constraint hypothesis without updating the record.",
-        "The claim remains too broad to validate."
-      ],
-      "expected_confidence_impact": {
-        "impact_level": "Moderate",
-        "estimated_score_lift": 1.1,
-        "explanation": "claim evidence is expected to improve validation confidence by about 1.1 points if it passes because 9.5 burden is being driven by evidence blockers."
-      },
-      "decision_use": "Determines whether the constraint claim is supported, narrowed, or rejected.",
-      "analyst_note": "Rank 9.5 high item. Start with the claim packet before expanding into the remaining 6 generated tasks.",
-      "source_task_ids": [
-        "task:strategic-032:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-field-execution",
-        "task:strategic-032:evidence_gap_resolution:resolve-evidence-gap-step-level-baseline-for-change-order-approval",
-        "task:strategic-032:claim_support_needed:strengthen-claim-support-for-capital-project-change-order-approval-friction",
-        "task:strategic-032:low_defensibility_review:review-low-defensibility-evidence-pack",
-        "task:strategic-032:primary_document_needed:attach-primary-document-for-infrastructure-permitting-construction-process-pattern-review"
-      ],
-      "investigation_route": "/constraints/strategic-032",
-      "network_route": "/network?focus=strategic-032"
-    },
-    {
-      "packet_id": "packet:strategic-005:task:strategic-005:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-connection-application",
-      "constraint_id": "strategic-005",
-      "constraint_title": "Distributed energy hosting capacity uncertainty",
-      "industry": "Energy / Grid / Interconnection",
-      "triage_rank": 10,
-      "triage_action": "Define validation metric: Distributed energy hosting capacity uncertainty",
-      "triage_action_summary": "Resolve whether this gap is visible in Distribution planning data.",
-      "triage_rationale": "6 generated tasks compress into 4 validation clusters. metric is the highest-leverage next action because it carries priority 9.9 and blocks confidence in the constraint. Evidence gap remains unresolved: Observed frequency and owner of delay before Connection application",
-      "validation_burden_score": 9.5,
-      "recalibrated_severity": "High",
-      "request_category": "metric",
-      "cluster_type": "metric",
-      "task_type": "metric_definition_needed",
-      "evidence_needed": "Define the measured signal for Distributed energy hosting capacity uncertainty: owner, data source, sampling window, baseline, and pass/fail threshold.",
-      "expected_artifact": "Metric definition with owner, data source, sampling window, and baseline.",
-      "artifact_checklist": [
-        "Constraint ID and title: strategic-005 / Distributed energy hosting capacity uncertainty",
-        "Linked triage task ID: task:strategic-005:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-connection-application",
-        "Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
-        "Metric definition with numerator, denominator, and unit",
-        "Data owner, source system, collection window, and refresh cadence",
-        "Baseline value or method for establishing the first baseline"
-      ],
-      "pass_criteria": [
-        "Metric can be collected from a named system, owner, or repeatable observation.",
-        "Baseline and sampling window are clear enough for a follow-up validation pass.",
-        "Metric tests the bottleneck described by the triage action rather than a generic outcome."
-      ],
-      "fail_criteria": [
-        "No owner, system, or repeatable observation can produce the metric.",
-        "The proposed measure captures downstream outcomes only after the friction has already occurred.",
-        "The baseline cannot be recreated or compared across a later validation cycle."
-      ],
-      "expected_confidence_impact": {
-        "impact_level": "High",
-        "estimated_score_lift": 1.5,
-        "explanation": "metric evidence is expected to improve validation confidence by about 1.5 points if it passes because 9.5 burden is being driven by metric blockers."
-      },
-      "decision_use": "Defines the measurement basis for deciding whether the constraint is real and repeatable.",
-      "analyst_note": "Rank 9.5 high item. Start with the metric packet before expanding into the remaining 5 generated tasks.",
-      "source_task_ids": [
-        "task:strategic-005:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-connection-application",
-        "task:strategic-005:metric_definition_needed:resolve-evidence-gap-step-level-baseline-for-hosting-capacity-screening",
-        "task:strategic-005:low_defensibility_review:review-low-defensibility-evidence-pack",
-        "task:strategic-005:claim_support_needed:strengthen-claim-support-for-distributed-energy-hosting-capacity-uncertainty",
-        "task:strategic-005:local_observation_needed:collect-local-observation-evidence-for-distributed-energy-hosting-capacity-uncertainty"
-      ],
-      "investigation_route": "/constraints/strategic-005",
-      "network_route": "/network?focus=strategic-005"
     }
   ]
 }
