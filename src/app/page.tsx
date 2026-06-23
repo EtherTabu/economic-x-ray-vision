@@ -229,6 +229,9 @@ export default function Home() {
             <Link className="dashboard-network-link" href="/sources">
               Open Source Registry
             </Link>
+            <Link className="dashboard-network-link" href="/evidence">
+              Open Evidence Matching
+            </Link>
             <Link className="dashboard-network-link" href="/compare">
               Open Comparison Workspace
             </Link>

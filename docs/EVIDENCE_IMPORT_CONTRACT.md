@@ -25,6 +25,7 @@ Instead, it writes a separate registry and audit report.
 - `data/evidence/imports/*.json`: future human-authored import packs.
 - `data/exports/evidence_import_registry.json`: generated import registry and coverage report.
 - `data/exports/evidence_import_audit.json`: generated audit result.
+- `data/exports/evidence_artifact_matches.json`: generated evidence-to-artifact matching report.
 
 ## How To Add Evidence Metadata Later
 
@@ -33,7 +34,8 @@ Instead, it writes a separate registry and audit report.
 3. Replace every placeholder with real metadata.
 4. Link to existing `artifact_id`, `constraint_id`, or `source_record_id` values when known.
 5. Run `npm run evidence-imports`.
-6. Run `npm run check`.
+6. Run `npm run evidence-matches`.
+7. Run `npm run check`.
 
 The builder validates links against existing generated artifacts, constraints, and source records. If a link cannot be resolved, the import is reported as an orphan or validation error.
 
@@ -51,6 +53,8 @@ An artifact need is a generated request, such as:
 An imported evidence record is metadata about something that may satisfy, partially satisfy, or fail to satisfy that need.
 
 The artifact need remains `not_collected` until a future human-state or review workflow explicitly decides otherwise. V26 only reports candidate coverage.
+
+V27 adds a matching report that classifies artifact needs as `matched`, `candidate`, `blocked`, or `uncovered`. Candidate and matched reports are still read-only. They do not mutate the artifact library or analyst state.
 
 ## Status Rules
 

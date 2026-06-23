@@ -38,6 +38,7 @@ Economic X-Ray Vision currently:
 - Builds evidence request packets for the highest-priority validation actions.
 - Defines an evidence artifact library for the documents, datasets, observations, metrics, or primary records needed to validate claims.
 - Validates future human-authored evidence import metadata without mutating generated artifact needs or claiming evidence has been collected.
+- Matches imported evidence metadata to generated artifact needs and reports uncovered, candidate, blocked, and review-ready coverage.
 - Plans fast, standard, and deep validation campaigns from triage, source, evidence, and comparison signals.
 - Generates a separate local analyst state template for review, collection, assignment, blocking, and campaign progress tracking.
 - Proposes deterministic intervention strategies and first experiments.
@@ -82,6 +83,7 @@ Current metrics:
 - 10 evidence request packets
 - 459 generated evidence artifact needs
 - 0 imported evidence records currently, with an import contract ready for real evidence metadata
+- 459 uncovered artifact needs in the evidence matching workspace
 - 3 validation campaign modes
 - 1060 local analyst state template records
 - Local-first data and scripts
@@ -102,6 +104,7 @@ Current metrics:
 - **Evidence Packet Engine**: turns top validation actions into artifact requests with pass/fail criteria.
 - **Evidence Artifact Library**: defines the specific documents, observations, metrics, or primary records still needed for validation.
 - **Evidence Import Contract**: validates future human-added evidence metadata, link coverage, provenance posture, and review status without changing generated intelligence.
+- **Evidence Matching Workspace**: connects imported evidence metadata to artifact needs by explicit IDs, constraints, or source records while preserving zero-import honesty.
 - **Validation Campaign Planner**: groups top actions into fast, standard, and deep campaign plans.
 - **Local Analyst State**: creates a separate non-complete template for tracking future human review and artifact collection progress.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
@@ -116,6 +119,7 @@ Current metrics:
 
 - `/`: main constraint intelligence dashboard and filtered record list.
 - `/validation`: validation workbench with triage, evidence packets, and raw task exploration.
+- `/evidence`: read-only evidence-to-artifact matching workspace.
 - `/campaigns`: validation campaign planner with fast, standard, and deep campaign modes.
 - `/campaigns/[id]`: execution workspace for one validation campaign.
 - `/compare`: side-by-side constraint comparison workspace.
@@ -138,6 +142,8 @@ flowchart TD
   H --> I["Evidence Request Packets"]
   I --> P["Evidence Artifact Library"]
   P --> Q["Evidence Import Registry"]
+  Q --> R["Evidence Artifact Matching"]
+  P --> R
   P --> J["Validation Campaigns"]
   F --> K["Intervention Strategies"]
   C --> L["Archetype Analysis"]
@@ -165,6 +171,7 @@ flowchart TD
   Q --> R["Evidence Request Packets"]
   R --> U["Evidence Artifact Library"]
   U --> V["Evidence Import Registry"]
+  V --> W["Evidence Artifact Matching"]
   U --> S["Validation Campaigns"]
   O --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
@@ -185,6 +192,7 @@ flowchart TD
   R --> L
   U --> L
   V --> L
+  W --> L
   S --> L
   I --> L
   J --> L
@@ -254,6 +262,7 @@ npm run triage
 npm run evidence-packets
 npm run artifacts
 npm run evidence-imports
+npm run evidence-matches
 npm run campaigns
 npm run analyst-state
 npm run coverage
@@ -275,6 +284,7 @@ npm run sqlite
 - `data/exports/evidence_artifact_library.json`
 - `data/exports/evidence_import_registry.json`
 - `data/exports/evidence_import_audit.json`
+- `data/exports/evidence_artifact_matches.json`
 - `data/exports/validation_campaigns.json`
 - `data/exports/analyst_state_template.json`
 - `data/exports/coverage_density_report.json`

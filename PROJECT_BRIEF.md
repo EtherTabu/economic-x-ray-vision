@@ -241,6 +241,10 @@ V26.0 adds a manual-first evidence import contract. Future human-authored eviden
 
 The import registry writes `data/exports/evidence_import_registry.json` and `data/exports/evidence_import_audit.json`. This layer reports candidate evidence coverage while keeping generated intelligence immutable: artifact statuses, validation tasks, campaigns, constraints, and source records are not mutated or marked collected by the presence of import metadata alone. Empty imports are valid and currently expected until real evidence metadata is added.
 
+## V27.0 Technical Note
+
+V27.0 adds evidence-to-artifact matching as a read-only reporting layer. The export `data/exports/evidence_artifact_matches.json` accounts for every generated artifact need as matched, candidate, blocked, or uncovered by comparing evidence import metadata against explicit artifact IDs first, then weaker constraint or source links. The `/evidence` route exposes this coverage posture and handles the current zero-import state without fake evidence or mutated artifact statuses.
+
 ## V21.0 Technical Note
 
 V21.0 aligned README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
@@ -274,7 +278,8 @@ The current pipeline is:
 9. Evidence packets turn top actions into concrete artifact requests.
 10. The evidence artifact library defines the specific documents, observations, metrics, or source artifacts still needed.
 11. Evidence import packs can report real evidence metadata separately from generated artifact needs.
-12. Campaigns group top validation work into fast, standard, and deep plans.
-13. Analyst state templates track future human progress separately from generated intelligence.
-14. Coverage density audits track frontier-domain expansion and generated-layer growth.
-15. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
+12. Evidence matching reports artifact coverage without changing generated artifact or analyst-state statuses.
+13. Campaigns group top validation work into fast, standard, and deep plans.
+14. Analyst state templates track future human progress separately from generated intelligence.
+15. Coverage density audits track frontier-domain expansion and generated-layer growth.
+16. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.

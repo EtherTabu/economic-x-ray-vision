@@ -22,7 +22,8 @@
     "evidence-packets": "npm run triage && node scripts/build-validation-evidence-packets.ts && node scripts/audit-validation-evidence-packets.ts",
     "artifacts": "npm run evidence-packets && node scripts/build-evidence-artifact-library.ts && node scripts/audit-evidence-artifact-library.ts",
     "evidence-imports": "npm run artifacts && node scripts/build-evidence-imports.ts && node scripts/audit-evidence-imports.ts",
-    "campaigns": "npm run evidence-imports && node scripts/build-validation-campaigns.ts && node scripts/audit-validation-campaigns.ts",
+    "evidence-matches": "npm run evidence-imports && node scripts/build-evidence-artifact-matches.ts && node scripts/audit-evidence-artifact-matches.ts",
+    "campaigns": "npm run evidence-matches && node scripts/build-validation-campaigns.ts && node scripts/audit-validation-campaigns.ts",
     "analyst-state": "npm run campaigns && node scripts/build-analyst-state-template.ts && node scripts/audit-analyst-state.ts",
     "coverage": "npm run analyst-state && node scripts/audit-coverage-density.ts",
     "sqlite:build": "npm run tasks && node --no-warnings scripts/build-sqlite.ts",
@@ -30,7 +31,7 @@
     "sqlite:inspect": "node --no-warnings scripts/inspect-sqlite.ts",
     "sqlite:parity": "node --no-warnings scripts/audit-sqlite-parity.ts",
     "sqlite": "npm run sqlite:build && npm run sqlite:audit && npm run sqlite:inspect && npm run sqlite:parity",
-    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run sources && npm run intervention && npm run archetype && npm run network && node scripts/build-validation-tasks.ts && node scripts/audit-validation-tasks.ts && node scripts/build-validation-triage.ts && node scripts/audit-validation-triage.ts && node scripts/build-validation-evidence-packets.ts && node scripts/audit-validation-evidence-packets.ts && node scripts/build-evidence-artifact-library.ts && node scripts/audit-evidence-artifact-library.ts && node scripts/build-evidence-imports.ts && node scripts/audit-evidence-imports.ts && node scripts/build-validation-campaigns.ts && node scripts/audit-validation-campaigns.ts && node scripts/build-analyst-state-template.ts && node scripts/audit-analyst-state.ts && node scripts/audit-coverage-density.ts && node --no-warnings scripts/build-sqlite.ts && npm run sqlite:audit && npm run sqlite:inspect && npm run sqlite:parity && npm run lint && npm run build"
+    "check": "npm run validate && npm run build:data && npm run dataset && npm run evidence && npm run sources && npm run intervention && npm run archetype && npm run network && node scripts/build-validation-tasks.ts && node scripts/audit-validation-tasks.ts && node scripts/build-validation-triage.ts && node scripts/audit-validation-triage.ts && node scripts/build-validation-evidence-packets.ts && node scripts/audit-validation-evidence-packets.ts && node scripts/build-evidence-artifact-library.ts && node scripts/audit-evidence-artifact-library.ts && node scripts/build-evidence-imports.ts && node scripts/audit-evidence-imports.ts && node scripts/build-evidence-artifact-matches.ts && node scripts/audit-evidence-artifact-matches.ts && node scripts/build-validation-campaigns.ts && node scripts/audit-validation-campaigns.ts && node scripts/build-analyst-state-template.ts && node scripts/audit-analyst-state.ts && node scripts/audit-coverage-density.ts && node --no-warnings scripts/build-sqlite.ts && npm run sqlite:audit && npm run sqlite:inspect && npm run sqlite:parity && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "^15.3.3",

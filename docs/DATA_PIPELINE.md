@@ -27,7 +27,8 @@ Templates are deliberately excluded from the build path. Use `data/intake/templa
 2. Future human-authored import packs can be placed in `data/evidence/imports/*.json`.
 3. `npm run evidence-imports` validates import metadata against existing artifact IDs, constraint IDs, and source record IDs.
 4. The builder writes `data/exports/evidence_import_registry.json` and the auditor writes `data/exports/evidence_import_audit.json`.
-5. Generated artifact statuses are not mutated. Imported evidence is reported as candidate coverage until a future review workflow accepts it.
+5. `npm run evidence-matches` connects import metadata to artifact needs by explicit artifact IDs first, then weaker constraint or source candidate links.
+6. Generated artifact statuses are not mutated. Imported evidence is reported as candidate, blocked, review-ready, or uncovered coverage until a future review workflow accepts it.
 
 `data/evidence/templates/evidence_import_template.json` is a copy-only template and is deliberately excluded from the import build path.
 
@@ -45,6 +46,7 @@ flowchart TD
   H --> I["Evidence Request Packets"]
   I --> Q["Evidence Artifact Library"]
   Q --> T["Evidence Import Registry"]
+  T --> U["Evidence Artifact Matching"]
   Q --> J["Validation Campaigns"]
   J --> R["Analyst State Template"]
   F --> K["Intervention Strategies"]
@@ -62,6 +64,7 @@ flowchart TD
   I --> P
   Q --> P
   T --> P
+  U --> P
   J --> P
   R --> P
   K --> P
@@ -85,6 +88,7 @@ flowchart TD
 - `npm run evidence-packets`: builds and audits evidence request packets.
 - `npm run artifacts`: builds and audits the evidence artifact library.
 - `npm run evidence-imports`: builds and audits the evidence import registry and coverage report.
+- `npm run evidence-matches`: builds and audits evidence-to-artifact matching and uncovered artifact coverage.
 - `npm run campaigns`: builds and audits validation campaign plans.
 - `npm run analyst-state`: builds and audits the local analyst state template.
 - `npm run coverage`: builds upstream artifacts and audits frontier coverage density.
@@ -106,6 +110,7 @@ flowchart TD
 - `data/exports/evidence_artifact_library.json`
 - `data/exports/evidence_import_registry.json`
 - `data/exports/evidence_import_audit.json`
+- `data/exports/evidence_artifact_matches.json`
 - `data/exports/validation_campaigns.json`
 - `data/exports/analyst_state_template.json`
 - `data/exports/coverage_density_report.json`
