@@ -149,7 +149,7 @@ flowchart TD
 ```mermaid
 flowchart TD
   A["Seed Records"] --> C["Constraint Registry"]
-  B["JSON Intake Records"] --> D["Generated Intake Data"]
+  B["JSON Intake + Intake Packs"] --> D["Generated Intake Data"]
   D --> C
   E["Strategic Cross-Sector Seeds"] --> C
   C --> F["Scoring Engine"]
@@ -214,6 +214,16 @@ The constraint list supports filtering by industry and archetype, plus expanded 
 
 ![Constraint List + Inspection Workflow](docs/screenshots/04-constraint-list-filters-expanded-card-inspection.png)
 
+## Capture Workflow
+
+Future records should enter through documented capture paths instead of being casually appended to a growing seed file.
+
+- Use `data/intake/packs/*.json` for structured expansion packs.
+- Use `data/intake/templates/constraint_capture_template.json` as a copy-only JSON skeleton.
+- Use [Constraint Capture Template](docs/CONSTRAINT_CAPTURE_TEMPLATE.md) for the analyst checklist and frontier-domain capture guidance.
+- Run `npm run validate:intake` to enforce required fields, known categories, known industries, archetypes, measurable validation language, evidence gaps, and honest evidence status.
+- Run `npm run coverage` or `npm run check` to verify coverage density and generated-layer growth.
+
 ## How To Run
 
 ```bash
@@ -269,6 +279,7 @@ Generated exports preserve existing `generated_at` values when semantic content 
 - [Data Pipeline](docs/DATA_PIPELINE.md)
 - [Scoring and Validation](docs/SCORING_AND_VALIDATION.md)
 - [Constraint Archetypes](docs/CONSTRAINT_ARCHETYPES.md)
+- [Constraint Capture Template](docs/CONSTRAINT_CAPTURE_TEMPLATE.md)
 - [Intervention Strategy](docs/INTERVENTION_STRATEGY.md)
 - [Demo Walkthrough](docs/DEMO_WALKTHROUGH.md)
 - [Screenshot Guide](docs/SCREENSHOT_GUIDE.md)

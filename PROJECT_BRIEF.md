@@ -229,6 +229,12 @@ V25.0 expands frontier infrastructure coverage density without adding external s
 
 New records are intentionally evidence-humble: they use operational-pattern source metadata, low evidence strength, unverified validation status, and explicit local evidence requirements. The coverage density audit writes `data/exports/coverage_density_report.json`, comparing the V24 baseline to the current dataset across record count, frontier domain coverage, industry and archetype distribution, evidence posture, validation task growth, evidence artifact growth, and analyst state growth.
 
+## V25.5 Technical Note
+
+V25.5 hardens the local capture pipeline without adding new product records. Future structured records can be added through `data/intake/packs/*.json`, while `data/intake/templates/constraint_capture_template.json` and `docs/CONSTRAINT_CAPTURE_TEMPLATE.md` provide copy-only capture guidance that is not processed as live data.
+
+The intake validator now covers the V25 industry vocabulary and checks that future records include a concrete mechanism, affected workflow/system layer, known archetype, measurable validation language, evidence gaps, plausible intervention path, and honest evidence posture. Operational-pattern records cannot claim validated status or high evidence strength by default.
+
 ## V21.0 Technical Note
 
 V21.0 aligned README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
@@ -251,16 +257,17 @@ V23.1 refreshes repository presentation without changing product behavior. The R
 
 The current pipeline is:
 
-1. Seed, intake, and strategic records enter the constraint registry.
-2. Deterministic scoring produces priority, validation, graph, strategic, and archetype scores.
-3. Dataset exports create the local dataset snapshot.
-4. Evidence dossiers derive proof/disproof conditions, evidence gaps, and validation priority.
-5. Source registry and evidence packs separate source metadata, claim support, gaps, and provenance.
-6. Validation tasks convert weak evidence and source gaps into generated analyst tasks.
-7. Validation triage compresses task volume into next-best actions.
-8. Evidence packets turn top actions into concrete artifact requests.
-9. The evidence artifact library defines the specific documents, observations, metrics, or source artifacts still needed.
-10. Campaigns group top validation work into fast, standard, and deep plans.
-11. Analyst state templates track future human progress separately from generated intelligence.
-12. Coverage density audits track frontier-domain expansion and generated-layer growth.
-13. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
+1. Seed, intake, intake-pack, and strategic records enter the constraint registry.
+2. Intake validation enforces known values, measurable validation language, evidence gaps, and honest evidence posture.
+3. Deterministic scoring produces priority, validation, graph, strategic, and archetype scores.
+4. Dataset exports create the local dataset snapshot.
+5. Evidence dossiers derive proof/disproof conditions, evidence gaps, and validation priority.
+6. Source registry and evidence packs separate source metadata, claim support, gaps, and provenance.
+7. Validation tasks convert weak evidence and source gaps into generated analyst tasks.
+8. Validation triage compresses task volume into next-best actions.
+9. Evidence packets turn top actions into concrete artifact requests.
+10. The evidence artifact library defines the specific documents, observations, metrics, or source artifacts still needed.
+11. Campaigns group top validation work into fast, standard, and deep plans.
+12. Analyst state templates track future human progress separately from generated intelligence.
+13. Coverage density audits track frontier-domain expansion and generated-layer growth.
+14. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.

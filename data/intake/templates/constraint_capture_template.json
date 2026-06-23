@@ -1,0 +1,94 @@
+{
+  "contract_version": "1.0",
+  "records": [
+    {
+      "id": "pack-prefix-001",
+      "industry": "Data Centers / AI Infrastructure",
+      "subsector": "Specific operating layer",
+      "title": "Specific constraint mechanism title",
+      "category": "Process Handoff",
+      "description": "Describe the concrete mechanism: what waits, what must be verified, which handoff fails, or which capacity signal is missing before work can proceed.",
+      "evidence": [
+        "Hypothesis signal: describe the observable pattern that suggests this bottleneck exists.",
+        "Operational review should confirm whether the named system captures queue, handoff, readiness, or capacity data."
+      ],
+      "affected_parties": [
+        "Analyst-facing role or operating team",
+        "Downstream team or customer of the process"
+      ],
+      "current_process": [
+        "Name the workflow intake or trigger.",
+        "Name the review, verification, scheduling, qualification, or readiness step.",
+        "Name the release, approval, commissioning, production, or service outcome."
+      ],
+      "resource_waste": [
+        "Idle asset, queue aging, rework, duplicate verification, or manual chasing"
+      ],
+      "time_waste": 7,
+      "capital_waste": 7,
+      "labor_waste": 7,
+      "opportunity_cost": "Explain what value is delayed, trapped, duplicated, misallocated, or underused.",
+      "estimated_annual_impact": "Use relative language only unless a real source supports a number.",
+      "growth_trend": "Increasing",
+      "visibility_score": 5,
+      "overlooked_score": 8,
+      "digital_solution_potential": 7,
+      "automation_potential": 5,
+      "ai_potential": 5,
+      "implementation_complexity": 7,
+      "regulatory_complexity": 6,
+      "adoption_complexity": 6,
+      "confidence": 4,
+      "evidence_strength": "Low",
+      "source_type": "Operational Pattern",
+      "validation_status": "Unverified",
+      "source_quality": 5,
+      "measurement_difficulty": 7,
+      "data_availability": 5,
+      "confidence_reasoning": "This record is a structured hypothesis and requires local process evidence before decision-grade claims.",
+      "validation_notes": [
+        "Measure cycle time, queue age, exception rate, throughput, or rework count inside the named workflow.",
+        "Compare system records with downstream release, commissioning, production, service, or approval outcomes."
+      ],
+      "evidence_gaps": [
+        "Step-level baseline for the named process",
+        "Observed frequency and owner of delay before the downstream outcome"
+      ],
+      "upstream_constraints": [
+        "Workflow intake",
+        "Readiness documentation"
+      ],
+      "downstream_constraints": [
+        "Release, approval, commissioning, production, or service outcome",
+        "Capacity allocation"
+      ],
+      "related_processes": [
+        "Named process",
+        "Named process validation",
+        "Downstream outcome"
+      ],
+      "affected_systems": [
+        "Named operational system, tracker, portal, repository, telemetry layer, queue, or planning system"
+      ],
+      "solution_hypotheses": [
+        "Instrument the process with owner, age, reason code, and exception status.",
+        "Create a bounded pilot to reduce the dominant bottleneck archetype signal."
+      ],
+      "opportunity_type": "Workflow Redesign",
+      "primary_archetype": "handoff_leakage",
+      "secondary_archetypes": [
+        "queue_backlog",
+        "measurement_blind_spot"
+      ],
+      "archetype_confidence": 7,
+      "archetype_reasoning": "Explain why the record maps to the primary archetype using the process and downstream outcome.",
+      "sources": [
+        {
+          "title": "Structured hypothesis; local operational evidence required",
+          "publisher": "Economic X-Ray Vision local capture",
+          "source_type": "Operational Pattern"
+        }
+      ]
+    }
+  ]
+}
