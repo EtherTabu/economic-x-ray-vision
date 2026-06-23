@@ -219,6 +219,10 @@ V20.0 adds a validation campaign planner at `/campaigns`. Campaigns group top tr
 
 V23.0 adds an evidence artifact contract and generated artifact library. The artifact layer translates evidence packets, source records, evidence packs, and triage gaps into specific needed artifacts such as primary documents, source URLs, local observations, metric definitions, claim-support memos, and intervention pilot plans. The export `data/exports/evidence_artifact_library.json` is a deterministic planning contract for future collection; it does not fetch, upload, scrape, or invent evidence.
 
+## V24.0 Technical Note
+
+V24.0 adds local analyst state as a separate template layer. Generated intelligence remains immutable: constraints, evidence artifacts, validation tasks, campaigns, and generated exports are not mutated to imply human progress. The export `data/exports/analyst_state_template.json` creates unassigned, non-complete state records for artifacts, validation tasks, campaigns, and constraints so future local analyst workflows can track review, collection, blockers, deferrals, and assignments without fake completion claims.
+
 ## V21.0 Technical Note
 
 V21.0 aligned README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
@@ -251,4 +255,5 @@ The current pipeline is:
 8. Evidence packets turn top actions into concrete artifact requests.
 9. The evidence artifact library defines the specific documents, observations, metrics, or source artifacts still needed.
 10. Campaigns group top validation work into fast, standard, and deep plans.
-11. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
+11. Analyst state templates track future human progress separately from generated intelligence.
+12. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.

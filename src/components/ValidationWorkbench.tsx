@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { ValidationEvidencePacketPanel } from "@/components/ValidationEvidencePacketPanel";
 import { ValidationTriagePanel } from "@/components/ValidationTriagePanel";
+import type { AnalystStateTemplate } from "@/lib/analystState";
 import type { EvidenceArtifactLibrary } from "@/lib/evidenceArtifacts";
 import type { ValidationEvidencePacketPortfolio } from "@/lib/validationEvidencePackets";
 import type {
@@ -20,11 +21,13 @@ type ValidationWorkbenchProps = {
   triage: ValidationTriagePortfolio;
   evidencePackets: ValidationEvidencePacketPortfolio;
   artifactLibrary: EvidenceArtifactLibrary;
+  analystState: AnalystStateTemplate;
 };
 
 type FilterValue = "All";
 
 export function ValidationWorkbench({
+  analystState,
   artifactLibrary,
   evidencePackets,
   portfolio,
@@ -123,6 +126,7 @@ export function ValidationWorkbench({
 
       <section className="validation-main" aria-label="Validation workbench">
         <ValidationTriagePanel triage={triage} />
+        <AnalystStateSummaryPanel analystState={analystState} />
         <ValidationEvidencePacketPanel
           artifactLibrary={artifactLibrary}
           portfolio={evidencePackets}
@@ -203,6 +207,40 @@ export function ValidationWorkbench({
         />
       </section>
     </main>
+  );
+}
+
+function AnalystStateSummaryPanel({
+  analystState
+}: {
+  analystState: AnalystStateTemplate;
+}) {
+  return (
+    <section className="analyst-state-panel" aria-label="Analyst state template">
+      <div>
+        <p className="section-kicker">Local analyst state</p>
+        <h2>Generated state template, separate from intelligence outputs.</h2>
+        <p>
+          All records are unassigned and start from non-complete statuses. This
+          tracks future analyst progress without mutating generated tasks,
+          artifacts, campaigns, or constraints.
+        </p>
+      </div>
+      <div className="analyst-state-metrics">
+        <Metric label="State Records" value={analystState.summary.total_state_records} />
+        <Metric label="Artifacts" value={analystState.summary.artifact_state_records} />
+        <Metric
+          label="Tasks"
+          value={analystState.summary.validation_task_state_records}
+        />
+        <Metric label="Campaigns" value={analystState.summary.campaign_state_records} />
+        <Metric
+          label="Constraints"
+          value={analystState.summary.constraint_state_records}
+        />
+        <Metric label="Assigned" value="0" />
+      </div>
+    </section>
   );
 }
 

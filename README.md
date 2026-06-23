@@ -38,6 +38,7 @@ Economic X-Ray Vision currently:
 - Builds evidence request packets for the highest-priority validation actions.
 - Defines an evidence artifact library for the documents, datasets, observations, metrics, or primary records needed to validate claims.
 - Plans fast, standard, and deep validation campaigns from triage, source, evidence, and comparison signals.
+- Generates a separate local analyst state template for review, collection, assignment, blocking, and campaign progress tracking.
 - Proposes deterministic intervention strategies and first experiments.
 - Compares 2-4 constraints side by side to explain why one outranks another.
 - Opens a dedicated investigation workspace for each constraint, linking evidence, validation workflow, analogs, archetype reasoning, and intervention strategy.
@@ -76,6 +77,7 @@ Current metrics:
 - 10 evidence request packets
 - 276 generated evidence artifact needs
 - 3 validation campaign modes
+- 647 local analyst state template records
 - Local-first data and scripts
 - Deterministic scoring
 - No external APIs
@@ -94,6 +96,7 @@ Current metrics:
 - **Evidence Packet Engine**: turns top validation actions into artifact requests with pass/fail criteria.
 - **Evidence Artifact Library**: defines the specific documents, observations, metrics, or primary records still needed for validation.
 - **Validation Campaign Planner**: groups top actions into fast, standard, and deep campaign plans.
+- **Local Analyst State**: creates a separate non-complete template for tracking future human review and artifact collection progress.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
 - **Cross-Industry Analog Engine**: finds similar constraints in different industries.
@@ -231,6 +234,7 @@ npm run triage
 npm run evidence-packets
 npm run artifacts
 npm run campaigns
+npm run analyst-state
 npm run sqlite
 ```
 
@@ -248,6 +252,7 @@ npm run sqlite
 - `data/exports/validation_evidence_packets.json`
 - `data/exports/evidence_artifact_library.json`
 - `data/exports/validation_campaigns.json`
+- `data/exports/analyst_state_template.json`
 - `data/exports/constraint_intelligence.sqlite`
 
 Generated exports preserve existing `generated_at` values when semantic content is unchanged, which prevents meaningless Git diffs during repeated local checks.
@@ -275,6 +280,7 @@ SQLite is available as a local build artifact at `data/exports/constraint_intell
 - Inspectable logic over hidden model output.
 - Evidence humility over false certainty.
 - Hypotheses before claims.
+- Human analyst state stays separate from generated intelligence.
 - Local-first data and exports.
 - No hidden external services.
 - No fake ROI claims.

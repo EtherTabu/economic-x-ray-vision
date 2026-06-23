@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { CampaignAnalystState } from "@/lib/analystState";
 import type {
   CampaignDetailConstraint,
   ValidationCampaignDetail
@@ -6,9 +7,11 @@ import type {
 
 type ValidationCampaignDetailWorkspaceProps = {
   detail: ValidationCampaignDetail;
+  analystState: CampaignAnalystState;
 };
 
 export function ValidationCampaignDetailWorkspace({
+  analystState,
   detail
 }: ValidationCampaignDetailWorkspaceProps) {
   const { campaign, summary } = detail;
@@ -65,6 +68,32 @@ export function ValidationCampaignDetailWorkspace({
           <p>
             <strong>Decision use:</strong> {campaign.decision_use}
           </p>
+        </section>
+
+        <section className="campaign-progress-panel">
+          <div>
+            <p className="section-kicker">Analyst state placeholder</p>
+            <h2>Campaign progress starts unassigned and not started.</h2>
+            <p>
+              This is local state scaffolding only. It does not claim artifacts
+              have been collected, tasks accepted, or constraints reviewed.
+            </p>
+          </div>
+          <div className="campaign-progress-grid">
+            <Metric
+              label="Campaign Status"
+              value={String(analystState.summary.campaign_status).replaceAll("_", " ")}
+            />
+            <Metric
+              label="Tracked Artifacts"
+              value={analystState.summary.tracked_artifacts}
+            />
+            <Metric label="Tracked Tasks" value={analystState.summary.tracked_tasks} />
+            <Metric
+              label="Unassigned"
+              value={analystState.summary.unassigned_records}
+            />
+          </div>
         </section>
 
         <section className="campaign-detail-brief">

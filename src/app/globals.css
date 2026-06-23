@@ -1413,6 +1413,34 @@ h1 {
   border-radius: 8px;
 }
 
+.analyst-state-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.analyst-state-panel h2 {
+  margin: 0;
+  font-size: 1.22rem;
+  line-height: 1.25;
+}
+
+.analyst-state-panel p:not(.section-kicker) {
+  margin: 8px 0 0;
+  color: #344655;
+  line-height: 1.55;
+}
+
+.analyst-state-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
 .validation-packet-panel__header {
   display: grid;
   grid-template-columns: minmax(280px, 0.44fr) minmax(0, 1fr);
@@ -3043,6 +3071,7 @@ select {
 }
 
 .campaign-detail-brief,
+.campaign-progress-panel,
 .campaign-detail-sequence,
 .campaign-detail-card {
   background: var(--surface);
@@ -3068,6 +3097,31 @@ select {
   margin: 0 0 8px;
   color: #344655;
   line-height: 1.5;
+}
+
+.campaign-progress-panel {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.38fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 18px;
+}
+
+.campaign-progress-panel h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.campaign-progress-panel p:not(.section-kicker) {
+  margin: 8px 0 0;
+  color: #344655;
+  line-height: 1.5;
+}
+
+.campaign-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
 }
 
 .campaign-detail-columns {
@@ -3245,6 +3299,7 @@ select {
   .validation-panel__body,
   .validation-triage-panel__header,
   .validation-triage-panel__body,
+  .analyst-state-panel,
   .validation-packet-panel__header,
   .intervention-panel__header,
   .intervention-panel__body,
@@ -3260,6 +3315,7 @@ select {
   .campaign-intro,
   .campaign-card__header,
   .campaign-detail-brief,
+  .campaign-progress-panel,
   .campaign-detail-card__header {
     grid-template-columns: 1fr;
   }

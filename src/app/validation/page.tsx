@@ -1,5 +1,6 @@
 import { ValidationWorkbench } from "@/components/ValidationWorkbench";
 import { constraintRegistry } from "@/data/constraintRegistry";
+import { buildAnalystStateTemplate } from "@/lib/analystState";
 import { getConstraintsWithScores } from "@/lib/constraints";
 import { buildEvidenceArtifactLibrary } from "@/lib/evidenceArtifacts";
 import { buildValidationEvidencePacketPortfolio } from "@/lib/validationEvidencePackets";
@@ -12,9 +13,11 @@ export default function ValidationPage() {
   const triage = buildValidationTriagePortfolio(portfolio.tasks);
   const evidencePackets = buildValidationEvidencePacketPortfolio(triage);
   const artifactLibrary = buildEvidenceArtifactLibrary(scoredConstraints);
+  const analystState = buildAnalystStateTemplate(scoredConstraints);
 
   return (
     <ValidationWorkbench
+      analystState={analystState}
       artifactLibrary={artifactLibrary}
       evidencePackets={evidencePackets}
       portfolio={portfolio}

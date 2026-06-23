@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
 import { ValidationCampaignDetailWorkspace } from "@/components/ValidationCampaignDetailWorkspace";
 import { constraintRegistry } from "@/data/constraintRegistry";
+import {
+  analystStatesForCampaign,
+  buildAnalystStateTemplate
+} from "@/lib/analystState";
 import { getConstraintsWithScores } from "@/lib/constraints";
 import {
   buildValidationCampaignDetailPortfolio,
@@ -34,5 +38,12 @@ export default async function CampaignDetailPage({
     notFound();
   }
 
-  return <ValidationCampaignDetailWorkspace detail={detail} />;
+  const analystState = buildAnalystStateTemplate(scoredConstraints);
+
+  return (
+    <ValidationCampaignDetailWorkspace
+      analystState={analystStatesForCampaign(analystState, detail.campaign.campaign_id)}
+      detail={detail}
+    />
+  );
 }
