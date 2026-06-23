@@ -37,6 +37,7 @@ Economic X-Ray Vision currently:
 - Compresses raw validation tasks into triaged next-best validation actions.
 - Builds evidence request packets for the highest-priority validation actions.
 - Defines an evidence artifact library for the documents, datasets, observations, metrics, or primary records needed to validate claims.
+- Validates future human-authored evidence import metadata without mutating generated artifact needs or claiming evidence has been collected.
 - Plans fast, standard, and deep validation campaigns from triage, source, evidence, and comparison signals.
 - Generates a separate local analyst state template for review, collection, assignment, blocking, and campaign progress tracking.
 - Proposes deterministic intervention strategies and first experiments.
@@ -80,6 +81,7 @@ Current metrics:
 - 10 triaged top validation actions
 - 10 evidence request packets
 - 459 generated evidence artifact needs
+- 0 imported evidence records currently, with an import contract ready for real evidence metadata
 - 3 validation campaign modes
 - 1060 local analyst state template records
 - Local-first data and scripts
@@ -99,6 +101,7 @@ Current metrics:
 - **Validation Triage Engine**: compresses raw tasks by constraint into ranked next-best validation actions.
 - **Evidence Packet Engine**: turns top validation actions into artifact requests with pass/fail criteria.
 - **Evidence Artifact Library**: defines the specific documents, observations, metrics, or primary records still needed for validation.
+- **Evidence Import Contract**: validates future human-added evidence metadata, link coverage, provenance posture, and review status without changing generated intelligence.
 - **Validation Campaign Planner**: groups top actions into fast, standard, and deep campaign plans.
 - **Local Analyst State**: creates a separate non-complete template for tracking future human review and artifact collection progress.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
@@ -134,6 +137,7 @@ flowchart TD
   G --> H["Validation Triage"]
   H --> I["Evidence Request Packets"]
   I --> P["Evidence Artifact Library"]
+  P --> Q["Evidence Import Registry"]
   P --> J["Validation Campaigns"]
   F --> K["Intervention Strategies"]
   C --> L["Archetype Analysis"]
@@ -160,6 +164,7 @@ flowchart TD
   P --> Q["Validation Triage"]
   Q --> R["Evidence Request Packets"]
   R --> U["Evidence Artifact Library"]
+  U --> V["Evidence Import Registry"]
   U --> S["Validation Campaigns"]
   O --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
@@ -179,6 +184,7 @@ flowchart TD
   Q --> L
   R --> L
   U --> L
+  V --> L
   S --> L
   I --> L
   J --> L
@@ -247,6 +253,7 @@ npm run tasks
 npm run triage
 npm run evidence-packets
 npm run artifacts
+npm run evidence-imports
 npm run campaigns
 npm run analyst-state
 npm run coverage
@@ -266,6 +273,8 @@ npm run sqlite
 - `data/exports/validation_triage.json`
 - `data/exports/validation_evidence_packets.json`
 - `data/exports/evidence_artifact_library.json`
+- `data/exports/evidence_import_registry.json`
+- `data/exports/evidence_import_audit.json`
 - `data/exports/validation_campaigns.json`
 - `data/exports/analyst_state_template.json`
 - `data/exports/coverage_density_report.json`
@@ -280,6 +289,7 @@ Generated exports preserve existing `generated_at` values when semantic content 
 - [Scoring and Validation](docs/SCORING_AND_VALIDATION.md)
 - [Constraint Archetypes](docs/CONSTRAINT_ARCHETYPES.md)
 - [Constraint Capture Template](docs/CONSTRAINT_CAPTURE_TEMPLATE.md)
+- [Evidence Import Contract](docs/EVIDENCE_IMPORT_CONTRACT.md)
 - [Intervention Strategy](docs/INTERVENTION_STRATEGY.md)
 - [Demo Walkthrough](docs/DEMO_WALKTHROUGH.md)
 - [Screenshot Guide](docs/SCREENSHOT_GUIDE.md)
@@ -313,8 +323,8 @@ If this project is useful or you want to support continued local-first intellige
 
 Future directions:
 
-- Local analyst state for notes, artifact collection status, task status history, and campaign progress.
-- Evidence artifact intake workflow for attaching collected documents, URLs, files, and observation records.
+- Human-reviewed evidence acceptance workflow on top of the import contract.
+- Local analyst state editing for notes, artifact collection status, task status history, and campaign progress.
 - Runtime SQLite read pilot once the artifact workflow remains stable.
 - Real source ingestion with explicit provenance.
 - Richer validation task states and reviewer notes.

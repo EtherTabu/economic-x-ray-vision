@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-06-23T04:02:32.054Z",
+  "result": "PASS",
+  "summary": {
+    "total_evidence_imports": 0,
+    "imports_by_collection_status": {
+      "not_collected": 0,
+      "metadata_only": 0,
+      "collected": 0,
+      "needs_review": 0,
+      "rejected": 0,
+      "blocked": 0
+    },
+    "imports_by_review_status": {
+      "unreviewed": 0,
+      "review_ready": 0,
+      "reviewed": 0,
+      "accepted": 0,
+      "rejected": 0,
+      "needs_followup": 0
+    },
+    "imports_by_provenance_status": {
+      "unknown": 0,
+      "source_title_only": 0,
+      "operational_pattern": 0,
+      "secondary_reference": 0,
+      "primary_document": 0,
+      "local_observation": 0,
+      "verified_primary": 0
+    },
+    "linked_constraints": 0,
+    "linked_artifacts": 0,
+    "orphan_imports": 0,
+    "imports_with_missing_required_metadata": 0,
+    "artifact_needs_with_matching_imported_evidence": 0,
+    "artifact_needs_still_uncovered": 459,
+    "top_validation_packets_with_imported_evidence_coverage": [
+      {
+        "packet_id": "packet:strategic-053:task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "constraint_id": "strategic-053",
+        "triage_rank": 1,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-067:task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+        "constraint_id": "strategic-067",
+        "triage_rank": 2,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-054:task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "constraint_id": "strategic-054",
+        "triage_rank": 3,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-055:task:strategic-055:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+        "constraint_id": "strategic-055",
+        "triage_rank": 4,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-020:task:strategic-020:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-approved-input-sourcing",
+        "constraint_id": "strategic-020",
+        "triage_rank": 5,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-056:task:strategic-056:evidence_gap_resolution:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-customer-shipment-release",
+        "constraint_id": "strategic-056",
+        "triage_rank": 6,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-019:task:strategic-019:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
+        "constraint_id": "strategic-019",
+        "triage_rank": 7,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-010:task:strategic-010:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "constraint_id": "strategic-010",
+        "triage_rank": 8,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-017:task:strategic-017:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-industrial-input-availability",
+        "constraint_id": "strategic-017",
+        "triage_rank": 9,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      },
+      {
+        "packet_id": "packet:strategic-018:task:strategic-018:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-construction-mobilization",
+        "constraint_id": "strategic-018",
+        "triage_rank": 10,
+        "matching_artifact_count": 1,
+        "imported_evidence_match_count": 0,
+        "coverage_status": "uncovered"
+      }
+    ],
+    "packet_artifact_needs_with_imported_evidence": 0,
+    "packet_artifact_needs_still_uncovered": 10
+  },
+  "failures": []
+}

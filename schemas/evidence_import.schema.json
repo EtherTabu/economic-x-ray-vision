@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Import Contract",
+  "description": "Manual-first evidence metadata contract for linking collected or candidate evidence to generated artifact needs without mutating generated intelligence.",
+  "type": "object",
+  "required": ["contract_version", "imports"],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "1.0"
+    },
+    "imports": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidenceImport"
+      }
+    }
+  },
+  "$defs": {
+    "nullableString": {
+      "type": ["string", "null"]
+    },
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stringList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    },
+    "evidenceImport": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "related_artifact_ids",
+        "related_constraint_ids",
+        "source_record_id",
+        "title",
+        "artifact_type",
+        "evidence_type",
+        "provenance_status",
+        "collection_status",
+        "review_status",
+        "source_url",
+        "local_file_reference",
+        "publisher_or_owner",
+        "publication_date",
+        "collected_at",
+        "reviewed_at",
+        "claim_support_summary",
+        "validation_metric_supported",
+        "notes",
+        "tags"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "artifact_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "related_artifact_ids": {
+          "$ref": "#/$defs/stringList"
+        },
+        "constraint_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "related_constraint_ids": {
+          "$ref": "#/$defs/stringList"
+        },
+        "source_record_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "artifact_type": {
+          "enum": [
+            "primary_document",
+            "source_url",
+            "local_observation",
+            "metric_definition",
+            "claim_support_memo",
+            "intervention_pilot_plan",
+            "dataset_extract",
+            "system_export",
+            "screenshot",
+            "interview_note",
+            "operating_log"
+          ]
+        },
+        "evidence_type": {
+          "enum": [
+            "metadata_stub",
+            "primary_document",
+            "secondary_reference",
+            "local_observation",
+            "system_export",
+            "metric_definition",
+            "interview_note",
+            "screenshot",
+            "dataset_extract",
+            "operating_log",
+            "claim_support"
+          ]
+        },
+        "provenance_status": {
+          "enum": [
+            "unknown",
+            "source_title_only",
+            "operational_pattern",
+            "secondary_reference",
+            "primary_document",
+            "local_observation",
+            "verified_primary"
+          ]
+        },
+        "collection_status": {
+          "enum": [
+            "not_collected",
+            "metadata_only",
+            "collected",
+            "needs_review",
+            "rejected",
+            "blocked"
+          ]
+        },
+        "review_status": {
+          "enum": [
+            "unreviewed",
+            "review_ready",
+            "reviewed",
+            "accepted",
+            "rejected",
+            "needs_followup"
+          ]
+        },
+        "source_url": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "local_file_reference": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "publisher_or_owner": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "publication_date": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "collected_at": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "reviewed_at": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "claim_support_summary": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "validation_metric_supported": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "notes": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "tags": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    }
+  }
+}

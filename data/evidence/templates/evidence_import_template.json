@@ -1,0 +1,29 @@
+{
+  "contract_version": "1.0",
+  "imports": [
+    {
+      "evidence_id": "evidence:replace-with-stable-id",
+      "artifact_id": "artifact:replace-with-existing-artifact-id",
+      "related_artifact_ids": ["artifact:replace-with-existing-artifact-id"],
+      "constraint_id": "replace-with-existing-constraint-id",
+      "related_constraint_ids": ["replace-with-existing-constraint-id"],
+      "source_record_id": null,
+      "title": "Replace with the exact artifact or evidence title",
+      "artifact_type": "metric_definition",
+      "evidence_type": "metadata_stub",
+      "provenance_status": "unknown",
+      "collection_status": "metadata_only",
+      "review_status": "unreviewed",
+      "source_url": null,
+      "local_file_reference": null,
+      "publisher_or_owner": null,
+      "publication_date": null,
+      "collected_at": null,
+      "reviewed_at": null,
+      "claim_support_summary": "Describe the claim this evidence is expected to support, narrow, or disprove.",
+      "validation_metric_supported": "Describe the metric or observable signal this evidence supports.",
+      "notes": "Copy this template into data/evidence/imports/ and replace every placeholder before using it as real metadata.",
+      "tags": ["template", "replace-before-use"]
+    }
+  ]
+}

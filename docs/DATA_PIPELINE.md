@@ -9,6 +9,8 @@ The project uses a local pipeline that keeps app data, generated exports, and au
 - `data/intake/packs/*.json`: optional structured intake expansion packs.
 - `data/intake/templates/`: copy-only capture templates that are not processed as real data.
 - `src/data/strategicConstraintSeeds.ts`: hand-authored cross-sector strategic hypotheses.
+- `data/evidence/imports/*.json`: optional human-authored evidence import metadata packs.
+- `data/evidence/templates/`: copy-only evidence import templates that are not processed as real data.
 
 ## Intake Flow
 
@@ -18,6 +20,16 @@ The project uses a local pipeline that keeps app data, generated exports, and au
 4. The dashboard imports `src/data/constraintRegistry.ts`, which combines healthcare records, generated intake records, and strategic seed records.
 
 Templates are deliberately excluded from the build path. Use `data/intake/templates/constraint_capture_template.json` and `docs/CONSTRAINT_CAPTURE_TEMPLATE.md` as copy sources only.
+
+## Evidence Import Flow
+
+1. Evidence artifact needs are generated first from packets, triage, source gaps, and campaigns.
+2. Future human-authored import packs can be placed in `data/evidence/imports/*.json`.
+3. `npm run evidence-imports` validates import metadata against existing artifact IDs, constraint IDs, and source record IDs.
+4. The builder writes `data/exports/evidence_import_registry.json` and the auditor writes `data/exports/evidence_import_audit.json`.
+5. Generated artifact statuses are not mutated. Imported evidence is reported as candidate coverage until a future review workflow accepts it.
+
+`data/evidence/templates/evidence_import_template.json` is a copy-only template and is deliberately excluded from the import build path.
 
 ## Export Flow
 
@@ -32,6 +44,7 @@ flowchart TD
   G --> H["Validation Triage"]
   H --> I["Evidence Request Packets"]
   I --> Q["Evidence Artifact Library"]
+  Q --> T["Evidence Import Registry"]
   Q --> J["Validation Campaigns"]
   J --> R["Analyst State Template"]
   F --> K["Intervention Strategies"]
@@ -48,6 +61,7 @@ flowchart TD
   H --> P
   I --> P
   Q --> P
+  T --> P
   J --> P
   R --> P
   K --> P
@@ -70,6 +84,7 @@ flowchart TD
 - `npm run triage`: builds and audits constraint-level validation triage.
 - `npm run evidence-packets`: builds and audits evidence request packets.
 - `npm run artifacts`: builds and audits the evidence artifact library.
+- `npm run evidence-imports`: builds and audits the evidence import registry and coverage report.
 - `npm run campaigns`: builds and audits validation campaign plans.
 - `npm run analyst-state`: builds and audits the local analyst state template.
 - `npm run coverage`: builds upstream artifacts and audits frontier coverage density.
@@ -89,6 +104,8 @@ flowchart TD
 - `data/exports/validation_triage.json`
 - `data/exports/validation_evidence_packets.json`
 - `data/exports/evidence_artifact_library.json`
+- `data/exports/evidence_import_registry.json`
+- `data/exports/evidence_import_audit.json`
 - `data/exports/validation_campaigns.json`
 - `data/exports/analyst_state_template.json`
 - `data/exports/coverage_density_report.json`

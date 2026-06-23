@@ -147,7 +147,7 @@ Future versions may add Python ingestion workers for scraping, AI extraction, NL
 Near-term:
 
 - Pilot selected SQLite read paths only after parity checks and artifact workflow remain stable
-- Add evidence artifact intake once provenance and validation contracts are ready
+- Add human-reviewed evidence acceptance on top of the V26 import contract
 - Add local analyst state editing only after the template, audit, and separation rules remain stable
 
 Later:
@@ -235,6 +235,12 @@ V25.5 hardens the local capture pipeline without adding new product records. Fut
 
 The intake validator now covers the V25 industry vocabulary and checks that future records include a concrete mechanism, affected workflow/system layer, known archetype, measurable validation language, evidence gaps, plausible intervention path, and honest evidence posture. Operational-pattern records cannot claim validated status or high evidence strength by default.
 
+## V26.0 Technical Note
+
+V26.0 adds a manual-first evidence import contract. Future human-authored evidence metadata can be placed in `data/evidence/imports/*.json` and validated against existing artifact needs, constraint IDs, and source records. The template at `data/evidence/templates/evidence_import_template.json` is copy-only and is not processed as live evidence.
+
+The import registry writes `data/exports/evidence_import_registry.json` and `data/exports/evidence_import_audit.json`. This layer reports candidate evidence coverage while keeping generated intelligence immutable: artifact statuses, validation tasks, campaigns, constraints, and source records are not mutated or marked collected by the presence of import metadata alone. Empty imports are valid and currently expected until real evidence metadata is added.
+
 ## V21.0 Technical Note
 
 V21.0 aligned README, architecture docs, route maps, data pipeline maps, app copy, and project brief content with the product state so a reviewer or future contributor can understand the system without reconstructing the history from commits.
@@ -267,7 +273,8 @@ The current pipeline is:
 8. Validation triage compresses task volume into next-best actions.
 9. Evidence packets turn top actions into concrete artifact requests.
 10. The evidence artifact library defines the specific documents, observations, metrics, or source artifacts still needed.
-11. Campaigns group top validation work into fast, standard, and deep plans.
-12. Analyst state templates track future human progress separately from generated intelligence.
-13. Coverage density audits track frontier-domain expansion and generated-layer growth.
-14. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
+11. Evidence import packs can report real evidence metadata separately from generated artifact needs.
+12. Campaigns group top validation work into fast, standard, and deep plans.
+13. Analyst state templates track future human progress separately from generated intelligence.
+14. Coverage density audits track frontier-domain expansion and generated-layer growth.
+15. Intervention, archetype, network, comparison, and SQLite parity layers provide action, pattern, relationship, relative-ranking, and persistence credibility.
