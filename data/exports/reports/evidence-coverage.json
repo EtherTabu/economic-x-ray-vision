@@ -1,0 +1,87 @@
+{
+  "report_id": "evidence-coverage",
+  "report_type": "evidence_coverage",
+  "title": "Evidence Coverage Report",
+  "summary": "A deterministic coverage report connecting imported evidence metadata to generated artifact needs.",
+  "referenced_constraint_ids": [
+    "strategic-053",
+    "strategic-067",
+    "strategic-054",
+    "strategic-056",
+    "strategic-010",
+    "strategic-052",
+    "strategic-040",
+    "strategic-013",
+    "strategic-051",
+    "strategic-020",
+    "strategic-049"
+  ],
+  "referenced_campaign_ids": [],
+  "referenced_artifact_ids": [
+    "artifact:cluster:strategic-053:metric",
+    "artifact:cluster:strategic-067:evidence",
+    "artifact:cluster:strategic-067:metric",
+    "artifact:cluster:strategic-054:metric",
+    "artifact:cluster:strategic-056:evidence",
+    "artifact:cluster:strategic-010:metric",
+    "artifact:cluster:strategic-052:metric",
+    "artifact:cluster:strategic-040:metric",
+    "artifact:cluster:strategic-013:metric",
+    "artifact:cluster:strategic-051:metric",
+    "artifact:cluster:strategic-020:metric",
+    "artifact:cluster:strategic-049:metric"
+  ],
+  "sections": [
+    {
+      "heading": "Coverage Summary",
+      "lines": [
+        "Imported evidence records: 0",
+        "Artifact needs: 459",
+        "Matched artifact needs: 0",
+        "Candidate artifact coverage: 0",
+        "Blocked evidence records: 0",
+        "Review-ready evidence records: 0",
+        "Uncovered artifact needs: 459",
+        "Import registry uncovered artifact count: 459"
+      ]
+    },
+    {
+      "heading": "Top Validation Packet Coverage",
+      "lines": [
+        "Queue #1: Critical mineral assay-to-offtake qualification delay - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Queue #2: Heavy equipment telematics fault classification blind spot - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Queue #3: Leach circuit reagent supply concentration risk - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Queue #4: Tailings permit monitoring data gap - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Queue #5: Critical mineral processing qualification delay - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Queue #6: Refinery sample lot release queue - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Evidence note showing whether the gap is confirmed, reduced, or disproven..",
+        "Queue #7: Refining and smelting capacity bottleneck - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Queue #8: Right-of-way utility relocation sequencing delay - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Queue #9: Silver byproduct supply dependency - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Queue #10: Gold project approval and capital sequencing friction - uncovered, uncovered artifacts 1. Next import action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline.."
+      ]
+    },
+    {
+      "heading": "Top Uncovered Artifact Needs",
+      "lines": [
+        "Critical mineral assay-to-offtake qualification delay: Metric definition with owner, data source, sampling window, and baseline. (metric_definition, priority 9.2). Next action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Heavy equipment telematics fault classification blind spot: Short validation memo connecting evidence, measured gap, and opportunity thesis. (claim_support_memo, priority 9.2). Next action: Add an evidence import record for Short validation memo connecting evidence, measured gap, and opportunity thesis..",
+        "Heavy equipment telematics fault classification blind spot: Metric definition with owner, data source, sampling window, and baseline. (metric_definition, priority 9.2). Next action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Leach circuit reagent supply concentration risk: Metric definition with owner, data source, sampling window, and baseline. (metric_definition, priority 9.2). Next action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Refinery sample lot release queue: Evidence note showing whether the gap is confirmed, reduced, or disproven. (claim_support_memo, priority 9.2). Next action: Add an evidence import record for Evidence note showing whether the gap is confirmed, reduced, or disproven..",
+        "Right-of-way utility relocation sequencing delay: Metric definition with owner, data source, sampling window, and baseline. (metric_definition, priority 9.2). Next action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Advanced packaging substrate qualification bottleneck: Metric definition with owner, data source, sampling window, and baseline. (metric_definition, priority 9.1). Next action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "AI training workload scheduling against power and cooling envelope mismatch: Metric definition with owner, data source, sampling window, and baseline. (metric_definition, priority 9.1). Next action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Chip equipment lead-time coordination: Metric definition with owner, data source, sampling window, and baseline. (metric_definition, priority 9.1). Next action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline..",
+        "Cleanroom capacity allocation conflict during ramp: Metric definition with owner, data source, sampling window, and baseline. (metric_definition, priority 9.1). Next action: Add an evidence import record for Metric definition with owner, data source, sampling window, and baseline.."
+      ]
+    },
+    {
+      "heading": "Limitations",
+      "lines": [
+        "Artifact statuses remain generated and unchanged.",
+        "Current generated artifact count: 459",
+        "Zero imported evidence means this report should be read as an uncovered-needs map, not as proof of absence."
+      ]
+    }
+  ]
+}

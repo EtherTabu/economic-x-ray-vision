@@ -238,6 +238,9 @@ export default function Home() {
             <Link className="dashboard-network-link" href="/campaigns">
               Open Campaign Planner
             </Link>
+            <Link className="dashboard-network-link" href="/reports">
+              Open Report Builder
+            </Link>
           </div>
 
           <div className="priority-panel" aria-label="Highest priority constraint">

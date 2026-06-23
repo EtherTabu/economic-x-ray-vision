@@ -1,0 +1,394 @@
+{
+  "generated_at": "2026-06-23T16:04:29.138Z",
+  "report_count": 15,
+  "summary": {
+    "validation_priority_reports": 1,
+    "evidence_coverage_reports": 1,
+    "campaign_reports": 3,
+    "constraint_reports": 10,
+    "evidence_import_count": 0,
+    "uncovered_artifact_count": 459,
+    "analyst_state_status_distribution": {
+      "not_started": 3,
+      "unreviewed": 84,
+      "not_collected": 459,
+      "open": 398,
+      "blocked": 116
+    }
+  },
+  "reports": [
+    {
+      "report_id": "validation-priority",
+      "report_type": "validation_priority",
+      "title": "Validation Priority Report",
+      "markdown_path": "data/exports/reports/validation-priority.md",
+      "json_path": "data/exports/reports/validation-priority.json",
+      "referenced_constraint_ids": [
+        "strategic-053",
+        "strategic-067",
+        "strategic-054",
+        "strategic-055",
+        "strategic-020",
+        "strategic-056",
+        "strategic-019",
+        "strategic-010",
+        "strategic-017",
+        "strategic-018"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": []
+    },
+    {
+      "report_id": "evidence-coverage",
+      "report_type": "evidence_coverage",
+      "title": "Evidence Coverage Report",
+      "markdown_path": "data/exports/reports/evidence-coverage.md",
+      "json_path": "data/exports/reports/evidence-coverage.json",
+      "referenced_constraint_ids": [
+        "strategic-053",
+        "strategic-067",
+        "strategic-054",
+        "strategic-056",
+        "strategic-010",
+        "strategic-052",
+        "strategic-040",
+        "strategic-013",
+        "strategic-051",
+        "strategic-020",
+        "strategic-049"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-053:metric",
+        "artifact:cluster:strategic-067:evidence",
+        "artifact:cluster:strategic-067:metric",
+        "artifact:cluster:strategic-054:metric",
+        "artifact:cluster:strategic-056:evidence",
+        "artifact:cluster:strategic-010:metric",
+        "artifact:cluster:strategic-052:metric",
+        "artifact:cluster:strategic-040:metric",
+        "artifact:cluster:strategic-013:metric",
+        "artifact:cluster:strategic-051:metric",
+        "artifact:cluster:strategic-020:metric",
+        "artifact:cluster:strategic-049:metric"
+      ]
+    },
+    {
+      "report_id": "campaign-validation-campaign-fast",
+      "report_type": "campaign",
+      "title": "Fast validation sprint Report",
+      "markdown_path": "data/exports/reports/campaign-validation-campaign-fast.md",
+      "json_path": "data/exports/reports/campaign-validation-campaign-fast.json",
+      "referenced_constraint_ids": [
+        "strategic-067",
+        "strategic-053",
+        "strategic-054"
+      ],
+      "referenced_campaign_ids": [
+        "validation-campaign:fast"
+      ],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-067:evidence",
+        "artifact:cluster:strategic-067:metric",
+        "artifact:packet:packet-strategic-067-task-strategic-067-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+        "artifact:cluster:strategic-053:metric",
+        "artifact:packet:packet-strategic-053-task-strategic-053-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "artifact:cluster:strategic-053:evidence",
+        "artifact:cluster:strategic-054:metric",
+        "artifact:packet:packet-strategic-054-task-strategic-054-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "artifact:cluster:strategic-054:evidence"
+      ]
+    },
+    {
+      "report_id": "campaign-validation-campaign-standard",
+      "report_type": "campaign",
+      "title": "Standard validation campaign Report",
+      "markdown_path": "data/exports/reports/campaign-validation-campaign-standard.md",
+      "json_path": "data/exports/reports/campaign-validation-campaign-standard.json",
+      "referenced_constraint_ids": [
+        "strategic-067",
+        "strategic-053",
+        "strategic-054",
+        "strategic-010",
+        "strategic-055",
+        "strategic-019"
+      ],
+      "referenced_campaign_ids": [
+        "validation-campaign:standard"
+      ],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-067:evidence",
+        "artifact:cluster:strategic-067:metric",
+        "artifact:packet:packet-strategic-067-task-strategic-067-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+        "artifact:cluster:strategic-053:metric",
+        "artifact:packet:packet-strategic-053-task-strategic-053-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "artifact:cluster:strategic-053:evidence",
+        "artifact:cluster:strategic-054:metric",
+        "artifact:packet:packet-strategic-054-task-strategic-054-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "artifact:cluster:strategic-054:evidence",
+        "artifact:cluster:strategic-010:metric",
+        "artifact:packet:packet-strategic-010-task-strategic-010-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "artifact:cluster:strategic-010:evidence",
+        "artifact:cluster:strategic-055:metric",
+        "artifact:packet:packet-strategic-055-task-strategic-055-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+        "artifact:cluster:strategic-055:evidence",
+        "artifact:cluster:strategic-019:metric",
+        "artifact:packet:packet-strategic-019-task-strategic-019-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
+        "artifact:cluster:strategic-019:evidence"
+      ]
+    },
+    {
+      "report_id": "campaign-validation-campaign-deep",
+      "report_type": "campaign",
+      "title": "Deep defensibility campaign Report",
+      "markdown_path": "data/exports/reports/campaign-validation-campaign-deep.md",
+      "json_path": "data/exports/reports/campaign-validation-campaign-deep.json",
+      "referenced_constraint_ids": [
+        "strategic-067",
+        "strategic-053",
+        "strategic-054",
+        "strategic-010",
+        "strategic-055",
+        "strategic-019",
+        "strategic-020",
+        "strategic-017",
+        "strategic-056",
+        "strategic-018"
+      ],
+      "referenced_campaign_ids": [
+        "validation-campaign:deep"
+      ],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-067:evidence",
+        "artifact:cluster:strategic-067:metric",
+        "artifact:packet:packet-strategic-067-task-strategic-067-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+        "artifact:cluster:strategic-053:metric",
+        "artifact:packet:packet-strategic-053-task-strategic-053-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "artifact:cluster:strategic-053:evidence",
+        "artifact:cluster:strategic-054:metric",
+        "artifact:packet:packet-strategic-054-task-strategic-054-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "artifact:cluster:strategic-054:evidence",
+        "artifact:cluster:strategic-010:metric",
+        "artifact:packet:packet-strategic-010-task-strategic-010-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "artifact:cluster:strategic-010:evidence",
+        "artifact:cluster:strategic-055:metric",
+        "artifact:packet:packet-strategic-055-task-strategic-055-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+        "artifact:cluster:strategic-055:evidence",
+        "artifact:cluster:strategic-019:metric",
+        "artifact:packet:packet-strategic-019-task-strategic-019-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
+        "artifact:cluster:strategic-019:evidence",
+        "artifact:cluster:strategic-020:metric",
+        "artifact:packet:packet-strategic-020-task-strategic-020-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-approved-input-sourcing",
+        "artifact:cluster:strategic-020:evidence",
+        "artifact:cluster:strategic-017:metric",
+        "artifact:packet:packet-strategic-017-task-strategic-017-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-industrial-input-availability",
+        "artifact:cluster:strategic-017:evidence",
+        "artifact:cluster:strategic-056:evidence",
+        "artifact:cluster:strategic-056:source",
+        "artifact:packet:packet-strategic-056-task-strategic-056-evidence-gap-resolution-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-customer-shipment-release",
+        "artifact:packet:packet-strategic-018-task-strategic-018-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-construction-mobilization",
+        "artifact:cluster:strategic-018:metric",
+        "artifact:cluster:strategic-018:evidence"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-053",
+      "report_type": "constraint",
+      "title": "Critical mineral assay-to-offtake qualification delay Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-053.md",
+      "json_path": "data/exports/reports/constraint-strategic-053.json",
+      "referenced_constraint_ids": [
+        "strategic-053"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-053:metric",
+        "artifact:packet:packet-strategic-053-task-strategic-053-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "artifact:cluster:strategic-053:evidence",
+        "artifact:cluster:strategic-053:source",
+        "artifact:cluster:strategic-053:intervention-blocking",
+        "artifact:source:strategic-053:source-metals-mining-critical-inputs-process-pattern-review",
+        "artifact:source:strategic-053:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-067",
+      "report_type": "constraint",
+      "title": "Heavy equipment telematics fault classification blind spot Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-067.md",
+      "json_path": "data/exports/reports/constraint-strategic-067.json",
+      "referenced_constraint_ids": [
+        "strategic-067"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-067:evidence",
+        "artifact:cluster:strategic-067:metric",
+        "artifact:packet:packet-strategic-067-task-strategic-067-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+        "artifact:cluster:strategic-067:intervention-blocking",
+        "artifact:cluster:strategic-067:source",
+        "artifact:source:strategic-067:source-logistics-supply-chain-industrial-equipment-process-pattern-review",
+        "artifact:source:strategic-067:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-054",
+      "report_type": "constraint",
+      "title": "Leach circuit reagent supply concentration risk Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-054.md",
+      "json_path": "data/exports/reports/constraint-strategic-054.json",
+      "referenced_constraint_ids": [
+        "strategic-054"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-054:metric",
+        "artifact:packet:packet-strategic-054-task-strategic-054-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "artifact:cluster:strategic-054:evidence",
+        "artifact:cluster:strategic-054:source",
+        "artifact:cluster:strategic-054:intervention-blocking",
+        "artifact:source:strategic-054:source-metals-mining-critical-inputs-process-pattern-review",
+        "artifact:source:strategic-054:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-055",
+      "report_type": "constraint",
+      "title": "Tailings permit monitoring data gap Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-055.md",
+      "json_path": "data/exports/reports/constraint-strategic-055.json",
+      "referenced_constraint_ids": [
+        "strategic-055"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-055:metric",
+        "artifact:packet:packet-strategic-055-task-strategic-055-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+        "artifact:cluster:strategic-055:evidence",
+        "artifact:cluster:strategic-055:source",
+        "artifact:cluster:strategic-055:intervention-blocking",
+        "artifact:source:strategic-055:source-metals-mining-critical-inputs-process-pattern-review",
+        "artifact:source:strategic-055:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-020",
+      "report_type": "constraint",
+      "title": "Critical mineral processing qualification delay Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-020.md",
+      "json_path": "data/exports/reports/constraint-strategic-020.json",
+      "referenced_constraint_ids": [
+        "strategic-020"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-020:metric",
+        "artifact:packet:packet-strategic-020-task-strategic-020-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-approved-input-sourcing",
+        "artifact:cluster:strategic-020:evidence",
+        "artifact:cluster:strategic-020:source",
+        "artifact:cluster:strategic-020:intervention-blocking",
+        "artifact:source:strategic-020:source-metals-mining-critical-inputs-process-pattern-review",
+        "artifact:source:strategic-020:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-056",
+      "report_type": "constraint",
+      "title": "Refinery sample lot release queue Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-056.md",
+      "json_path": "data/exports/reports/constraint-strategic-056.json",
+      "referenced_constraint_ids": [
+        "strategic-056"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-056:evidence",
+        "artifact:cluster:strategic-056:source",
+        "artifact:packet:packet-strategic-056-task-strategic-056-evidence-gap-resolution-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-customer-shipment-release",
+        "artifact:cluster:strategic-056:intervention-blocking",
+        "artifact:source:strategic-056:source-metals-mining-critical-inputs-process-pattern-review",
+        "artifact:source:strategic-056:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-019",
+      "report_type": "constraint",
+      "title": "Refining and smelting capacity bottleneck Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-019.md",
+      "json_path": "data/exports/reports/constraint-strategic-019.json",
+      "referenced_constraint_ids": [
+        "strategic-019"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-019:metric",
+        "artifact:packet:packet-strategic-019-task-strategic-019-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
+        "artifact:cluster:strategic-019:evidence",
+        "artifact:cluster:strategic-019:source",
+        "artifact:cluster:strategic-019:intervention-blocking",
+        "artifact:source:strategic-019:source-metals-mining-critical-inputs-process-pattern-review",
+        "artifact:source:strategic-019:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-010",
+      "report_type": "constraint",
+      "title": "Right-of-way utility relocation sequencing delay Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-010.md",
+      "json_path": "data/exports/reports/constraint-strategic-010.json",
+      "referenced_constraint_ids": [
+        "strategic-010"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-010:metric",
+        "artifact:packet:packet-strategic-010-task-strategic-010-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "artifact:cluster:strategic-010:evidence",
+        "artifact:cluster:strategic-010:source",
+        "artifact:cluster:strategic-010:intervention-blocking",
+        "artifact:source:strategic-010:source-structured-hypothesis-local-operational-evidence-required",
+        "artifact:source:strategic-010:source-infrastructure-permitting-construction-process-pattern-review"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-017",
+      "report_type": "constraint",
+      "title": "Silver byproduct supply dependency Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-017.md",
+      "json_path": "data/exports/reports/constraint-strategic-017.json",
+      "referenced_constraint_ids": [
+        "strategic-017"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:cluster:strategic-017:metric",
+        "artifact:packet:packet-strategic-017-task-strategic-017-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-industrial-input-availability",
+        "artifact:cluster:strategic-017:evidence",
+        "artifact:cluster:strategic-017:source",
+        "artifact:cluster:strategic-017:intervention-blocking",
+        "artifact:source:strategic-017:source-metals-mining-critical-inputs-process-pattern-review",
+        "artifact:source:strategic-017:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    },
+    {
+      "report_id": "constraint-strategic-018",
+      "report_type": "constraint",
+      "title": "Gold project approval and capital sequencing friction Constraint Report",
+      "markdown_path": "data/exports/reports/constraint-strategic-018.md",
+      "json_path": "data/exports/reports/constraint-strategic-018.json",
+      "referenced_constraint_ids": [
+        "strategic-018"
+      ],
+      "referenced_campaign_ids": [],
+      "referenced_artifact_ids": [
+        "artifact:packet:packet-strategic-018-task-strategic-018-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-construction-mobilization",
+        "artifact:cluster:strategic-018:metric",
+        "artifact:cluster:strategic-018:evidence",
+        "artifact:cluster:strategic-018:source",
+        "artifact:cluster:strategic-018:intervention-blocking",
+        "artifact:source:strategic-018:source-metals-mining-critical-inputs-process-pattern-review",
+        "artifact:source:strategic-018:source-structured-hypothesis-local-operational-evidence-required"
+      ]
+    }
+  ]
+}

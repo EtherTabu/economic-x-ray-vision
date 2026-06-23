@@ -1,0 +1,89 @@
+{
+  "report_id": "campaign-validation-campaign-standard",
+  "report_type": "campaign",
+  "title": "Standard validation campaign Report",
+  "summary": "Cover the highest validation-burden constraints across multiple industries with enough artifacts for analyst review.",
+  "referenced_constraint_ids": [
+    "strategic-067",
+    "strategic-053",
+    "strategic-054",
+    "strategic-010",
+    "strategic-055",
+    "strategic-019"
+  ],
+  "referenced_campaign_ids": [
+    "validation-campaign:standard"
+  ],
+  "referenced_artifact_ids": [
+    "artifact:cluster:strategic-067:evidence",
+    "artifact:cluster:strategic-067:metric",
+    "artifact:packet:packet-strategic-067-task-strategic-067-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+    "artifact:cluster:strategic-053:metric",
+    "artifact:packet:packet-strategic-053-task-strategic-053-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+    "artifact:cluster:strategic-053:evidence",
+    "artifact:cluster:strategic-054:metric",
+    "artifact:packet:packet-strategic-054-task-strategic-054-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+    "artifact:cluster:strategic-054:evidence",
+    "artifact:cluster:strategic-010:metric",
+    "artifact:packet:packet-strategic-010-task-strategic-010-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+    "artifact:cluster:strategic-010:evidence",
+    "artifact:cluster:strategic-055:metric",
+    "artifact:packet:packet-strategic-055-task-strategic-055-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-permit-compliance-decision",
+    "artifact:cluster:strategic-055:evidence",
+    "artifact:cluster:strategic-019:metric",
+    "artifact:packet:packet-strategic-019-task-strategic-019-metric-definition-needed-resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-qualified-refined-input",
+    "artifact:cluster:strategic-019:evidence"
+  ],
+  "sections": [
+    {
+      "heading": "Campaign Objective",
+      "lines": [
+        "Mode: standard",
+        "Effort level: Medium",
+        "Timebox: 1 analyst week",
+        "Decision use: Decide which constraints are strong enough for comparison, source upgrade, and measurement-first intervention planning.",
+        "Expected confidence lift: +9.6 total / +1.6 average",
+        "Standard validation campaign covers 6 constraints across 3 industries. The highest burden record is Heavy equipment telematics fault classification blind spot."
+      ]
+    },
+    {
+      "heading": "Selected Constraints",
+      "lines": [
+        "Heavy equipment telematics fault classification blind spot (Logistics / Supply Chain / Industrial Equipment) - burden 10.0, lift +1.6. Hypothesis: Fault codes, operator notes, maintenance history, and site conditions can remain disconnected, making it hard to prioritize actual failure risk. Next artifact: Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+        "Critical mineral assay-to-offtake qualification delay (Metals / Mining / Critical Inputs) - burden 10.0, lift +1.6. Hypothesis: Potential buyers often require repeat assays, sample chain-of-custody, impurity profiles, and processing fit evidence before offtake terms can advance. Next artifact: Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+        "Leach circuit reagent supply concentration risk (Metals / Mining / Critical Inputs) - burden 10.0, lift +1.6. Hypothesis: Hydrometallurgical processing output can depend on a narrow set of reagent suppliers, storage limits, delivery timing, and quality certificates. Next artifact: Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+        "Right-of-way utility relocation sequencing delay (Infrastructure / Permitting / Construction) - burden 9.9, lift +1.6. Hypothesis: Construction sequencing waits while utilities, agencies, and contractors coordinate relocation responsibilities and timing. Next artifact: Constraint ID and title: strategic-010 / Right-of-way utility relocation sequencing delay",
+        "Tailings permit monitoring data gap (Metals / Mining / Critical Inputs) - burden 10.0, lift +1.6. Hypothesis: Tailings operations depend on inspection, water quality, geotechnical, and reporting evidence that may be fragmented across teams and reporting periods. Next artifact: Constraint ID and title: strategic-055 / Tailings permit monitoring data gap",
+        "Refining and smelting capacity bottleneck (Metals / Mining / Critical Inputs) - burden 9.9, lift +1.6. Hypothesis: Upstream mined material may wait for constrained processing, refining, or smelting capacity before becoming usable input. Next artifact: Constraint ID and title: strategic-019 / Refining and smelting capacity bottleneck"
+      ]
+    },
+    {
+      "heading": "Required Artifacts And Source Upgrades",
+      "lines": [
+        "Artifact need: Constraint ID and title: strategic-067 / Heavy equipment telematics fault classification blind spot",
+        "Artifact need: Linked triage task ID: task:strategic-067:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-maintenance-work-order-prioritization",
+        "Artifact need: Analyst note explaining whether the artifact supports, narrows, or rejects the claim",
+        "Artifact need: Metric definition with numerator, denominator, and unit",
+        "Artifact need: Data owner, source system, collection window, and refresh cadence",
+        "Artifact need: Constraint ID and title: strategic-053 / Critical mineral assay-to-offtake qualification delay",
+        "Artifact need: Linked triage task ID: task:strategic-053:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-offtake-agreement-decision",
+        "Artifact need: Constraint ID and title: strategic-054 / Leach circuit reagent supply concentration risk",
+        "Artifact need: Linked triage task ID: task:strategic-054:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-leach-circuit-throughput",
+        "Artifact need: Constraint ID and title: strategic-010 / Right-of-way utility relocation sequencing delay",
+        "Artifact need: Linked triage task ID: task:strategic-010:metric_definition_needed:resolve-evidence-gap-observed-frequency-and-owner-of-delay-before-civil-construction",
+        "Artifact need: Constraint ID and title: strategic-055 / Tailings permit monitoring data gap",
+        "Source upgrade: Add local operational evidence from Fleet telemetry and maintenance system.",
+        "Source upgrade: Attach the specific primary document for Metals / Mining / Critical Inputs process pattern review.",
+        "Source upgrade: Attach the specific primary document for Infrastructure / Permitting / Construction process pattern review."
+      ]
+    },
+    {
+      "heading": "Limitations",
+      "lines": [
+        "Campaigns are plans generated from local evidence and validation signals.",
+        "The report does not assert that the artifacts exist or that confidence has actually improved.",
+        "Analyst state remains not_started unless a future human workflow changes it."
+      ]
+    }
+  ]
+}

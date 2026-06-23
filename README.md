@@ -40,6 +40,7 @@ Economic X-Ray Vision currently:
 - Validates future human-authored evidence import metadata without mutating generated artifact needs or claiming evidence has been collected.
 - Matches imported evidence metadata to generated artifact needs and reports uncovered, candidate, blocked, and review-ready coverage.
 - Plans fast, standard, and deep validation campaigns from triage, source, evidence, and comparison signals.
+- Builds deterministic Markdown and JSON analyst reports for validation priorities, evidence coverage, campaigns, and top constraints.
 - Generates a separate local analyst state template for review, collection, assignment, blocking, and campaign progress tracking.
 - Proposes deterministic intervention strategies and first experiments.
 - Compares 2-4 constraints side by side to explain why one outranks another.
@@ -85,6 +86,7 @@ Current metrics:
 - 0 imported evidence records currently, with an import contract ready for real evidence metadata
 - 459 uncovered artifact needs in the evidence matching workspace
 - 3 validation campaign modes
+- 15 deterministic analyst reports
 - 1060 local analyst state template records
 - Local-first data and scripts
 - Deterministic scoring
@@ -106,6 +108,7 @@ Current metrics:
 - **Evidence Import Contract**: validates future human-added evidence metadata, link coverage, provenance posture, and review status without changing generated intelligence.
 - **Evidence Matching Workspace**: connects imported evidence metadata to artifact needs by explicit IDs, constraints, or source records while preserving zero-import honesty.
 - **Validation Campaign Planner**: groups top actions into fast, standard, and deep campaign plans.
+- **Report Builder**: exports compact Markdown and JSON analyst reports from existing local intelligence artifacts.
 - **Local Analyst State**: creates a separate non-complete template for tracking future human review and artifact collection progress.
 - **Intervention Simulator**: proposes first experiments, success metrics, failure modes, and action confidence.
 - **Constraint Archetype Engine**: classifies recurring bottleneck patterns across sectors.
@@ -122,6 +125,7 @@ Current metrics:
 - `/evidence`: read-only evidence-to-artifact matching workspace.
 - `/campaigns`: validation campaign planner with fast, standard, and deep campaign modes.
 - `/campaigns/[id]`: execution workspace for one validation campaign.
+- `/reports`: read-only report index for generated Markdown and JSON analyst reports.
 - `/compare`: side-by-side constraint comparison workspace.
 - `/sources`: source registry workspace for provenance, citation status, and constraint dependencies.
 - `/network`: constraint network explorer with search, filters, and focus links.
@@ -145,6 +149,8 @@ flowchart TD
   Q --> R["Evidence Artifact Matching"]
   P --> R
   P --> J["Validation Campaigns"]
+  J --> S["Markdown + JSON Reports"]
+  R --> S
   F --> K["Intervention Strategies"]
   C --> L["Archetype Analysis"]
   L --> M["Constraint Network"]
@@ -173,6 +179,7 @@ flowchart TD
   U --> V["Evidence Import Registry"]
   V --> W["Evidence Artifact Matching"]
   U --> S["Validation Campaigns"]
+  S --> X["Report Builder"]
   O --> I["Intervention Strategies"]
   I --> J["Archetype Analysis"]
   J --> N["Constraint Network Map"]
@@ -194,6 +201,7 @@ flowchart TD
   V --> L
   W --> L
   S --> L
+  X --> L
   I --> L
   J --> L
   N --> L
@@ -264,6 +272,7 @@ npm run artifacts
 npm run evidence-imports
 npm run evidence-matches
 npm run campaigns
+npm run reports
 npm run analyst-state
 npm run coverage
 npm run sqlite
@@ -286,6 +295,9 @@ npm run sqlite
 - `data/exports/evidence_import_audit.json`
 - `data/exports/evidence_artifact_matches.json`
 - `data/exports/validation_campaigns.json`
+- `data/exports/reports/report_index.json`
+- `data/exports/reports/*.md`
+- `data/exports/reports/*.json`
 - `data/exports/analyst_state_template.json`
 - `data/exports/coverage_density_report.json`
 - `data/exports/constraint_intelligence.sqlite`
